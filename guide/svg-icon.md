@@ -1,6 +1,6 @@
 # 图标
 
-:::warning
+:::warning 注意
 由于 Element Plus 官方的 SVG 图标暂时不支持自动导入，整体开发体验并不友好，所以框架并没有采用 Element Plus 官方提供的使用方式。
 
 如果你需要使用 Element Plus 的图标，可以参考下面 [Iconify](#iconify-图标) 或 [Unocss](#unocss-图标) 方案。
@@ -28,11 +28,9 @@
 
 ## Iconify 图标
 
-:::tip 介绍
 [Iconify](https://github.com/iconify/iconify) 提供 100+ 套图标集，有 100,000+ 个图标可以免费使用。
 
 专业版可以使用任意图标集内的图标，基础版只能使用其中的 Element Plus 图标。
-:::
 
 ### 使用 Element Plus 图标
 

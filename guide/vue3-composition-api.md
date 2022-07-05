@@ -1,7 +1,7 @@
 # 使用 Composition API 开发
 
-::: tip 关于 Options API
-Vue3 虽然提供了全新的 Composition API ，但它依旧支持 Options API ，对于从 Vue2 就在使用的开发者，如果一时半会没办法立马上手 Composition API ，你依旧可以在项目中使用 Options API 做开发。
+::: tip
+Composition API 是 Vue3 全新提供的一种语法，对于从 Vue2 就在使用的开发者，如果一时半会没办法立马上手 Composition API ，你依旧可以在项目中使用 Options API 做开发。当然我们更建议你使用 Composition API 进行开发，它比 Options API 更灵活且易读。
 :::
 
 如果你还不熟悉 Composition API ，那么我们建议你阅读 Vue3 [官方文档](https://v3.cn.vuejs.org/guide/composition-api-introduction.html)了解；如果你已经熟悉 Composition API ，那么我们建议你在开发的时候，使用 [`<script setup>`](https://v3.cn.vuejs.org/api/sfc-script-setup.html) 语法糖进行开发，它将提高很多开发上的效率。
