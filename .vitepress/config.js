@@ -8,6 +8,18 @@ export default {
         ['meta', { name: 'keywords', content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
         ['keywords', { content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
         ['description', { content: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite2 技术栈。' }],
+        ['script', {}, `var _hmt = _hmt || [];
+		_hmt.push(['_requirePlugin', 'UrlChangeTracker', {
+			shouldTrackUrlChange: function(newPath, oldPath) {
+				return newPath && oldPath;
+			}
+		}]);
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?c31a3e8267162de8420bc73e06d62463";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();`]
     ],
     themeConfig: {
         logo: '/logo.png',
