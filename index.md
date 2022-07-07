@@ -20,10 +20,10 @@ hero:
       link: /guide/why
     - theme: alt
       text: 演示地址：基础版
-      link: https://github.com/vuejs/vitepress
+      link: https://hooray.github.io/fantastic-admin-example/
     - theme: alt
       text: 演示地址：专业版
-      link: https://github.com/vuejs/vitepress
+      link: https://hooray.github.io/fantastic-admin-pro-example/
 
 features:
 - icon: 💪
