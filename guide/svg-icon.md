@@ -34,7 +34,7 @@
 
 ### 使用 Element Plus 图标
 
-使用方式很简单，你只需进入 Iconify 的 [Element Plus 图标](https://icon-sets.iconify.design/ep/)页面，然后点击需要使用的图标，复制图标名称 `ep:xxx`，最后通过 Iconify 提供的 Icon 组件就可以使用了。
+使用方式很简单，你只需进入 Iconify 的 [Element Plus 图标](https://icon-sets.iconify.design/ep/) 页面，然后点击需要使用的图标，复制图标名称 `ep:xxx`，最后通过 Iconify 提供的 Icon 组件就可以使用了。
 
 ```vue
 <script setup>
@@ -58,9 +58,9 @@ import { Icon } from '@iconify/vue'
 
 ### 使用其它图标集的图标 <sup class="pro-badge" />
 
-你可以在[Iconify 官网](https://icon-sets.iconify.design/)上查找 Iconify 提供的所有图标，并按照使用 Element Plus 图标的方式去使用。
+你可以在 [Iconify 官网](https://icon-sets.iconify.design/) 上查找 Iconify 提供的所有图标，并按照使用 Element Plus 图标的方式去使用。
 
-或者你也可以在 [Icônes 网站](https://icones.js.org/) 上查找你想要的图标，这是一个基于 Iconify 的在线图标搜索网站，它比 Iconify 官网的操作更直观。并且还提供了 VSCode 扩展，安装 [Icônes 扩展](https://marketplace.visualstudio.com/items?itemName=afzalsayed96.icones)就可以在 VSCode 里进行图标查找。
+或者你也可以在 [Icônes 网站](https://icones.js.org/) 上查找你想要的图标，这是一个基于 Iconify 的在线图标搜索网站，它比 Iconify 官网的操作更直观。并且还提供了 VSCode 扩展，安装 [Icônes 扩展](https://marketplace.visualstudio.com/items?itemName=afzalsayed96.icones) 就可以在 VSCode 里进行图标查找。
 
 <ZoomImg src="/icones1.png" />
 
