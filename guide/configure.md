@@ -34,8 +34,6 @@ VITE_APP_DEBUG_TOOL =
 VITE_BUILD_MOCK = false
 # 在构建时生成 sourcemap
 VITE_BUILD_SOURCEMAP = true
-# 在构建时删除 console 代码
-VITE_BUILD_DROP_CONSOLE = true
 # 在构建时开启压缩，支持 gzip 和 brotli
 VITE_BUILD_COMPRESS = gzip,brotli
 # 是否在打包时候生成PWA
@@ -58,8 +56,6 @@ VITE_APP_DEBUG_TOOL =
 VITE_BUILD_MOCK = true
 # 在构建时生成 sourcemap
 VITE_BUILD_SOURCEMAP = false
-# 在构建时删除 console 代码
-VITE_BUILD_DROP_CONSOLE = false
 # 在构建时开启压缩，支持 gzip 和 brotli
 VITE_BUILD_COMPRESS = gzip,brotli
 # 是否在打包时候生成PWA

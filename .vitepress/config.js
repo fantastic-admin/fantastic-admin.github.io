@@ -143,7 +143,8 @@ export default {
                     items: [
                         { text: '文档说明', link: '/guide/intro' },
                         { text: '为什么选择我们 ?', link: '/guide/why' }
-                    ]
+                    ],
+                    collapsible: true
                 },
                 {
                     text: '入门',
@@ -161,7 +162,8 @@ export default {
                         { text: '全局资源', link: '/guide/global-resources' },
                         { text: '图标', link: '/guide/svg-icon' },
                         { text: '构建与预览', link: '/guide/build' }
-                    ]
+                    ],
+                    collapsible: true
                 },
                 {
                     text: '高级',
@@ -179,7 +181,8 @@ export default {
                         { text: 'JSX', link: '/guide/jsx' },
                         { text: '基于文件系统的路由', link: '/guide/file-system-route' },
                         { text: '高级 position:fixed', link: '/guide/position-fixed' }
-                    ]
+                    ],
+                    collapsible: true
                 },
                 {
                     text: '其它',
@@ -189,7 +192,8 @@ export default {
                         { text: '从 Vue2 版本迁移', link: '/guide/vue2-to-vue3' },
                         { text: '从 vue-element-admin 迁移', link: '/guide/vea-to-fa' },
                         { text: '常见问题', link: '/guide/q-a' }
-                    ]
+                    ],
+                    collapsible: true
                 }
             ],
             '/components/': [
