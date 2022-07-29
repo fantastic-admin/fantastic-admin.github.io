@@ -174,7 +174,7 @@ export default {
                         { text: '国际化', link: '/guide/i18n' },
                         { text: '代码文件自动生成', link: '/guide/plop' },
                         { text: '标准模块', link: '/guide/plop-module' },
-                        { text: '全局属性', link: '/guide/global-properties' },
+                        { text: '常用 API', link: '/guide/api' },
                         { text: '私有 Storage 数据', link: '/guide/storage' },
                         { text: '错误日志', link: '/guide/error-log' },
                         { text: '自定义字体', link: '/guide/font' },

@@ -98,33 +98,3 @@ tabbar: {
 这其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页。
 
 通常使用场景是将同个模块的路由合并成一个标签页，使标签栏看上去相对简洁明了。
-
-## API
-
-### 获取当前标签页 tabId
-
-```js
-import { useTabbar } from '@/util/composables'
-const { getId } = useTabbar()
-getId()
-```
-
-### 关闭指定标签页
-
-该方法接收一个 `tabId` 参数。
-
-```js
-import { useTabbar } from '@/util/composables'
-const { closeById } = useTabbar()
-closeById(tabId)
-```
-
-### 关闭当前标签页
-
-该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，表示关闭当前标签页并跳转到指定路由，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
-
-```js
-import { useTabbar } from '@/util/composables'
-const { close } = useTabbar()
-close(to)
-```

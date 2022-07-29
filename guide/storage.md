@@ -13,7 +13,7 @@ app: {
 然后在需要使用到 storage 的地方引入：
 
 ```js
-import storage from '@/util/storage'
+import storage from '@/utils/storage'
 ```
 
 这个类封装了 `setItem()` ，`getItem()` ，`removeItem()` ，`clear()` 方法，同时还增加了一个 `has()` 方法用来判断对象是否存在：

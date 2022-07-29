@@ -152,10 +152,10 @@ function goBack() {
 
 功能部分的介绍主要还是要看代码，先从列表页 `list.vue` 开始。
 
-最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/util/pagination.js` 方便复用。
+最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/utils/composables/pagination/index.js` 方便复用。
 
 ```js
-import usePagination from '@/util/pagination.js'
+import { usePagination } from '@/utils/composables'
 
 const { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } = usePagination()
 ```

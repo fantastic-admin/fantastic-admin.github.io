@@ -107,17 +107,17 @@ meta: {
 鉴权组件和鉴权指令控制的是页面上的元素，而鉴权函数则更多是使用在业务流程代码里的权限判断。
 
 ```js
-import { useAuth } from '@/util/composables'
-const auth = useAuth()
+import { useAuth } from '@/utils/composables'
+const { auth, authAll } = useAuth()
 
 // 单权限验证，返回 true 或 false
-auth.auth('department.create')
+auth('department.create')
 
 // 多权限验证，用户只要具备其中任何一个权限，则验证通过，返回 true 或 false
-auth.auth(['department.create', 'department.edit'])
+auth(['department.create', 'department.edit'])
 
 // 多权限验证，用户必须具备全部权限，才验证通过，返回 true 或 false
-auth.authAll(['department.create', 'department.edit'])
+authAll(['department.create', 'department.edit'])
 ```
 
 ## 小技巧

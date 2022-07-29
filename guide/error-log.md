@@ -8,7 +8,7 @@ app: {
 }
 ```
 
-然后需要到 `/src/util/error.log.js` 文件里编写业务代码，框架为方便演示，将错误日志记录在 `sessionStorage` 里。
+然后需要到 `/src/utils/error.log.js` 文件里编写业务代码，框架为方便演示，将错误日志记录在 `sessionStorage` 里。
 
 开发者需要根据实际业务情况修改代码，例如将增加上报信息，记录用户账号、token等数据，并且将错误日志进行上报。
 
