@@ -94,15 +94,15 @@ export default {
             },
             {
                 text: '购买专业版',
-                link: '/buy.md'
+                link: '/buy'
             },
             {
                 text: '定制开发',
-                link: '/customize.md'
+                link: '/customize'
             },
             {
                 text: '技术支持',
-                link: '/support.md'
+                link: '/support'
             },
             {
                 text: '生态',
@@ -130,6 +130,14 @@ export default {
                             {
                                 text: 'VForm 低代码表单',
                                 link: 'https://www.vform666.com'
+                            },
+                            {
+                                text: 'QuickAdmin 快速开发管理框架',
+                                link: 'https://gitee.com/sciqtw/quickadmin'
+                            },
+                            {
+                                text: '交换友链 ?',
+                                link: '/links'
                             }
                         ]
                     }
@@ -271,7 +279,8 @@ export default {
                     items: [
                         { text: '购买专业版', link: '/buy' },
                         { text: '定制开发', link: '/customize' },
-                        { text: '技术支持', link: '/support' }
+                        { text: '技术支持', link: '/support' },
+                        { text: '我要交换友链', link: '/links' },
                     ]
                 }
             ]
