@@ -227,7 +227,7 @@ export default {
                         { text: 'ImagePreview 图片预览', link: '/components/image-preview' },
                         { text: 'SvgIcon SVG图标', link: '/components/svg-icon' },
                         { text: 'Trend 趋势标记', link: '/components/trend' },
-                        { text: 'CascaderArea 省市级联动', link: '/components/cascader-area' },
+                        { text: 'PcasCascader 省市区街道联动', link: '/components/pcas-cascader' },
                         { text: 'LayoutContainer 布局容器', link: '/components/layout-container' },
                         { text: 'Chip 纸片', link: '/components/chip' },
                         { text: 'ColorfulCard 多彩渐变卡片', link: '/components/colorful-card' },
