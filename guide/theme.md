@@ -4,7 +4,7 @@
 
 ### 基础版
 
-基础版主题样式存放在 `/src/assets/styles/themes.scss` 文件中，均为 css 变量，修改后即可在页面上查看效果，注意明亮/暗黑模式区分。
+基础版主题样式存放在 `/src/assets/styles/themes.scss` 文件中，均为 css 变量，修改后即可在页面上查看效果，注意明亮和暗黑模式的区分。
 
 ### 专业版
 
@@ -25,7 +25,7 @@ app: {
 }
 ```
 
-如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。首先先打开默认主题了解下代码结构 `/src/assets/styles/resources/theme-default.scss` ，主题的样式都存放在 `$theme-default` 这个变量里，注意明亮模式和暗黑模式的区分，两者里面属性名是完全一致的。
+如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。首先先打开默认主题了解下代码结构 `/src/assets/styles/themes/default.scss` ，主题的样式都存放在 `$theme-default` 这个变量里，注意明亮模式和暗黑模式的区分，两者里面属性名是完全一致的。
 
 ```scss
 $theme-default: (
@@ -40,16 +40,16 @@ $theme-default: (
 )
 ```
 
-所以如果要创建一个新主题，可以将 `theme-default.scss` 文件复制一份。例如要增加一个红色主题，则复制 `theme-default.scss` 并将文件名修改为 `theme-red.scss` ，然后将文件里的 `$theme-default` 变量名也修改为 `$theme-red` ，最后打开 `/src/assets/styles/resources/themes.scss` 文件，然后增加以下代码即可。
+所以如果要创建一个新主题，可以将 `default.scss` 文件复制一份。例如要增加一个红色主题，则复制 `default.scss` 并将文件名修改为 `red.scss` ，然后将文件里的 `$theme-default` 变量名也修改为 `$theme-red` ，最后打开 `/src/assets/styles/resources/themes.scss` 文件，然后增加以下代码即可。
 
 ```scss {7,16}
-@use "./theme-default.scss" as *;
-@use "./theme-green.scss" as *;
-@use "./theme-orange.scss" as *;
-@use "./theme-pink.scss" as *;
-@use "./theme-grey.scss" as *;
-@use "./theme-yellow.scss" as *;
-@use "./theme-red.scss" as *;
+@use "../themes/default.scss" as *;
+@use "../themes/green.scss" as *;
+@use "../themes/orange.scss" as *;
+@use "../themes/pink.scss" as *;
+@use "../themes/grey.scss" as *;
+@use "../themes/yellow.scss" as *;
+@use "../themes/red.scss" as *;
 
 $themes: (
     default: $theme-default,
@@ -74,7 +74,7 @@ app: {
 
 > 详细可阅读 Element Plus 官方文档《[自定义主题](https://element-plus.gitee.io/zh-CN/guide/theming.html)》。
 
-你可以在 `/src/assets/style/resources/element.customized.scss` 和 `/src/assets/style/resources/element.customized.dark.scss` 文件中分别修改 Element Plus 的明亮和暗黑模式下的预设样式。
+你可以在 `/src/assets/style/element-plus/index.scss` 和 `/src/assets/style/element-plus/dark.scss` 文件中分别修改 Element Plus 的明亮和暗黑模式下的预设样式。
 
 你可以到 Element Plus 的 [`packages/theme-chalk/src/common/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss) 和 [`packages/theme-chalk/src/dark/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/dark/var.scss) 中查找更多明亮和暗黑模式下的 scss 变量。
 
