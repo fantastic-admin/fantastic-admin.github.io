@@ -95,7 +95,7 @@ import { withBase } from 'vitepress'
 	</tr>
 	<tr>
 		<td align="center">开发与构建工具</td>
-		<td colspan="2" align="center">vite 2.x</td>
+		<td colspan="2" align="center">Vue 3 / Vite 3</td>
 	</tr>
 	<tr>
 		<td align="center">UI 组件库</td>
