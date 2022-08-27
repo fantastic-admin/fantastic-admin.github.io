@@ -2,14 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   medium-zoom: ^1.0.6
-  vitepress: 1.0.0-alpha.10
+  vitepress: 1.0.0-alpha.12
   vue: ^3.2.37
 
 dependencies:
   medium-zoom: 1.0.6
 
 devDependencies:
-  vitepress: 1.0.0-alpha.10
+  vitepress: 1.0.0-alpha.12
   vue: 3.2.37
 
 packages:
@@ -710,8 +710,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.10:
-    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
+  /vitepress/1.0.0-alpha.12:
+    resolution: {integrity: sha512-++e7p9oxqk7RKz2fMNtrOAWmZSWVPozDuOG1owwntPRincC8/pIhPkJ9ojNHcHCHBylszJBsjkRqbseurZ7vCg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1
