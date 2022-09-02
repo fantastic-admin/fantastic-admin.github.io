@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
     <p>
-        <img ref="imgRef" :src="withBase(src)">
+        <img ref="imgRef" :src="withBase(src)" loading="lazy">
     </p>
 </template>
 
