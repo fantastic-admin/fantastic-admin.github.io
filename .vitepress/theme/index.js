@@ -6,14 +6,14 @@ import ZoomImg from './components/ZoomImg.vue'
 import CustomerEvaluate from './components/CustomerEvaluate.vue'
 
 export default {
-    ...Theme,
-    Layout() {
-        return h(Theme.Layout, null, {
-            'home-features-after': () => h(HomePreview)
-        })
-    },
-    enhanceApp({ app }) {
-        app.component('ZoomImg', ZoomImg)
-        app.component('CustomerEvaluate', CustomerEvaluate)
-    }
+  ...Theme,
+  Layout() {
+    return h(Theme.Layout, null, {
+      'home-features-after': () => h(HomePreview)
+    })
+  },
+  enhanceApp({ app }) {
+    app.component('ZoomImg', ZoomImg)
+    app.component('CustomerEvaluate', CustomerEvaluate)
+  }
 }

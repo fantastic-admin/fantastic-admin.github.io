@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /guide/ready
+      link: /guide/intro
     - theme: alt
       text: 为什么选我们 ?
       link: /guide/why
