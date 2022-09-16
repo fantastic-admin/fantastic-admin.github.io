@@ -30,6 +30,12 @@ import { withBase } from 'vitepress'
 
 ## 支付方式
 
+:::tip 领红包
+若你打算使用支付宝进行付款，可以先扫下面这个二维码领取红包。
+
+<img :src="withBase('/qrcode-alipay-hongbao.jpg')" width="300" />
+:::
+
 <table style="width: 100%; display: table; margin: 1rem auto;">
 	<tr>
 		<th colspan="2" width="30%" align="center">Vue2 专业版</th>
@@ -41,8 +47,8 @@ import { withBase } from 'vitepress'
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
-            停止销售
-        </td>
+      停止销售
+    </td>
 		<td align="center">
 			<img :src="withBase('/qrcode-wechat.png')" />
 		</td>
@@ -52,15 +58,15 @@ import { withBase } from 'vitepress'
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
-            <p style="margin-top: 5px; margin-bottom: 0; color: #aaa;">已于 2021/05 停止更新<br />并于 2022/02 停止维护</p>
-        </td>
+      <p style="margin-top: 5px; margin-bottom: 0; color: #aaa;">已于 2021/05 停止更新<br />并于 2022/02 停止维护</p>
+    </td>
 		<td colspan="2" align="center">
-            <p style="margin-top: 5px; margin-bottom: 0;">产品生命周期内提供长期维护<br />并赠送 Vue2 专业版</p>
-        </td>
+      <p style="margin-top: 5px; margin-bottom: 0;">产品生命周期内提供长期维护<br />并赠送 Vue2 专业版</p>
+    </td>
 	</tr>
-    <tr>
-        <td colspan="4">专业版用户可加入专业版微信群（群内提供框架技术支持），除此之外，每一位专业版用户可<b>免费绑定</b>一位开发者（不支持换绑），绑定的开发者同样可加入专业版微信群，额外绑定更多开发者为 200 元/人。</td>
-    </tr>
+  <tr>
+    <td colspan="4">专业版用户可加入专业版微信群（群内提供框架技术支持），除此之外，每一位专业版用户可<b>免费绑定</b>一位开发者（不支持换绑），绑定的开发者同样可加入专业版微信群，额外绑定更多开发者为 200 元/人。</td>
+  </tr>
 </table>
 
 ## 部分客户评价
@@ -205,6 +211,6 @@ import { withBase } from 'vitepress'
 
 - **作者拥有10年+的前后端开发经验。** 部分框架的作者由于缺少后端开发经验，可能会在设计框架的时候，很少或者没有考虑后端的实现逻辑，导致框架在实际使用中，业务场景无法落地，开发人员得通过修改源码自行实现业务。
 - **经历过数十个真实项目的打磨。** 没用在真实业务场景中使用过的框架都是纸飞机，哪怕它提供的演示功能特别华丽。而本框架在作者就职的公司，已经稳定应用在电商、直播、OA、CRM、ERP等多个不同领域的中后台系统中。
-- **丰富的组件库。** 除了支持 ElementUI / Element Plus 自带的组件外，框架还扩充了部分业务组件，以及第三方插件。借助以往的项目经验，提供最佳实践方案，方便开发人员直接使用。
+- **丰富的组件库。** 除了支持 Element Plus 自带的组件外，框架还扩充了部分业务组件，以及第三方插件。借助以往的项目经验，提供最佳实践方案，方便开发人员直接使用。
 - **持续更新的业务应用静态页面。** 通过项目积累，沉淀出数十个业务应用的静态页面，做到开发人员拿来即可使用，极大提升开发效率的同时，还省去了产品和设计人员的工作。
 - **长期维护。** 无论是免费的基础版，还是付费的专业版，均提供长期维护。区别在于基础版侧重于稳定性维护，主要在修复 bug ，不定期增加新特性；专业版侧重于新特性开发，在确保稳定的基础上，会长期深挖中后台系统框架，持续产出可落地的特性或开发规范。
