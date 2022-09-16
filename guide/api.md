@@ -26,10 +26,14 @@ authAll()
 
 ## 主导航
 
-```js
-import { useMainPage } from '@/utils/composables'
+### 切换
 
-useMainPage().reload()
+切换主导航，`index` 为主导航序列数。
+
+```js
+import { useMenu } from '@/utils/composables'
+
+useMenu().switchTo(index)
 ```
 
 ## 主页面
