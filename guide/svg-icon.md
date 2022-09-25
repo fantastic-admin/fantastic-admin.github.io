@@ -12,17 +12,17 @@
 
 你可以去[阿里巴巴矢量图标库](https://www.iconfont.cn/)，或者其它支持下载 SVG 图标文件的网站，又或者是设计师绘制的 SVG 文件，将准备好的 SVG 图标文件放到 `/src/assets/icons/` 目录下，然后在页面中就可以通过 SvgIcon 组件使用了，name 就是 svg 的文件名。
 
-```vue
+```vue-html
 <!-- /src/assets/icons/example.svg -->
 <svg-icon name="example" />
 ```
 
 因为 SvgIcon 组件只负责渲染 `<svg>` 元素，而下载的 SVG 图标文件的尺寸可能不统一，建议在外层使用 ElIcon 组件进行包裹，对 `<svg>` 元素进行统一处理。
 
-```vue
+```vue-html
 <!-- 同时你还可以使用 el-icon 提供的 color 和 size 属性 -->
 <el-icon color="red" size="48px">
-    <svg-icon name="example" />
+  <svg-icon name="example" />
 </el-icon>
 ```
 
@@ -42,9 +42,9 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-    <el-icon>
-        <Icon icon="ep:arrow-right" />
-    </el-icon>
+  <el-icon>
+    <Icon icon="ep:arrow-right" />
+  </el-icon>
 </template>
 ```
 
@@ -52,7 +52,7 @@ import { Icon } from '@iconify/vue'
 
 ```vue-html
 <el-icon>
-    <svg-icon name="ep:arrow-right" />
+  <svg-icon name="ep:arrow-right" />
 </el-icon>
 ```
 
@@ -80,9 +80,11 @@ import { Icon } from '@iconify/vue'
 :::details 基础版
 在应用配置里修改 Iconify 图标的使用方式改为离线使用。
 
-```js
-app: {
-    iconifyOfflineUse: true
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    iconifyOfflineUse: true,
+  },
 }
 ```
 :::

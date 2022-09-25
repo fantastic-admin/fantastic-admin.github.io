@@ -4,7 +4,7 @@
 
 详细可阅读《[与服务端交互 - 接口请求](axios#接口请求)》。
 
-```js
+```ts
 import api from '@/api'
 
 api.get()
@@ -15,8 +15,8 @@ api.post()
 
 详细可阅读《[权限 - 鉴权函数](permission#鉴权函数)》。
 
-```js
-import { useAuth } from '@/utils/composables'
+```ts
+import useAuth from '@/utils/composables/useAuth'
 
 const { auth, authAll } = useAuth()
 
@@ -30,8 +30,8 @@ authAll()
 
 切换主导航，`index` 为主导航序列数。
 
-```js
-import { useMenu } from '@/utils/composables'
+```ts
+import useMenu from '@/utils/composables/useMenu'
 
 useMenu().switchTo(index)
 ```
@@ -40,16 +40,16 @@ useMenu().switchTo(index)
 
 ### 刷新
 
-```js
-import { useMainPage } from '@/utils/composables'
+```ts
+import useMainPage from '@/utils/composables/useMainPage'
 
 useMainPage().reload()
 ```
 
 ### 最大化 <sup class="pro-badge" />
 
-```js
-import { useMainPage } from '@/utils/composables'
+```ts
+import useMainPage from '@/utils/composables/useMainPage'
 
 // status: true / false
 useMainPage().maximize(status)
@@ -59,8 +59,8 @@ useMainPage().maximize(status)
 
 ### 获取当前标签页 tabId
 
-```js
-import { useTabbar } from '@/utils/composables'
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
 
 const { getId } = useTabbar()
 
@@ -71,8 +71,8 @@ getId()
 
 该方法接收一个 `tabId` 参数。
 
-```js
-import { useTabbar } from '@/utils/composables'
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
 
 const { closeById } = useTabbar()
 
@@ -83,19 +83,91 @@ closeById(tabId)
 
 该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，表示关闭当前标签页并跳转到指定路由，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
 
-```js
-import { useTabbar } from '@/utils/composables'
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
 
 const { close } = useTabbar()
 
 close(to)
 ```
 
+### 关闭两侧标签页
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { closeOtherSide } = useTabbar()
+
+closeOtherSide(tabId)
+```
+
+### 关闭左侧标签页
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { closeLeftSide } = useTabbar()
+
+closeLeftSide(tabId)
+```
+
+### 关闭右侧标签页
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { closeRightSide } = useTabbar()
+
+closeRightSide(tabId)
+```
+
+### 校验指定标签两侧是否有可关闭的标签
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { checkCloseOtherSide } = useTabbar()
+
+checkCloseOtherSide(tabId)
+```
+
+### 校验指定标签左侧是否有可关闭的标签
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { checkCloseLeftSide } = useTabbar()
+
+checkCloseLeftSide(tabId)
+```
+
+### 校验指定标签右侧是否有可关闭的标签
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { checkCloseRightSide } = useTabbar()
+
+checkCloseRightSide(tabId)
+```
+
 ## 事件总线
 
 基于 [mitt](https://github.com/developit/mitt) 简单封装，使用方法请查阅官方文档。
 
-```js
+```ts
 import eventBus from '@/utils/eventBus'
 
 eventBus.on()
@@ -107,7 +179,7 @@ eventBus.off()
 
 基于 [dayjs](https://day.js.org/zh-CN/) 简单封装，使用方法请查阅官方文档。
 
-```js
+```ts
 import dayjs from '@/utils/dayjs'
 
 dayjs()

@@ -2,32 +2,34 @@
 
 首先需要在应用配置里开启权限功能。
 
-```js
-app: {
-    enablePermission: true
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    enablePermission: true,
+  },
 }
 ```
 
-然后在 `src/store/modules/user.js` 文件里 action 下有个 `getPermissions` 的方法，该方法用于登录成功后获取用户权限。
+然后在 `src/store/modules/user.ts` 文件里 action 下有个 `getPermissions` 的方法，该方法用于登录成功后获取用户权限。
 
 在实际开发中，需要手动进行修改，框架默认通过 mock 模拟获取用户权限。
 
-```js
+```ts
 // 获取我的权限
-getPermissions({ state, commit }) {
-    return new Promise(resolve => {
-        // 通过 mock 获取权限
-        api.get('member/permission', {
-            baseURL: '/mock/',
-            params: {
-                account: state.account
-            }
-        }).then(res => {
-            commit('setPermissions', res.data.permissions)
-            resolve(res.data.permissions)
-        })
+getPermissions() {
+  return new Promise<string[]>((resolve) => {
+    // 通过 mock 获取权限
+    api.get('member/permission', {
+      baseURL: '/mock/',
+      params: {
+        account: this.account,
+      },
+    }).then((res) => {
+      this.permissions = res.data.permissions
+      resolve(res.data.permissions)
     })
-}
+  })
+},
 ```
 
 在演示源码中，默认提供了两组权限，你可以在“权限验证”导航里切换帐号查看不同权限下的效果。如果使用的不是 `admin` 或 `test` 用户名登录，则在导航栏里看不到“权限验证”导航入口。
@@ -44,10 +46,10 @@ getPermissions({ state, commit }) {
 
 在路由的 `meta` 配置项中，其中有一个 `auth` 参数，这个就是用来配置路由的权限，一个路由可以配置多个权限，当配置多个权限时，只要满足其中任何一个，则视为用户有访问该路由的权限，如下：
 
-```js
+```ts
 meta: {
-    auth: ['news.browse', 'news.edit']
-}
+  auth: ['news.browse', 'news.edit'],
+},
 ```
 
 框架内部鉴权的逻辑是字符串比对，所以建议对权限有个统一的格式，例如为 `xxx.yyy` ，其中 `xxx` 表示模块名， `yyy` 表示操作类型。那么上面那个例子就表示：
@@ -64,26 +66,26 @@ meta: {
 ```vue-html
 <!-- 单权限验证 -->
 <Auth :value="'department.create'">
-    <p>你有该权限</p>
-    <template #no-auth>
-        <p>你没有该权限</p>
-    </template>
+  <p>你有该权限</p>
+  <template #no-auth>
+    <p>你没有该权限</p>
+  </template>
 </Auth>
 
 <!-- 多权限验证，用户只要具备其中任何一个权限，则验证通过 -->
 <Auth :value="['department.create', 'department.edit']">
-    <p>你有该权限</p>
-    <template #no-auth>
-        <p>你没有该权限</p>
-    </template>
+  <p>你有该权限</p>
+  <template #no-auth>
+    <p>你没有该权限</p>
+  </template>
 </Auth>
 
 <!-- 多权限验证，用户必须具备全部权限，才验证通过 -->
 <AuthAll :value="['department.create', 'department.edit']">
-    <p>你有该权限</p>
-    <template #no-auth>
-        <p>你没有该权限</p>
-    </template>
+  <p>你有该权限</p>
+  <template #no-auth>
+    <p>你没有该权限</p>
+  </template>
 </AuthAll>
 ```
 
@@ -106,8 +108,8 @@ meta: {
 
 鉴权组件和鉴权指令控制的是页面上的元素，而鉴权函数则更多是使用在业务流程代码里的权限判断。
 
-```js
-import { useAuth } from '@/utils/composables'
+```ts
+import useAuth from '@/utils/composables/useAuth'
 const { auth, authAll } = useAuth()
 
 // 单权限验证，返回 true 或 false
@@ -126,50 +128,54 @@ authAll(['department.create', 'department.edit'])
 
 当然了，业务有大有小，针对一些小型的管理系统，对权限这块没有这么多复杂的要求，甚至什么角色拥有什么权限都是写死固定的，不需要自由配置。针对这种情况，框架也可以很方便的实现。
 
-```js
+```ts
+import type { Route } from '@/global'
+
 import Layout from '@/layout/index.vue'
 
-export default {
-    path: '/banner',
-    component: Layout,
-    redirect: '/banner/list',
-    name: 'banner',
-    meta: {
-        title: 'Banner 管理',
-        icon: 'banner',
-        auth: ['admin', 'editor']
+const routes: Route.recordRaw = {
+  path: '/banner',
+  component: Layout,
+  redirect: '/banner/list',
+  name: 'banner',
+  meta: {
+    title: 'Banner 管理',
+    icon: 'banner',
+    auth: ['admin', 'editor'],
+  },
+  children: [
+    {
+      path: 'detail',
+      name: 'bannerCreate',
+      component: () => import('@/views/banner/detail.vue'),
+      meta: {
+        title: '新增 Banner',
+        auth: ['admin', 'editor'],
+      },
     },
-    children: [
-        {
-            path: 'detail',
-            name: 'bannerCreate',
-            component: () => import('@/views/banner/detail.vue'),
-            meta: {
-                title: '新增 Banner',
-                auth: ['admin', 'editor']
-            }
-        },
-        {
-            path: 'list',
-            name: 'bannerList',
-            component: () => import('@/views/banner/list.vue'),
-            meta: {
-                title: 'Banner 列表',
-                auth: ['admin']
-            }
-        },
-        {
-            path: 'detail/:id',
-            name: 'bannerEdit',
-            component: () => import('@/views/banner/detail.vue'),
-            meta: {
-                title: '编辑 Banner',
-                auth: ['admin'],
-                sidebar: false
-            }
-        }
-    ]
+    {
+      path: 'list',
+      name: 'bannerList',
+      component: () => import('@/views/banner/list.vue'),
+      meta: {
+        title: 'Banner 列表',
+        auth: ['admin'],
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'bannerEdit',
+      component: () => import('@/views/banner/detail.vue'),
+      meta: {
+        title: '编辑 Banner',
+        auth: ['admin'],
+        sidebar: false,
+      },
+    },
+  ],
 }
+
+export default routes
 ```
 
 如上所示，假设有 2 种角色，一个是管理员 `admin` ，一个是编辑员 `editor` ，如果用户是 `admin` 权限，则可以操作 Banner 管理下的所有功能，如果是 `editor` 权限，则只能进行新增 Banner 操作。

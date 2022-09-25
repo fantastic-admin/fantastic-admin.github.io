@@ -14,9 +14,11 @@
 
 首先需要在应用配置里设置（基础版无需设置）：
 
-```js
-tabbar: {
-    enable: false
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    enable: false,
+  },
 }
 ```
 
@@ -34,28 +36,28 @@ tabbar: {
 
 怎么理解呢？还是用上面的例子，如果有两个模块，一个新闻管理，一个用户管理。当从**新闻列表页**进入**新闻详情页**的时候，需要对**新闻列表页**进行缓存，而从**新闻列表页**进入**用户列表页**，则不需要对**新闻列表页**进行缓存，我们就可以对**新闻列表页**的路由设置成：
 
-```js {9}
-{
-    path: '/news',
-    children: [
-        {
-            path: 'list',
-            name: 'NewsList'
-            meta: {
-                title: '新闻列表',
-                cache: 'NewsDetail'
-            }
-        },
-        {
-            path: 'detail/:id',
-            name: 'NewsDetail',
-            meta: {
-                title: '新闻详情',
-                sidebar: false,
-                activeMenu: '/news/list'
-            }
-        }
-    ]
+```ts {9}
+const routes: Route.recordRaw = {
+  path: '/news',
+  children: [
+    {
+      path: 'list',
+      name: 'NewsList'
+      meta: {
+        title: '新闻列表',
+        cache: 'NewsDetail',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'NewsDetail',
+      meta: {
+        title: '新闻详情',
+        sidebar: false,
+        activeMenu: '/news/list',
+      },
+    },
+  ],
 }
 ```
 
@@ -63,37 +65,37 @@ tabbar: {
 
 当然也可将 `cache` 设置成 name 数组。
 
-```js {9}
-{
-    path: '/news',
-    children: [
-        {
-            path: 'list',
-            name: 'NewsList'
-            meta: {
-                title: '新闻列表',
-                cache: ['NewsDetail', 'NewsCreate']
-            }
-        },
-        {
-            path: 'detail/:id',
-            name: 'NewsDetail',
-            meta: {
-                title: '新闻详情',
-                sidebar: false,
-                activeMenu: '/news/list'
-            }
-        },
-        {
-            path: 'create',
-            name: 'NewsCreate',
-            meta: {
-                title: '新增新闻',
-                sidebar: false,
-                activeMenu: '/news/list'
-            }
-        }
-    ]
+```ts {9}
+const routes: Route.recordRaw = {
+  path: '/news',
+  children: [
+    {
+      path: 'list',
+      name: 'NewsList'
+      meta: {
+        title: '新闻列表',
+        cache: ['NewsDetail', 'NewsCreate'],
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'NewsDetail',
+      meta: {
+        title: '新闻详情',
+        sidebar: false,
+        activeMenu: '/news/list',
+      },
+    },
+    {
+      path: 'create',
+      name: 'NewsCreate',
+      meta: {
+        title: '新增新闻',
+        sidebar: false,
+        activeMenu: '/news/list',
+      },
+    },
+  ],
 }
 ```
 
@@ -111,10 +113,12 @@ tabbar: {
 
 在应用配置里设置：
 
-```js
-tabbar: {
+```ts {2-5}
+const globalSettings: Settings.all = {
+  tabbar: {
     enable: true,
-    mergeTabs: false
+    mergeTabs: false,
+  },
 }
 ```
 
@@ -126,50 +130,52 @@ tabbar: {
 
 在应用配置里设置：
 
-```js
-tabbar: {
+```ts {2-5}
+const globalSettings: Settings.all = {
+  tabbar: {
     enable: true,
-    mergeTabs: true
+    mergeTabs: true,
+  },
 }
 ```
 
 当标签页合并时，我们从**新闻列表页**进入**新增新闻页**后，进行了一些数据填写，这时候再点开其它模块的页面，例如**用户列表页**，此时标签栏里有 2 个标签页，分别是*新增新闻*和*用户列表*，这时候从**用户列表页**切换回**新增新闻页**，并且想让它保持住离开时的状态，只能设置 `cache: true` ，因为从**新闻列表页**跳转到其它任何页面，都需要将它进行缓存住。但这个时候问题来了，如果从**新增新闻页**返回**新闻列表页**时，是需要清除缓存的，所以框架提供了另一个参数 `noCache` ，来看下面的路由配置。
 
-```js {19-20,30-31}
-{
-    path: '/news',
-    children: [
-        {
-            path: 'list',
-            name: 'NewsList'
-            meta: {
-                title: '新闻列表',
-                cache: true
-            }
-        },
-        {
-            path: 'detail/:id',
-            name: 'NewsDetail',
-            meta: {
-                title: '新闻详情',
-                sidebar: false,
-                activeMenu: '/news/list',
-                cache: true,
-                noCache: 'NewsList'
-            }
-        },
-        {
-            path: 'create',
-            name: 'NewsCreate',
-            meta: {
-                title: '新增新闻',
-                sidebar: false,
-                activeMenu: '/news/list',
-                cache: true,
-                noCache: 'NewsList'
-            }
-        }
-    ]
+```ts {19-20,30-31}
+const routes: Route.recordRaw = {
+  path: '/news',
+  children: [
+    {
+      path: 'list',
+      name: 'NewsList'
+      meta: {
+        title: '新闻列表',
+        cache: true,
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'NewsDetail',
+      meta: {
+        title: '新闻详情',
+        sidebar: false,
+        activeMenu: '/news/list',
+        cache: true,
+        noCache: 'NewsList',
+      },
+    },
+    {
+      path: 'create',
+      name: 'NewsCreate',
+      meta: {
+        title: '新增新闻',
+        sidebar: false,
+        activeMenu: '/news/list',
+        cache: true,
+        noCache: 'NewsList',
+      },
+    },
+  ],
 }
 ```
 

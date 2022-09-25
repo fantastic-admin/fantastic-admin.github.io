@@ -27,16 +27,16 @@
 
 // @include [文件夹名称]-sprite([文件名称]);
 .icon {
-    @include example-sprite(address);
+  @include example-sprite(address);
 }
 
 // 输出
 .icon {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: 0px 0px;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: 0px 0px;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
@@ -48,25 +48,25 @@
 
 // 输出
 .example-address-sprites {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: 0 0;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: 0 0;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 .example-feedback-sprites {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: -110px 0;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: -110px 0;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 .example-payment-sprites {
-    background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
-    background-position: 0 -110px;
-    background-size: 210px 210px;
-    width: 100px;
-    height: 100px;
+  background-image: url(img/example.326b35aec20837b9c08563c654422fe6.326b35ae.png);
+  background-position: 0 -110px;
+  background-size: 210px 210px;
+  width: 100px;
+  height: 100px;
 }
 ```
 

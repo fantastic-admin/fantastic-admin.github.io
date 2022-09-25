@@ -8,28 +8,32 @@
 
 一个路由模块包含以下结构：
 
-```js
+```ts
+import type { Route } from '@/global'
+
 const Layout = () => import('@/layout/index.vue')
 
-export default {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/index',
-    name: 'Example',
-    meta: {
-        title: '演示'
+const routes: Route.recordRaw = {
+  path: '/example',
+  component: Layout,
+  redirect: '/example/index',
+  name: 'Example',
+  meta: {
+    title: '演示',
+  },
+  children: [
+    {
+      path: 'index',
+      name: 'ExampleIndex',
+      component: () => import('@/views/example/index.vue'),
+      meta: {
+        title: '演示页面',
+      },
     },
-    children: [
-        {
-            path: 'index',
-            name: 'ExampleIndex',
-            component: () => import('@/views/example/index.vue'),
-            meta: {
-                title: '演示页面'
-            }
-        }
-    ]
+  ],
 }
+
+export default routes
 ```
 
 :::warning 注意事项
@@ -45,79 +49,87 @@ export default {
 
 多级路由的中间层级，可以无需设置 `component` 。
 
-```js
+```ts
+import type { Route } from '@/global'
+
 const Layout = () => import('@/layout/index.vue')
 
-export default {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/level/index',
-    name: 'Example',
-    meta: {
-        title: '演示'
-    },
-    children: [
+const routes: Route.recordRaw = {
+  path: '/example',
+  component: Layout,
+  redirect: '/example/level/index',
+  name: 'Example',
+  meta: {
+    title: '演示',
+  },
+  children: [
+    {
+      path: 'level',
+      name: 'ExampleLevel',
+      meta: {
+        title: '中间层级',
+      },
+      children: [
         {
-            path: 'level',
-            name: 'ExampleLevel',
-            meta: {
-                title: '中间层级'
-            },
-            children: [
-                {
-                    path: 'index',
-                    name: 'ExampleIndex',
-                    component: () => import('@/views/example/index.vue'),
-                    meta: {
-                        title: '演示页面'
-                    }
-                }
-            ]
-        }
-    ]
+          path: 'index',
+          name: 'ExampleIndex',
+          component: () => import('@/views/example/index.vue'),
+          meta: {
+            title: '演示页面',
+          },
+        },
+      ],
+    },
+  ],
 }
+
+export default routes
 ```
 
 ### 外链
 
 只需要将 `path` 设置为需要跳转的 HTTP 地址即可。
 
-```js
-{
-    path: 'https://hooray.gitee.io/fantastic-admin/',
-    meta: {
-        title: '官网'
-    }
+```ts
+import type { Route } from '@/global'
+
+const routes: Route.recordRaw = {
+  path: 'https://hooray.gitee.io/fantastic-admin/',
+  meta: {
+    title: '官网'
+  }
 }
+
+export default routes
 ```
 
 ### 主导航
 
-主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类，在 `/src/router/routes.js` 里进行设置。
+主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类，在 `/src/router/routes.ts` 里进行设置。
 
-```js
-let asyncRoutes = [
-    {
-        meta: {
-            title: '演示',
-            icon: 'sidebar-default'
-        },
-        children: [
-            MultilevelMenuExample,
-            BreadcrumbExample,
-            KeepAliveExample
-        ]
+```ts
+const asyncRoutes: Route.recordMainRaw[] = [
+  {
+    meta: {
+      title: '演示',
+      icon: 'sidebar-default',
     },
-    {
-        meta: {
-            title: '其它',
-            icon: 'sidebar-other'
-        },
-        children: [
-            ComponentExample,
-            PermissionExample
-        ]
-    }
+    children: [
+      MultilevelMenuExample,
+      BreadcrumbExample,
+      KeepAliveExample,
+    ],
+  },
+  {
+    meta: {
+      title: '其它',
+      icon: 'sidebar-other',
+    },
+    children: [
+      ComponentExample,
+      PermissionExample,
+    ],
+  },
 ]
 ```
 
@@ -201,29 +213,33 @@ let asyncRoutes = [
 
 该参数常与 `sidebar: false` 一起使用，因为路由不在侧边栏导航显示，会导致进入该路由后，侧边栏导航高亮效果失效，所以需要手动指定。
 
-```js {17-18}
-{
-    path: '/news',
-    meta: {
-        title: '新闻管理'
+```ts {19-20}
+import type { Route } from '@/global'
+
+const routes: Route.recordRaw = {
+  path: '/news',
+  meta: {
+    title: '新闻管理',
+  },
+  children: [
+    {
+      path: 'list',
+      meta: {
+        title: '新闻列表',
+      },
     },
-    children: [
-        {
-            path: 'list',
-            meta: {
-                title: '新闻列表'
-            }
-        },
-        {
-            path: 'detail',
-            meta: {
-                title: '新闻详情',
-                sidebar: false,
-                activeMenu: '/news/list'
-            }
-        }
-    ]
+    {
+      path: 'detail',
+      meta: {
+        title: '新闻详情',
+        sidebar: false,
+        activeMenu: '/news/list',
+      },
+    },
+  ],
 }
+
+export default routes
 ```
 
 ### cache
@@ -263,7 +279,7 @@ let asyncRoutes = [
 
 如果标记需要动态更新，请设置为箭头函数形式，并返回外部变量，例如搭配 pinia 一起使用。
 
-```js
+```ts
 badge: () => globalStore.number
 ```
 
@@ -275,15 +291,29 @@ badge: () => globalStore.number
 
 如果要开启内嵌网页，component 需要设置为框架提供的 layoue/iframe.vue
 
-```js
-{
-    path: 'iframe',
-    component: () => import('@/layout/iframe.vue'),
-    meta: {
+```ts
+import type { Route } from '@/global'
+
+const routes: Route.recordRaw = {
+  path: '/link',
+  component: () => import('@/layouts/index.vue'),
+  redirect: '/link/iframe',
+  meta: {
+    title: '外链',
+  },
+  children: [
+    {
+      path: 'iframe',
+      component: () => import('@/layout/iframe.vue'),
+      meta: {
         title: 'Gitee 仓库',
-        link: 'https://gitee.com/hooray/fantastic-admin'
-    }
+        link: 'https://gitee.com/hooray/fantastic-admin',
+      },
+    },
+  ],
 }
+
+export default routes
 ```
 
 ### copyright <sup class="pro-badge" />
@@ -302,7 +332,7 @@ badge: () => globalStore.number
 
 当使用类似 `<FixedActionBar />` 这类通过 `position: fixed` 固定在底部的组件时，需要手动设置该参数，目的是为了防止页面底部可能被遮挡。
 
-```js
+```ts
 paddingBottom: '80px'
 ```
 
@@ -316,47 +346,51 @@ paddingBottom: '80px'
 
 ## 示例
 
-```js
+```ts
+import type { Route } from '@/global'
+
 const Layout = () => import('@/layout/index.vue')
 
-export default {
-    path: '/banner',
-    component: Layout,
-    redirect: '/banner/list',
-    name: 'banner',
-    meta: {
-        title: 'Banner 管理',
-        icon: 'banner'
+const routes: Route.recordRaw = {
+  path: '/banner',
+  component: Layout,
+  redirect: '/banner/list',
+  name: 'banner',
+  meta: {
+    title: 'Banner 管理',
+    icon: 'banner',
+  },
+  children: [
+    {
+      path: 'detail',
+      name: 'bannerCreate',
+      component: () => import('@/views/banner/detail.vue'),
+      meta: {
+        title: '新增 Banner',
+      },
     },
-    children: [
-        {
-            path: 'detail',
-            name: 'bannerCreate',
-            component: () => import('@/views/banner/detail.vue'),
-            meta: {
-                title: '新增 Banner'
-            }
-        },
-        {
-            path: 'list',
-            name: 'bannerList',
-            component: () => import('@/views/banner/list.vue'),
-            meta: {
-                title: 'Banner 列表'
-            }
-        },
-        {
-            path: 'detail/:id',
-            name: 'bannerEdit',
-            component: () => import('@/views/banner/detail.vue'),
-            meta: {
-                title: '编辑 Banner',
-                sidebar: false,
-                activeMenu: '/banner/list'
-            }
-        }
-    ]
+    {
+      path: 'list',
+      name: 'bannerList',
+      component: () => import('@/views/banner/list.vue'),
+      meta: {
+        title: 'Banner 列表',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'bannerEdit',
+      component: () => import('@/views/banner/detail.vue'),
+      meta: {
+        title: '编辑 Banner',
+        sidebar: false,
+        activeMenu: '/banner/list',
+      },
+    },
+  ],
 }
+
+export default routes
 ```
 
 展示效果如下：
@@ -371,66 +405,70 @@ export default {
 
 其实根据图中的效果，可以确定路由需要有三层，剩下就是通过配置项去控制侧边栏导航和面包屑导航是否展示。
 
-```js
+```ts
+import type { Route } from '@/global'
+
 const Layout = () => import('@/layout/index.vue')
 
-export default {
-    path: '/banner',
-    component: Layout,
-    redirect: '/banner/list',
-    name: 'banner',
-    meta: {
-        title: 'Banner 管理',
-        icon: 'banner'
+const routes: Route.recordRaw = {
+  path: '/banner',
+  component: Layout,
+  redirect: '/banner/list',
+  name: 'banner',
+  meta: {
+    title: 'Banner 管理',
+    icon: 'banner',
+  },
+  children: [
+    {
+      path: 'detail',
+      redirect: '/banner/list/detail',
+      meta: {
+        title: '新增 Banner',
+      },
     },
-    children: [
+    {
+      path: 'list',
+      meta: {
+          title: 'Banner 列表'
+      },
+      children: [
         {
-            path: 'detail',
-            redirect: '/banner/list/detail',
-            meta: {
-                title: '新增 Banner'
-            }
+          path: '',
+          name: 'bannerList',
+          component: () => import('@/views/banner/list.vue'),
+          meta: {
+            title: 'Banner 列表',
+            sidebar: false,
+            breadcrumb: false,
+          }
         },
         {
-            path: 'list',
-            meta: {
-                title: 'Banner 列表'
-            },
-            children: [
-                {
-                    path: '',
-                    name: 'bannerList',
-                    component: () => import('@/views/banner/list.vue'),
-                    meta: {
-                        title: 'Banner 列表',
-                        sidebar: false,
-                        breadcrumb: false
-                    }
-                },
-                {
-                    path: 'detail',
-                    name: 'bannerCreate',
-                    component: () => import('@/views/banner/detail.vue'),
-                    meta: {
-                        title: '新增 Banner',
-                        sidebar: false,
-                        activeMenu: '/banner/detail'
-                    }
-                },
-                {
-                    path: 'detail/:id',
-                    name: 'bannerEdit',
-                    component: () => import('@/views/banner/detail.vue'),
-                    meta: {
-                        title: '编辑 Banner',
-                        sidebar: false,
-                        activeMenu: '/banner/list'
-                    }
-                }
-            ]
-        }
-    ]
+          path: 'detail',
+          name: 'bannerCreate',
+          component: () => import('@/views/banner/detail.vue'),
+          meta: {
+            title: '新增 Banner',
+            sidebar: false,
+            activeMenu: '/banner/detail',
+          }
+        },
+        {
+          path: 'detail/:id',
+          name: 'bannerEdit',
+          component: () => import('@/views/banner/detail.vue'),
+          meta: {
+            title: '编辑 Banner',
+            sidebar: false,
+            activeMenu: '/banner/list',
+          },
+        },
+      ],
+    },
+  ],
 }
+
+export default routes
 ```
 
 ## 后端生成
@@ -445,13 +483,15 @@ export default {
 
 在应用配置里开启：
 
-```js
-app: {
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
     routeBaseOn: 'backend'
+  }
 }
 ```
 
-开启后访问 `/src/store/modules/route.js` 文件，找到 `generateRoutesAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/route.js` 里查看 mock 数据。
+开启后访问 `/src/store/modules/route.ts` 文件，找到 `generateRoutesAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/route.ts` 里查看 mock 数据。
 
 开启后端生成后，路由权限有两种做法，一种是后端直接返回用户具备访问权限的路由数据，另一种则返回全部的路由的数据，让框架自行处理。两种做法的区别在于第一种返回的路由数据里，无需在 meta 对象里设置 auth 参数。
 
@@ -459,21 +499,19 @@ app: {
 
 基于后台框架的页面都是需要登录后才能访问，如果希望增加免登录的页面，也就是脱离框架本身，相对独立的页面，你可以按照下面的方式处理。
 
-首先在 `/src/router/routes.js` 里 `constantRoutes` 配置免登录页面的路由，然后在 `meta` 对象里设置 `whiteList: true` ，例子如下。
+首先在 `/src/router/routes.ts` 里 `constantRoutes` 配置免登录页面的路由，然后在 `meta` 对象里设置 `whiteList: true` ，例子如下。
 
-```js {10}
-// 固定路由
-const constantRoutes = [
-	...,
-    {
-        path: '/no/login/example',
-        name: 'noLoginExample',
-        component: () => import('@/views/no-login-example.vue'),
-        meta: {
-            title: '免登录页面',
-            whiteList: true
-        }
-    }
+```ts {8}
+const constantRoutes: Route.recordRaw[] = [
+  {
+    path: '/no/login/example',
+    name: 'noLoginExample',
+    component: () => import('@/views/no-login-example.vue'),
+    meta: {
+      title: '免登录页面',
+      whiteList: true,
+    },
+  },
 ]
 ```
 

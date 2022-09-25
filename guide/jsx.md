@@ -6,23 +6,23 @@
 
 ## 开发模式
 
-### 在 jsx 文件中开发
+### 在 tsx 文件中开发
 
-```jsx
+```tsx
 // 在 render 中返回
 export default defineComponent({
-    name: 'Jsx',
-    render() {
-        return <div>我是一个div</div>
-    }
+  name: 'Tsx',
+  render() {
+    return <div>我是一个div</div>
+  },
 })
 
 // 在 setup 中返回
 export default defineComponent({
-    name: 'Jsx',
-    setup() {
-        return () => <div>我是一个div</div>
-    }
+  name: 'Tsx',
+  setup() {
+    return () => <div>我是一个div</div>
+  },
 })
 ```
 
@@ -30,9 +30,9 @@ export default defineComponent({
 
 ### 在 vue 文件中开发
 
-是的，你依旧可以在 `.vue` 文件中以 SFC 的方式去编写开发我们的业务代码，只需要给 `<script>` 标签增加 `lang="jsx"` 的设置即可，同样也支持上面所提到的两种开发方式。
+是的，你依旧可以在 `.vue` 文件中以 SFC 的方式去编写开发我们的业务代码，只需要给 `<script>` 标签增加 `lang="tsx"` 的设置即可，同样也支持上面所提到的两种开发方式。
 
-此外，在 `.vue` 文件中开发可直接使用 `<style scoped>` 特性，而在 `.jsx` 文件中开发，则需要使用 [CSS Modules](https://cn.vitejs.dev/guide/features.html#css-modules) 来实现样式隔离。
+此外，在 `.vue` 文件中开发可直接使用 `<style scoped>` 特性，而在 `.tsx` 文件中开发，则需要使用 [CSS Modules](https://cn.vitejs.dev/guide/features.html#css-modules) 来实现样式隔离。
 
 ## 阅读参考
 

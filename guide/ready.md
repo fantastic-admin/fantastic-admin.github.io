@@ -8,13 +8,17 @@
 
 :::tip 分支说明
 - `master` 框架源码分支，不含示例代码，可直接用于实际开发
-- `example` 演示源码分支，同演示站，含有大量示例代码
+- `example` 演示源码分支，同演示站，在框架源码基础上，提供了大量示例代码
 :::
 
-- 手动下载
-  - 去 [Gitee](https://gitee.com/hooray/fantastic-admin) 下载
-  - 去 [Github](https://github.com/hooray/fantastic-admin) 下载
-- git 克隆
+**手动下载（推荐）**
+
+`tags` 下提供每个版本的压缩包下载，仅提供框架源码，不提供演示源码。
+
+- 去 [Gitee](https://gitee.com/hooray/fantastic-admin/tags) 下载
+- 去 [Github](https://github.com/hooray/fantastic-admin/tags) 下载
+
+**git 克隆**
 
 <!-- TODO 等 vitepress 更新后，使用 code group 代替 -->
 
@@ -70,9 +74,9 @@ Node.js 版本需 >= 14.18.0 ，建议为 16.x
 - [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) 彩虹缩进提示
 :::
 
-除此之外，还需要准备好开发使用的浏览器，推荐使用 [Chrome](https://www.google.cn/chrome/) ，并且在 Chrome 里安装好 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 扩展，这一步很重要，安装 Vue 官方提供的调试工具将大大提升解决 bug 的效率。
+除此之外，还需要准备好开发使用的浏览器，推荐使用 [Chrome](https://www.google.cn/chrome/) ，并且在 Chrome 里安装好 [Vue.js devtools 扩展](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)，安装 Vue 官方提供的调试工具在一定程度上可以提升解决 bug 的效率，当然这个扩展开启后，可能在开发环境操作会有些许卡顿，建议不需要时候可以将扩展禁用。
 
-不过由于安装 Vue.js devtools 需要访问 Chrome 应用商店，如果在大陆地区访问，需要自行准备相关**可访问外网**的工具。如果不具备该条件，也可访问 [Vue.js devtools](https://devtools.vuejs.org/) 官网了解本地构建或者下载支持 Firefox 的 Vue.js devtools 。
+不过由于安装 Vue.js devtools 需要访问 Chrome 应用商店，如果在大陆地区访问，需要自行准备相关**可访问外网**的工具。如果不具备该条件，也可访问 [Vue.js devtools 官网](https://devtools.vuejs.org/) 了解本地构建或者下载支持 Edge/Firefox 的 Vue.js devtools 。
 
 ## 技术栈
 

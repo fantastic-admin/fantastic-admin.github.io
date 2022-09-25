@@ -16,75 +16,78 @@
 √  ++ \src\views\example\detail.vue
 √  ++ \src\views\example\components\DetailForm\index.vue
 √  ++ \src\views\example\components\FormMode\index.vue
-√  ++ \src\mock\example.js
+√  ++ \src\mock\example.ts
 ```
 
 这里我已经通过命令在 `/src/views/` 目录下创建好了一个 example 文件夹，并且也生成了 mock 数据。接下来需要去配置下路由，这样我们才可以在导航栏里访问到。
 
-首先在 `/src/router/modules/` 目录下新建一个与文件夹同名的 `example.js` 文件，并在里面复制以下代码：
+首先在 `/src/router/modules/` 目录下新建一个与文件夹同名的 `example.ts` 文件，并在里面复制以下代码：
 
-```js
+```ts
+import type { Route } from '@/global'
+
 const Layout = () => import('@/layout/index.vue')
 
-export default {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/list',
-    name: 'example',
-    meta: {
-        title: '演示'
+const routes: Route.recordRaw = {
+  path: '/example',
+  component: Layout,
+  redirect: '/example/list',
+  name: 'example',
+  meta: {
+    title: '演示',
+  },
+  children: [
+    {
+      path: 'list',
+      name: 'exampleList',
+      component: () => import('@/views/example/list.vue'),
+      meta: {
+        title: '列表',
+      },
     },
-    children: [
-        {
-            path: 'list',
-            name: 'exampleList',
-            component: () => import('@/views/example/list.vue'),
-            meta: {
-                title: '列表'
-            }
-        },
-        {
-            path: 'create',
-            name: 'exampleCreate',
-            component: () => import('@/views/example/detail.vue'),
-            meta: {
-                title: '新增',
-                sidebar: false,
-                activeMenu: '/example/list'
-            }
-        },
-        {
-            path: 'edit/:id',
-            name: 'exampleEdit',
-            component: () => import('@/views/example/detail.vue'),
-            meta: {
-                title: '编辑',
-                sidebar: false,
-                activeMenu: '/example/list'
-            }
-        }
-    ]
+    {
+      path: 'create',
+      name: 'exampleCreate',
+      component: () => import('@/views/example/detail.vue'),
+      meta: {
+        title: '新增',
+        sidebar: false,
+        activeMenu: '/example/list',
+      },
+    },
+    {
+      path: 'edit/:id',
+      name: 'exampleEdit',
+      component: () => import('@/views/example/detail.vue'),
+      meta: {
+        title: '编辑',
+        sidebar: false,
+        activeMenu: '/example/list',
+      },
+    },
+  ],
 }
+
+export default routes
 ```
 
-然后到 `/src/router/routes.js` 文件里加上这个路由配置文件的引用。
+然后到 `/src/router/routes.ts` 文件里加上这个路由配置文件的引用。
 
-```js {1,12}
+```ts {1,12}
 import Example from './modules/example'
 
-const asyncRoutes = [
-    ...,
-    {
-        meta: {
-            title: '页面',
-            icon: 'ri-pages-line'
-        },
-        children: [
-            ...PagesExample,
-            Example
-        ]
+const asyncRoutes: Route.recordMainRaw[] = [
+  ...,
+  {
+    meta: {
+      title: '页面',
+      icon: 'ri-pages-line',
     },
-    ...
+    children: [
+      ...PagesExample,
+      Example,
+    ],
+  },
 ]
 ```
 
@@ -92,55 +95,55 @@ const asyncRoutes = [
 
 先打开 `list.vue` 文件，找到 `onCreate()` 和 `onEdit()` 方法并替换：
 
-```js {4,15}
+```ts {4,15}
 function onCreate() {
-    if (data.value.formMode === 'router') {
-        router.push({
-            name: 'exampleCreate'
-        })
-    } else {
-        data.value.formModeProps.id = ''
-        data.value.formModeProps.visible = true
-    }
+  if (data.value.formMode === 'router') {
+    router.push({
+      name: 'exampleCreate',
+    })
+  } else {
+    data.value.formModeProps.id = ''
+    data.value.formModeProps.visible = true
+  }
 }
 
 function onEdit(row) {
-    if (data.value.formMode === 'router') {
-        router.push({
-            name: 'exampleEdit',
-            params: {
-                id: row.id
-            }
-        })
-    } else {
-        data.value.formModeProps.id = row.id
-        data.value.formModeProps.visible = true
-    }
+  if (data.value.formMode === 'router') {
+    router.push({
+      name: 'exampleEdit',
+      params: {
+        id: row.id,
+      },
+    })
+  } else {
+    data.value.formModeProps.id = row.id
+    data.value.formModeProps.visible = true
+  }
 }
 ```
 
 然后打开 `detail.vue` 文件，替换以下两处：
 
 ```vue-html {1}
-<page-header :title="$route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
-    <el-button size="mini" round @click="goBack">
-        <template #icon>
-            <el-icon>
-                <svg-icon name="ep:arrow-left" />
-            </el-icon>
-        </template>
-        返回
-    </el-button>
+<page-header :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
+  <el-button size="mini" round @click="goBack">
+    <template #icon>
+      <el-icon>
+        <svg-icon name="ep:arrow-left" />
+      </el-icon>
+    </template>
+    返回
+  </el-button>
 </page-header>
 ```
 
-```js {3,5}
+```ts {3,6}
 function goBack() {
-    if (store.state.settings.enableTabbar && !store.state.settings.enableMergeTabbar) {
-        proxy.$tabbar.close({ name: 'exampleList' })
-    } else {
-        proxy.$router.push({ name: 'exampleList' })
-    }
+  if (settingsStore.tabbar.enable && !settingsStore.tabbar.mergeTabs)
+    useTabbar().close({ name: 'exampleList' })
+  
+  else
+    router.push({ name: 'exampleList' })
 }
 ```
 
@@ -152,46 +155,46 @@ function goBack() {
 
 功能部分的介绍主要还是要看代码，先从列表页 `list.vue` 开始。
 
-最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/utils/composables/pagination/index.js` 方便复用。
+最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/utils/composables/pagination/index.ts` 方便复用。
 
-```js
-import { usePagination } from '@/utils/composables'
+```ts
+import usePagination from '@/utils/composables/usePagination'
 
 const { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } = usePagination()
 ```
 
 接着在 `data` 里存放的是标准模块提供的一些配置项和必要数据参数字段。
 
-```js {9,25}
+```ts {9,25}
 const data = ref({
-    loading: false,
-    /**
-     * 详情展示模式
-     * router 路由跳转
-     * dialog 对话框
-     * drawer 抽屉
-     */
-    formMode: 'router',
-    // 详情
-    formModeProps: {
-        visible: false,
-        id: ''
-    },
-    // 搜索
-    search: {
-        account: '',
-        name: '',
-        mobile: '',
-        sex: ''
-    },
-    searchMore: false,
-    // 批量操作
-    batch: {
-        enable: true,
-        selectionDataList: []
-    },
-    // 列表数据
-    dataList: []
+  loading: false,
+  /**
+   * 详情展示模式
+   * router 路由跳转
+   * dialog 对话框
+   * drawer 抽屉
+   */
+  formMode: 'router',
+  // 详情
+  formModeProps: {
+    visible: false,
+    id: '',
+  },
+  // 搜索
+  search: {
+    account: '',
+    name: '',
+    mobile: '',
+    sex: '',
+  },
+  searchMore: false,
+  // 批量操作
+  batch: {
+    enable: true,
+    selectionDataList: [],
+  },
+  // 列表数据
+  dataList: [],
 })
 ```
 
@@ -201,20 +204,19 @@ const data = ref({
 
 紧接着的是下面这段代码，它的作用是当列表页开启缓存时，并以路由跳转的方式进入详情页进行新增或编辑操作后，先对缓存的列表页进行一次数据更新，然后再跳转回列表页，这样即可以保证列表页相关搜索、翻页等状态可以被缓存，又能保证数据是最新。具体实现则是通过绑定一个事件总线，并在详情页里调用这个事件。需要注意的是，专业版如果开启标签栏，事件总线的名称得确保唯一。
 
-```js
+```ts
 onMounted(() => {
-    getDataList()
-    if (data.value.formMode === 'router') {
-        proxy.$eventBus.on('get-data-list', () => {
-            getDataList()
-        })
-    }
+  getDataList()
+  if (data.value.formMode === 'router') {
+    eventBus.on('get-data-list', () => {
+      getDataList()
+    })
+  }
 })
 
 onBeforeUnmount(() => {
-    if (data.value.formMode === 'router') {
-        proxy.$eventBus.off('get-data-list')
-    }
+  if (data.value.formMode === 'router')
+    eventBus.off('get-data-list')
 })
 ```
 

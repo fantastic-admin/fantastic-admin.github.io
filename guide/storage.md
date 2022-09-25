@@ -4,21 +4,23 @@
 
 解决同源 storage 数据冲突的方式就是增加前缀区分，首先需要在应用配置里设置，这里需要你设置一个唯一且不重名的前缀。
 
-```js
-app: {
-    storagePrefix: 'fa_'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    storagePrefix: 'fa_',
+  },
 }
 ```
 
 然后在需要使用到 storage 的地方引入：
 
-```js
+```ts
 import storage from '@/utils/storage'
 ```
 
 这个类封装了 `setItem()` ，`getItem()` ，`removeItem()` ，`clear()` 方法，同时还增加了一个 `has()` 方法用来判断对象是否存在：
 
-```js
+```ts
 // localStorage
 storage.local.has(key)
 storage.local.get(key)

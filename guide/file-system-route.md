@@ -10,9 +10,11 @@
 
 框架默认不启用该特性，如果需要开启，需要到应用配置里修改设置。
 
-```js
-app: {
-	routeBaseOn: 'filesystem'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    routeBaseOn: 'filesystem',
+  },
 }
 ```
 
@@ -48,49 +50,46 @@ views
 
 默认生成的路由均为嵌套路由，父级 component 指向 `/src/layout/index.vue` 组件，即：
 
-```js
+```ts
 // 生成的路由
 {
-    path: '/example/list',
-    component: () => import('/src/layout/index.vue'),
-    children: [
-        {
-            path: '',
-            component: () => import('/src/views/example/list.vue'),
-            name: 'example-list',
-            meta: {
-                layout: 'index'
-            }
-        }
-    ]
+  path: '/example/list',
+  component: () => import('/src/layout/index.vue'),
+  children: [
+    {
+      path: '',
+      component: () => import('/src/views/example/list.vue'),
+      name: 'example-list',
+      meta: {
+        layout: 'index',
+      },
+    },
+  ],
 }
 ```
 
 你可以在 SFC 单文件组件里将 layout 设置为 false，这样该路由则不会生成嵌套路由：
 
-```vue {1-7}
-<route>
-{
-    meta: {
-        layout: false
-    }
-}
+```vue {1-4}
+<route lang="yaml">
+meta:
+  layout: false
 </route>
 
 <template>
-    <div>列表页</div>
+  <div>列表页</div>
 </template>
 ```
 
-```js
+```ts
 // 生成的路由
 {
-    path: '/example/list',
-    component: () => import('/src/views/example/list.vue'),
-    name: 'example-list',
-    meta: {
-        layout: false
-    }
+  path: '/example/list',
+  component: () => import('/src/views/example/list.vue'),
+  name: 'example-list',
+  meta: {
+    layout: false,
+  },
 }
 ```
 
@@ -137,7 +136,7 @@ views
 
 由于导航无法通过路由自动生成，所以在基于文件系统的路由模式下，我们需要手动配置导航数据。
 
-导航数据存放在 `/menu/` 目录下，和 `/router/` 的目录结构类似， `/menu/modules/` 用于存放每个模块的导航配置，最终在 `/menu/index.js` 文件里引用并进行归类，即主导航。
+导航数据存放在 `/menu/` 目录下，和 `/router/` 的目录结构类似， `/menu/modules/` 用于存放每个模块的导航配置，最终在 `/menu/index.ts` 文件里引用并进行归类，即主导航。
 
 导航对象有三个标准参数：
 
@@ -153,13 +152,15 @@ views
 
 同样的，导航数据也可通过后端进行返回，只需在应用配置里做如下修改：
 
-```js
-menu: {
-    baseOn: 'backend'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    baseOn: 'backend',
+  },
 }
 ```
 
-开启后访问 `/src/store/modules/menu.js` 文件，找到 `generateMenusAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/menu.js` 里查看 mock 数据。
+开启后访问 `/src/store/modules/menu.ts` 文件，找到 `generateMenusAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/menu.ts` 里查看 mock 数据。
 
 ## 功能取舍
 

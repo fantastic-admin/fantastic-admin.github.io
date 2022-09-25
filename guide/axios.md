@@ -20,31 +20,31 @@
 
 常用的 GET 和 POST 请求可使用以下的方法：
 
-```js
+```ts
 import api from '@/api'
 
 // GET 请求
 api.get('news/list', {
-    params: {
-        page: 1,
-        size: 10
-    }
-}).then(res => {
-    // 后续业务代码
+  params: {
+    page: 1,
+    size: 10,
+  },
+}).then((res) => {
+  // 后续业务代码
 })
 
 // POST 请求
 api.post('news/create', {
-    title: '新闻标题',
-    content: '新闻内容'
-}).then(res=>{
-    // 后续业务代码
+  title: '新闻标题',
+  content: '新闻内容',
+}).then((res) => {
+  // 后续业务代码
 })
 ```
 
 ### 拦截器
 
-在 `/src/api/index.js` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。但因为每个公司提供的接口标准不同，所以该文件拦截器部分的代码，需要开发者根据实际情况去修改调整。
+在 `/src/api/index.ts` 文件里实例化了 axios 对象，并对 `request` 和 `response` 设置了拦截器，拦截器的用处就是拦截每一次的请求和响应，然后做一些全局的处理。例如接口响应报错，可以在拦截器里用统一的报错提示来展示，方便业务开发。但因为每个公司提供的接口标准不同，所以该文件拦截器部分的代码，需要开发者根据实际情况去修改调整。
 
 代码很简单，首先初始化 axios 对象，然后 `axios.interceptors.request.use()` 和 `axios.interceptors.response.use()` 就分别是请求和响应的拦截代码了。
 
@@ -54,26 +54,26 @@ api.post('news/create', {
 
 生产环境的跨域需要服务端去解决，开发环境的跨域问题可在本地设置代理解决。如果本地开发环境请求接口提示跨域，可以设置 `.env.development` 文件里 `VITE_OPEN_PROXY = true` 开启代理。
 
-```js
+```ts
 import api from '@/api'
 
 api.get('news/list')  // http://localhost:3000/proxy/news/list
 api.post('news/add')  // http://localhost:3000/proxy/news/add
 ```
 
-开启代理后，原有请求都会被指向到本地 `http://localhost:3000/proxy` ，因为 `/proxy` 匹配到了 vite.config.js 里代理部分的设置，所以实际是请求依旧是 `VITE_APP_API_BASEURL` 所设置的地址。
+开启代理后，原有请求都会被指向到本地 `http://localhost:3000/proxy` ，因为 `/proxy` 匹配到了 vite.config.ts 里代理部分的设置，所以实际是请求依旧是 `VITE_APP_API_BASEURL` 所设置的地址。
 
-```js
-// vite.config.js 中 proxy 配置，该配置即用于代理 API 请求
+```ts {2-9}
 server: {
-    proxy: {
-        '/proxy': {
-            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
-            changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-            rewrite: path => path.replace(/\/proxy/, '')
-        }
-    }
-}
+  // vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
+  proxy: {
+    '/proxy': {
+      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
+      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+      rewrite: path => path.replace(/\/proxy/, ''),
+    },
+  },
+},
 ```
 
 ## 多数据源
@@ -82,11 +82,11 @@ server: {
 
 如果只是几个接口需求从其它数据源请求，你可以使用覆盖 `baseURL` 的方式：
 
-```js
+```ts
 import api from '@/api'
 
 api.get('/new/list', {
-    baseURL: 'http://baidu.com/' // 直接覆盖 baseURL
+  baseURL: 'http://baidu.com/', // 直接覆盖 baseURL
 })
 ```
 
@@ -99,9 +99,9 @@ api.get('/new/list', {
 VITE_APP_API_BASEURL_2 = 此处填写接口地址
 ```
 
-然后把 `/src/api/index.js` 文件复制一份，例如就叫 `/src/api/index2.js` ，并且将代码中使用到 `VITE_APP_API_BASEURL` 也替换为 `VITE_APP_API_BASEURL_2` ，这样你就可以在页面中通过引入不同的文件分别请求两个数据源了：
+然后把 `/src/api/index.ts` 文件复制一份，例如就叫 `/src/api/index2.ts` ，并且将代码中使用到 `VITE_APP_API_BASEURL` 也替换为 `VITE_APP_API_BASEURL_2` ，这样你就可以在页面中通过引入不同的文件分别请求两个数据源了：
 
-```js
+```ts
 import api from '@/api'
 import api2 from '@/api/index2'
 
@@ -111,34 +111,34 @@ api.get('/new/list')
 api2.get('/new/list')
 ```
 
-需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `/src/api/index2.js` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
+需注意，如果第二个数据源也需要开启跨域处理的话，需要在 `/src/api/index2.ts` 里定一个新的 proxy 路径，例如 `/proxy2/` ：
 
-```js {2}
+```ts {2}
 const api = axios.create({
-    baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy2/' : import.meta.env.VITE_APP_API_BASEURL_2,
-    timeout: 10000,
-    responseType: 'json'
+  baseURL: import.meta.env.DEV && import.meta.env.VITE_OPEN_PROXY === 'true' ? '/proxy2/' : import.meta.env.VITE_APP_API_BASEURL_2,
+  timeout: 10000,
+  responseType: 'json',
 })
 ```
 
-同时在 vite.config.js 里增加一段新的 proxy 配置：
+同时在 vite.config.ts 里增加一段新的 proxy 配置：
 
-```js {9-13}
-// vite.config.js 中 proxy 配置，该配置即用于代理 API 请求
+```ts {9-13}
 server: {
-    proxy: {
-        '/proxy': {
-            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
-            changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-            rewrite: path => path.replace(/\/proxy/, '')
-        },
-        '/proxy2': {
-            target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL_2,
-            changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
-            rewrite: path => path.replace(/\/proxy2/, '')
-        }
-    }
-}
+  // vite.config.ts 中 proxy 配置，该配置即用于代理 API 请求
+  proxy: {
+    '/proxy': {
+      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL,
+      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+      rewrite: path => path.replace(/\/proxy/, ''),
+    },
+    '/proxy2': {
+      target: loadEnv(mode, process.cwd()).VITE_APP_API_BASEURL_2,
+      changeOrigin: command === 'serve' && loadEnv(mode, process.cwd()).VITE_OPEN_PROXY == 'true',
+      rewrite: path => path.replace(/\/proxy2/, ''),
+    },
+  },
+},
 ```
 
 ## Mock
@@ -157,25 +157,25 @@ mock 文件存放在 `/src/mock/` 下，建议按照不同模块区分文件夹�
 
 以下为示例代码：
 
-```js
+```ts
 export default [
-    {
-        url: '/mock/news/list',
-        method: 'get',
-        response: ({ query }) => {
-            return {
-                error: '',
-                status: 1,
-                data: {
-                    'list|5-10': [
-                        {
-                            'title': '@ctitle'
-                        }
-                    ]
-                }
-            }
-        }
-    }
+  {
+    url: '/mock/news/list',
+    method: 'get',
+    response: ({ query }) => {
+      return {
+        error: '',
+        status: 1,
+        data: {
+          'list|5-10': [
+            {
+              'title': '@ctitle'
+            },
+          ],
+        },
+      }
+    },
+  },
 ]
 ```
 
@@ -188,24 +188,24 @@ export default [
 
 如下所示，其中 `news/list` 会请求本地的 mock 接口，而 `news/add` 依旧请求真实接口，即使开启跨域代理也不影响。
 
-```js {4}
+```ts {4}
 import api from '@/api'
 
 api.get('news/list', {
-	baseURL: '/mock/',
-    params: {
-        page: 1,
-        size: 10
-    }
-}).then(res => {
-    // 后续业务代码
+  baseURL: '/mock/',
+  params: {
+    page: 1,
+    size: 10,
+  },
+}).then((res) => {
+  // 后续业务代码
 })
 
 api.post('news/create', {
-    title: '新闻标题',
-    content: '新闻内容'
-}).then(res => {
-    // 后续业务代码
+  title: '新闻标题',
+  content: '新闻内容',
+}).then((res) => {
+  // 后续业务代码
 })
 ```
 

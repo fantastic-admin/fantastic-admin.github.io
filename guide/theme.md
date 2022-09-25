@@ -8,10 +8,11 @@
 
 ### 专业版
 
-与基础版不同，专业版默认提供了 6 款主题，并且主题可在运行时共存，可动态切换。
+与基础版不同，专业版默认提供了 6 款主题，并且主题在运行时共存，可实现动态切换。
 
-```js
-app: {
+```ts {2-13}
+const globalSettings: Settings.all = {
+  app: {
     /**
      * 主题
      * default 默认
@@ -21,7 +22,8 @@ app: {
      * sys_grey 灰色
      * sys_yellow 黄色
      */
-    theme: 'default'
+    theme: 'default',
+  },
 }
 ```
 
@@ -29,14 +31,14 @@ app: {
 
 ```scss
 $theme-default: (
-    // 明亮模式
-    "": (
-        ...
-    ),
-    // 暗黑模式
-    "dark": (
-        ...
-    )
+  // 明亮模式
+  "": (
+    ...
+  ),
+  // 暗黑模式
+  "dark": (
+    ...
+  )
 )
 ```
 
@@ -52,21 +54,23 @@ $theme-default: (
 @use "../themes/red.scss" as *;
 
 $themes: (
-    default: $theme-default,
-    sys_green: $theme-green,
-    sys_orange: $theme-orange,
-    sys_pink: $theme-pink,
-    sys_grey: $theme-grey,
-    sys_yellow: $theme-yellow,
-    red: $theme-red
+  default: $theme-default,
+  sys_green: $theme-green,
+  sys_orange: $theme-orange,
+  sys_pink: $theme-pink,
+  sys_grey: $theme-grey,
+  sys_yellow: $theme-yellow,
+  red: $theme-red
 );
 ```
 
 最后在应用配置里修改主题为 `red` 就可以调用这个我们创建的主题了。
 
-```js
-app: {
-    theme: 'red'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    theme: 'red',
+  },
 }
 ```
 
@@ -77,6 +81,10 @@ app: {
 你可以在 `/src/assets/style/element-plus/index.scss` 和 `/src/assets/style/element-plus/dark.scss` 文件中分别修改 Element Plus 的明亮和暗黑模式下的预设样式。
 
 你可以到 Element Plus 的 [`packages/theme-chalk/src/common/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss) 和 [`packages/theme-chalk/src/dark/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/dark/var.scss) 中查找更多明亮和暗黑模式下的 scss 变量。
+
+## Element Plus 样式
+
+有时候，我们可能需要重写 Element Plus 组件的一些默认样式，除了可以在 SFC 单文件组件里单独重写外，你也可以在 `/src/assets/style/element-plus/override.scss` 文件中进行全局重写。
 
 ## 开发注意
 
@@ -188,12 +196,12 @@ var(--el-transition-box-shadow)
 
 ```scss
 html {
-    div {
-        color: #000;
-    }
-    &.dark div {
-        color: #fff;
-    }
+  div {
+    color: #000;
+  }
+  &.dark div {
+    color: #fff;
+  }
 }
 ```
 

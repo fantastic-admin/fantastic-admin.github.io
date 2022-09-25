@@ -35,47 +35,4 @@ VITE_BUILD_COMPRESS = gzip,brotli
 ```
 # 是否在打包时生成 sourcemap
 VITE_BUILD_SOURCEMAP = true
-# 是否在打包时删除 console 代码
-VITE_BUILD_DROP_CONSOLE = true
 ```
-
-### 生成 PWA 应用 <sup class="pro-badge" />
-
-在环境配置文件里开启 PWA 支持。
-
-```
-# 是否在打包时候生成PWA
-VITE_BUILD_PWA = true
-```
-
-然后分别在 `/src/main.js` 和 `/src/App.vue` 里取消注释，引入 PWA 所需的相关文件。
-
-<!-- TODO 等 vitepress 更新后，使用 code group 代替 -->
-
-```js
-// PWA
-import './pwa'
-```
-
-```vue {2,8}
-<script setup>
-import ReloadPrompt from '@/pwa/reloadPrompt.vue'
-</script>
-
-<template>
-    <el-config-provider :locale="locales[$store.state.settings.defaultLang]">
-        <RouterView />
-        <ReloadPrompt />
-    </el-config-provider>
-</template>
-```
-
-最后在 `/vite/plugins/pwa.js` 文件里修改 manifest 信息，对应的图片目录为 `/public/pwa_icons/` 。
-
-当准备好这一切并构建部署到生产环境后，你就可以在浏览器的地址栏里看到多了一个小图标，点击后会提示你可以安装应用。
-
-<ZoomImg src="/pwa1.png" />
-
-并且以后再次构建部署，访问地址时，如果浏览器存在缓存，导致页面没有载入最新的资源，在页面右下角还会出现相关提示框。
-
-<ZoomImg src="/pwa2.png" />

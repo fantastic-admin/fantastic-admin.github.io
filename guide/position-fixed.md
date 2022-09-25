@@ -6,6 +6,6 @@
 
 ```vue-html
 <div data-fixed-calc-width>
-    ...
+  ...
 </div>
 ```

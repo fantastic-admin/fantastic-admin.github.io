@@ -16,9 +16,11 @@
 
 <ZoomImg src="/menu-mode-head.png" />
 
-```js
-menu: {
-    menuMode: 'head'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'head',
+  },
 }
 ```
 
@@ -26,9 +28,11 @@ menu: {
 
 <ZoomImg src="/menu-mode-side.png" />
 
-```js
-menu: {
-    menuMode: 'side'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'side',
+  },
 }
 ```
 
@@ -36,9 +40,11 @@ menu: {
 
 <ZoomImg src="/menu-mode-single.png" />
 
-```js
-menu: {
-    menuMode: 'single'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'single',
+  },
 }
 ```
 
@@ -46,9 +52,11 @@ menu: {
 
 <ZoomImg src="/menu-mode-only-side.png" />
 
-```js
-menu: {
-    menuMode: 'only-side'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'only-side',
+  },
 }
 ```
 
@@ -56,9 +64,11 @@ menu: {
 
 <ZoomImg src="/menu-mode-only-head.png" />
 
-```js
-menu: {
-    menuMode: 'only-head'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'only-head',
+  },
 }
 ```
 
@@ -75,9 +85,11 @@ menu: {
 
 <ZoomImg src="/layout_1.gif" />
 
-```js
-layout: {
-    widthMode: 'adaption'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  layout: {
+    widthMode: 'adaption',
+  },
 }
 ```
 
@@ -85,9 +97,11 @@ layout: {
 
 <ZoomImg src="/layout_2.gif" />
 
-```js
-layout: {
-    widthMode: 'adaption-min-width'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  layout: {
+    widthMode: 'adaption-min-width',
+  },
 }
 ```
 
@@ -95,9 +109,11 @@ layout: {
 
 <ZoomImg src="/layout_3.gif" />
 
-```js
-layout: {
-    widthMode: 'center'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  layout: {
+    widthMode: 'center',
+  },
 }
 ```
 
@@ -105,15 +121,17 @@ layout: {
 
 <ZoomImg src="/layout_4.gif" />
 
-```js
-layout: {
-    widthMode: 'center-max-width'
+```ts {2-4}
+const globalSettings: Settings.all = {
+  layout: {
+    widthMode: 'center-max-width',
+  },
 }
 ```
 
 ## 变量
 
-布局相关的变量存放在 `/src/assets/styles/layout.scss` 文件中，均为 CSS 变量。
+布局相关的变量存放在 `/src/assets/styles/globals.scss` 文件中（注意看注释），均为 CSS 变量。
 
 ## 移动端
 

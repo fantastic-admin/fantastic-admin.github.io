@@ -25,7 +25,7 @@
 ```scss
 @import '../../assets/fonts/digital-7/stylesheet.css';
 .digital-7 {
-    font-family: 'digital-7regular';
+  font-family: 'digital-7regular';
 }
 ```
 

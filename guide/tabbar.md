@@ -2,9 +2,11 @@
 
 首先需要在应用配置里开启标签栏功能。
 
-```js
-tabbar: {
-    enable: true
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    enable: true,
+  },
 }
 ```
 
@@ -42,44 +44,46 @@ tabbar: {
 
 当标签栏开启时，框架还提供一个配置属性，即标签页是否合并，首先先看下面这段路由配置。
 
-```js
-{
-    path: '/news',
-    children: [
-        {
-            path: 'list',
-            name: 'NewsList'
-            meta: {
-                title: '新闻列表'
-            }
-        },
-        {
-            path: 'detail/:id',
-            name: 'NewsDetail',
-            meta: {
-                title: '新闻详情',
-                sidebar: false,
-                activeMenu: '/news/list'
-            }
-        },
-        {
-            path: 'create',
-            name: 'NewsCreate',
-            meta: {
-                title: '新增新闻',
-                sidebar: false,
-                activeMenu: '/news/list'
-            }
-        }
-    ]
+```ts
+const routes: Route.recordRaw = {
+  path: '/news',
+  children: [
+    {
+      path: 'list',
+      name: 'NewsList'
+      meta: {
+        title: '新闻列表',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'NewsDetail',
+      meta: {
+        title: '新闻详情',
+        sidebar: false,
+        activeMenu: '/news/list',
+      },
+    },
+    {
+      path: 'create',
+      name: 'NewsCreate',
+      meta: {
+        title: '新增新闻',
+        sidebar: false,
+        activeMenu: '/news/list',
+      },
+    },
+  ],
 }
 ```
 
 当设置标签页不合并时，从**新闻列表页**进入**新闻详情页**，框架会新增一个*新闻详情*的标签页，配置如下。
 
-```js
-tabbar: {
-    mergeTabs: false
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    mergeTabs: false,
+  },
 }
 ```
 
@@ -87,9 +91,11 @@ tabbar: {
 
 而设置当标签栏合并时，从**新闻列表页**进入**新闻详情页**，框架会将*新闻列表*的标签页，替换成*新闻详情*的标签页，始终只保持一个标签页，配置如下。
 
-```js
-tabbar: {
-    mergeTabs: true
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    mergeTabs: true,
+  },
 }
 ```
 
