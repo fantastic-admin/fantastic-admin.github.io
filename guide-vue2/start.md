@@ -18,7 +18,7 @@
   - 去 [Github](https://github.com/hooray/fantastic-admin) 下载
 - git 克隆
 
-```bash
+```sh
 # 从 Gitee 克隆
 
 # 拉取框架源码
@@ -27,7 +27,7 @@ git clone -b vue2 https://gitee.com/hooray/fantastic-admin.git
 git clone -b vue2-example https://gitee.com/hooray/fantastic-admin.git
 ```
 
-```bash
+```sh
 # 从 Github 克隆
 
 # 拉取框架源码
@@ -46,7 +46,7 @@ git clone -b vue2-example https://gitee.com/hooray/fantastic-admin.git
 
 做好准备工作后，依次执行下面的命令：
 
-```bash
+```sh
 # 进入项目目录
 cd fantastic-admin
 # 专业版

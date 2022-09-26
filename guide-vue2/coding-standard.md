@@ -57,7 +57,7 @@ indent_size = 2
 
 修改完毕后，再分别执行下面两句命令：
 
-```bash
+```sh
 yarn run lint
 yarn run stylelint
 ```

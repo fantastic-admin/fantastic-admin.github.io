@@ -22,7 +22,7 @@
 
 <!-- TODO 等 vitepress 更新后，使用 code group 代替 -->
 
-```bash
+```sh
 # 从 Gitee 克隆
 
 # 拉取框架源码
@@ -31,7 +31,7 @@ git clone https://gitee.com/hooray/fantastic-admin.git
 git clone -b example https://gitee.com/hooray/fantastic-admin.git
 ```
 
-```bash
+```sh
 # 从 Github 克隆
 
 # 拉取框架源码
