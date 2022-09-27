@@ -38,7 +38,7 @@
 
 ### 与服务端交互
 
-接口请求即 `/src/api/index.js` 文件，由于 `baseURL` 和跨域代理搭配使用代码耦合较高，请勿直接覆盖文件，建议可以只复制拦截器部分代码进行替换。
+接口请求即 `/src/api/index.ts` 文件，由于 `baseURL` 和跨域代理搭配使用代码耦合较高，请勿直接覆盖文件，建议可以只复制拦截器部分代码进行替换。
 
 跨域开启本地代理仅需要在 `.env.development` 文件里 `VITE_OPEN_PROXY = true` 开启代理即可。
 
@@ -56,7 +56,7 @@ Mock 部分变动较大，在 `Vue2版本` 里提供了 2 种方案，并且 moc
 
 ### 国际化
 
-国际化的入口文件有变化，从 `Vue2版本` 的 `/src/lang/index.js` 变为 `Vue3版本` 的 `/src/locales/index.js` ，请比对后修改，同时语言包的目录也从 `/src/lang/packages/` 变为 `/src/locales/lang/` ，另外语言包的格式为 `.json` 文件，具体可阅读《[国际化](i18n)》。
+国际化的入口文件有变化，从 `Vue2版本` 的 `/src/lang/index.js` 变为 `Vue3版本` 的 `/src/locales/index.ts` ，请比对后修改，同时语言包的目录也从 `/src/lang/packages/` 变为 `/src/locales/lang/` ，另外语言包的格式为 `.json` 文件，具体可阅读《[国际化](i18n)》。
 
 ## 最后
 

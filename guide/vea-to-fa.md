@@ -58,7 +58,7 @@ vue-element-admin 将组件存放在 `/src/components/` 目录下，并且使用
 
 ### 与服务端交互
 
-vue-element-admin 的 `/src/utils/request.js` 对应了 Fantastic-admin 的 `/src/api/index.js` 文件，它们都对 axios 进行了封装，便于统一处理 POST 和 GET 请求，你可以根据原有的配置逐行迁移代码。
+vue-element-admin 的 `/src/utils/request.js` 对应了 Fantastic-admin 的 `/src/api/index.ts` 文件，它们都对 axios 进行了封装，便于统一处理 POST 和 GET 请求，你可以根据原有的配置逐行迁移代码。
 
 另外在 vue-element-admin 的 `/src/api/` 目录下存放了以模块为维度拆分的独立文件，方便统一管理不同模块的所有接口请求，这在大型项目中是很有必要的，而 Fantastic-admin 并未提供特定目录，如果你有这个需求，可以自行建立一个文件夹用来管理这部分文件。
 
