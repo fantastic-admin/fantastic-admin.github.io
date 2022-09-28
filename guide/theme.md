@@ -42,7 +42,7 @@ $theme-default: (
 )
 ```
 
-所以如果要创建一个新主题，可以将 `default.scss` 文件复制一份。例如要增加一个红色主题，则复制 `default.scss` 并将文件名修改为 `red.scss` ，然后将文件里的 `$theme-default` 变量名也修改为 `$theme-red` ，最后打开 `/src/assets/styles/resources/themes.scss` 文件，然后增加以下代码即可。
+所以如果要创建一个新主题，例如要增加一个红色主题，可以将 `default.scss` 文件复制一份，并修改文件名为 `red.scss` ，同时将文件里的 `$theme-default` 变量名也修改为 `$theme-red` ，然后在 `/src/assets/styles/resources/themes.scss` 文件中增加以下代码：
 
 ```scss {7,16}
 @use "../themes/default.scss" as *;
