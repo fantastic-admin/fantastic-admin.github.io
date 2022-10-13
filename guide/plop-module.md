@@ -26,7 +26,7 @@
 ```ts
 import type { Route } from '@/global'
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 
 const routes: Route.recordRaw = {
   path: '/example',
