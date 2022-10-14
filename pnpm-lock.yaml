@@ -2,14 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   medium-zoom: ^1.0.6
-  vitepress: 1.0.0-alpha.19
+  vitepress: 1.0.0-alpha.20
   vue: ^3.2.40
 
 dependencies:
   medium-zoom: 1.0.6
 
 devDependencies:
-  vitepress: 1.0.0-alpha.19
+  vitepress: 1.0.0-alpha.20
   vue: 3.2.40
 
 packages:
@@ -211,14 +211,14 @@ packages:
     resolution: {integrity: sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA==}
     dev: true
 
-  /@vitejs/plugin-vue/3.1.2_vite@3.1.7+vue@3.2.40:
+  /@vitejs/plugin-vue/3.1.2_vite@3.1.8+vue@3.2.40:
     resolution: {integrity: sha512-3zxKNlvA3oNaKDYX0NBclgxTQ1xaFdL7PzwF6zj9tGFziKwmBa3Q/6XcJQxudlT81WxDjEhHmevvIC4Orc1LhQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 3.1.7
+      vite: 3.1.8
       vue: 3.2.40
     dev: true
 
@@ -637,6 +637,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postcss/8.4.18:
+    resolution: {integrity: sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.4
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /preact/10.11.1:
     resolution: {integrity: sha512-1Wz5PCRm6Fg+6BTXWJHhX4wRK9MZbZBHuwBqfZlOdVm2NqPe8/rjYpufvYCwJSGb9layyzB2jTTXfpCTynLqFQ==}
     dev: true
@@ -690,8 +699,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /vite/3.1.7:
-    resolution: {integrity: sha512-5vCAmU4S8lyVdFCInu9M54f/g8qbOMakVw5xJ4pjoaDy5wgy9sLLZkGdSLN52dlsBqh0tBqxjaqqa8LgPqwRAA==}
+  /vite/3.1.8:
+    resolution: {integrity: sha512-m7jJe3nufUbuOfotkntGFupinL/fmuTNuQmiVE7cH2IZMuf4UbfbGYMUT3jVWgGYuRVLY9j8NnrRqgw5rr5QTg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -710,25 +719,25 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.15.10
-      postcss: 8.4.17
+      postcss: 8.4.18
       resolve: 1.22.1
       rollup: 2.78.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.19:
-    resolution: {integrity: sha512-0FIUZB6JGXio7SELDDUkyQoMjmO/UAXqDXmznzOsBKsdZ3EHlyb6NaP/V/BMfN5S8+GV88ScbIL0jd/pDzkLBg==}
+  /vitepress/1.0.0-alpha.20:
+    resolution: {integrity: sha512-8WXPQbWsoAckdS9FqhZ8MQWLDhq6DQG8dhuEtwsZmPMYtl/ezRYWoV/8gJD0T0xUbz6O6vJ8Sddq7OvEwLFUFA==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.1
       '@docsearch/js': 3.2.1
-      '@vitejs/plugin-vue': 3.1.2_vite@3.1.7+vue@3.2.40
+      '@vitejs/plugin-vue': 3.1.2_vite@3.1.8+vue@3.2.40
       '@vue/devtools-api': 6.4.4
       '@vueuse/core': 9.3.0_vue@3.2.40
       body-scroll-lock: 4.0.0-beta.0
       shiki: 0.11.1
-      vite: 3.1.7
+      vite: 3.1.8
       vue: 3.2.40
     transitivePeerDependencies:
       - '@algolia/client-search'
