@@ -69,7 +69,9 @@ getId()
 
 ### 打开新标签页
 
-该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，通过该方式跳转，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到整个标签栏最后的位置。
+该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
+
+通过该方式跳转页面，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到所有标签页的最后。
 
 ```ts
 import useTabbar from '@/utils/composables/useTabbar'
@@ -93,7 +95,9 @@ closeById(tabId)
 
 ### 关闭当前标签页
 
-该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，表示关闭当前标签页并跳转到指定路由，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
+该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
+
+通过该方式跳转页面，同时可以关闭当前标签页，而直接通过路由跳转，当前标签页会被保留。
 
 ```ts
 import useTabbar from '@/utils/composables/useTabbar'
