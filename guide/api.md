@@ -81,18 +81,6 @@ const { open } = useTabbar()
 open(to)
 ```
 
-### 关闭指定标签页
-
-该方法接收一个 `tabId` 参数。
-
-```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
-const { closeById } = useTabbar()
-
-closeById(tabId)
-```
-
 ### 关闭当前标签页
 
 该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
@@ -105,6 +93,18 @@ import useTabbar from '@/utils/composables/useTabbar'
 const { close } = useTabbar()
 
 close(to)
+```
+
+### 关闭指定标签页
+
+该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { closeById } = useTabbar()
+
+closeById(tabId)
 ```
 
 ### 关闭两侧标签页
