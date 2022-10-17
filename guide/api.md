@@ -67,6 +67,18 @@ const { getId } = useTabbar()
 getId()
 ```
 
+### 打开新标签页
+
+该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，通过该方式跳转，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到整个标签栏最后的位置。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { open } = useTabbar()
+
+open(to)
+```
+
 ### 关闭指定标签页
 
 该方法接收一个 `tabId` 参数。
