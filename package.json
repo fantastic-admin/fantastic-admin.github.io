@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "vitepress": "1.0.0-alpha.20",
-    "vue": "^3.2.40"
+    "vue": "^3.2.41"
   },
   "dependencies": {
     "medium-zoom": "^1.0.6"

@@ -9,20 +9,7 @@
 阅读并学习请查看 [Element Plus 官方文档](https://element-plus.org/#/zh-CN)。
 
 :::tip
-框架严格按照 Element Plus 推荐的使用方式进行引入，即按需自动导入，意味着你可以直接在代码里使用组件，而无需手动注册。
-
-但也意味着 Element Plus 一些全局方法将无法使用，例如 Message 消息提示组件。
-
-```js
-// 无法使用
-const { proxy } = getCurrentInstance()
-proxy.$message.success(options)
-
-// 可以使用
-ElMessage.success(options)
-```
-
-另外因为框架没有采用 Element Plus 官方的图标使用方式，这也意味着部分组件的 icon 属性将无法使用，例如 Button 按钮组件。
+为了统一图标的使用，框架没有采用 Element Plus 官方图标的使用方式，这意味着部分 Element Plus 组件的 icon 属性将无法使用，例如 Button 按钮组件。
 
 ```vue-html
 <!-- 无法使用 -->
@@ -30,14 +17,17 @@ ElMessage.success(options)
 
 <!-- 可以使用插槽代替 -->
 <el-button>
-    <template #icon>
-        <el-icon>
-            <svg-icon name="ep:edit" />
-        </el-icon>
-    </template>
-    编辑
+  <template #icon>
+    <el-icon>
+      <svg-icon name="ep:edit" />
+    </el-icon>
+  </template>
+  编辑
 </el-button>
 ```
+
+如果你习惯 Element Plus 官方图标的使用方式，需执行 `pnpm install @element-plus/icons-vue` 安装依赖，并按照官方的使用方式引入图标，点击[查看](http://element-plus.org/zh-CN/component/icon.html)详细介绍。
+
 :::
 
 ## 扩展组件

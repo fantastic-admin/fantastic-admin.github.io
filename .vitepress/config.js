@@ -236,12 +236,14 @@ export default {
             { text: 'SvgIcon SVG图标', link: '/components/svg-icon' },
             { text: 'Trend 趋势标记', link: '/components/trend' },
             { text: 'PcasCascader 省市区街道联动', link: '/components/pcas-cascader' },
+            { text: 'Editor 富文本编辑器', link: '/components/editor' },
             { text: 'LayoutContainer 布局容器', link: '/components/layout-container' },
             { text: 'Chip 纸片', link: '/components/chip' },
             { text: 'ColorfulCard 多彩渐变卡片', link: '/components/colorful-card' },
             { text: 'IconPicker 图标选择器', link: '/components/icon-picker' },
             { text: 'Sparkline 迷你图', link: '/components/sparkline' },
-            { text: 'I18nSelector 国际化选择器', link: '/components/i18n-selector' }
+            { text: 'I18nSelector 国际化选择器', link: '/components/i18n-selector' },
+            { text: 'SignCanvas 电子签名', link: '/components/sign-canvas' }
           ]
         }
       ],
