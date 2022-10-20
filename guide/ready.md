@@ -44,6 +44,10 @@ git clone -b example https://github.com/hooray/fantastic-admin.git
 
 [去购买](../buy)
 
+### JS 版本
+
+框架目前仅提供 TS 版本，如果需要使用 JS 版本，可以在仓库 tags 或 releases 页面里找到 `v1.0.0` 版本，这个是最后更新的 JS 版本，注意这是框架源码，演示源码只能从 git 提交记录中找了。
+
 ## 开发环境
 
 使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
