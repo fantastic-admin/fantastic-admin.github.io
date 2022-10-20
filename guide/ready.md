@@ -88,6 +88,6 @@ Node.js 版本需 >= 14.18.0 ，建议为 16.x
 
 - [Vite](https://cn.vitejs.dev/)
 - [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
-- [Vue Router 4](https://next.router.vuejs.org/zh/)
-- [Pinia](https://pinia.vuejs.org/)
-- [Element Plus](https://element-plus.org/#/zh-CN)
+- [Vue Router 4](https://router.vuejs.org/zh/)
+- [Pinia](https://pinia.vuejs.org/zh/)
+- [Element Plus](https://element-plus.org/zh-CN/)
