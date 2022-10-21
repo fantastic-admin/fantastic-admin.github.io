@@ -58,9 +58,9 @@ import { Icon } from '@iconify/vue'
 
 ### 使用其它图标集的图标 <sup class="pro-badge" />
 
-你可以在 [Iconify 官网](https://icon-sets.iconify.design/) 上查找 Iconify 提供的所有图标，并按照使用 Element Plus 图标的方式去使用。
+你可以在 [Iconify 官网](https://icon-sets.iconify.design/) 上查找 Iconify 提供的所有图标，并按照使用 Element Plus 图标的方式去使用。或者你也可以在 [Icônes 网站](https://icones.js.org/) 上查找你想要的图标，这是一个基于 Iconify 的在线图标搜索网站，它比 Iconify 官网的操作更直观。
 
-或者你也可以在 [Icônes 网站](https://icones.js.org/) 上查找你想要的图标，这是一个基于 Iconify 的在线图标搜索网站，它比 Iconify 官网的操作更直观。并且还提供了 VSCode 扩展，安装 [Icônes 扩展](https://marketplace.visualstudio.com/items?itemName=afzalsayed96.icones) 就可以在 VSCode 里进行图标查找。
+除此之外我们还推荐你安装 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) 这个 VSCode 扩展，方便在 VSCode 里预览图标。
 
 <ZoomImg src="/icones1.png" />
 
