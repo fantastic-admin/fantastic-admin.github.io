@@ -14,11 +14,11 @@ pnpm run dev
 运行成功后，会自动访问页面，默认地址为 `http://localhost:9000`
 
 ::: tip 注意
-由于框架有使用到 husky 这个依赖包，所以请确保在安装依赖前，已经使用 `git init` 对项目进行过 git 环境初始化，否则安装依赖过程中会提示 husky 安装失败。
+由于框架有使用到 simple-git-hooks 这个依赖包，所以请确保在安装依赖前，已经使用 `git init` 对项目进行过 git 环境初始化，如果你在安装依赖后再初始化了 git 环境，请在 git 环境初始化之后再执行一遍 `pnpm install` 安装命令。
 
-了解更多请阅读《[代码规范 - husky & lint-staged](coding-standard#husky-lint-staged)》。
+了解更多请阅读《[代码规范 - simple-git-hooks & lint-staged](coding-standard#simple-git-hooks-lint-staged)》。
 
-此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `prepare` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-admin/` ，则在 `package.json` 里找到 `"prepare": "husky install"` 并修改为 `"prepare": "cd .. && husky install"` 即可。
+此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `postinstall` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-admin/` ，则在 `package.json` 里找到 `"postinstall": "simple-git-hooks"` 并修改为 `"postinstall": "cd .. && simple-git-hooks"` 即可。
 :::
 
 ::: warning 报错

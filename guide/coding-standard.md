@@ -22,13 +22,12 @@
 
 当你对规则进行修改后，原有的代码可能会因为规则的变动导致编辑器大量提示错误，你可以通过运行 `pnpm run lint:stylelint` 进行一次格式校验，如果规则支持自动修复，则会将不符合规则的代码自动进行格式化。
 
-## husky & lint-staged
+## simple-git-hooks & lint-staged
 
-由于 IDE 能做的事比较有限，只能对代码的书写规范进行格式化，对于一些无法自动修复的错误代码，如果没有改正到就被推送到 git 仓库，在多人协作开发时，可能会影响到别人的开发体验。所以框架集成了 [husky](https://github.com/typicode/husky) 和 [lint-staged](https://github.com/okonet/lint-staged) 这两个依赖来解决这一问题。
+由于 IDE 能做的事比较有限，只能对代码的书写规范进行格式化，对于一些无法自动修复的错误代码，如果没有改正到就被推送到 git 仓库，在多人协作开发时，可能会影响到别人的开发体验。所以框架集成了 [simple-git-hooks](https://github.com/toplenboren/simple-git-hooks) 和 [lint-staged](https://github.com/okonet/lint-staged) 这两个依赖来解决这一问题。
 
-在提交代码时，husky 会通过 lint-staged 对 `/src` 目录下的 js vue scss 文件进行分别进行 eslint 和 stylelint 检测，如果有报错，则会阻止本次代码提交，直到开发者修改完所有错误代码后，才允许提交到 git 仓库，这样可以确保 git 仓库里的代码不会有语法错误。
+在提交代码时， simple-git-hooks 会通过 lint-staged 对 `/src` 目录下的 js vue scss 文件进行分别进行 eslint 和 stylelint 检测，如果有报错，则会阻止本次代码提交，直到开发者修改完所有错误代码后，才允许提交到 git 仓库，这样可以确保 git 仓库里的代码不会有语法错误。
 
 ::: tip
-- 通过修改 `.eslintignore`(需自行新建) 和 `.stylelintignore` 可忽略无需做代码规范校验的文件，例如在项目中导入了一些第三方的插件代码或组件代码，我们就可以将其进行忽略。
-- 如果不想使用该特性，你可以在 `.husky/pre-commit` 文件中注释 `pnpm lint-staged` 这行代码。
+通过修改 `.eslintignore`(需自行新建) 和 `.stylelintignore` 可忽略无需做代码规范校验的文件，例如在项目中导入了一些第三方的插件代码或组件代码，我们就可以将其进行忽略。
 :::
