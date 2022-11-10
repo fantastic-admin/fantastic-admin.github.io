@@ -33,7 +33,9 @@ authAll()
 ```ts
 import useMenu from '@/utils/composables/useMenu'
 
-useMenu().switchTo(index)
+const { switchTo } = useMenu()
+
+switchTo(index)
 ```
 
 ## 主页面
@@ -43,7 +45,9 @@ useMenu().switchTo(index)
 ```ts
 import useMainPage from '@/utils/composables/useMainPage'
 
-useMainPage().reload()
+const { reload } = useMainPage()
+
+reload()
 ```
 
 ### 最大化 <sup class="pro-badge" />
@@ -51,8 +55,10 @@ useMainPage().reload()
 ```ts
 import useMainPage from '@/utils/composables/useMainPage'
 
+const { maximize } = useMainPage()
+
 // status: true / false
-useMainPage().maximize(status)
+maximize(status)
 ```
 
 ## 标签栏 <sup class="pro-badge" />
