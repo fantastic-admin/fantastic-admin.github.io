@@ -11,14 +11,17 @@
 - `example` 演示源码分支，同演示站，在框架源码基础上，提供了大量示例代码
 :::
 
-**手动下载（推荐）**
+**手动下载**
 
-`tags` 下提供每个版本的压缩包下载，仅提供框架源码，不提供演示源码。
+推荐去 [Github Releases](https://github.com/fantastic-admin/pro/releases) 页面下载最新版本的压缩包，如下图所示：
 
-- 去 [Gitee](https://gitee.com/hooray/fantastic-admin/tags) 下载
-- 去 [Github](https://github.com/hooray/fantastic-admin/tags) 下载
+<ZoomImg src="/download.png" />
 
 **git 克隆**
+
+:::warning 不推荐
+因为你将会获得到一份还未正式发布的最新源码，里面可能包含了新的特性，也可能包含修改变更，但最重要的是这份源码是不稳定的。
+:::
 
 <!-- TODO 等 vitepress 更新后，使用 code group 代替 -->
 
@@ -42,7 +45,9 @@ git clone -b example https://github.com/hooray/fantastic-admin.git
 
 ### 专业版
 
-[去购买](../buy)
+专业版用户会邀请加入到私有组织，获取源码的方式和基础版一致，只是仓库地址不同。
+
+如果你想获取专业版源码，可以点[这里](../buy)去购买。
 
 ### JS 版本
 
