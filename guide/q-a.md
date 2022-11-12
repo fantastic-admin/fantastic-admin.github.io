@@ -177,3 +177,21 @@ const globalSettings: Settings.all = {
   },
 }
 ```
+
+## 构建报错，提示内存溢出
+
+构建时失败并在错误信息里提示 `Reached heap limit Allocation failed - JavaScript heap out of memory` 。
+
+你可以执行 `pnpm add cross-env -D` 安装 cross-env 依赖，并在 `package.json` 里修改构建脚本指令：
+
+```json {4}
+{
+  ...
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vite build"
+  }
+  ...
+}
+```
+
+其中 4096 表示内存空间大小。
