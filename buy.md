@@ -14,7 +14,19 @@ import { withBase } from 'vitepress'
 
 ## 购买流程
 
-1. 请先加作者**微信**或**QQ**：304327508（注明来意），或者点击 [客服1](https://wpa.qq.com/msgrd?v=3&uin=304327508&site=qq&menu=yes) 或 [客服2](https://wpa.qq.com/msgrd?v=3&uin=61830631&site=qq&menu=yes) 进行在线咨询。
+1. 请先加作者**微信**或**QQ**：304327508（注明来意），或者点击 [这里](https://wpa.qq.com/msgrd?v=3&uin=304327508&site=qq&menu=yes) 进行在线咨询。
+
+<table style="width: min(100%, 500px); display: table; margin: 1rem auto;">
+	<tr>
+		<td align="center">
+			<img :src="withBase('/friend-wechat.png')" />
+		</td>
+		<td align="center">
+			<img :src="withBase('/friend-qq.png')" />
+		</td>
+	</tr>
+</table>
+
 2. 通过微信或支付宝扫码支付，并在备注里留下**手机/微信/QQ/邮箱**等任意一种联系方式。
 3. 支付成功后需提供：
     - **付款截图凭证**
@@ -23,9 +35,9 @@ import { withBase } from 'vitepress'
 4. 接受邀请后，进入[专业版开发者私有组织](https://github.com/fantastic-admin)，获取源码。
 
 > 若你在支付成功并提供相关信息后，作者没有及时回复，请耐心等待。
-> 
+>
 > 若因作者账号被冻结导致无法回复，我们会通过**流程2**里的备注，及时与你取得联系。
-> 
+>
 > 请相信我们，**我们一定会认真对待每一位专业版用户**！
 
 ## 支付方式
@@ -38,12 +50,12 @@ import { withBase } from 'vitepress'
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
 	<tr>
-		<th colspan="2" width="30%" align="center">Vue2 专业版</th>
-		<th colspan="2" width="70%" align="center">Vue3 专业版</th>
+		<th colspan="2" width="25%" align="center">Vue2 专业版</th>
+		<th colspan="2" width="75%" align="center">Vue3 专业版</th>
 	</tr>
 	<tr>
-		<td colspan="2" align="center"><b style="color: #ccc;">￥<span style="font-size: 24px;">596.</span>00</b></td>
-		<td colspan="2" align="center"><b style="color: #ff4400;">￥<span style="font-size: 24px;">796.</span>00</b></td>
+		<td colspan="2" align="center"><b style="color: #ccc;">￥<span style="font-size: 24px;">596</span>.00</b></td>
+		<td colspan="2" align="center"><b style="color: #ff4400;">￥<span style="font-size: 24px;">796</span>.00</b></td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
@@ -58,7 +70,7 @@ import { withBase } from 'vitepress'
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
-      <p style="margin-top: 5px; margin-bottom: 0; color: #aaa;">已于 2021/05 停止更新<br />并于 2022/02 停止维护</p>
+      <p style="margin-top: 5px; margin-bottom: 0; color: #aaa;">2021/05 停止更新<br />2022/02 停止维护</p>
     </td>
 		<td colspan="2" align="center">
       <p style="margin-top: 5px; margin-bottom: 0;">产品生命周期内提供长期维护<br />并赠送 Vue2 专业版</p>
