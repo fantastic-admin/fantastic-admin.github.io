@@ -42,65 +42,84 @@ const globalSettings: Settings.all = {
 
 ## 标签页合并
 
-当标签栏开启时，框架还提供一个配置属性，即标签页是否合并，首先先看下面这段路由配置。
+当标签栏开启时，框架提供标签页是否合并的配置项，方便开发者应对需要合并标签页场景的需求。
+
+以下面这段路由配置为例：
 
 ```ts
 const routes: Route.recordRaw = {
-  path: '/news',
+  path: '/manager',
+  meta: {
+    title: '管理员管理',
+  },
   children: [
     {
-      path: 'list',
-      name: 'NewsList'
+      path: '',
+      name: 'ManagerList'
       meta: {
-        title: '新闻列表',
+        title: '管理员列表',
+      },
+    },
+    {
+      path: 'detail',
+      name: 'ManagerCreate',
+      meta: {
+        title: '新增管理员',
+        sidebar: false,
+        activeMenu: '/manager',
       },
     },
     {
       path: 'detail/:id',
-      name: 'NewsDetail',
+      name: 'ManagerEdit',
       meta: {
-        title: '新闻详情',
+        title: '编辑管理员',
         sidebar: false,
-        activeMenu: '/news/list',
-      },
-    },
-    {
-      path: 'create',
-      name: 'NewsCreate',
-      meta: {
-        title: '新增新闻',
-        sidebar: false,
-        activeMenu: '/news/list',
+        activeMenu: '/manager',
       },
     },
   ],
 }
 ```
 
-当设置标签页不合并时，从**新闻列表页**进入**新闻详情页**，框架会新增一个*新闻详情*的标签页，配置如下。
+### 不合并
 
 ```ts {2-4}
 const globalSettings: Settings.all = {
   tabbar: {
-    mergeTabs: false,
+    mergeTabsBy: '',
   },
 }
 ```
+
+从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，可打开多个不同的**编辑管理员**标签页，效果如下：
 
 <ZoomImg src="/tabbar-no-merge.gif" />
 
-而设置当标签栏合并时，从**新闻列表页**进入**新闻详情页**，框架会将*新闻列表*的标签页，替换成*新闻详情*的标签页，始终只保持一个标签页，配置如下。
+### 根据路由名称进行合并
 
 ```ts {2-4}
 const globalSettings: Settings.all = {
   tabbar: {
-    mergeTabs: true,
+    mergeTabsBy: 'routeName',
   },
 }
 ```
 
-<ZoomImg src="/tabbar-merge.gif" />
+从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，打开多个不同的详情页，只会保持一个**编辑管理员**标签页，效果如下：
 
-这其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页。
+<ZoomImg src="/tabbar-merge-routename.gif" />
 
-通常使用场景是将同个模块的路由合并成一个标签页，使标签栏看上去相对简洁明了。
+### 根据 `meta.activeMenu` 进行合并
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    mergeTabsBy: 'activeMenu',
+  },
+}
+```
+
+从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
+
+<ZoomImg src="/tabbar-merge-activemenu.gif" />
