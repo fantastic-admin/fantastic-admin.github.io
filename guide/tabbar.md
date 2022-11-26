@@ -40,6 +40,10 @@ const globalSettings: Settings.all = {
 
 <ZoomImg src="/tabbar5.gif" />
 
+### 快捷操作下拉菜单
+
+<ZoomImg src="/tabbar6.gif" />
+
 ## 标签页合并
 
 当标签栏开启时，框架提供标签页是否合并的配置项，方便开发者应对需要合并标签页场景的需求。
