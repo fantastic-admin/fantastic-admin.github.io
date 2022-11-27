@@ -51,7 +51,7 @@ const globalSettings: Settings.all = {
 以下面这段路由配置为例：
 
 ```ts
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/manager',
   meta: {
     title: '管理员管理',

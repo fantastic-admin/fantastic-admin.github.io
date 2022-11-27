@@ -24,11 +24,11 @@
 首先在 `/src/router/modules/` 目录下新建一个与文件夹同名的 `example.ts` 文件，并在里面复制以下代码：
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/layouts/index.vue')
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/example',
   component: Layout,
   redirect: '/example/list',
@@ -141,7 +141,7 @@ function onEdit(row) {
 function goBack() {
   if (settingsStore.tabbar.enable && !settingsStore.tabbar.mergeTabs)
     useTabbar().close({ name: 'exampleList' })
-  
+
   else
     router.push({ name: 'exampleList' })
 }

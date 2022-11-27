@@ -139,11 +139,11 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ```
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/layout/index.vue')
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/test',
   component: Layout,
   redirect: '/test/page',

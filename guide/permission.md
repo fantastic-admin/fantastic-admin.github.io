@@ -129,11 +129,11 @@ authAll(['department.create', 'department.edit'])
 当然了，业务有大有小，针对一些小型的管理系统，对权限这块没有这么多复杂的要求，甚至什么角色拥有什么权限都是写死固定的，不需要自由配置。针对这种情况，框架也可以很方便的实现。
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 import Layout from '@/layout/index.vue'
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/banner',
   component: Layout,
   redirect: '/banner/list',

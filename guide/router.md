@@ -9,11 +9,11 @@
 一个路由模块包含以下结构：
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/layout/index.vue')
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/example',
   component: Layout,
   redirect: '/example/index',
@@ -50,11 +50,11 @@ export default routes
 多级路由的中间层级，可以无需设置 `component` 。
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/layout/index.vue')
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/example',
   component: Layout,
   redirect: '/example/level/index',
@@ -91,10 +91,11 @@ export default routes
 只需要将 `path` 设置为需要跳转的 HTTP 地址即可。
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: 'https://hooray.gitee.io/fantastic-admin/',
+  redirect: '',
   meta: {
     title: '官网'
   }
@@ -214,9 +215,9 @@ const asyncRoutes: Route.recordMainRaw[] = [
 该参数常与 `sidebar: false` 一起使用，因为路由不在侧边栏导航显示，会导致进入该路由后，侧边栏导航高亮效果失效，所以需要手动指定。
 
 ```ts {19-20}
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/news',
   meta: {
     title: '新闻管理',
@@ -292,9 +293,9 @@ badge: () => globalStore.number
 如果要开启内嵌网页，component 需要设置为框架提供的 layoue/iframe.vue
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/link',
   component: () => import('@/layouts/index.vue'),
   redirect: '/link/iframe',
@@ -347,11 +348,11 @@ paddingBottom: '80px'
 ## 示例
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/layout/index.vue')
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/banner',
   component: Layout,
   redirect: '/banner/list',
@@ -406,11 +407,11 @@ export default routes
 其实根据图中的效果，可以确定路由需要有三层，剩下就是通过配置项去控制侧边栏导航和面包屑导航是否展示。
 
 ```ts
-import type { Route } from '@/global'
+import type { RouteRecordRaw } from 'vue-router'
 
 const Layout = () => import('@/layout/index.vue')
 
-const routes: Route.recordRaw = {
+const routes: RouteRecordRaw = {
   path: '/banner',
   component: Layout,
   redirect: '/banner/list',
@@ -502,7 +503,7 @@ const globalSettings: Settings.all = {
 首先在 `/src/router/routes.ts` 里 `constantRoutes` 配置免登录页面的路由，然后在 `meta` 对象里设置 `whiteList: true` ，例子如下。
 
 ```ts {8}
-const constantRoutes: Route.recordRaw[] = [
+const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/no/login/example',
     name: 'noLoginExample',
