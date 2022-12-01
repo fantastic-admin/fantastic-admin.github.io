@@ -184,6 +184,7 @@ export default {
         {
           text: '高级',
           items: [
+            { text: '登录', link: '/guide/login' },
             { text: '权限', link: '/guide/permission' },
             { text: '标签栏', link: '/guide/tabbar' },
             { text: '页面缓存', link: '/guide/keep-alive' },

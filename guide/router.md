@@ -86,24 +86,6 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-### 外链
-
-只需要将 `path` 设置为需要跳转的 HTTP 地址即可。
-
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: 'https://hooray.gitee.io/fantastic-admin/',
-  redirect: '',
-  meta: {
-    title: '官网'
-  }
-}
-
-export default routes
-```
-
 ### 主导航
 
 主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类，在 `/src/router/routes.ts` 里进行设置。
@@ -134,7 +116,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 只接受 `title` 和 `icon` 这两个参数，`children` 则是存放我们配置的路由模块数据。
+主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 只接受 `title`、`i18n`、`icon`、`activeIcon`、`auth` 这 5 个参数，`children` 则是存放我们配置的路由模块数据。
 
 ## 导航配置
 
@@ -284,28 +266,31 @@ export default routes
 badge: () => globalStore.number
 ```
 
-### link <sup class="pro-badge" />
+### link
 
 |  类型  | 默认值 | 说明         |
 | :----: | :----: | :----------- |
-| string |   /    | 内嵌网页链接 |
+| string |   /    | 外部网页链接 |
 
-如果要开启内嵌网页，component 需要设置为框架提供的 layoue/iframe.vue
+会在新窗口访问该链接。
+
+内嵌网页无需设置 component ，但需设置 redirect 和 name 属性。
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
-  path: '/link',
+  path: '/xxx',
   component: () => import('@/layouts/index.vue'),
-  redirect: '/link/iframe',
+  redirect: '/xxx/link',
   meta: {
-    title: '外链',
+    title: '外部网页',
   },
   children: [
     {
-      path: 'iframe',
-      component: () => import('@/layout/iframe.vue'),
+      path: 'link',
+      redirect: '',
+      name: 'Link',
       meta: {
         title: 'Gitee 仓库',
         link: 'https://gitee.com/hooray/fantastic-admin',
@@ -315,6 +300,54 @@ const routes: RouteRecordRaw = {
 }
 
 export default routes
+```
+
+### iframe <sup class="pro-badge" />
+
+|  类型  | 默认值 | 说明         |
+| :----: | :----: | :----------- |
+| string |   /    | 内嵌网页链接 |
+
+会启用一个 `<iframe>` 并载入该链接。
+
+内嵌网页无需设置 component ，但需设置 redirect 和 name 属性，如果同时设置了 meta.link 则 meta.link 优先级更高。
+
+```ts
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/xxx',
+  component: () => import('@/layouts/index.vue'),
+  redirect: '/xxx/iframe',
+  meta: {
+    title: '内嵌网页',
+  },
+  children: [
+    {
+      path: 'iframe',
+      redirect: '',
+      name: 'Iframe',
+      meta: {
+        title: 'Gitee 仓库',
+        iframe: 'https://gitee.com/hooray/fantastic-admin',
+      },
+    },
+  ],
+}
+
+export default routes
+```
+
+内嵌网页同样支持使用 meta.cache 和 meta.noCache 属性来开启页面缓存，但考虑到 `<iframe>` 本身的性能问题，框架默认提供最大缓存数量为 3 个，超过 3 个则会自动清除最早的缓存页面。
+
+如果需要修改最大缓存数量，请在 `/src/settings.ts` 中修改：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  mainPage: {
+    iframeCacheMax: 3,
+  },
+}
 ```
 
 ### copyright <sup class="pro-badge" />
