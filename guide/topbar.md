@@ -14,7 +14,7 @@ const globalSettings: Settings.all = {
 
 <ZoomImg src="/tabbar-fixed.gif" />
 
-## 切换标签栏和工具栏
+## 切换标签栏和工具栏 <sup class="pro-badge" />
 
 默认标签栏在上，工具栏在下，可以在应用配置里设置切换：
 

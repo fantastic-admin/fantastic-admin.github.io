@@ -170,6 +170,11 @@ import { withBase } from 'vitepress'
 		<td align="center">✔️</td>
 	</tr>
 	<tr>
+		<td align="center">快捷键</td>
+		<td align="center">支持部分</td>
+		<td align="center">✔️</td>
+	</tr>
+	<tr>
 		<td align="center">错误日志上报</td>
 		<td align="center"></td>
 		<td align="center">✔️</td>
