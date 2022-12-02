@@ -8,7 +8,7 @@
 
 ::: details 主导航 | 标签栏 | 工具栏
 
-标签栏 + 工具栏 = 顶栏
+[标签栏](tabbar) + [工具栏](toolbar) = [顶栏](topbar)
 
 <ZoomImg src="/term2.png" />
 :::

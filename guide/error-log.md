@@ -1,6 +1,6 @@
 # 错误日志 <sup class="pro-badge" />
 
-首先需要在应用配置里开启错误日志。
+在应用配置中设置：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {

@@ -150,7 +150,7 @@ meta:
   - [badge](router#badge) <sup class="pro-badge" />
 - children 下级导航数组
 
-同样的，导航数据也可通过后端进行返回，只需在应用配置里做如下修改：
+同样的，导航数据也可通过后端进行返回，只需在应用配置中设置：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {

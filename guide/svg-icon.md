@@ -78,7 +78,7 @@ import { Icon } from '@iconify/vue'
 
 
 :::details 基础版
-在应用配置里修改 Iconify 图标的使用方式改为离线使用。
+在应用配置中设置 Iconify 图标的使用方式改为离线使用：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {

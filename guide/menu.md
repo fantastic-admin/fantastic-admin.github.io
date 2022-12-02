@@ -1,0 +1,134 @@
+# 导航菜单
+
+## 切换主导航同时跳转页面
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    switchMainMenuAndPageJump: true,
+  },
+}
+```
+
+<ZoomImg src="/menu-switchmainmenuandpagejump.gif" />
+
+## 次导航可同时展开多个子项
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    subMenuUniqueOpened: false,
+  },
+}
+```
+
+<ZoomImg src="/menu-submenuuniqueopened.gif" />
+
+## 次导航默认收起
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    subMenuCollapse: true,
+  },
+}
+```
+
+<ZoomImg src="/menu-submenucollapse.gif" />
+
+## 开启次导航展开/收起按钮
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    enableSubMenuCollapseButton: true,
+  },
+}
+```
+
+<ZoomImg src="/menu-enablesubmenucollapsebutton.gif" />
+
+## 次导航只有一个导航时自动隐藏 <sup class="pro-badge" />
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    subMenuOnlyOneHide: true,
+  },
+}
+```
+
+搭配开启 `menu.switchMainMenuAndPageJump` 可以实现如下的效果：
+
+<ZoomImg src="/menu-submenuonlyonehide.gif" />
+
+你只需要在某个主导航下只保留一个次导航，就像这样：
+
+```ts {3,18-26}
+import MultilevelMenuExample from './modules/multilevel.menu.example'
+import BreadcrumbExample from './modules/breadcrumb.example'
+import Test from './modules/test'
+
+// 动态路由（异步路由、导航栏路由）
+const asyncRoutes: Route.recordMainRaw[] = [
+  {
+    meta: {
+      title: '演示',
+      i18n: 'route.demo',
+      icon: 'sidebar-default',
+    },
+    children: [
+      MultilevelMenuExample,
+      BreadcrumbExample,
+    ],
+  },
+  {
+    meta: {
+      title: '无次导航',
+      icon: 'sidebar-default',
+    },
+    children: [
+      Test,
+    ],
+  },
+]
+```
+
+```ts
+import type { RouteRecordRaw } from 'vue-router'
+
+const Layout = () => import('@/layout/index.vue')
+
+const routes: RouteRecordRaw = {
+  path: '/test',
+  component: Layout,
+  redirect: '/test/page',
+  name: 'test',
+  meta: {
+    title: '演示页面',
+  },
+  children: [
+    {
+      path: 'page',
+      name: 'testPage',
+      component: () => import('@/views/test/page.vue'),
+      meta: {
+        title: '演示页面',
+        sidebar: false,
+      },
+    },
+  ],
+}
+
+export default routes
+```

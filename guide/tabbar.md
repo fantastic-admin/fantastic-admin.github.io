@@ -1,6 +1,6 @@
 # 标签栏 <sup class="pro-badge" />
 
-首先需要在应用配置里开启标签栏功能。
+在应用配置中设置：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {
@@ -127,3 +127,17 @@ const globalSettings: Settings.all = {
 从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
 
 <ZoomImg src="/tabbar-merge-activemenu.gif" />
+
+## 显示图标
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    enableIcon: true,
+  },
+}
+```
+
+会根据当前路由配置中的 `meta.icon` 和 `meta.activeIcon` 属性来显示图标，如果未设置，则会根据路由嵌套层级，依次向上查找父级路由的 `meta.icon` 和 `meta.activeIcon` 属性进行显示。

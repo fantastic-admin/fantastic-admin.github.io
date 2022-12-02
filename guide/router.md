@@ -158,7 +158,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :-----: | :----: | :----------------- |
 | boolean | false  | 次导航是否默认展开 |
 
-使用该特性时，建议在应用配置里关闭 `menu.subMenuUniqueOpened` 设置。
+使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置。
 
 ### permanent <sup class="pro-badge" />
 
@@ -166,7 +166,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :-----: | :----: | :------------- |
 | boolean | false  | 是否常驻标签页 |
 
-使用该特性时，需要在应用配置里开启 `tabbar.enable` 设置，同时需注意，请勿在带有参数的路由上设置该特性。
+使用该特性时，需要在应用配置中开启 `tabbar.enable` 设置，同时需注意，请勿在带有参数的路由上设置该特性。
 
 ### auth
 
@@ -340,7 +340,7 @@ export default routes
 
 内嵌网页同样支持使用 meta.cache 和 meta.noCache 属性来开启页面缓存，但考虑到 `<iframe>` 本身的性能问题，框架默认提供最大缓存数量为 3 个，超过 3 个则会自动清除最早的缓存页面。
 
-如果需要修改最大缓存数量，请在 `/src/settings.ts` 中修改：
+如果需要修改最大缓存数量，请在应用配置中设置：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {
@@ -515,7 +515,7 @@ export default routes
 如果你执意使用该特性，请确保你了解该特性在上面所说的优缺点，并谨慎使用！
 :::
 
-在应用配置里开启：
+在应用配置中设置：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {

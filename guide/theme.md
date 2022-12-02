@@ -10,11 +10,10 @@
 
 与基础版不同，专业版默认提供了 6 款主题，并且主题在运行时共存，可实现动态切换。
 
-```ts {2-13}
+```ts {2-12}
 const globalSettings: Settings.all = {
   app: {
     /**
-     * 主题
      * default 默认
      * sys_green 绿色
      * sys_orange 橙色
@@ -26,6 +25,8 @@ const globalSettings: Settings.all = {
   },
 }
 ```
+
+<ZoomImg src="/theme.gif" />
 
 如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。首先先打开默认主题了解下代码结构 `/src/assets/styles/themes/default.scss` ，主题的样式都存放在 `$theme-default` 这个变量里，注意明亮模式和暗黑模式的区分，两者里面属性名是完全一致的。
 
@@ -64,7 +65,7 @@ $themes: (
 );
 ```
 
-最后在应用配置里修改主题为 `red` 就可以调用这个我们创建的主题了。
+最后在应用配置中设置主题为 `red` 就可以调用这个我们创建的主题了：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {
@@ -73,6 +74,100 @@ const globalSettings: Settings.all = {
   },
 }
 ```
+
+## 颜色方案
+
+在应用配置中设置：
+
+```ts {2-9}
+const globalSettings: Settings.all = {
+  app: {
+    /**
+     * 留空跟随系统
+     * light 明亮模式
+     * dark 暗黑模式
+     */
+    colorScheme: '',
+  },
+}
+```
+
+## 导航栏风格 <sup class="pro-badge" />
+
+### 填充风格
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  menu: {
+    /**
+     * 留空默认
+     * radius 圆角
+     */
+    menuFillStyle: '',
+  },
+}
+```
+
+<ZoomImg src="/menu-fill-style.png" />
+
+### 激活风格
+
+在应用配置中设置：
+
+```ts {2-10}
+const globalSettings: Settings.all = {
+  menu: {
+    /**
+     * 留空默认
+     * arrow 箭头
+     * line 线条
+     * dot 圆点
+     */
+    menuActiveStyle: '',
+  },
+}
+```
+
+<ZoomImg src="/menu-active-style.png" />
+
+## 面包屑导航风格 <sup class="pro-badge" />
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  breadcrumb: {
+    /**
+     * 留空默认
+     * modern 现代
+     */
+    style: '',
+  },
+}
+```
+
+<ZoomImg src="/breadcrumb-style.png" />
+
+## 标签栏风格 <sup class="pro-badge" />
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  tabbar: {
+    /**
+     * fashion 时尚
+     * card 卡片
+     * square 方块
+     */
+    tabStyle: 'fashion',
+  },
+}
+```
+
+<ZoomImg src="/tabbar-style.png" />
 
 ## Element Plus 主题
 
@@ -85,6 +180,23 @@ const globalSettings: Settings.all = {
 ## Element Plus 样式
 
 有时候，我们可能需要重写 Element Plus 组件的一些默认样式，除了可以在 SFC 单文件组件里单独重写外，你也可以在 `/src/assets/style/element-plus/override.scss` 文件中进行全局重写。
+
+## Element Plus 默认尺寸
+
+在应用配置中设置：
+
+```ts {2-9}
+const globalSettings: Settings.all = {
+  app: {
+    /**
+     * default 默认
+     * large 大号
+     * small 小号
+     */
+    elementSize: 'default',
+  },
+}
+```
 
 ## 开发注意
 

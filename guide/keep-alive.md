@@ -12,7 +12,7 @@
 
 ## 标签栏关闭时
 
-首先需要在应用配置里设置（基础版无需设置）：
+在应用配置中设置（基础版无需设置）：
 
 ```ts {2-4}
 const globalSettings: Settings.all = {
@@ -111,7 +111,7 @@ const routes: RouteRecordRaw = {
 
 ### 标签页不合并
 
-在应用配置里设置：
+在应用配置中设置：
 
 ```ts {2-5}
 const globalSettings: Settings.all = {
@@ -128,7 +128,7 @@ const globalSettings: Settings.all = {
 
 ### 标签页根据路由名称合并
 
-在应用配置里设置：
+在应用配置中设置：
 
 ```ts {2-5}
 const globalSettings: Settings.all = {
@@ -143,7 +143,7 @@ const globalSettings: Settings.all = {
 
 ### 标签页根据路由 `meta.activeMenu` 字段合并
 
-在应用配置里设置：
+在应用配置中设置：
 
 ```ts {2-5}
 const globalSettings: Settings.all = {
