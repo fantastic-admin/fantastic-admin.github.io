@@ -13,7 +13,7 @@
 
 **手动下载**
 
-推荐去 [Github Releases](https://github.com/fantastic-admin/pro/releases) 页面下载最新版本的压缩包，如下图所示：
+推荐去 [Github Releases](https://github.com/hooray/fantastic-admin/releases) 页面下载最新版本的压缩包，如下图所示：
 
 <ZoomImg src="/download.png" />
 

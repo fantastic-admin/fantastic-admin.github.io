@@ -131,8 +131,8 @@ import { withBase } from 'vitepress'
 	</tr>
 	<tr>
 		<td align="center">导航路由配置项</td>
-		<td align="center">8 个</td>
-		<td align="center" style="color: #e34d22;">17 个</td>
+		<td align="center">9 个</td>
+		<td align="center" style="color: #e34d22;">18 个</td>
 	</tr>
 	<tr>
 		<td align="center">外链导航</td>
