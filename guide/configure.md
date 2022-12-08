@@ -66,7 +66,7 @@ VITE_BUILD_COMPRESS = gzip,brotli
 
 开发者请在 `/src/settings.ts` 文件中设置自定义配置，而 `/src/settings.default.ts` 为框架的默认配置，请勿在该文件内修改。
 
-关于配置的类型定义，可以在 `/src/globals.d.ts` 文件中查阅。
+关于配置的类型定义，可以在 `/src/types/globals.d.ts` 文件中查阅。
 
 ```ts
 // 这是基础版演示源码里的自定义配置示例
@@ -81,6 +81,9 @@ const globalSettings: Settings.all = {
   menu: {
     enableSubMenuCollapseButton: true,
     enableHotkeys: true,
+  },
+  topbar: {
+    mode: 'fixed',
   },
   toolbar: {
     enableFullscreen: true,
