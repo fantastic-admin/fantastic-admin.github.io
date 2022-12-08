@@ -4,7 +4,7 @@
 
 提供了 3 种模式可选择，可以在应用配置里设置：
 
-```ts {2-8}
+```ts {2-9}
 const globalSettings: Settings.all = {
   topbar: {
     /**
