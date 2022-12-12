@@ -74,14 +74,12 @@
 
 你可以执行 `pnpm add cross-env -D` 安装 cross-env 依赖，并在 `package.json` 里修改构建脚本指令：
 
-```json {4}
+```json {3}
 {
-  ...
   "scripts": {
-    "build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 vite build"
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 vue-tsc --noEmit && vite build"
   }
-  ...
 }
 ```
 
-其中 4096 表示内存空间大小。
+其中 8192 表示内存空间大小。
