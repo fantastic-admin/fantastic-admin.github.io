@@ -7,7 +7,7 @@ titleTemplate: 一款 Vue 中后台管理系统框架
 hero:
   name: Fantastic-admin
   text: 杰出的管理系统框架
-  tagline: 开箱即用，为开发提供舒适体验
+  tagline: 开箱即用，提供舒适开发体验
   image:
     src: /logo.png
     alt: Vite
@@ -51,3 +51,12 @@ features:
   title: 丰富的业务页面
   details: 通过真实场景及真实需求，沉淀出数十个业务应用的静态页面，方便开发人员直接使用
 ---
+
+<script setup>
+import { onMounted } from 'vue'
+import { fetchReleaseTag } from './.vitepress/utils/fetchReleaseTag.js'
+
+onMounted(() => {
+  fetchReleaseTag()
+})
+</script>
