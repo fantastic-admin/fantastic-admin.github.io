@@ -1,5 +1,6 @@
 import { h } from 'vue'
 import Theme from 'vitepress/theme'
+import './fonts/fira_code/fira_code.css'
 import './styles/var.css'
 import HomePreview from './components/HomePreview.vue'
 import ZoomImg from './components/ZoomImg.vue'

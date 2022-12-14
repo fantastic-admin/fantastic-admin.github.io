@@ -23,6 +23,10 @@
 :root {
   --vp-sidebar-width: 294px;
 }
+/* 字体 */
+:root {
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, 'Fira Code', 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
 /* 首页 */
 :root {
   --vp-home-hero-name-color: transparent;
