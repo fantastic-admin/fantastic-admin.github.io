@@ -95,13 +95,14 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 先打开 `list.vue` 文件，找到 `onCreate()` 和 `onEdit()` 方法并替换：
 
-```ts {4,15}
+```ts {4,16}
 function onCreate() {
   if (data.value.formMode === 'router') {
     router.push({
       name: 'exampleCreate',
     })
-  } else {
+  }
+  else {
     data.value.formModeProps.id = ''
     data.value.formModeProps.visible = true
   }
@@ -115,7 +116,8 @@ function onEdit(row) {
         id: row.id,
       },
     })
-  } else {
+  }
+  else {
     data.value.formModeProps.id = row.id
     data.value.formModeProps.visible = true
   }
@@ -139,11 +141,12 @@ function onEdit(row) {
 
 ```ts {3,6}
 function goBack() {
-  if (settingsStore.tabbar.enable && !settingsStore.tabbar.mergeTabs)
+  if (settingsStore.tabbar.enable && !settingsStore.tabbar.mergeTabs) {
     useTabbar().close({ name: 'exampleList' })
-
-  else
+  }
+  else {
     router.push({ name: 'exampleList' })
+  }
 }
 ```
 
@@ -165,9 +168,11 @@ const { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } = u
 
 接着在 `data` 里存放的是标准模块提供的一些配置项和必要数据参数字段。
 
-```ts {9,25}
+```ts {11,27}
 const data = ref({
   loading: false,
+  // 表格是否自适应高度
+  tableAutoHeight: false,
   /**
    * 详情展示模式
    * router 路由跳转
