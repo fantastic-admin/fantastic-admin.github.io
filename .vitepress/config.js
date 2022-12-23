@@ -307,7 +307,7 @@ export default {
     },
     algolia: {
       appId: '97F9CKAB42',
-      apiKey: '57a5f904c27c39373b9cdc1508e9d5b2',
+      apiKey: '4e99a9432adb2e0c37178c43c14d3ebc',
       indexName: 'fantastic-admin',
       placeholder: '请输入关键词',
       buttonText: '搜索',
