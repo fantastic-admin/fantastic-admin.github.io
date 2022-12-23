@@ -95,17 +95,28 @@ jobs:
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: gh-pages
 
+  # algolia:
+  #   needs: docs-github
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Get the content of algolia.json as config
+  #       id: algolia_config
+  #       run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
+  #     - name: Push indices to Algolia
+  #       uses: signcl/docsearch-scraper-action@master
+  #       env:
+  #         APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+  #         API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+  #         CONFIG: ${{ steps.algolia_config.outputs.config }}
+
   algolia:
     needs: docs-github
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Get the content of algolia.json as config
-        id: algolia_config
-        run: echo "config=$(cat crawlerConfig.json | jq -r tostring)" >> $GITHUB_OUTPUT
-      - name: Push indices to Algolia
-        uses: signcl/docsearch-scraper-action@master
-        env:
-          APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-          CONFIG: ${{ steps.algolia_config.outputs.config }}
+      - uses: darrenjennings/algolia-docsearch-action@master
+        with:
+          algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          algolia_api_key: ${{ secrets.ALGOLIA_API_KEY }}
+          file: 'crawlerConfig.json'
