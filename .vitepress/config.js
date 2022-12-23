@@ -170,8 +170,6 @@ export default {
             { text: '代码规范', link: '/guide/coding-standard' },
             { text: '术语', link: '/guide/term' },
             { text: '配置', link: '/guide/configure' },
-            { text: '布局', link: '/guide/layout' },
-            { text: '主题', link: '/guide/theme' },
             { text: '路由（导航）', link: '/guide/router' },
             { text: '与服务端交互', link: '/guide/axios' },
             { text: '全局状态管理', link: '/guide/store' },
@@ -182,11 +180,13 @@ export default {
           collapsible: true
         },
         {
-          text: '高级',
+          text: '进阶',
           items: [
             { text: '登录', link: '/guide/login' },
             { text: '权限', link: '/guide/permission' },
             { text: '主页', link: '/guide/home' },
+            { text: '布局', link: '/guide/layout' },
+            { text: '主题', link: '/guide/theme' },
             { text: '动态标题', link: '/guide/title' },
             { text: '导航菜单', link: '/guide/menu' },
             { text: '顶栏', link: '/guide/topbar' },
@@ -195,6 +195,12 @@ export default {
             { text: '面包屑导航', link: '/guide/breadcrumb' },
             { text: '快捷键', link: '/guide/hotkeys' },
             { text: '版权信息', link: '/guide/copyright' },
+          ],
+          collapsible: true
+        },
+        {
+          text: '高级',
+          items: [
             { text: '页面缓存', link: '/guide/keep-alive' },
             { text: '国际化', link: '/guide/i18n' },
             { text: '代码文件自动生成', link: '/guide/plop' },
@@ -206,6 +212,7 @@ export default {
             { text: '自定义字体', link: '/guide/font' },
             { text: 'JSX', link: '/guide/jsx' },
             { text: '基于文件系统的路由', link: '/guide/file-system-route' },
+            { text: '使用 Composition API 开发', link: '/guide/vue3-composition-api' },
             { text: '高级 position:fixed', link: '/guide/position-fixed' }
           ],
           collapsible: true
@@ -213,7 +220,6 @@ export default {
         {
           text: '其它',
           items: [
-            { text: '使用 Composition API 开发', link: '/guide/vue3-composition-api' },
             { text: '框架更新', link: '/guide/upgrade' },
             { text: '从 Vue2 版本迁移', link: '/guide/vue2-to-vue3' },
             { text: '从 vue-element-admin 迁移', link: '/guide/vea-to-fa' },
