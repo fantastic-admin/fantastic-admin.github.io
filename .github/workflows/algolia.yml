@@ -1,10 +1,13 @@
 name: algolia
+
 on:
   push:
-    branches:
-      - docs
+    branches: [docs]
+  workflow_dispatch:
+
 jobs:
   algolia:
+    needs: docs-github
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
