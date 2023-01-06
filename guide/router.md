@@ -464,7 +464,7 @@ const routes: RouteRecordRaw = {
     {
       path: 'list',
       meta: {
-          title: 'Banner 列表'
+        title: 'Banner 列表'
       },
       children: [
         {

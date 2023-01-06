@@ -10,7 +10,7 @@ hero:
   tagline: 开箱即用，提供舒适开发体验
   image:
     src: /logo.png
-    alt: Vite
+    alt: Fantastic-admin
   actions:
     - theme: brand
       text: 开始

@@ -23,35 +23,29 @@
 因为你将会获得到一份还未正式发布的最新源码，里面可能包含了新的特性，也可能包含修改变更，但最重要的是这份源码是不稳定的。
 :::
 
-<!-- TODO 等 vitepress 更新后，使用 code group 代替 -->
+::: code-group
 
-```sh
-# 从 Gitee 克隆
-
+```sh [从 Gitee 克隆]
 # 拉取框架源码
 git clone https://gitee.com/hooray/fantastic-admin.git
 # 拉取演示源码
 git clone -b example https://gitee.com/hooray/fantastic-admin.git
 ```
 
-```sh
-# 从 Github 克隆
-
+```sh [从 Github 克隆]
 # 拉取框架源码
 git clone https://github.com/hooray/fantastic-admin.git
 # 拉取演示源码
 git clone -b example https://github.com/hooray/fantastic-admin.git
 ```
 
+:::
+
 ### 专业版
 
 专业版用户会邀请加入到私有组织，获取源码的方式和基础版一致，只是仓库地址不同。
 
 如果你想获取专业版源码，可以点[这里](../buy)去购买。
-
-### JS 版本
-
-框架目前仅提供 TS 版本，如果需要使用 JS 版本，可以在仓库 tags 或 releases 页面里找到 `v1.0.0` 版本，这个是最后更新的 JS 版本，注意这是框架源码，演示源码只能从 git 提交记录中找了。
 
 ## 开发环境
 

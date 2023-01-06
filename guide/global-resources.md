@@ -20,11 +20,9 @@
 
 可通过 `@include` 直接使用精灵图，无需手动引入 `.scss` 文件，使用方法如下：
 
-<!-- TODO 等 vitepress 更新后，使用 code group 代替 -->
+::: code-group
 
-```scss
-// 方法 1
-
+```scss [单独使用]
 // @include [文件夹名称]-sprite([文件名称]);
 .icon {
   @include example-sprite(address);
@@ -40,9 +38,7 @@
 }
 ```
 
-```scss
-// 方法 2
-
+```scss [全部导入]
 // @include all-[文件夹名称]-sprites;
 @include all-example-sprites;
 
@@ -69,6 +65,8 @@
   height: 100px;
 }
 ```
+
+:::
 
 如果是小型项目，静态图片不多，可全部放在一个文件夹内；如果是中大型项目，文件夹可按模块来划分，这样不同的模块最终会生成各自的精灵图文件。
 

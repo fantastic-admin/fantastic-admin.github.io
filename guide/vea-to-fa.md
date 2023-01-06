@@ -75,7 +75,7 @@ Fantastic-admin 借鉴了 vue-element-admin 通过路由生成导航栏的思路
 |     meta.icon     |    meta.icon    | 导航图标                                                                                                          |
 |   meta.noCache    |   meta.cache    | vue-element-admin 的 noCache 与 Fantastic-admin 的 cache 都是对页面缓存的配置，但背后的逻辑和使用方式却完全不一样 |
 |  meta.breadcrumb  | meta.breadcrumb | 是否在面包屑导航里显示                                                                                            |
-|    meta.affix     |        /        | 标签页是否固定，在 Fantastic-admin 中，标签页是可以通过右键标签页手动设置固定，而非在路由配置里固定写死           |
+|    meta.affix     | meta.permanent  | 标签页是否固定，在 Fantastic-admin 中，标签页还可以通过右键标签页手动设置固定，而非在路由配置里固定写死           |
 |  meta.activeMenu  | meta.activeMenu | 高亮指定导航                                                                                                      |
 
 除了以上 vue-element-admin 提供的配置项之外，Fantastic-admin 还提供了很多额外的配置项，详细可阅读《[路由 - 导航配置](router#导航配置)》。
