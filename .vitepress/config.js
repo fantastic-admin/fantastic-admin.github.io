@@ -258,8 +258,7 @@ export default {
             { text: 'ColorfulCard 多彩渐变卡片', link: '/components/colorful-card' },
             { text: 'IconPicker 图标选择器', link: '/components/icon-picker' },
             { text: 'Sparkline 迷你图', link: '/components/sparkline' },
-            { text: 'I18nSelector 国际化选择器', link: '/components/i18n-selector' },
-            { text: 'SignCanvas 电子签名', link: '/components/sign-canvas' }
+            { text: 'I18nSelector 国际化选择器', link: '/components/i18n-selector' }
           ]
         }
       ],
