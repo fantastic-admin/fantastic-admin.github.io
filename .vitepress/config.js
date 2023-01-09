@@ -113,26 +113,16 @@ export default {
         text: '下载 / 购买',
         items: [
           {
-            text: '基础版',
-            items: [
-              {
-                text: '下载',
-                link: 'https://github.com/hooray/fantastic-admin/releases'
-              }
-            ]
+            text: '下载基础版',
+            link: 'https://github.com/hooray/fantastic-admin/releases'
           },
           {
-            text: '专业版',
-            items: [
-              {
-                text: '购买',
-                link: '/buy'
-              },
-              {
-                text: '定制开发',
-                link: '/customize'
-              }
-            ]
+            text: '购买专业版 ⭐',
+            link: '/buy'
+          },
+          {
+            text: '定制开发',
+            link: '/customize'
           }
         ]
       }
