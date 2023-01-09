@@ -116,12 +116,8 @@ export default {
             text: '基础版',
             items: [
               {
-                text: '去 Gitee 下载',
-                link: 'https://gitee.com/hooray/fantastic-admin'
-              },
-              {
-                text: '去 Github 下载',
-                link: 'https://github.com/hooray/fantastic-admin'
+                text: '下载',
+                link: 'https://github.com/hooray/fantastic-admin/releases'
               }
             ]
           },
