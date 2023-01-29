@@ -6,33 +6,27 @@
 
 ### 基础版
 
-:::tip 分支说明
-- `master` 框架源码分支，不含示例代码，可直接用于实际开发
-- `example` 演示源码分支，同演示站，在框架源码基础上，提供了大量示例代码
+:::tip 说明
+- **框架源码** 不含示例代码，可直接用于实际开发
+- **演示源码** 同演示站，在框架源码基础上，提供了大量示例代码
 :::
 
-**手动下载**
-
-推荐去 [Github Releases](https://github.com/hooray/fantastic-admin/releases) 页面下载最新版本的压缩包，如下图所示：
+到 [Github Releases](https://github.com/hooray/fantastic-admin/releases) 页面下载最新版本的压缩包，如下图所示：
 
 <ZoomImg src="/download.png" />
 
-**git 克隆**
-
-:::warning 不推荐
-因为你将会获得到一份还未正式发布的最新源码，里面可能包含了新的特性，也可能包含修改变更，但最重要的是这份源码是不稳定的。
-:::
+或者也可以从 Gitee/Github 上拉取源码，但需要注意的是，这种方式拉取的是最新的代码，而不是稳定版本，可能会存在一些问题，所以请谨慎使用。
 
 ::: code-group
 
-```sh [从 Gitee 克隆]
+```sh [从 Gitee 拉取]
 # 拉取框架源码
 git clone https://gitee.com/hooray/fantastic-admin.git
 # 拉取演示源码
 git clone -b example https://gitee.com/hooray/fantastic-admin.git
 ```
 
-```sh [从 Github 克隆]
+```sh [从 Github 拉取]
 # 拉取框架源码
 git clone https://github.com/hooray/fantastic-admin.git
 # 拉取演示源码

@@ -1,7 +1,3 @@
-<script setup>
-import { withBase } from 'vitepress'
-</script>
-
 <template>
   <div class="home-preview-block">
     <div class="home-preview">
