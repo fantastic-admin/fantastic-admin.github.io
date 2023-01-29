@@ -160,7 +160,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 该特性只对第一个主导航下的次导航有效，详细原因请参见这个 [issue](https://github.com/element-plus/element-plus/issues/8497) 。
 
-如果你想要让其他主导航下的次导航也能默认展开，可以在 `/src/layouts/components/SubSidebar/index.vue` 中对 `<el-menu>` 增加一句 `:key="menuStore.actived"` ，但这会导致次导航的切换动效失效。
+如果你想要让其他主导航下的次导航也能默认展开，可以在 `/src/layouts/components/SubSidebar/index.vue` 中给 `<el-menu>` 增加一句 `:key="menuStore.actived"` ，但这会导致次导航的切换动效失效。
 
 使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置。
 
