@@ -22,6 +22,5 @@
     ".page-footer",
     ".next-and-prev-link",
     ".table-of-contents"
-  ],
-  "js_render": true
+  ]
 }
