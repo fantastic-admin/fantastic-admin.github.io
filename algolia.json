@@ -1,6 +1,7 @@
 {
   "index_name": "fantastic-admin",
   "start_urls": [
+    "https://hooray.github.io/fantastic-admin",
     "https://hooray.gitee.io/fantastic-admin"
   ],
   "rateLimit": 8,
