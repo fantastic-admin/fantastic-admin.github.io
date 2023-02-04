@@ -296,6 +296,7 @@ export default {
         }
       ]
     },
+    outline: 'deep',
     algolia: {
       appId: 'ZSPI9V0NSX',
       apiKey: '021c88e8b1c541cd0e103797e9630bfe',
