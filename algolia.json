@@ -1,7 +1,10 @@
 {
   "index_name": "fantastic-admin",
   "start_urls": [
-    "https://hooray.github.io/fantastic-admin/"
+    {
+      "url": "https://hooray.github.io/fantastic-admin/",
+      "tags": ["lang", "type"]
+    }
   ],
   "rateLimit": 8,
   "maxDepth": 10,
