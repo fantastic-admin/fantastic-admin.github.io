@@ -3,10 +3,8 @@
   "start_urls": [
     {
       "url": "https://hooray.github.io/fantastic-admin/",
-      "variables": {
-        "lang": "zh-CN",
-        "type": ["lvl1", "lvl2", "lvl3", "lvl4", "lvl5", "content"]
-      }
+      "lang": "zh-CN",
+      "type": ["lvl1", "lvl2", "lvl3", "lvl4", "lvl5", "content"]
     }
   ],
   "rateLimit": 8,
