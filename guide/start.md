@@ -18,7 +18,16 @@ pnpm run dev
 
 了解更多请阅读《[代码规范 - simple-git-hooks & lint-staged](coding-standard#simple-git-hooks-lint-staged)》。
 
-此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `postinstall` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-admin/` ，则在 `package.json` 里找到 `"postinstall": "simple-git-hooks"` 并修改为 `"postinstall": "cd .. && simple-git-hooks"` 即可。
+此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `postinstall` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-admin/` ，则在 `package.json` 里找到 `simple-git-hooks` 配置并修改：
+
+```json {2}
+"simple-git-hooks": {
+  "pre-commit": "cd ./fantastic/ && pnpm lint-staged",
+  "preserveUnused": true
+}
+```
+
+修改后重新执行一下 `pnpm install` 即可。
 :::
 
 ::: warning 报错
