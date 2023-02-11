@@ -22,7 +22,7 @@ pnpm run dev
 
 ```json {2}
 "simple-git-hooks": {
-  "pre-commit": "cd ./fantastic/ && pnpm lint-staged",
+  "pre-commit": "cd ./fantastic-admin/ && pnpm lint-staged",
   "preserveUnused": true
 }
 ```
