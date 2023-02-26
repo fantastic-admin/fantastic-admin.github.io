@@ -13,7 +13,7 @@ const images = computed(() => {
       <ZoomImg :src="`/customer-${i}.png`" />
     </div>
     <div v-if="fold" class="item more" @click="fold = false">
-      <p>更多...</p>
+      <p>查看全部</p>
     </div>
   </div>
 </template>
