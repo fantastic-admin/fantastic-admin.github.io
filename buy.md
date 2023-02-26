@@ -50,15 +50,18 @@ import { withBase } from 'vitepress'
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
 	<tr>
-		<th colspan="2" width="25%" align="center">Vue2 专业版</th>
-		<th colspan="2" width="75%" align="center">Vue3 专业版</th>
+		<th colspan="2" width="25%" style="text-align: center;">Vue2 专业版</th>
+		<th colspan="2" width="75%" style="text-align: center;">Vue3 专业版</th>
 	</tr>
 	<tr>
 		<td colspan="2" align="center"><b style="color: #ccc;">￥<span style="font-size: 24px;">596</span>.00</b></td>
-		<td colspan="2" align="center"><b style="color: #ff4400;">￥<span style="font-size: 24px;">796</span>.00</b></td>
+		<td colspan="2" align="center">
+      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">899</span>.00</b></div>
+      <b style="color: #ccc;">原价：￥1099.00</b>
+    </td>
 	</tr>
 	<tr>
-		<td colspan="2" align="center">
+		<td colspan="2" align="center" style="color: #ccc;">
       停止销售
     </td>
 		<td align="center">
@@ -73,7 +76,7 @@ import { withBase } from 'vitepress'
       <p style="margin-top: 5px; margin-bottom: 0; color: #aaa;">2021/05 停止更新<br />2022/02 停止维护</p>
     </td>
 		<td colspan="2" align="center">
-      <p style="margin-top: 5px; margin-bottom: 0;">产品生命周期内提供长期维护<br />并赠送 Vue2 专业版</p>
+      <p style="margin-top: 5px; margin-bottom: 0;">产品生命周期内提供长期更新维护<br />并赠送 Vue2 专业版</p>
     </td>
 	</tr>
   <tr>
@@ -99,17 +102,13 @@ import { withBase } from 'vitepress'
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
 	<tr>
-		<th width="40%" align="center">⭐功能与服务⭐</th>
-		<th width="30%" align="center">基础版</th>
-		<th width="30%" align="center">专业版</th>
+		<th width="40%" style="text-align: center;">⭐功能与服务⭐</th>
+		<th width="30%" style="text-align: center;">基础版</th>
+		<th width="30%" style="text-align: center;">专业版</th>
 	</tr>
 	<tr>
 		<td align="center">长期维护更新，提供新特性</td>
-		<td colspan="2" align="center">✔️</td>
-	</tr>
-	<tr>
-		<td align="center">定期修复 bug</td>
-		<td colspan="2" align="center">✔️</td>
+		<td colspan="2" align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">开发与构建工具</td>
@@ -136,23 +135,23 @@ import { withBase } from 'vitepress'
 	</tr>
 	<tr>
 		<td align="center">外链导航</td>
-		<td align="center">✔️</td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">内嵌导航</td>
 		<td align="center"></td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">Tab 标签栏</td>
 		<td align="center"></td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">全方位权限验证</td>
-		<td align="center">✔️</td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">扩展组件</td>
@@ -162,37 +161,37 @@ import { withBase } from 'vitepress'
 	<tr>
 		<td align="center">国际化</td>
 		<td align="center"></td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">Mock 数据</td>
-		<td align="center">✔️</td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">快捷键</td>
 		<td align="center">支持部分</td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">错误日志上报</td>
 		<td align="center"></td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">文件自动生成</td>
 		<td align="center">支持部分</td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">业务应用静态页面</td>
 		<td align="center"></td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">团队代码规范</td>
-		<td align="center">✔️</td>
-		<td align="center">✔️</td>
+		<td align="center">✅</td>
+		<td align="center">✅</td>
 	</tr>
 	<tr>
 		<td align="center">框架版权信息</td>

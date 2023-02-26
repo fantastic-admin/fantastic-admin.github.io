@@ -1,7 +1,19 @@
+<script setup>
+import { ref, computed } from 'vue'
+
+const fold = ref(true)
+const images = computed(() => {
+  return fold.value ? 9 : 16
+})
+</script>
+
 <template>
   <div class="customer-evaluate">
-    <div v-for="i in 15" :key="i" class="item">
+    <div v-for="i in images" :key="i" class="item">
       <ZoomImg :src="`/customer-${i}.png`" />
+    </div>
+    <div v-if="fold" class="item more" @click="fold = false">
+      <p>更多...</p>
     </div>
   </div>
 </template>
@@ -18,6 +30,11 @@
   padding: 8px;
   padding: 8px;
   display: inline-flex;
+}
+
+.customer-evaluate .item.more {
+  cursor: pointer;
+  color: #999;
 }
 
 .customer-evaluate .item p {
