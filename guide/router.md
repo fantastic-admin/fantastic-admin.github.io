@@ -178,6 +178,49 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :------------: | :----: | :------------------------------------------------------- |
 | string / array |   /    | 该路由访问权限，支持多个权限叠加，只要满足一个，即可进入 |
 
+用户在访问路由时，会判断当前路由是否具备访问权限，不具备访问权限则会显示 403 页面。
+
+为避免多级路由同时设置 `auth` 可能会导致逻辑冲突，框架会以最先设置的 `auth` 为准：
+
+```ts {13,26}
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/system',
+  meta: {
+    title: '系统管理',
+  },
+  children: [
+    {
+      path: 'department',
+      meta: {
+        title: '部门管理',
+        auth: 'a',
+      },
+      children: [
+        {
+          path: 'job',
+          meta: {
+            title: '职位管理',
+          },
+          children: [
+            {
+              path: 'member',
+              meta: {
+                title: '人员管理',
+                auth: 'b', // 无效设置，该路由的访问权限会以 auth: 'a' 为准
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
+
+export default routes
+```
+
 用户在登录时，会获取用户权限，根据权限去过滤并动态注册路由。所以没有权限的路由不会被注册，也不会在侧边栏导航里显示，详细可阅读《[权限 - 路由权限](permission#路由权限)》。
 
 ### sidebar
