@@ -2,14 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   medium-zoom: ^1.0.8
-  vitepress: 1.0.0-alpha.49
+  vitepress: 1.0.0-alpha.51
   vue: ^3.2.47
 
 dependencies:
   medium-zoom: 1.0.8
 
 devDependencies:
-  vitepress: 1.0.0-alpha.49
+  vitepress: 1.0.0-alpha.51
   vue: 3.2.47
 
 packages:
@@ -159,7 +159,7 @@ packages:
     resolution: {integrity: sha512-2xAv2GFuHzzmG0SSZgf8wHX0qZX8n9Y1ZirKUk5Wrdc+vH9CL837x2hZIUdwcPZI9caBA+/CzxsS68O4waYjUQ==}
     dependencies:
       '@docsearch/react': 3.3.3
-      preact: 10.13.0
+      preact: 10.13.1
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -641,8 +641,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /preact/10.13.0:
-    resolution: {integrity: sha512-ERdIdUpR6doqdaSIh80hvzebHB7O6JxycOhyzAeLEchqOq/4yueslQbfnPwXaNhAYacFTyCclhwkEbOumT0tHw==}
+  /preact/10.13.1:
+    resolution: {integrity: sha512-KyoXVDU5OqTpG9LXlB3+y639JAGzl8JSBXLn1J9HTSB3gbKcuInga7bZnXLlxmK94ntTs1EFeZp0lrja2AuBYQ==}
     dev: true
 
   /resolve/1.22.1:
@@ -654,8 +654,8 @@ packages:
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
 
-  /rollup/3.18.0:
-    resolution: {integrity: sha512-J8C6VfEBjkvYPESMQYxKHxNOh4A5a3FlP+0BETGo34HEcE4eTlgCrO2+eWzlu2a/sHs2QUkZco+wscH7jhhgWg==}
+  /rollup/3.19.1:
+    resolution: {integrity: sha512-lAbrdN7neYCg/8WaoWn/ckzCtz+jr70GFfYdlf50OF7387HTg+wiuiqJRFYawwSPpqfqDNYqK7smY/ks2iAudg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -724,13 +724,13 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.18.0
+      rollup: 3.19.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.49:
-    resolution: {integrity: sha512-3nUZJow4qL8NHRWYatqqVj45AJDxWst/TuOj+IbQRhxesEswa+Fpwayj9/FxzRzBl665fuiG5y+QeVhOeUm0OA==}
+  /vitepress/1.0.0-alpha.51:
+    resolution: {integrity: sha512-euZpjXeIaNUadLAQtd7NYbKhJJoDyZ6z8YK77qlM2c6NvUB5wmLPU6moP4rfcKUqpBDrsrxjJS6fdPk6azS5qQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
