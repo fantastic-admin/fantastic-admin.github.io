@@ -423,9 +423,29 @@ paddingBottom: '80px'
 | :-----: | :----: | :------------------------------------- |
 | boolean |   /    | 是否开启白名单，开启后无需登录即可访问 |
 
-这个属性比较特殊，请勿在系统路由和动态路由里设置，详细可阅读《[免登录页面](router.md#免登录页面)》。
+这个属性比较特殊，因为基于后台框架的页面基本上都是需要登录后才能访问，如果希望增加免登录的页面（白名单页面），也就是脱离框架本身，相对独立的页面，你可以按照下面的方式处理：
 
-## 示例
+首先在 `/src/router/routes.ts` 里 `constantRoutes` 配置免登录页面的路由，然后在 `meta` 对象里设置 `whiteList: true` ，例子如下：
+
+```ts {8}
+const constantRoutes: RouteRecordRaw[] = [
+  {
+    path: '/no/login/example',
+    name: 'noLoginExample',
+    component: () => import('@/views/no-login-example.vue'),
+    meta: {
+      title: '免登录页面',
+      whiteList: true,
+    },
+  },
+]
+```
+
+需要注意，请勿在**系统路由**和**动态路由**上设置该属性，因为这里面的路由，它们的一级路由调用的是 Layout 组件，而 Layout 组件是必须登录才能正常使用。
+
+## 小技巧
+
+通常我们配置的路由都是这样的：
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -474,17 +494,15 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-展示效果如下：
+对应的展示效果如下：
 
 <ZoomImg src="/breadcrumb1.gif" />
 
-## 小技巧
-
-如果需要在不改变侧边栏导航结构的前提下，面包屑导航希望能变成这样：
+有时候可能会遇到这样的需求，要求在不改变侧边栏导航结构的前提下，面包屑导航能变成这样：
 
 <ZoomImg src="/breadcrumb2.gif" />
 
-其实根据图中的效果，可以确定路由需要有三层，剩下就是通过配置项去控制侧边栏导航和面包屑导航是否展示。
+其实根据图中的效果，可以确定路由需要有三层，那剩下就是通过配置项去控制侧边栏导航和面包屑导航是否展示：
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -581,28 +599,6 @@ const globalSettings: Settings.all = {
 ## 文件系统路由
 
 基于文件系统的路由是除后端生成路由外，另一种路由生成方式。如果你有后端生成路由的需求，不妨先了解下文件系统路由这一特性，它的优势在于将路由和导航菜单进行了解耦，后端无需再关心路由数据，只需提供导航菜单数据即可，详细可阅读《[基于文件系统的路由](file-system-route)》。
-
-## 免登录页面 <sup class="pro-badge" />
-
-基于后台框架的页面都是需要登录后才能访问，如果希望增加免登录的页面，也就是脱离框架本身，相对独立的页面，你可以按照下面的方式处理。
-
-首先在 `/src/router/routes.ts` 里 `constantRoutes` 配置免登录页面的路由，然后在 `meta` 对象里设置 `whiteList: true` ，例子如下。
-
-```ts {8}
-const constantRoutes: RouteRecordRaw[] = [
-  {
-    path: '/no/login/example',
-    name: 'noLoginExample',
-    component: () => import('@/views/no-login-example.vue'),
-    meta: {
-      title: '免登录页面',
-      whiteList: true,
-    },
-  },
-]
-```
-
-需要注意，请勿在**系统路由**和**动态路由**上设置该属性，因为这里面的路由，它们的一级路由调用的是 Layout 组件，而 Layout 组件是必须登录才能正常使用。
 
 ## 导航守卫
 
