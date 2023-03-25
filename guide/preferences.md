@@ -27,38 +27,7 @@ const preferences = ref<Settings.all>({
     theme: settingsDefault.app.theme,
     enableProgress: settingsDefault.app.enableProgress,
   },
-  menu: {
-    menuMode: settingsDefault.menu.menuMode,
-    menuFillStyle: settingsDefault.menu.menuFillStyle,
-    menuActiveStyle: settingsDefault.menu.menuActiveStyle,
-    switchMainMenuAndPageJump: settingsDefault.menu.switchMainMenuAndPageJump,
-    subMenuOnlyOneHide: settingsDefault.menu.subMenuOnlyOneHide,
-    subMenuUniqueOpened: settingsDefault.menu.subMenuUniqueOpened,
-    enableSubMenuCollapseButton: settingsDefault.menu.enableSubMenuCollapseButton,
-  },
-  layout: {
-    widthMode: settingsDefault.layout.widthMode,
-  },
-  mainPage: {
-    enableTransition: settingsDefault.mainPage.enableTransition,
-    transitionMode: settingsDefault.mainPage.transitionMode,
-  },
-  topbar: {
-    mode: settingsDefault.topbar.mode,
-    switchTabbarAndToolbar: settingsDefault.topbar.switchTabbarAndToolbar,
-  },
-  tabbar: {
-    enable: settingsDefault.tabbar.enable,
-    style: settingsDefault.tabbar.style,
-    enableIcon: settingsDefault.tabbar.enableIcon,
-    mergeTabsBy: settingsDefault.tabbar.mergeTabsBy,
-    enableMemory: settingsDefault.tabbar.enableMemory,
-  },
-  breadcrumb: {
-    enable: settingsDefault.breadcrumb.enable,
-    style: settingsDefault.breadcrumb.style,
-    enableMainMenu: settingsDefault.breadcrumb.enableMainMenu,
-  },
+  ...
 })
 ```
 
