@@ -196,6 +196,7 @@ export default {
             { text: '页面水印', link: '/guide/watermark' },
             { text: '错误日志', link: '/guide/error-log' },
             { text: '自定义字体', link: '/guide/font' },
+            { text: '用户偏好设置', link: '/guide/preferences' },
             { text: 'JSX', link: '/guide/jsx' },
             { text: '基于文件系统的路由', link: '/guide/file-system-route' },
             { text: '使用 Composition API 开发', link: '/guide/vue3-composition-api' },

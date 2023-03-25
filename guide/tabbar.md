@@ -141,3 +141,19 @@ const globalSettings: Settings.all = {
 ```
 
 会根据当前路由配置中的 `meta.icon` 和 `meta.activeIcon` 属性来显示图标，如果未设置，则会根据路由嵌套层级，依次向上查找父级路由的 `meta.icon` 和 `meta.activeIcon` 属性进行显示。
+
+## 记忆功能
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    enableMemory: true,
+  },
+}
+```
+
+当开启记忆功能时，框架会将当前标签页的状态记录到浏览器当前会话缓存中，刷新页面或重新登录会自动恢复，效果如下：
+
+<ZoomImg src="/tabbar7-memory.gif" />
