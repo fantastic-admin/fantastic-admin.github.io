@@ -13,23 +13,6 @@ pnpm run dev
 
 运行成功后，会自动访问页面，默认地址为 `http://localhost:9000`
 
-::: tip 注意
-由于框架有使用到 simple-git-hooks 这个依赖包，所以请确保在安装依赖前，已经使用 `git init` 对项目进行过 git 环境初始化，如果你在安装依赖后再初始化了 git 环境，请在 git 环境初始化之后再执行一遍 `pnpm install` 安装命令。
-
-了解更多请阅读《[代码规范 - simple-git-hooks & lint-staged](coding-standard#simple-git-hooks-lint-staged)》。
-
-此外，如果 git 仓库目录和框架目录并非同一个，则需要在 `package.json` 中修改 `postinstall` 脚本，切换到 git 所在目录。例如 git 目录是 `project/` ，而框架目录是 `project/fantastic-admin/` ，则在 `package.json` 里找到 `simple-git-hooks` 配置并修改：
-
-```json {2}
-"simple-git-hooks": {
-  "pre-commit": "cd ./fantastic-admin/ && pnpm lint-staged",
-  "preserveUnused": true
-}
-```
-
-修改后重新执行一下 `pnpm install` 即可。
-:::
-
 ::: warning 报错
 安装依赖时提示 404 ，或者安装结束后，运行时提示「 'vite' 不是内部或外部命令，也不是可运行的程序或批处理文件 」，都些都是依赖未安装成功导致的。可以尝试执行 `pnpm config set registry https://registry.npmmirror.com/` 切换为国内 npmmirror 源（也可以使用 [nrm](https://github.com/Pana/nrm) 一键切换源），然后删除根目录下 `/node_modules` 文件夹并重新安装依赖。
 
