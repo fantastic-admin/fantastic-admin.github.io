@@ -26,9 +26,25 @@ const globalSettings: Settings.all = {
 
 ### 固定
 
-将指定标签页设为固定状态，固定的标签页右键无法直接关闭，同时也不会被关闭其它、关闭左侧、关闭右侧标签页操作所关闭。并且固定的标签页会被记录到浏览器缓存，下次访问将保留固定标签页状态。
+将指定标签页设为固定状态，固定的标签页右键无法直接关闭，同时也不会被关闭其它、关闭左侧、关闭右侧标签页操作所关闭，并且下次访问将保留固定标签页状态。
 
 <ZoomImg src="/tabbar3.gif" />
+
+固定标签页默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `tabbar.storageTo` 配置项来实现，具体配置如下：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  tabbar: {
+    storageTo: 'server',
+  },
+}
+```
+
+然后到 `/src/store/modules/tabbar.ts` 中找到 `updateStorage()` 和 `recoveryStorage()` 这两个函数，分别修改函数内的接口请求部分代码。
+
+:::tip 建议
+为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
+:::
 
 ### 最大化
 

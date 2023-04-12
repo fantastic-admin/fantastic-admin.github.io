@@ -144,7 +144,12 @@ import { withBase } from 'vitepress'
 		<td align="center">✅</td>
 	</tr>
 	<tr>
-		<td align="center">Tab 标签栏</td>
+		<td align="center">标签栏</td>
+		<td align="center"></td>
+		<td align="center">✅</td>
+	</tr>
+	<tr>
+		<td align="center">收藏夹</td>
 		<td align="center"></td>
 		<td align="center">✅</td>
 	</tr>

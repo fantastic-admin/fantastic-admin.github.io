@@ -38,3 +38,7 @@ const preferences = ref<Settings.all>({
 ## 处理请求
 
 当定制好了用户偏好设置内容后，还需要修改页面中两处请求代码，它们分别是 `获取用户偏好设置` 和 `保存用户偏好设置` ，同时也需要到 `/src/store/modules/user.ts` 文件中修改 `getPreferences` 函数。
+
+:::tip 建议
+为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
+:::
