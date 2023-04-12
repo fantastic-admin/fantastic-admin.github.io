@@ -68,6 +68,7 @@ const globalSettings: Settings.all = {
   app: {
     enablePermission: true,
     enableDynamicTitle: true,
+    enableAppSetting: true,
   },
   layout: {
     enableMobileAdaptation: true,
@@ -83,7 +84,18 @@ const globalSettings: Settings.all = {
     enableFullscreen: true,
     enablePageReload: true,
     enableColorScheme: true,
+  },
+}
+```
+
+::: warning 注意
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
     enableAppSetting: true,
   },
 }
 ```
+
+该功能主要是方便开发者在开发阶段调试，生产环境下建议关闭。
+:::

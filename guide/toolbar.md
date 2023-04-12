@@ -72,17 +72,3 @@ const globalSettings: Settings.all = {
 ```
 
 如果设置为不启用，并不代表不支持颜色主题切换，只是不会在工具栏显示切换颜色主题的图标。
-
-## 应用配置
-
-在应用配置中设置：
-
-```ts {2-4}
-const globalSettings: Settings.all = {
-  toolbar: {
-    enableAppSetting: true,
-  },
-}
-```
-
-该功能主要是方便开发者在开发阶段调试，生产环境下建议关闭。
