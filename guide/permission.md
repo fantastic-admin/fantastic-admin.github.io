@@ -20,9 +20,6 @@ async function getPermissions() {
   // 通过 mock 获取权限
   const res = await api.get('member/permission', {
     baseURL: '/mock/',
-    params: {
-      account: account.value,
-    },
   })
   permissions.value = res.data.permissions
   return permissions.value
