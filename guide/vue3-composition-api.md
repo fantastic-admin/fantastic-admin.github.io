@@ -10,25 +10,12 @@ Composition API 是 Vue3 全新提供的一种语法，对于从 Vue2 就在使�
 
 同时得益于 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 的特性，在 `<script setup>` 里无需导入相关 API ，该依赖会自动导入（默认支持 vue，vue-router 和 pinia ）。
 
-```vue {3-4}
-<script setup>
-// 原先需要手动 import 相关 API
-import { ref, computed } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-const route = useRoute()
-const router = useRouter()
-console.log(route.path)
-router.push('/dashboard')
-</script>
-```
-
 ```vue
 <script setup>
-// 现在直接使用即可
+// 无需手动 import 相关 API
+import { ref, computed } from 'vue' // [!code --]
+import { useRoute, useRouter } from 'vue-router' // [!code --]
+
 const count = ref(0)
 const doubled = computed(() => count.value * 2)
 
@@ -41,7 +28,7 @@ router.push('/dashboard')
 
 ## 组件 name
 
-`<script setup>` 可以和普通的 `<script>` 一起使用，所以可以这样：
+`<script setup>` 可以和普通的 `<script>` 一起使用，所以可以这样定义组件 name：
 
 ```vue
 <script>
@@ -55,7 +42,7 @@ export default {
 </script>
 ```
 
-另外框架引用了 [vite-plugin-vue-setup-extend](https://github.com/anncwb/vite-plugin-vue-setup-extend) 依赖，所以可以更方便的设置。
+另外框架引用了 [unplugin-vue-setup-extend-plus](https://github.com/chenxch/unplugin-vue-setup-extend-plus) 依赖，所以可以更方便的设置。
 
 ```vue
 <script setup name="componentName">
