@@ -28,7 +28,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-然后到 `/src/store/modules/favorites.ts` 中找到 `updateStorage()` 和 `recoveryStorage()` 这两个函数，分别修改函数内的接口请求部分代码。
+然后到 `/src/api/modules/user.ts` 中找到 `favorites()` 和 `favoritesEdit()` 这两个函数，并分别修改这两个函数的请求地址。
 
 :::tip 建议
 为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。

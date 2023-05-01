@@ -590,7 +590,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-开启后访问 `/src/store/modules/route.ts` 文件，找到 `generateRoutesAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/route.ts` 里查看 mock 数据。
+开启后在 `/src/api/modules/app.ts` 文件里找到 `routeList()` 这个函数，并修改这个函数的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/app.ts` 里查看 mock 数据。
 
 开启后端生成后，路由权限有两种做法，第一种是返回全部的路由数据，让框架自行处理（推荐），第二种是后端直接返回用户具备访问权限的路由数据。
 

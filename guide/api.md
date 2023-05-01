@@ -75,7 +75,7 @@ getId()
 
 ### 打开新标签页
 
-该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
+该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-push)。
 
 通过该方式跳转页面，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到所有标签页的最后。
 
@@ -87,9 +87,23 @@ const { open } = useTabbar()
 open(to)
 ```
 
+### 后退标签页
+
+该方法接收一个 `delta` 参数，该参数与 `router.go(delta)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-go)。
+
+通过该方式跳转页面，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到所有标签页的最后。
+
+```ts
+import useTabbar from '@/utils/composables/useTabbar'
+
+const { go } = useTabbar()
+
+go(delta)
+```
+
 ### 关闭当前标签页
 
-该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://next.router.vuejs.org/zh/api/#routelocationraw)。
+该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-push)。
 
 通过该方式跳转页面，同时可以关闭当前标签页，而直接通过路由跳转，当前标签页会被保留。
 

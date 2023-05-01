@@ -40,7 +40,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-然后到 `/src/store/modules/tabbar.ts` 中找到 `updateStorage()` 和 `recoveryStorage()` 这两个函数，分别修改函数内的接口请求部分代码。
+然后到 `/src/api/modules/user.ts` 中找到 `tabbar()` 和 `tabbarEdit()` 这两个函数，并分别修改这两个函数的请求地址。
 
 :::tip 建议
 为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
@@ -172,4 +172,4 @@ const globalSettings: Settings.all = {
 
 当开启记忆功能时，框架会将当前标签页的状态记录到浏览器当前会话缓存中，刷新页面或重新登录会自动恢复，效果如下：
 
-<ZoomImg src="/tabbar7-memory.gif" />
+<ZoomImg src="/tabbar-memory.gif" />

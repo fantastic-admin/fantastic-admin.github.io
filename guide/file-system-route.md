@@ -160,7 +160,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-开启后访问 `/src/store/modules/menu.ts` 文件，找到 `generateMenusAtBack()` 这个 action 方法，你要做的就是修改这个方法里的请求地址，请求返回的数据就是路由数据，你可以在 `/src/mock/menu.ts` 里查看 mock 数据。
+开启后在 `/src/api/modules/app.ts` 文件里找到 `menuList()` 这个函数，并修改这个函数的请求地址，请求返回的数据就是导航数据，你可以在 `/src/mock/app.ts` 里查看 mock 数据。
 
 ## 功能取舍
 

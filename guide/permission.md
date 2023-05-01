@@ -10,21 +10,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-然后在 `src/store/modules/user.ts` 文件里找到 `getPermissions` 的方法，该方法用于登录成功后获取用户权限。
-
-在实际开发中，需要手动进行修改，框架默认通过 mock 模拟获取用户权限。
-
-```ts
-// 获取我的权限
-async function getPermissions() {
-  // 通过 mock 获取权限
-  const res = await api.get('member/permission', {
-    baseURL: '/mock/',
-  })
-  permissions.value = res.data.permissions
-  return permissions.value
-}
-```
+然后在 `/src/api/modules/user.ts` 文件里找到 `getPermissions` 的方法，该方法用于登录成功后获取用户权限。在实际开发中，需要手动进行修改，框架默认通过 mock 模拟获取用户权限。
 
 在演示源码中，默认提供了两组权限，你可以在“权限验证”导航里切换帐号查看不同权限下的效果。如果使用的不是 `admin` 或 `test` 用户名登录，则在导航栏里看不到“权限验证”导航入口。
 
