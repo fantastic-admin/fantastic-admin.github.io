@@ -16,8 +16,6 @@ api.post()
 详细可阅读《[权限 - 鉴权函数](permission#鉴权函数)》。
 
 ```ts
-import useAuth from '@/utils/composables/useAuth'
-
 const { auth, authAll } = useAuth()
 
 auth()
@@ -31,8 +29,6 @@ authAll()
 切换主导航，`index` 为主导航序列数。
 
 ```ts
-import useMenu from '@/utils/composables/useMenu'
-
 const { switchTo } = useMenu()
 
 switchTo(index)
@@ -43,8 +39,6 @@ switchTo(index)
 ### 刷新
 
 ```ts
-import useMainPage from '@/utils/composables/useMainPage'
-
 const { reload } = useMainPage()
 
 reload()
@@ -53,8 +47,6 @@ reload()
 ### 最大化 <sup class="pro-badge" />
 
 ```ts
-import useMainPage from '@/utils/composables/useMainPage'
-
 const { maximize } = useMainPage()
 
 // status: true / false
@@ -66,8 +58,6 @@ maximize(status)
 ### 获取当前标签页 tabId
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { getId } = useTabbar()
 
 getId()
@@ -80,8 +70,6 @@ getId()
 通过该方式跳转页面，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到所有标签页的最后。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { open } = useTabbar()
 
 open(to)
@@ -94,8 +82,6 @@ open(to)
 通过该方式跳转页面，新增的标签页会插入到当前标签页后面，而直接通过路由跳转，新增的标签页会插入到所有标签页的最后。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { go } = useTabbar()
 
 go(delta)
@@ -108,8 +94,6 @@ go(delta)
 通过该方式跳转页面，同时可以关闭当前标签页，而直接通过路由跳转，当前标签页会被保留。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { close } = useTabbar()
 
 close(to)
@@ -120,8 +104,6 @@ close(to)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { closeById } = useTabbar()
 
 closeById(tabId)
@@ -132,8 +114,6 @@ closeById(tabId)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { closeOtherSide } = useTabbar()
 
 closeOtherSide(tabId)
@@ -144,8 +124,6 @@ closeOtherSide(tabId)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { closeLeftSide } = useTabbar()
 
 closeLeftSide(tabId)
@@ -156,8 +134,6 @@ closeLeftSide(tabId)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { closeRightSide } = useTabbar()
 
 closeRightSide(tabId)
@@ -168,8 +144,6 @@ closeRightSide(tabId)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { checkCloseOtherSide } = useTabbar()
 
 checkCloseOtherSide(tabId)
@@ -180,8 +154,6 @@ checkCloseOtherSide(tabId)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { checkCloseLeftSide } = useTabbar()
 
 checkCloseLeftSide(tabId)
@@ -192,8 +164,6 @@ checkCloseLeftSide(tabId)
 该方法接收一个 `tabId` 参数，如果不传则默认为当前页的 `tabId` 。
 
 ```ts
-import useTabbar from '@/utils/composables/useTabbar'
-
 const { checkCloseRightSide } = useTabbar()
 
 checkCloseRightSide(tabId)
