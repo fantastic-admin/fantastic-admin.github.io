@@ -340,6 +340,6 @@ export default {
           }
         }
       }
-    },
+    }
   }
 }

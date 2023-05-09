@@ -27,6 +27,8 @@
 
 主要是 Vite 的原因，具体可以阅读这篇文章了解《[为什么有人说 vite 快，有人却说 vite 慢？](https://juejin.cn/post/7129041114174062628)》。
 
+Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文章了解《[Vite 4.3 is out!](https://vitejs.dev/blog/announcing-vite4-3.html)》，同时框架 v3.0.0 版本开始，vite 也升级到了 4.3 版本。
+
 ## 项目 URL 里的 # 号能不能去掉
 
 这是因为路由默认使用的是 Hash 模式，你可以在 `/src/router/index.ts` 修改为 HTML5 模式，但需要注意，开启 HTML5 模式，服务器也需要做相应的配置调整，详细可阅读《[Vue-router 不同的历史模式](https://next.router.vuejs.org/zh/guide/essentials/history-mode.html)》。
