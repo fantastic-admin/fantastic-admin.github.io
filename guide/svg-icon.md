@@ -118,7 +118,7 @@ const globalSettings: Settings.all = {
 <svg-icon name="i-ep:arrow-right" />
 ```
 
-在使用 Unocss 图标时，需要注意以下两点：
+在使用 Unocss 图标时，需要注意以下几点：
 
 - 图标字符串不支持拆分
 
@@ -144,6 +144,8 @@ const globalSettings: Settings.all = {
     <!-- 等同于 -->
     <svg-icon name="ep:search" />
     ```
+
+- Unocss 默认不会扫描 `.ts` 文件，在 `.ts` 文件里使用需要增加 `// @unocss-include` 注释
 
 ## 图标选择器 <sup class="pro-badge" />
 
