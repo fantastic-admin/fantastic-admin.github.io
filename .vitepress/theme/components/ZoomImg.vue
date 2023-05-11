@@ -1,21 +1,21 @@
-<script setup>
+<script lang="ts" setup>
 import { withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
 import mediumZoom from 'medium-zoom'
 
 defineProps({
-  src: String
+  src: String,
 })
 
 const imgRef = ref(null)
 
 onMounted(() => {
-  mediumZoom(imgRef.value, { background: 'var(--vp-c-bg)' });
+  imgRef.value && mediumZoom(imgRef.value, { background: 'var(--vp-c-bg)' })
 })
 </script>
 
 <template>
-  <p>
+  <p v-if="src">
     <img ref="imgRef" :src="withBase(src)" loading="lazy">
   </p>
 </template>

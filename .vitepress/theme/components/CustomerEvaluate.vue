@@ -1,5 +1,5 @@
-<script setup>
-import { ref, computed } from 'vue'
+<script lang="ts" setup>
+import { computed, ref } from 'vue'
 
 const fold = ref(true)
 const images = computed(() => {

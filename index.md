@@ -54,7 +54,7 @@ features:
 
 <script setup>
 import { onMounted } from 'vue'
-import { fetchReleaseTag } from './.vitepress/utils/fetchReleaseTag.js'
+import { fetchReleaseTag } from './.vitepress/utils/fetchReleaseTag'
 
 onMounted(() => {
   fetchReleaseTag()
