@@ -38,7 +38,7 @@ git clone -b vue2-example https://gitee.com/hooray/fantastic-admin.git
 
 ## 专业版
 
-[去购买](../buy)
+[去购买](../../buy)
 
 ## 运行
 
