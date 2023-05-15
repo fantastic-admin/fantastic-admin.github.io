@@ -15,7 +15,7 @@
 
 <ZoomImg src="/download.png" />
 
-或者也可以从 Gitee/Github 上拉取源码，但需要注意的是，这种方式拉取的是最新的代码，而不是稳定版本，可能会存在一些问题，所以请谨慎使用。
+或者也可以从 Gitee/Github 上拉取源码，但需要注意的是，这种方式拉取的是最新的代码，可能会存在一些问题，所以请谨慎使用。
 
 ::: code-group
 
@@ -46,7 +46,7 @@ git clone -b example https://github.com/hooray/fantastic-admin.git
 使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 ::: warning 注意
-Node.js 需要使用 14.18+ / 16+ 版本，建议为 18.12+ 版本。
+Node.js 需要使用 16+ 版本，建议为 18+ 版本。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：

@@ -13,7 +13,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",
     "vitepress": "1.0.0-alpha.75",
-    "vue": "^3.2.47"
+    "vue": "^3.3.2"
   },
   "dependencies": {
     "medium-zoom": "^1.0.8"
