@@ -8,9 +8,9 @@
 | collaspe | 是否折叠                             | boolean | -      | false  |
 | height   | 展示高度，当 collaspe 为 true 时生效 | string  | -      | -      |
 
-## Slot
+## Slots
 
-| name  | 说明   |
-| :---- | :----- |
-| -     | 内容区 |
-| title | 标题区 |
+| name  | 说明               |
+| :---- | :----------------- |
+| -     | 内容区的 HTML 内容 |
+| title | 标题区的 HTML 内容 |

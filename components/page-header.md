@@ -7,9 +7,9 @@
 | title   | 标题 | string | -      | -      |
 | content | 内容 | string | -      | -      |
 
-## Slot
+## Slots
 
-| name    | 说明     |
-| :------ | :------- |
-| -       | 右侧区域 |
-| content | 内容区域 |
+| name    | 说明                 |
+| :------ | :------------------- |
+| -       | 右侧区域的 HTML 内容 |
+| content | 内容区域的 HTML 内容 |

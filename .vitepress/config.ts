@@ -283,6 +283,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'IconPicker 图标选择器', link: '/components/icon-picker' },
             { text: 'Sparkline 迷你图', link: '/components/sparkline' },
             { text: 'I18nSelector 国际化选择器', link: '/components/i18n-selector' },
+            { text: 'StorageBox 储存箱', link: '/components/storage-box' },
           ],
         },
       ],

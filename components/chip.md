@@ -7,8 +7,8 @@
 | type     | 类型             | string  | primary / success / warning / danger / info | -      |
 | closable | 是否显示关闭按钮 | boolean | -                                           | false  |
 
-## Event
+## Events
 
-| 事件名称 | 说明         | 回调参数 |
-| :------- | :----------- | :------- |
-| close    | 关闭按钮事件 | -        |
+| 事件名称 | 说明             | 回调参数 |
+| :------- | :--------------- | :------- |
+| close    | 关闭按钮事件回调 | -        |
