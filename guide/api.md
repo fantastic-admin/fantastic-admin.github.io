@@ -44,6 +44,22 @@ const { reload } = useMainPage()
 reload()
 ```
 
+### 设置自定义标题 <sup class="pro-badge" />
+
+```ts
+const { setCustomTitle } = useMainPage()
+
+setCustomTitle(title)
+```
+
+### 重置自定义标题 <sup class="pro-badge" />
+
+```ts
+const { resetCustomTitle } = useMainPage()
+
+resetCustomTitle()
+```
+
 ### 最大化 <sup class="pro-badge" />
 
 ```ts
