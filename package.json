@@ -12,7 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.1",
-    "vitepress": "1.0.0-alpha.76",
+    "vitepress": "1.0.0-beta.1",
     "vue": "^3.3.4"
   },
   "dependencies": {

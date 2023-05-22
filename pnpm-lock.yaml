@@ -10,8 +10,8 @@ devDependencies:
     specifier: ^0.39.1
     version: 0.39.1(eslint@8.41.0)(typescript@5.0.4)
   vitepress:
-    specifier: 1.0.0-alpha.76
-    version: 1.0.0-alpha.76(@algolia/client-search@4.17.0)
+    specifier: 1.0.0-beta.1
+    version: 1.0.0-beta.1(@algolia/client-search@4.17.0)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -276,7 +276,7 @@ packages:
     resolution: {integrity: sha512-nZi074OCryZnzva2LNcbQkwBJIND6cvuFI4s1FIe6Ygf6n9g6B/IYUULXNx05rpoCZ+KEoEt3taROpsHBliuSw==}
     dependencies:
       '@docsearch/react': 3.3.5(@algolia/client-search@4.17.0)
-      preact: 10.14.1
+      preact: 10.15.0
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -2590,8 +2590,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /preact@10.14.1:
-    resolution: {integrity: sha512-4XDSnUisk3YFBb3p9WeKeH1mKoxdFUsaXcvxs9wlpYR1wax/TWJVqhwmIWbByX0h7jMEJH6Zc5J6jqc58FKaNQ==}
+  /preact@10.15.0:
+    resolution: {integrity: sha512-nZSa8M2R2m1n7nJSBlzDpxRJaIsejrTO1vlFbdpFvyC8qM1iU+On2y0otfoUm6SRB5o0lF0CKDFxg6grEFU0iQ==}
     dev: true
 
   /prelude-ls@1.2.1:
@@ -2679,8 +2679,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup@3.22.0:
-    resolution: {integrity: sha512-imsigcWor5Y/dC0rz2q0bBt9PabcL3TORry2hAa6O6BuMvY71bqHyfReAz5qyAqiQATD1m70qdntqBfBQjVWpQ==}
+  /rollup@3.23.0:
+    resolution: {integrity: sha512-h31UlwEi7FHihLe1zbk+3Q7z1k/84rb9BSwmBSr/XjOCEaBJ2YyedQDuM0t/kfOS0IxM+vk1/zI9XxYj9V+NJQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -2992,13 +2992,13 @@ packages:
     dependencies:
       esbuild: 0.17.19
       postcss: 8.4.23
-      rollup: 3.22.0
+      rollup: 3.23.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-alpha.76(@algolia/client-search@4.17.0):
-    resolution: {integrity: sha512-fzR1pDpGnSMeCJ+AnDdMe/ETD2G0Go+g6mTxDv9ps7Hmr1JjVqw97nasCyZg3jgfQxi2nt78EJ/bw7hY5n/rlw==}
+  /vitepress@1.0.0-beta.1(@algolia/client-search@4.17.0):
+    resolution: {integrity: sha512-V2yyCwQ+v9fh7rbnGDLp8M7vHa9sLElexXf/JHtBOsOwv7ed9wt1QI4WUagYgKR3TeoJT9v2s6f0UaQSne0EvQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.5

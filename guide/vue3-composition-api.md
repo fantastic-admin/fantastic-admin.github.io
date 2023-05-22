@@ -11,7 +11,7 @@ Composition API 是 Vue3 全新提供的一种语法，对于从 Vue2 就在使�
 同时得益于 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) 的特性，在 `<script setup>` 里无需导入相关 API ，该依赖会自动导入（默认支持 vue，vue-router 和 pinia ）。
 
 ```vue
-<script setup>
+<script setup lang="ts">
 // 无需手动 import 相关 API
 import { ref, computed } from 'vue' // [!code --]
 import { useRoute, useRouter } from 'vue-router' // [!code --]
@@ -31,21 +31,23 @@ router.push('/dashboard')
 `<script setup>` 可以和普通的 `<script>` 一起使用，所以可以这样定义组件 name：
 
 ```vue
-<script>
+<script lang="ts">
 export default {
   name: 'componentName',
 }
 </script>
 
-<script setup>
+<script setup lang="ts">
 ...
 </script>
 ```
 
-另外框架引用了 [unplugin-vue-setup-extend-plus](https://github.com/chenxch/unplugin-vue-setup-extend-plus) 依赖，所以可以更方便的设置。
+Vue 3.3 开始，你可以使用 `defineOptions` 在 `<script setup>` 里定义组件的 name：
 
 ```vue
-<script setup name="componentName">
-...
+<script setup lang="ts">
+defineOptions({
+  name: 'componentName',
+})
 </script>
 ```
