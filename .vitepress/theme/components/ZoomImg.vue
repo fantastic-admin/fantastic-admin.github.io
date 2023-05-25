@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import { withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
 import mediumZoom from 'medium-zoom'
