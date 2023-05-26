@@ -7,6 +7,10 @@ export default defineConfig({
   base: '/fantastic-admin/',
   head: [
     ['link', { rel: 'icon', href: './favicon.ico' }],
+    ['meta', { 'http-equiv': 'Expires', 'content': '0' }],
+    ['meta', { 'http-equiv': 'Pragma', 'content': 'no-cache' }],
+    ['meta', { 'http-equiv': 'Cache-control', 'content': 'no-cache' }],
+    ['meta', { 'http-equiv': 'Cache', 'content': 'no-cache' }],
     ['meta', { name: 'keywords', content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
     ['keywords', { content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
     ['description', { content: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite2 技术栈。' }],
