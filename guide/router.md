@@ -317,7 +317,7 @@ badge: () => globalStore.number
 
 会在新窗口访问该链接。
 
-内嵌网页无需设置 component ，但需设置 redirect 和 name 属性。
+外部网页无需设置 component ，但需设置 redirect 和 name 属性。
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
