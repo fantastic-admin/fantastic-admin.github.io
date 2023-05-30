@@ -4,7 +4,7 @@ export default defineConfig({
   title: 'Fantastic-admin 官方文档',
   description: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite2 技术栈。',
   lang: 'zh-CN',
-  base: '/fantastic-admin/',
+  base: '/',
   head: [
     ['link', { rel: 'icon', href: './favicon.ico' }],
     ['meta', { 'http-equiv': 'Expires', 'content': '0' }],
