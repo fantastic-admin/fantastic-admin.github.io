@@ -11,7 +11,7 @@
 - **演示源码** 同演示站，在框架源码基础上，提供了大量示例代码
 :::
 
-到 [Github Releases](https://github.com/hooray/fantastic-admin/releases) 页面下载最新版本的压缩包，如下图所示：
+到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载最新版本的压缩包，如下图所示：
 
 <ZoomImg src="/download.png" />
 
@@ -21,16 +21,16 @@
 
 ```sh [从 Gitee 拉取]
 # 拉取框架源码
-git clone https://gitee.com/hooray/fantastic-admin.git
+git clone https://gitee.com/fantastic-admin/basic.git
 # 拉取演示源码
-git clone -b example https://gitee.com/hooray/fantastic-admin.git
+git clone -b example https://gitee.com/fantastic-admin/basic.git
 ```
 
 ```sh [从 Github 拉取]
 # 拉取框架源码
-git clone https://github.com/hooray/fantastic-admin.git
+git clone https://github.com/fantastic-admin/basic.git
 # 拉取演示源码
-git clone -b example https://github.com/hooray/fantastic-admin.git
+git clone -b example https://github.com/fantastic-admin/basic.git
 ```
 
 :::

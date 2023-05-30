@@ -20,10 +20,10 @@ hero:
       link: /guide/why
     - theme: alt
       text: 演示地址：基础版
-      link: https://hooray.gitee.io/fantastic-admin-example/
+      link: https://fantastic-admin.gitee.io/basic-example
     - theme: alt
       text: 演示地址：专业版
-      link: https://hooray.gitee.io/fantastic-admin-pro-example/
+      link: https://fantastic-admin.gitee.io/pro-example
 
 features:
 - icon: 💪

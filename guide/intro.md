@@ -3,9 +3,9 @@
 ::: tip ⭐⭐⭐⭐⭐
 相信你已经准备或正在使用 Fantastic-admin 进行开发工作了，在此之前，希望你可以去 **Github** 或者 **Gitee(码云)** 帮我点个 ⭐ ，这将是对我极大的鼓励。
 
-[![star](https://img.shields.io/github/stars/hooray/fantastic-admin?style=social)](https://github.com/hooray/fantastic-admin/stargazers)
+[![star](https://img.shields.io/github/stars/fantastic-admin/basic?style=social)](https://github.com/fantastic-admin/basic)
 
-[![star](https://gitee.com/hooray/fantastic-admin/badge/star.svg?theme=dark)](https://gitee.com/hooray/fantastic-admin/stargazers)
+[![star](https://gitee.com/fantastic-admin/basic/badge/star.svg?theme=dark)](https://gitee.com/fantastic-admin/basic)
 :::
 
 Fantastic-admin 目前有 Vue3 和 Vue2 两个版本，其中 Vue3 版本为长期维护。

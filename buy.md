@@ -7,7 +7,7 @@ import { withBase } from 'vitepress'
 ## 超值优惠合集，立减 <b style="color: #ff4400;">799</b> 元
 
 :::details 查看详情
-同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://hooray.gitee.io/one-step-admin/) 专业版 <sup>￥999.00</sup>
+同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://one-step-admin.gitee.io) 专业版 <sup>￥999.00</sup>
 
 原价 ￥2098.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b>
 
@@ -207,10 +207,10 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   <tr>
     <td align="center">演示地址</td>
     <td align="center">
-      <a href="https://hooray.gitee.io/fantastic-admin-example/" target="_blank">访问</a>
+      <a href="https://fantastic-admin.gitee.io/basic-example" target="_blank">访问</a>
     </td>
     <td align="center">
-      <a href="https://hooray.gitee.io/fantastic-admin-pro-example/" target="_blank">访问</a>
+      <a href="https://fantastic-admin.gitee.io/pro-example" target="_blank">访问</a>
     </td>
   </tr>
 </table>

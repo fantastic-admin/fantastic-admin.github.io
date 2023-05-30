@@ -14,26 +14,26 @@
 :::
 
 - 手动下载
-  - 去 [Gitee](https://gitee.com/hooray/fantastic-admin) 下载
-  - 去 [Github](https://github.com/hooray/fantastic-admin) 下载
+  - 去 [Gitee](https://gitee.com/fantastic-admin/basic) 下载
+  - 去 [Github](https://github.com/fantastic-admin/basic) 下载
 - git 克隆
 
 ```sh
 # 从 Gitee 克隆
 
 # 拉取框架源码
-git clone -b vue2 https://gitee.com/hooray/fantastic-admin.git
+git clone -b vue2 https://gitee.com/fantastic-admin/basic.git
 # 拉取演示源码
-git clone -b vue2-example https://gitee.com/hooray/fantastic-admin.git
+git clone -b vue2-example https://gitee.com/fantastic-admin/basic.git
 ```
 
 ```sh
 # 从 Github 克隆
 
 # 拉取框架源码
-git clone -b vue2 https://github.com/hooray/fantastic-admin.git
+git clone -b vue2 https://github.com/fantastic-admin/basic.git
 # 拉取演示源码
-git clone -b vue2-example https://gitee.com/hooray/fantastic-admin.git
+git clone -b vue2-example https://gitee.com/fantastic-admin/basic.git
 ```
 
 ## 专业版

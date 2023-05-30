@@ -1,5 +1,5 @@
 export function fetchReleaseTag() {
-  return fetch('https://api.github.com/repos/hooray/fantastic-admin/releases/latest')
+  return fetch('https://api.github.com/repos/fantastic-admin/basic/releases/latest')
     .then(res => res.json())
     .then(json => json.tag_name ?? '')
     .then((releaseTag) => {

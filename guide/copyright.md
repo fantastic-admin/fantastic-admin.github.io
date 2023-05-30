@@ -49,7 +49,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   copyright: {
-    website: 'https://hooray.gitee.io/fantastic-admin/',
+    website: 'https://fantastic-admin.gitee.io',
   },
 }
 ```
