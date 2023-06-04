@@ -48,7 +48,7 @@ jobs:
         run: npm i -g @antfu/ni
 
       - name: Install dependencies
-        run: ni --no-frozen-lockfile
+        run: ni
 
       # 运行构建脚本
       - name: Build VitePress site
