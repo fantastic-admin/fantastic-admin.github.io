@@ -23,10 +23,11 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
 }]);
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?c31a3e8267162de8420bc73e06d62463";
+  hm.src = "https://hm.baidu.com/hm.js?7bb58fdfd1fe8ab146d4b4f23686b768";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
-})();`],
+})();
+    `],
   ],
   themeConfig: {
     logo: '/logo.png',
