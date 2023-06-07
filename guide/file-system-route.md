@@ -48,13 +48,13 @@ views
 
 ## 进阶使用
 
-默认生成的路由均为嵌套路由，父级 component 指向 `/src/layout/index.vue` 组件，即：
+默认生成的路由均为嵌套路由，父级 component 指向 `/src/layouts/index.vue` 组件，即：
 
 ```ts
 // 生成的路由
 {
   path: '/example/list',
-  component: () => import('/src/layout/index.vue'),
+  component: () => import('/src/layouts/index.vue'),
   children: [
     {
       path: '',

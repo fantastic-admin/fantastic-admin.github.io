@@ -11,7 +11,7 @@
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 
 const routes: RouteRecordRaw = {
   path: '/example',
@@ -52,7 +52,7 @@ export default routes
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 
 const routes: RouteRecordRaw = {
   path: '/example',
@@ -446,7 +446,7 @@ const constantRoutes: RouteRecordRaw[] = [
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 
 const routes: RouteRecordRaw = {
   path: '/banner',
@@ -503,7 +503,7 @@ export default routes
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 
 const routes: RouteRecordRaw = {
   path: '/banner',

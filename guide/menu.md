@@ -107,7 +107,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layout/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 
 const routes: RouteRecordRaw = {
   path: '/test',
