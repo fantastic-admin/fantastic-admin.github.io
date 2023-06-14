@@ -17,15 +17,6 @@
 <svg-icon name="example" />
 ```
 
-因为 SvgIcon 组件只负责渲染 `<svg>` 元素，而下载的 SVG 图标文件的尺寸可能不统一，建议在外层使用 ElIcon 组件进行包裹，对 `<svg>` 元素进行统一处理。
-
-```vue-html
-<!-- 同时你还可以使用 el-icon 提供的 color 和 size 属性 -->
-<el-icon color="red" size="48px">
-  <svg-icon name="example" />
-</el-icon>
-```
-
 ## Iconify 图标
 
 [Iconify](https://github.com/iconify/iconify) 提供 100+ 套图标集，有 100,000+ 个图标可以免费使用。
