@@ -32,12 +32,10 @@ ElMessage.success(options)
 
 <!-- 可以使用插槽代替 -->
 <el-button>
-    <template #icon>
-        <el-icon>
-            <svg-icon name="ep:edit" />
-        </el-icon>
-    </template>
-    编辑
+  <template #icon>
+    <svg-icon name="ep:edit" />
+  </template>
+  编辑
 </el-button>
 ```
 :::

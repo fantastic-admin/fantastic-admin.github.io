@@ -130,9 +130,7 @@ function onEdit(row) {
 <page-header :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
   <el-button size="mini" round @click="goBack">
     <template #icon>
-      <el-icon>
-        <svg-icon name="ep:arrow-left" />
-      </el-icon>
+      <svg-icon name="ep:arrow-left" />
     </template>
     返回
   </el-button>

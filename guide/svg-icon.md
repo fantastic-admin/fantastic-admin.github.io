@@ -33,18 +33,14 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-  <el-icon>
-    <Icon icon="ep:arrow-right" />
-  </el-icon>
+  <Icon icon="ep:arrow-right" />
 </template>
 ```
 
 当然这么使用并没有很方便，依旧还是需要手动导入一个 Icon 组件。如果你也觉得麻烦的话，那么你可以使用 SvgIcon 组件来展示，框架已经帮你做好的所有处理。
 
 ```vue-html
-<el-icon>
-  <svg-icon name="ep:arrow-right" />
-</el-icon>
+<svg-icon name="ep:arrow-right" />
 ```
 
 ### 使用其它图标集的图标 <sup class="pro-badge" />
