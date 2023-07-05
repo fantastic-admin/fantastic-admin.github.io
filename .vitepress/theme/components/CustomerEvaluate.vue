@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 
 const fold = ref(true)
 const images = computed(() => {
-  return fold.value ? 9 : 16
+  return fold.value ? 9 : 18
 })
 </script>
 
