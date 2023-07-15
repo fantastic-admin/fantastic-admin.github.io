@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.6",
+    "@antfu/eslint-config": "^0.39.7",
     "vitepress": "1.0.0-beta.5",
     "vue": "^3.3.4"
   },
