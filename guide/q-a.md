@@ -89,3 +89,9 @@ Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文�
 ## 开发环境修改代码后，路由跳转导致页面空白
 
 参考这个 [issue](https://github.com/vuejs/core/issues/7121) ，未来 Vue 官方可能会修复这个问题，目前只能手动刷新浏览器。
+
+## 不会 TypeScript 怎么办
+
+不管是项目还是个人，从长远考虑我们都建议你学习 TypeScript，因为它是未来的趋势，而且大部分框架、库、插件都是用 TypeScript 开发的，它是构建一款成熟稳健产品的基石。
+
+但考虑到实际情况，会各种客观原因存在，如果必须要用传统 JavaScript 进行开发，你可以在 `tsconfig.json` 里将 `allowJs` 设置为 `true` 即可，框架原有的 TypeScript 代码不会受到影响，并且你也可以在项目中使用 JavaScript 编写代码。
