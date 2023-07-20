@@ -101,6 +101,8 @@ meta:
 
 - [title](router#title)
 - [i18n](router#i18n) <sup class="pro-badge" />
+- [icon](router#icon)
+- [activeIcon](router#activeicon) <sup class="pro-badge" />
 - [permanent](router#permanent) <sup class="pro-badge" />
 - [auth](router#auth)
 - [activeMenu](router#activemenu)
