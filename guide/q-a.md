@@ -70,6 +70,10 @@ Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文�
 
 相关 [Issue](https://github.com/vuejs/vue-next/issues/1850) 说明。
 
+## 开发环境修改代码后，路由跳转导致页面空白
+
+参考这个 [issue](https://github.com/vuejs/core/issues/7121) ，未来 Vue 官方可能会修复这个问题，目前只能手动刷新浏览器。
+
 ## 构建报错，提示内存溢出
 
 构建时失败并在错误信息里提示 `Reached heap limit Allocation failed - JavaScript heap out of memory` 。
@@ -85,10 +89,6 @@ Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文�
 ```
 
 其中 8192 表示内存空间大小。
-
-## 开发环境修改代码后，路由跳转导致页面空白
-
-参考这个 [issue](https://github.com/vuejs/core/issues/7121) ，未来 Vue 官方可能会修复这个问题，目前只能手动刷新浏览器。
 
 ## 不会 TypeScript 怎么办
 
