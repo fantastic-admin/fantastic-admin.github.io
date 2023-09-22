@@ -360,6 +360,14 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
           },
         },
+        _render(src, env, md) {
+          const html = md.render(src, env)
+          // 搜索过滤掉 Vue2 版本的文档
+          if (env.relativePath.startsWith('guide/vue2')) {
+            return ''
+          }
+          return html
+        }
       },
     },
   },
