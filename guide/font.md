@@ -8,7 +8,7 @@
 
 访问 [DaFont](https://www.dafont.com/) 或其它字体下载网站，下载 `.ttf` 格式的字体文件。
 
-<ZoomImg src="/font1.png" />
+![](/font1.png){data-zoomable}
 
 ## 生成字体
 
@@ -16,7 +16,7 @@
 
 访问 [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)，上传 `.ttf` 文件，并按照下面设置后，点击下载。
 
-<ZoomImg src="/font2.png" />
+![](/font2.png){data-zoomable}
 
 ## 使用
 

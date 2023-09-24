@@ -26,4 +26,4 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/breadcrumb-mainmenu.png" />
+![](/breadcrumb-mainmenu.png){data-zoomable}

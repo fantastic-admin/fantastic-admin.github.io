@@ -19,17 +19,3 @@ onMounted(() => {
     <img ref="imgRef" :src="withBase(src)" loading="lazy">
   </p>
 </template>
-
-<style>
-.medium-zoom-overlay {
-  z-index: 200;
-}
-
-.medium-zoom-image {
-  z-index: 9;
-}
-
-.medium-zoom-image--opened {
-  z-index: 201;
-}
-</style>

@@ -26,7 +26,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/theme.gif" />
+![](/theme.gif){data-zoomable}
 
 如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。首先先打开默认主题了解下代码结构 `/src/assets/styles/themes/default.scss` ，主题的样式都存放在 `$theme-default` 这个变量里，注意明亮模式和暗黑模式的区分，两者里面属性名是完全一致的。
 
@@ -110,7 +110,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/menu-fill-style.png" />
+![](/menu-fill-style.png){data-zoomable}
 
 ### 激活风格
 
@@ -130,7 +130,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/menu-active-style.png" />
+![](/menu-active-style.png){data-zoomable}
 
 ## 面包屑导航风格 <sup class="pro-badge" />
 
@@ -148,7 +148,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/breadcrumb-style.png" />
+![](/breadcrumb-style.png){data-zoomable}
 
 ## 标签栏风格 <sup class="pro-badge" />
 
@@ -167,7 +167,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/tabbar-style.png" />
+![](/tabbar-style.png){data-zoomable}
 
 ## Element Plus 主题
 

@@ -18,7 +18,7 @@ const globalSettings: Settings.all = {
 
 关闭主页后，登录后将直接跳转到次导航下第一个导航对应的页面，效果如下：
 
-<ZoomImg src="/home-disable.gif" />
+![](/home-disable.gif){data-zoomable}
 
 ## 标题
 

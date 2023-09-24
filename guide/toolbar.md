@@ -2,7 +2,7 @@
 
 工具栏主要是红框处各类功能图标。
 
-<ZoomImg src="/toolbar.png" />
+![](/toolbar.png){data-zoomable}
 
 ## 通知中心 <sup class="pro-badge" />
 

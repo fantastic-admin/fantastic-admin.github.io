@@ -57,6 +57,13 @@
   border-radius: 10px;
   vertical-align: middle;
 }
+/* medium-zoom */
+.medium-zoom-overlay {
+  z-index: 30;
+}
+.medium-zoom-image {
+  z-index: 31;
+}
 /* 专业版 badge */
 .pro-badge {
   display: inline-block;

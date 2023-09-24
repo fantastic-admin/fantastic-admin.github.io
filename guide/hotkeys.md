@@ -2,7 +2,7 @@
 
 在用户下拉列表中可查看当前启用的所有快捷键。
 
-<ZoomImg src="/hotkeys.gif" />
+![](/hotkeys.gif){data-zoomable}
 
 ## 导航搜索
 

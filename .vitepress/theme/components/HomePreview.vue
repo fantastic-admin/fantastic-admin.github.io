@@ -4,22 +4,22 @@
       <h2>截图预览</h2>
       <div class="items">
         <div class="item">
-          <zoom-img src="/preview1.png" />
+          <ZoomImg src="/preview1.png" />
         </div>
         <div class="item">
-          <zoom-img src="/preview2.png" />
+          <ZoomImg src="/preview2.png" />
         </div>
         <div class="item">
-          <zoom-img src="/preview3.png" />
+          <ZoomImg src="/preview3.png" />
         </div>
         <div class="item">
-          <zoom-img src="/preview4.png" />
+          <ZoomImg src="/preview4.png" />
         </div>
         <div class="item">
-          <zoom-img src="/preview5.png" />
+          <ZoomImg src="/preview5.png" />
         </div>
         <div class="item">
-          <zoom-img src="/preview6.png" />
+          <ZoomImg src="/preview6.png" />
         </div>
       </div>
     </div>

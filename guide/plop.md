@@ -20,31 +20,31 @@
 
 ## page
 
-<ZoomImg src="/plop-page.gif" />
+![](/plop-page.gif){data-zoomable}
 
 page 模式下，只能在 `/src/views/` 目录下选择指定的文件夹进行生成，生成的文件中，部分关键位置会被替换掉，例如 `<page-header />` 中的 `title` 会按照你输入的中文名称替换，页面的 `name` 会根据当前文件目录和文件名自动生成，确保唯一。
 
 ## component
 
-<ZoomImg src="/plop-component.gif" />
+![](/plop-component.gif){data-zoomable}
 
 component 模式可以选择生成的是公共组件还是局部组件，公共组件生成目录为 `/src/components/` ，局部组件则在 `/src/views/` 目录下选择指定的文件夹进行生成。
 
 ## store
 
-<ZoomImg src="/plop-store.gif" />
+![](/plop-store.gif){data-zoomable}
 
 store 模式则会在 `/src/store/modules/` 目录下生成一个空模板
 
 ## mock
 
-<ZoomImg src="/plop-mock.gif" />
+![](/plop-mock.gif){data-zoomable}
 
 mock 模式则会在 `/src/mock/` 目录下生成一个标准 CURD 的 mock 数据
 
 ## module <sup class="pro-badge" />
 
-<ZoomImg src="/plop-module.gif" />
+![](/plop-module.gif){data-zoomable}
 
 module 模式是一个标准模块模板，会在指定目录下生成模块文件夹，并且包含列表页、编辑（详情）页，以及相关局部组件。
 

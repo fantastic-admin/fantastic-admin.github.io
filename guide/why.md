@@ -30,7 +30,7 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 通过布局与主题组合搭配，可实现**数百种**不同风格的界面。
 
-<ZoomImg src="/intro-1.png" />
+![](/intro-1.png){data-zoomable}
 
 ## 丰富的导航设置
 

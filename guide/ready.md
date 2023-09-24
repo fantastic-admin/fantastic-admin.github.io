@@ -13,7 +13,7 @@
 
 到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载最新版本的压缩包，如下图所示：
 
-<ZoomImg src="/download.png" />
+![](/download.png){data-zoomable}
 
 或者也可以从 Gitee/Github 上拉取源码，但需要注意的是，这种方式拉取的是最新的代码，可能会存在一些问题，所以请谨慎使用。
 
@@ -60,7 +60,7 @@ Node.js 需要使用 16+ 版本，建议为 18+ 版本。
 
 在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
 
-<ZoomImg src="/vscode.png" />
+![](/vscode.png){data-zoomable}
 
 ::: tip 建议
 以上 6 个为开发时必备扩展，以下则是作者建议安装的扩展，安装它们将在一定程度上提升开发效率。

@@ -12,7 +12,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/menu-switchmainmenuandpagejump.gif" />
+![](/menu-switchmainmenuandpagejump.gif){data-zoomable}
 
 ## 次导航可同时展开多个子项
 
@@ -26,7 +26,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/menu-submenuuniqueopened.gif" />
+![](/menu-submenuuniqueopened.gif){data-zoomable}
 
 ## 次导航默认收起
 
@@ -40,7 +40,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/menu-submenucollapse.gif" />
+![](/menu-submenucollapse.gif){data-zoomable}
 
 ## 开启次导航展开/收起按钮
 
@@ -54,7 +54,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/menu-enablesubmenucollapsebutton.gif" />
+![](/menu-enablesubmenucollapsebutton.gif){data-zoomable}
 
 ## 次导航只有一个导航时自动隐藏 <sup class="pro-badge" />
 
@@ -70,7 +70,7 @@ const globalSettings: Settings.all = {
 
 搭配开启 `menu.switchMainMenuAndPageJump` 可以实现如下的效果：
 
-<ZoomImg src="/menu-submenuonlyonehide.gif" />
+![](/menu-submenuonlyonehide.gif){data-zoomable}
 
 你只需要在某个主导航下只保留一个次导航，就像这样：
 

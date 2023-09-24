@@ -17,7 +17,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/topbar.gif" />
+![](/topbar.gif){data-zoomable}
 
 ## 切换标签栏和工具栏 <sup class="pro-badge" />
 
@@ -31,4 +31,4 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<ZoomImg src="/topbar-switchaabbarandtoolbar.gif" />
+![](/topbar-switchaabbarandtoolbar.gif){data-zoomable}

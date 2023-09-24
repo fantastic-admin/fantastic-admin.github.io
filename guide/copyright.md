@@ -2,7 +2,7 @@
 
 版权信息位于页面底部显示。
 
-<ZoomImg src="/copyright.png" />
+![](/copyright.png){data-zoomable}
 
 ## 使用
 

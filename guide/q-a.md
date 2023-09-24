@@ -2,7 +2,7 @@
 
 ## 安装依赖时有警告
 
-<ZoomImg src="/qa1.png" />
+![](/qa1.png){data-zoomable}
 
 这是一个可以无视的警告，因为依赖已经安装成功了。
 

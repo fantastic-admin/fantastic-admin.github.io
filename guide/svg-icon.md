@@ -49,9 +49,9 @@ import { Icon } from '@iconify/vue'
 
 除此之外我们还推荐你安装 [Iconify IntelliSense](https://marketplace.visualstudio.com/items?itemName=antfu.iconify) 这个 VSCode 扩展，方便在 VSCode 里预览图标。
 
-<ZoomImg src="/icones1.png" />
+![](/icones1.png){data-zoomable}
 
-<ZoomImg src="/icones2.png" />
+![](/icones2.png){data-zoomable}
 
 ### 调用本地 Iconify 图标
 

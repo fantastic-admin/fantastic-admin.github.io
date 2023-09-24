@@ -16,19 +16,19 @@ const globalSettings: Settings.all = {
 
 对当前标签页进行刷新，非激活的标签页无法刷新，并且刷新操作会强制清除页面缓存数据。
 
-<ZoomImg src="/tabbar1.gif" />
+![](/tabbar1.gif){data-zoomable}
 
 ### 关闭
 
 关闭标签页分关闭当前、关闭其它、关闭左侧、关闭右侧，当不满足关闭条件时，选项置灰，无法点击。
 
-<ZoomImg src="/tabbar2.gif" />
+![](/tabbar2.gif){data-zoomable}
 
 ### 固定
 
 将指定标签页设为固定状态，固定的标签页右键无法直接关闭，同时也不会被关闭其它、关闭左侧、关闭右侧标签页操作所关闭，并且下次访问将保留固定标签页状态。
 
-<ZoomImg src="/tabbar3.gif" />
+![](/tabbar3.gif){data-zoomable}
 
 固定标签页默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `tabbar.storageTo` 配置项来实现，具体配置如下：
 
@@ -50,15 +50,15 @@ const globalSettings: Settings.all = {
 
 通过隐藏导航栏和顶栏，将操作内容区最大化。双击标签页可快速进入最大化。
 
-<ZoomImg src="/tabbar4.gif" />
+![](/tabbar4.gif){data-zoomable}
 
 ### 拖拽排序
 
-<ZoomImg src="/tabbar5.gif" />
+![](/tabbar5.gif){data-zoomable}
 
 ### 快捷操作下拉菜单
 
-<ZoomImg src="/tabbar6.gif" />
+![](/tabbar6.gif){data-zoomable}
 
 ## 标签页合并
 
@@ -114,7 +114,7 @@ const globalSettings: Settings.all = {
 
 从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，可打开多个不同的**编辑管理员**标签页，效果如下：
 
-<ZoomImg src="/tabbar-no-merge.gif" />
+![](/tabbar-no-merge.gif){data-zoomable}
 
 ### 根据路由名称进行合并
 
@@ -128,7 +128,7 @@ const globalSettings: Settings.all = {
 
 从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，打开多个不同的详情页，只会保持一个**编辑管理员**标签页，效果如下：
 
-<ZoomImg src="/tabbar-merge-routename.gif" />
+![](/tabbar-merge-routename.gif){data-zoomable}
 
 ### 根据 `meta.activeMenu` 进行合并
 
@@ -142,7 +142,7 @@ const globalSettings: Settings.all = {
 
 从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
 
-<ZoomImg src="/tabbar-merge-activemenu.gif" />
+![](/tabbar-merge-activemenu.gif){data-zoomable}
 
 ## 显示图标
 
@@ -172,4 +172,4 @@ const globalSettings: Settings.all = {
 
 当开启记忆功能时，框架会将当前标签页的状态记录到浏览器当前会话缓存中，刷新页面或重新登录会自动恢复，效果如下：
 
-<ZoomImg src="/tabbar-memory.gif" />
+![](/tabbar-memory.gif){data-zoomable}

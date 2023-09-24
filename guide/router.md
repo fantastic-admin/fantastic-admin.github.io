@@ -494,11 +494,11 @@ export default routes
 
 对应的展示效果如下：
 
-<ZoomImg src="/breadcrumb1.gif" />
+![](/breadcrumb1.gif){data-zoomable}
 
 有时候可能会遇到这样的需求，要求在不改变侧边栏导航结构的前提下，面包屑导航能变成这样：
 
-<ZoomImg src="/breadcrumb2.gif" />
+![](/breadcrumb2.gif){data-zoomable}
 
 其实根据图中的效果，可以确定路由需要有三层，那剩下就是通过配置项去控制侧边栏导航和面包屑导航是否展示：
 

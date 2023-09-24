@@ -16,4 +16,4 @@ const globalSettings: Settings.all = {
 
 效果如下：
 
-<ZoomImg src="/dynamic-title.gif" />
+![](/dynamic-title.gif){data-zoomable}

@@ -14,7 +14,7 @@ const globalSettings: Settings.all = {
 
 效果如下：
 
-<ZoomImg src="/watermark.png" />
+![](/watermark.png){data-zoomable}
 
 ## 设置水印内容
 
