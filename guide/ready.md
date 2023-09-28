@@ -84,4 +84,3 @@ Node.js 需要使用 16+ 版本，建议为 18+ 版本。
 - [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
 - [Vue Router 4](https://router.vuejs.org/zh/)
 - [Pinia](https://pinia.vuejs.org/zh/)
-- [Element Plus](https://element-plus.org/zh-CN/)

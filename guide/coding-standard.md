@@ -51,7 +51,6 @@
 修改后重新执行一下 `pnpm install` 即可。
 :::
 
-
 ### 移除
 
 如果不想在 git 提交时强制进行代码规范校验，可以在 `package.json` 中移除 `simple-git-hooks` 配置：
