@@ -134,6 +134,15 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           },
         ],
       },
+      {
+        text: 'Version',
+        items: [
+          {
+            text: 'Vue2 版本（无版本号）',
+            link: 'https://fantastic-admin.github.io/vue2-docs/',
+          },
+        ],
+      },
     ],
     socialLinks: [
       {
@@ -223,41 +232,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           ],
           collapsed: false,
         },
-        {
-          text: '归档（Vue2 版本）',
-          items: [
-            { text: '开始', link: '/guide/vue2/start' },
-            { text: '代码规范', link: '/guide/vue2/coding-standard' },
-            { text: '配置', link: '/guide/vue2/configure' },
-            { text: '布局', link: '/guide/vue2/layout' },
-            { text: '主题', link: '/guide/vue2/theme' },
-            { text: '全局资源', link: '/guide/vue2/global-resources' },
-            { text: '和服务端交互', link: '/guide/vue2/axios' },
-            { text: '组件', link: '/guide/vue2/component' },
-            { text: 'Vuex', link: '/guide/vue2/vuex' },
-            { text: '路由', link: '/guide/vue2/router' },
-            { text: '权限验证', link: '/guide/vue2/permission' },
-            { text: '标签栏', link: '/guide/vue2/tabbar' },
-            { text: '二级页面缓存', link: '/guide/vue2/keep-alive' },
-            { text: '多级页面缓存', link: '/guide/vue2/keep-alive-neste' },
-            { text: '自定义字体', link: '/guide/vue2/font' },
-            { text: '国际化', link: '/guide/vue2/i18n' },
-            { text: '私有 Storage 数据', link: '/guide/vue2/storage' },
-            { text: '第三方库', link: '/guide/vue2/library' },
-            { text: 'CDN 支持', link: '/guide/vue2/cdn' },
-            { text: 'gzip 支持', link: '/guide/vue2/gzip' },
-            { text: 'Mock 与联调', link: '/guide/vue2/mock' },
-            { text: '构建', link: '/guide/vue2/build' },
-            { text: 'Git 钩子', link: '/guide/vue2/git' },
-            { text: '错误日志', link: '/guide/vue2/bug' },
-            { text: '快速生成文件', link: '/guide/vue2/plop' },
-            { text: '标准模块', link: '/guide/vue2/module' },
-            { text: '高级 position:fixed', link: '/guide/vue2/position-fixed' },
-            { text: '版本升级', link: '/guide/vue2/upgrade' },
-            { text: '视频教程', link: 'https://space.bilibili.com/3079082/channel/detail?cid=156985' },
-          ],
-          collapsed: true,
-        },
       ],
       '/components/': [
         {
@@ -305,50 +279,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
       ],
     },
     outline: 'deep',
-    // algolia: {
-    //   appId: '97F9CKAB42',
-    //   apiKey: '4f597e49203732d2255b001e4b8367cf',
-    //   indexName: 'fantastic-admin',
-    //   placeholder: '搜索文档',
-    //   translations: {
-    //     button: {
-    //       buttonText: '搜索文档',
-    //       buttonAriaLabel: '搜索文档'
-    //     },
-    //     modal: {
-    //       searchBox: {
-    //         resetButtonTitle: '清除查询条件',
-    //         resetButtonAriaLabel: '清除查询条件',
-    //         cancelButtonText: '取消',
-    //         cancelButtonAriaLabel: '取消'
-    //       },
-    //       startScreen: {
-    //         recentSearchesTitle: '搜索历史',
-    //         noRecentSearchesText: '没有搜索历史',
-    //         saveRecentSearchButtonTitle: '保存至搜索历史',
-    //         removeRecentSearchButtonTitle: '从搜索历史中移除',
-    //         favoriteSearchesTitle: '收藏',
-    //         removeFavoriteSearchButtonTitle: '从收藏中移除'
-    //       },
-    //       errorScreen: {
-    //         titleText: '无法获取结果',
-    //         helpText: '你可能需要检查你的网络连接'
-    //       },
-    //       footer: {
-    //         selectText: '选择',
-    //         navigateText: '切换',
-    //         closeText: '关闭',
-    //         searchByText: '搜索提供者'
-    //       },
-    //       noResultsScreen: {
-    //         noResultsText: '无法找到相关结果',
-    //         suggestedQueryText: '你可以尝试查询',
-    //         reportMissingResultsText: '你认为该查询应该有结果？',
-    //         reportMissingResultsLinkText: '点击反馈'
-    //       }
-    //     }
-    //   }
-    // },
     search: {
       provider: 'local',
       options: {
@@ -360,14 +290,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
           },
         },
-        _render(src, env, md) {
-          const html = md.render(src, env)
-          // 搜索过滤掉 Vue2 版本的文档
-          if (env.relativePath.startsWith('guide/vue2')) {
-            return ''
-          }
-          return html
-        }
       },
     },
   },
