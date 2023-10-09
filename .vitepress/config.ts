@@ -46,6 +46,14 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             text: '组件',
             link: '/components/index',
           },
+          {
+            text: 'v3 (Vue3版本)',
+            link: 'https://fantastic-admin.github.io/v3-docs/'
+          },
+          {
+            text: 'Vue2版本',
+            link: 'https://fantastic-admin.github.io/vue2-docs/',
+          },
         ],
       },
       {
@@ -131,15 +139,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           {
             text: '定制开发',
             link: '/customize',
-          },
-        ],
-      },
-      {
-        text: 'Version',
-        items: [
-          {
-            text: 'Vue2 版本（无版本号）',
-            link: 'https://fantastic-admin.github.io/vue2-docs/',
           },
         ],
       },
