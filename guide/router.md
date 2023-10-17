@@ -227,6 +227,33 @@ export default routes
 | :-----: | :----: | :--------------------------- |
 | boolean |  true  | 该路由是否在侧边栏导航中展示 |
 
+当子路由里没有可展示的路由时，在侧边栏导航中则只会显示父级路由，例如：
+
+```ts {13}
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/components',
+  meta: {
+    title: '基础组件',
+  },
+  children: [
+    {
+      path: 'index',
+      meta: {
+        title: '基础组件',
+        sidebar: false,
+        activeMenu: '/components/index',
+      },
+    },
+  ],
+}
+
+export default routes
+```
+
+![](/route-meta-sidebar.png){data-zoomable}
+
 ### breadcrumb
 
 |  类型   | 默认值 | 说明                         |
