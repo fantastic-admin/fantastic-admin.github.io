@@ -62,6 +62,8 @@ Node.js 需要使用 16+ 版本，建议为 18+ 版本。
 
 ![](/vscode.png){data-zoomable}
 
+同时建议开启 Volar 的 Takeover 模式，开启方式请参考 [Volar Takeover 模式](https://cn.vuejs.org/guide/typescript/overview.html#volar-takeover-mode)。
+
 ::: tip 建议
 以上 6 个为开发时必备扩展，以下则是作者建议安装的扩展，安装它们将在一定程度上提升开发效率。
 
