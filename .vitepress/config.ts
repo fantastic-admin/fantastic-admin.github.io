@@ -236,7 +236,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           text: '其它',
           items: [
             { text: '框架更新', link: '/guide/upgrade' },
-            { text: '从 Vue2 版本迁移', link: '/guide/vue2-to-vue3' },
             { text: '从 vue-element-admin 迁移', link: '/guide/vea-to-fa' },
             { text: '常见问题', link: '/guide/q-a' },
           ],

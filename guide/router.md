@@ -233,17 +233,17 @@ export default routes
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
-  path: '/components',
+  path: '/permission',
   meta: {
-    title: '基础组件',
+    title: '权限验证',
   },
   children: [
     {
       path: 'index',
       meta: {
-        title: '基础组件',
+        title: '权限验证',
         sidebar: false,
-        activeMenu: '/components/index',
+        activeMenu: '/permission/index',
       },
     },
   ],
@@ -484,15 +484,14 @@ const routes: RouteRecordRaw = {
   name: 'banner',
   meta: {
     title: 'Banner 管理',
-    icon: 'banner',
   },
   children: [
     {
-      path: 'detail',
-      name: 'bannerCreate',
-      component: () => import('@/views/banner/detail.vue'),
+      path: 'add',
+      name: 'bannerAdd',
+      component: () => import('@/views/banner/add.vue'),
       meta: {
-        title: '新增 Banner',
+        title: '新增 banner',
       },
     },
     {
@@ -500,17 +499,7 @@ const routes: RouteRecordRaw = {
       name: 'bannerList',
       component: () => import('@/views/banner/list.vue'),
       meta: {
-        title: 'Banner 列表',
-      },
-    },
-    {
-      path: 'detail/:id',
-      name: 'bannerEdit',
-      component: () => import('@/views/banner/detail.vue'),
-      meta: {
-        title: '编辑 Banner',
-        sidebar: false,
-        activeMenu: '/banner/list',
+        title: 'banner 列表',
       },
     },
   ],
@@ -521,13 +510,13 @@ export default routes
 
 对应的展示效果如下：
 
-![](/breadcrumb1.gif){data-zoomable}
+![](/route-breadcrumb1.gif){data-zoomable}
 
-有时候可能会遇到这样的需求，要求在不改变侧边栏导航结构的前提下，面包屑导航能变成这样：
+有时候会遇到这样的需求，要求在不改变侧边栏导航结构的前提下，面包屑导航展示嵌套的结构：
 
-![](/breadcrumb2.gif){data-zoomable}
+![](/route-breadcrumb2.gif){data-zoomable}
 
-其实根据图中的效果，可以确定路由需要有三层，那剩下就是通过配置项去控制侧边栏导航和面包屑导航是否展示：
+要实现这个效果也很简单，根据图中的效果，可以确定路由需要有三级。我们只需在二级放置一个重定向的路由，将其重定向到三级里的某个真实路由上，同时将三级路由均设置成不在侧边栏导航上显示即可，最终实现代码如下：
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -541,12 +530,11 @@ const routes: RouteRecordRaw = {
   name: 'banner',
   meta: {
     title: 'Banner 管理',
-    icon: 'banner',
   },
   children: [
     {
-      path: 'detail',
-      redirect: '/banner/list/detail',
+      path: 'add',
+      redirect: '/banner/list/add',
       meta: {
         title: '新增 Banner',
       },
@@ -558,6 +546,16 @@ const routes: RouteRecordRaw = {
       },
       children: [
         {
+          path: 'add',
+          name: 'bannerAdd',
+          component: () => import('@/views/banner/add.vue'),
+          meta: {
+            title: '新增 Banner',
+            sidebar: false,
+            activeMenu: '/banner/add',
+          }
+        },
+        {
           path: '',
           name: 'bannerList',
           component: () => import('@/views/banner/list.vue'),
@@ -566,26 +564,6 @@ const routes: RouteRecordRaw = {
             sidebar: false,
             breadcrumb: false,
           }
-        },
-        {
-          path: 'detail',
-          name: 'bannerCreate',
-          component: () => import('@/views/banner/detail.vue'),
-          meta: {
-            title: '新增 Banner',
-            sidebar: false,
-            activeMenu: '/banner/detail',
-          }
-        },
-        {
-          path: 'detail/:id',
-          name: 'bannerEdit',
-          component: () => import('@/views/banner/detail.vue'),
-          meta: {
-            title: '编辑 Banner',
-            sidebar: false,
-            activeMenu: '/banner/list',
-          },
         },
       ],
     },

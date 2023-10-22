@@ -12,12 +12,12 @@
 
 ## ESLint 配置
 
-配置文件为 `.eslintrc` ，框架使用 [antfu/eslint-config](https://github.com/antfu/eslint-config) 做为基础规范，如果你对默认的规则有异议，可以查阅 [ESLint](https://eslint.org/) 官网规则并在 `.eslintrc` 文件中进行覆盖。
+配置文件为 `eslint.config.js` ，框架使用 [antfu/eslint-config](https://github.com/antfu/eslint-config) 做为基础规范，如果你对默认的规则有异议，可以查阅 [ESLint](https://eslint.org/) 官网规则并在 `eslint.config.js` 文件中进行覆盖。
 
 当你对规则进行修改后，原有的代码可能会因为规则的变动导致编辑器大量提示错误，你可以通过运行 `pnpm run lint:eslint` 进行一次格式校验，如果规则支持自动修复，则会将不符合规则的代码自动进行格式化。
 
 ::: tip
-通过修改 `.eslintignore` 可忽略无需做代码规范校验的文件，例如在项目中导入了一些第三方的插件代码或组件代码，我们就可以将其进行忽略。
+通过修改 `eslint.config.js` 中 `ignores` 配置可忽略无需做代码规范校验的目录或文件，例如在项目中导入了一些第三方的插件代码或组件代码，我们就可以将其进行忽略。
 :::
 
 ## StyleLint 配置

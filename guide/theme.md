@@ -2,75 +2,238 @@
 
 ## 框架主题
 
+主题配色存放在 `/themes/index.ts` 文件中，基础版和专业版内容略有不同。
+
 ### 基础版
 
-基础版主题样式存放在 `/src/assets/styles/themes.scss` 文件中，均为 css 变量，修改后即可在页面上查看效果，注意明亮和暗黑模式的区分。
+```ts
+import { hex2rgba } from '@unocss/preset-mini/utils'
+
+export const lightTheme = {
+  'color-scheme': 'light', // 请勿删除，用于判断是否为明亮主题
+  // 内置 UI
+  '--ui-primary': hex2rgba('#0f0f0f')!.join(','),
+  '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+  // 主体
+  '--g-bg': '#f2f2f2',
+  '--g-container-bg': '#fff',
+  '--g-border-color': '#f2f2f2',
+  // 头部
+  '--g-header-bg': '#fff',
+  '--g-header-color': '#0f0f0f',
+  '--g-header-menu-color': '#0f0f0f',
+  '--g-header-menu-hover-bg': '#dde1e3',
+  '--g-header-menu-hover-color': '#0f0f0f',
+  '--g-header-menu-active-bg': '#0f0f0f',
+  '--g-header-menu-active-color': '#fff',
+  // 主导航
+  '--g-main-sidebar-bg': '#f2f2f2',
+  '--g-main-sidebar-menu-color': '#0f0f0f',
+  '--g-main-sidebar-menu-hover-bg': '#dde1e3',
+  '--g-main-sidebar-menu-hover-color': '#0f0f0f',
+  '--g-main-sidebar-menu-active-bg': '#0f0f0f',
+  '--g-main-sidebar-menu-active-color': '#fff',
+  // 次导航
+  '--g-sub-sidebar-bg': '#fff',
+  '--g-sub-sidebar-logo-bg': '#0f0f0f',
+  '--g-sub-sidebar-logo-color': '#fff',
+  '--g-sub-sidebar-menu-color': '#0f0f0f',
+  '--g-sub-sidebar-menu-hover-bg': '#dde1e3',
+  '--g-sub-sidebar-menu-hover-color': '#0f0f0f',
+  '--g-sub-sidebar-menu-active-bg': '#0f0f0f',
+  '--g-sub-sidebar-menu-active-color': '#fff',
+}
+
+export const darkTheme = {
+  'color-scheme': 'dark',
+  // 内置 UI
+  '--ui-primary': hex2rgba('#e5e5e5')!.join(','),
+  '--ui-text': hex2rgba('#0f0f0f')!.join(','),
+  // 主体
+  '--g-bg': '#0a0a0a',
+  '--g-container-bg': '#141414',
+  '--g-border-color': '#15191e',
+  // 头部
+  '--g-header-bg': '#141414',
+  '--g-header-color': '#e5e5e5',
+  '--g-header-menu-color': '#a8a29e',
+  '--g-header-menu-hover-bg': '#141414',
+  '--g-header-menu-hover-color': '#e5e5e5',
+  '--g-header-menu-active-bg': '#e5e5e5',
+  '--g-header-menu-active-color': '#0a0a0a',
+  // 主导航
+  '--g-main-sidebar-bg': '#0a0a0a',
+  '--g-main-sidebar-menu-color': '#a8a29e',
+  '--g-main-sidebar-menu-hover-bg': '#141414',
+  '--g-main-sidebar-menu-hover-color': '#e5e5e5',
+  '--g-main-sidebar-menu-active-bg': '#e5e5e5',
+  '--g-main-sidebar-menu-active-color': '#0a0a0a',
+  // 次导航
+  '--g-sub-sidebar-bg': '#141414',
+  '--g-sub-sidebar-logo-bg': '#0f0f0f',
+  '--g-sub-sidebar-logo-color': '#e5e5e5',
+  '--g-sub-sidebar-menu-color': '#a8a29e',
+  '--g-sub-sidebar-menu-hover-bg': '#0a0a0a',
+  '--g-sub-sidebar-menu-hover-color': '#e5e5e5',
+  '--g-sub-sidebar-menu-active-bg': '#e5e5e5',
+  '--g-sub-sidebar-menu-active-color': '#0a0a0a',
+}
+```
 
 ### 专业版
 
-与基础版不同，专业版默认提供了 6 款主题，并且主题在运行时共存，可实现动态切换。
+与基础版不同，专业版默认提供了 12 款主题，明亮和暗黑模式各 6 款，并且主题在运行时共存，可实现动态切换。
 
-```ts {2-12}
-const globalSettings: Settings.all = {
-  app: {
-    /**
-     * default 默认
-     * sys_green 绿色
-     * sys_orange 橙色
-     * sys_pink 粉色
-     * sys_grey 灰色
-     * sys_yellow 黄色
-     */
-    theme: 'default',
+```ts
+import { hex2rgba } from '@unocss/preset-mini/utils'
+
+export default {
+  light: {
+    // 颜色主题
+    'color-scheme': 'light',
+    // 内置 UI
+    '--ui-primary': hex2rgba('#0f0f0f')!.join(','),
+    '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+    // 主体
+    '--g-bg': '#f2f2f2',
+    '--g-container-bg': '#fff',
+    '--g-border-color': '#f2f2f2',
+    // 头部
+    '--g-header-bg': '#fff',
+    '--g-header-color': '#0f0f0f',
+    '--g-header-menu-color': '#0f0f0f',
+    '--g-header-menu-hover-bg': '#dde1e3',
+    '--g-header-menu-hover-color': '#0f0f0f',
+    '--g-header-menu-active-bg': '#0f0f0f',
+    '--g-header-menu-active-color': '#fff',
+    // 主导航
+    '--g-main-sidebar-bg': '#f2f2f2',
+    '--g-main-sidebar-menu-color': '#0f0f0f',
+    '--g-main-sidebar-menu-hover-bg': '#dde1e3',
+    '--g-main-sidebar-menu-hover-color': '#0f0f0f',
+    '--g-main-sidebar-menu-active-bg': '#0f0f0f',
+    '--g-main-sidebar-menu-active-color': '#fff',
+    // 次导航
+    '--g-sub-sidebar-bg': '#fff',
+    '--g-sub-sidebar-logo-bg': '#0f0f0f',
+    '--g-sub-sidebar-logo-color': '#fff',
+    '--g-sub-sidebar-menu-color': '#0f0f0f',
+    '--g-sub-sidebar-menu-hover-bg': '#dde1e3',
+    '--g-sub-sidebar-menu-hover-color': '#0f0f0f',
+    '--g-sub-sidebar-menu-active-bg': '#0f0f0f',
+    '--g-sub-sidebar-menu-active-color': '#fff',
+    // 标签栏
+    '--g-tabbar-dividers-bg': '#a3a3a3',
+    '--g-tabbar-tab-color': '#a3a3a3',
+    '--g-tabbar-tab-hover-bg': '#e5e5e5',
+    '--g-tabbar-tab-hover-color': '#0f0f0f',
+    '--g-tabbar-tab-active-color': '#0f0f0f',
   },
+  ...
+  dark: {
+    // 颜色主题
+    'color-scheme': 'dark',
+    // 内置 UI
+    '--ui-primary': hex2rgba('#e5e5e5')!.join(','),
+    '--ui-text': hex2rgba('#0f0f0f')!.join(','),
+    // 主体
+    '--g-bg': '#0a0a0a',
+    '--g-container-bg': '#141414',
+    '--g-border-color': '#15191e',
+    // 头部
+    '--g-header-bg': '#141414',
+    '--g-header-color': '#e5e5e5',
+    '--g-header-menu-color': '#a8a29e',
+    '--g-header-menu-hover-bg': '#141414',
+    '--g-header-menu-hover-color': '#e5e5e5',
+    '--g-header-menu-active-bg': '#e5e5e5',
+    '--g-header-menu-active-color': '#0a0a0a',
+    // 主导航
+    '--g-main-sidebar-bg': '#0a0a0a',
+    '--g-main-sidebar-menu-color': '#a8a29e',
+    '--g-main-sidebar-menu-hover-bg': '#141414',
+    '--g-main-sidebar-menu-hover-color': '#e5e5e5',
+    '--g-main-sidebar-menu-active-bg': '#e5e5e5',
+    '--g-main-sidebar-menu-active-color': '#0a0a0a',
+    // 次导航
+    '--g-sub-sidebar-bg': '#141414',
+    '--g-sub-sidebar-logo-bg': '#0f0f0f',
+    '--g-sub-sidebar-logo-color': '#e5e5e5',
+    '--g-sub-sidebar-menu-color': '#a8a29e',
+    '--g-sub-sidebar-menu-hover-bg': '#0a0a0a',
+    '--g-sub-sidebar-menu-hover-color': '#e5e5e5',
+    '--g-sub-sidebar-menu-active-bg': '#e5e5e5',
+    '--g-sub-sidebar-menu-active-color': '#0a0a0a',
+    // 标签栏
+    '--g-tabbar-dividers-bg': '#a8a29e',
+    '--g-tabbar-tab-color': '#a8a29e',
+    '--g-tabbar-tab-hover-bg': '#1b1b1b',
+    '--g-tabbar-tab-hover-color': '#e5e5e5',
+    '--g-tabbar-tab-active-color': '#e5e5e5',
+  },
+  ...
 }
 ```
 
 ![](/theme.gif){data-zoomable}
 
-如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。首先先打开默认主题了解下代码结构 `/src/assets/styles/themes/default.scss` ，主题的样式都存放在 `$theme-default` 这个变量里，注意明亮模式和暗黑模式的区分，两者里面属性名是完全一致的。
+如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。
 
-```scss
-$theme-default: (
-  // 明亮模式
-  "": (
-    ...
-  ),
-  // 暗黑模式
-  "dark": (
-    ...
-  )
-)
+```ts
+import { hex2rgba } from '@unocss/preset-mini/utils'
+
+export default {
+  newThemeName: { // 主题名称
+    // 颜色主题
+    'color-scheme': 'light', // 可选值 light/dark ，表示该主题在明亮或暗黑模式下的配色
+    // 内置 UI
+    '--ui-primary': hex2rgba('#409eff')!.join(','),
+    '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+    // 主体
+    '--g-bg': '#f2f2f2',
+    '--g-container-bg': '#fff',
+    '--g-border-color': '#f2f2f2',
+    // 头部
+    '--g-header-bg': '#222b45',
+    '--g-header-color': '#fff',
+    '--g-header-menu-color': '#fff',
+    '--g-header-menu-hover-bg': '#334067',
+    '--g-header-menu-hover-color': '#fff',
+    '--g-header-menu-active-bg': '#334067',
+    '--g-header-menu-active-color': '#fff',
+    // 主导航
+    '--g-main-sidebar-bg': '#222b45',
+    '--g-main-sidebar-menu-color': '#fff',
+    '--g-main-sidebar-menu-hover-bg': '#334067',
+    '--g-main-sidebar-menu-hover-color': '#fff',
+    '--g-main-sidebar-menu-active-bg': '#334067',
+    '--g-main-sidebar-menu-active-color': '#fff',
+    // 次导航
+    '--g-sub-sidebar-bg': '#fff',
+    '--g-sub-sidebar-logo-bg': '#222b45',
+    '--g-sub-sidebar-logo-color': '#fff',
+    '--g-sub-sidebar-menu-color': '#0f0f0f',
+    '--g-sub-sidebar-menu-hover-bg': '#dde1e3',
+    '--g-sub-sidebar-menu-hover-color': '#0f0f0f',
+    '--g-sub-sidebar-menu-active-bg': '#409eff',
+    '--g-sub-sidebar-menu-active-color': '#fff',
+    // 标签栏
+    '--g-tabbar-dividers-bg': '#a3a3a3',
+    '--g-tabbar-tab-color': '#a3a3a3',
+    '--g-tabbar-tab-hover-bg': '#e5e5e5',
+    '--g-tabbar-tab-hover-color': '#0f0f0f',
+    '--g-tabbar-tab-active-color': '#0f0f0f',
+  },
+}
 ```
 
-所以如果要创建一个新主题，例如要增加一个红色主题，可以将 `default.scss` 文件复制一份，并修改文件名为 `red.scss` ，同时将文件里的 `$theme-default` 变量名也修改为 `$theme-red` ，然后在 `/src/assets/styles/resources/themes.scss` 文件中增加以下代码：
+最后在应用配置中使用该主题：
 
-```scss {7,16}
-@use "../themes/default.scss" as *;
-@use "../themes/green.scss" as *;
-@use "../themes/orange.scss" as *;
-@use "../themes/pink.scss" as *;
-@use "../themes/grey.scss" as *;
-@use "../themes/yellow.scss" as *;
-@use "../themes/red.scss" as *;
-
-$themes: (
-  default: $theme-default,
-  sys_green: $theme-green,
-  sys_orange: $theme-orange,
-  sys_pink: $theme-pink,
-  sys_grey: $theme-grey,
-  sys_yellow: $theme-yellow,
-  red: $theme-red
-);
-```
-
-最后在应用配置中设置主题为 `red` 就可以调用这个我们创建的主题了：
-
-```ts {2-4}
+```ts {2-5}
 const globalSettings: Settings.all = {
   app: {
-    theme: 'red',
+    // 如果主题是暗黑模式下使用的，则 darkTheme: 'newThemeName'
+    lightTheme: 'newThemeName',
   },
 }
 ```
@@ -98,14 +261,11 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-8}
+```ts {2-5}
 const globalSettings: Settings.all = {
   menu: {
-    /**
-     * 留空默认
-     * radius 圆角
-     */
-    menuFillStyle: '',
+    // 导航栏是否圆角
+    isRounded: true,
   },
 }
 ```
@@ -169,142 +329,13 @@ const globalSettings: Settings.all = {
 
 ![](/tabbar-style.png){data-zoomable}
 
-## Element Plus 主题
-
-> 详细可阅读 Element Plus 官方文档《[自定义主题](https://element-plus.gitee.io/zh-CN/guide/theming.html)》。
-
-你可以在 `/src/assets/style/element-plus/index.scss` 和 `/src/assets/style/element-plus/dark.scss` 文件中分别修改 Element Plus 的明亮和暗黑模式下的预设样式。
-
-你可以到 Element Plus 的 [`packages/theme-chalk/src/common/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss) 和 [`packages/theme-chalk/src/dark/var.scss`](https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/dark/var.scss) 中查找更多明亮和暗黑模式下的 scss 变量。
-
-## Element Plus 样式
-
-有时候，我们可能需要重写 Element Plus 组件的一些默认样式，除了可以在 SFC 单文件组件里单独重写外，你也可以在 `/src/assets/style/element-plus/override.scss` 文件中进行全局重写。
-
-## Element Plus 默认尺寸
-
-在应用配置中设置：
-
-```ts {2-9}
-const globalSettings: Settings.all = {
-  app: {
-    /**
-     * default 默认
-     * large 大号
-     * small 小号
-     */
-    elementSize: 'default',
-  },
-}
-```
-
 ## 开发注意
 
 如果只在明亮或暗黑模式中，选择其中一种模式进行业务开发，那没有什么需要注意的，你可以按照以往的开发习惯进行开发，这也是框架推荐的方式。
 
 但如果需要让用户可以自己选择明亮或暗黑模式，或者是根据浏览器主题来判断是使用明亮还是暗黑模式。这时候开发则需要注意，业务页面里使用到的颜色将不能写成固定值（例如 color 、background-color 、border-color 、box-shadow 等有涉及到颜色的属性），因为同一个色值是无法顾及到明亮和暗黑两种模式的。
 
-这时候建议使用 Element Plus 原生的 css 变量来代替原有的颜色，你可以在 Element Plus 官网[这里](https://element-plus.org/zh-CN/component/color.html#%E4%B8%BB%E8%89%B2)了解到这些颜色变量。为了方便，我们将这些颜色变量都整理了出来。
-
-```css
-/* 主色 primary */
-var(--el-color-primary)
-var(--el-color-primary-light-3)
-var(--el-color-primary-light-5)
-var(--el-color-primary-light-7)
-var(--el-color-primary-light-9)
-var(--el-color-primary-dark-2)
-/* 辅助色 success */
-var(--el-color-success)
-var(--el-color-success-light-3)
-var(--el-color-success-light-5)
-var(--el-color-success-light-7)
-var(--el-color-success-light-9)
-var(--el-color-success-dark-2)
-/* 辅助色 warning */
-var(--el-color-warning)
-var(--el-color-warning-light-3)
-var(--el-color-warning-light-5)
-var(--el-color-warning-light-7)
-var(--el-color-warning-light-9)
-var(--el-color-warning-dark-2)
-/* 辅助色 danger */
-var(--el-color-danger)
-var(--el-color-danger-light-3)
-var(--el-color-danger-light-5)
-var(--el-color-danger-light-7)
-var(--el-color-danger-light-9)
-var(--el-color-danger-dark-2)
-/* 辅助色 error */
-var(--el-color-error)
-var(--el-color-error-light-3)
-var(--el-color-error-light-5)
-var(--el-color-error-light-7)
-var(--el-color-error-light-9)
-var(--el-color-error-dark-2)
-/* 辅助色 info */
-var(--el-color-info)
-var(--el-color-info-light-3)
-var(--el-color-info-light-5)
-var(--el-color-info-light-7)
-var(--el-color-info-light-9)
-var(--el-color-info-dark-2)
-/* 背景 */
-var(--el-bg-color)
-var(--el-bg-color-page)
-var(--el-bg-color-overlay)
-/* 文字 */
-var(--el-text-color-primary)
-var(--el-text-color-regular)
-var(--el-text-color-secondary)
-var(--el-text-color-placeholder)
-var(--el-text-color-disabled)
-/* 边框 */
-var(--el-border-color)
-var(--el-border-color-light)
-var(--el-border-color-lighter)
-var(--el-border-color-extra-light)
-var(--el-border-color-dark)
-var(--el-border-color-darker)
-/* 填充 */
-var(--el-fill-color)
-var(--el-fill-color-light)
-var(--el-fill-color-lighter)
-var(--el-fill-color-extra-light)
-var(--el-fill-color-dark)
-var(--el-fill-color-darker)
-var(--el-fill-color-blank)
-/* box-shadow */
-var(--el-box-shadow)
-var(--el-box-shadow-light)
-var(--el-box-shadow-lighter)
-var(--el-box-shadow-dark)
-/* 禁用 */
-var(--el-disabled-bg-color)
-var(--el-disabled-text-color)
-var(--el-disabled-border-color)
-/* 遮罩 */
-var(--el-overlay-color)
-var(--el-overlay-color-light)
-var(--el-overlay-color-lighter)
-/* mask */
-var(--el-mask-color)
-var(--el-mask-color-extra-light)
-```
-
-另外，你可能还会用到以下这些 transition 变量，因为在明亮和暗黑模式切换过程中，如果没有 transition 的过渡效果，就会变得很突兀，和框架整体动效风格也不统一。
-
-```css
-var(--el-transition-all)
-var(--el-transition-fade)
-var(--el-transition-fade-linear)
-var(--el-transition-md-fade)
-var(--el-transition-color)
-var(--el-transition-border)
-var(--el-transition-box-shadow)
-```
-
-除此之外，你还可以使用下面这种方法，在页面中去自定义一些颜色。
+这时候我们建议使用 UnoCSS 进行样式编写，例如 `text-dark dark:text-white` 、`bg-green dark:bg-red` 。如果你不习惯使用 UnoCSS ，那也可以使用下面这种方法，在页面中去自定义一些颜色。
 
 ```scss
 html {

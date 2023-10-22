@@ -16,10 +16,12 @@
 const useExampleStore = defineStore(
   // 唯一ID
   'example',
-  {
-    state: () => ({}),
-    getters: {},
-    actions: {},
+  () => {
+    const someThing = ref(0)
+
+    return {
+      someThing,
+    }
   },
 )
 
@@ -32,6 +34,5 @@ export default useExampleStore
 import useExampleStore from '@/store/modules/example'
 const exampleStore = useExampleStore()
 
-exampleStore.data
-exampleStore.doSomething()
+exampleStore.someThing
 ```
