@@ -28,7 +28,7 @@ hero:
 features:
 - icon: 💪
   title: 先进的技术栈
-  details: Vite + Vue3 + Vue-router + Pinia + TypeScript ，采用业内先进的技术栈，使框架始终保持新鲜
+  details: Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript ，采用业内先进的技术栈，使框架始终保持新鲜
 - icon: 🎨
   title: 风格百变
   details: 通过布局与主题组合搭配，可实现数百种不同风格的界面

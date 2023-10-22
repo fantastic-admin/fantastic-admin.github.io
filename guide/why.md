@@ -32,6 +32,25 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 ![](/intro-1.png){data-zoomable}
 
+## UI 组件库可替换
+
+框架默认使用了 Element Plus 作为 UI 组件库，但你也可以轻松切换到其它 UI 组件库，如 Ant Design Vue、Arco Design Vue、Naive UI、TDesign 等。
+
+<table>
+  <tr>
+    <th width="25%" style="text-align: center;">Ant Design Vue</th>
+    <th width="25%" style="text-align: center;">Arco Design Vue</th>
+    <th width="25%" style="text-align: center;">Naive UI</th>
+    <th width="25%" style="text-align: center;">TDesign</th>
+  </tr>
+  <tr>
+    <td><ZoomImg src="/ui-antd.png" /></td>
+    <td><ZoomImg src="/ui-arco.png" /></td>
+    <td><ZoomImg src="/ui-naive.png" /></td>
+    <td><ZoomImg src="/ui-tdesign.png" /></td>
+  </tr>
+</table>
+
 ## 丰富的导航设置
 
 对比同类产品只有几种基础的设置项，Fantastic-admin 提供了**十余种**设置项，可以设置导航的各种展示形态，包括但不限于标题、图标、徽标、外链、权限、缓存等。

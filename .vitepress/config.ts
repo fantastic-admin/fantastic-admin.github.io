@@ -161,6 +161,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           items: [
             { text: '文档说明', link: '/guide/intro' },
             { text: '为什么选择我们 ?', link: '/guide/why' },
+            { text: 'V4.0 更新介绍', link: '/guide/v4' },
           ],
           collapsed: false,
         },
@@ -218,6 +219,16 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: '基于文件系统的路由', link: '/guide/file-system-route' },
             { text: '使用 Composition API 开发', link: '/guide/vue3-composition-api' },
             { text: '高级 position:fixed', link: '/guide/position-fixed' },
+            {
+              text: '替换 UI 组件库',
+              items: [
+                { text: '替换为 Ant Design Vue', link: '/guide/replace-to-antd' },
+                { text: '替换为 Arco Design Vue', link: '/guide/replace-to-arco' },
+                { text: '替换为 Naive UI', link: '/guide/replace-to-naive' },
+                { text: '替换为 TDesign', link: '/guide/replace-to-tdesign' },
+              ],
+              collapsed: true,
+            }
           ],
           collapsed: false,
         },
