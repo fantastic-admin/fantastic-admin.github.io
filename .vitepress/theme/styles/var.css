@@ -79,3 +79,14 @@
 .pro-badge:before {
   content: '专业版';
 }
+a.cta {
+  text-align: center;
+  border-radius: 8px;
+}
+a.cta:hover {
+  border-color: var(--vp-c-brand);
+  background-color: var(--c-bg-accent);
+}
+a.cta.buy {
+  border-color: goldenrod;
+}

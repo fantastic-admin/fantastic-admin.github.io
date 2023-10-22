@@ -18,7 +18,7 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 开箱即用，是我们一直在努力的方向。
 
-事实也证明 Fantastic-admin 足够易于上手，在使用 Fantastic-admin 的开发者中，**非前端开发者占据了约有一半的人数**，它们大部分为后端 PHP/Java/.NET/GO 开发者，以及少部分学生人群。
+事实也证明 Fantastic-admin 足够易于上手，在使用 Fantastic-admin 的开发者中，**非前端开发者占据了约有一半以上的人数**，它们大部分为后端 PHP/Java/.NET/GO 开发者，以及少部分学生人群。
 
 ## 颜值在线
 
@@ -26,7 +26,7 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 ## 风格可配置
 
-提供明亮/暗黑两种模式，以及 6 款颜色主题风格，5 款导航栏模式，2 款导航栏填充风格，4 款导航栏激活风格和 4 款页宽模式。
+提供明亮和暗黑共计 **12** 款颜色主题，**5** 款导航栏模式，**2** 款导航栏填充风格，**4** 款导航栏激活风格和 **4** 款页宽模式。
 
 通过布局与主题组合搭配，可实现**数百种**不同风格的界面。
 
@@ -34,7 +34,7 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 ## UI 组件库可替换
 
-框架默认使用了 Element Plus 作为 UI 组件库，但你也可以轻松切换到其它 UI 组件库，如 Ant Design Vue、Arco Design Vue、Naive UI、TDesign 等。
+框架默认使用了 Element Plus 作为 UI 组件库，但你也可以**轻松替换成其它 UI 组件库**，如 Ant Design Vue、Arco Design Vue、Naive UI、TDesign 等。
 
 <table>
   <tr>
