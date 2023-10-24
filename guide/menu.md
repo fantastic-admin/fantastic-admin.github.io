@@ -94,8 +94,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
   },
   {
     meta: {
-      title: '无次导航',
-      icon: 'sidebar-default',
+      title: '测试',
     },
     children: [
       Test,
