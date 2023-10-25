@@ -65,11 +65,11 @@ import { theme } from 'ant-design-vue' // [!code ++]
 </script>
 
 <template>
-  <el-config-provider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <a-config-provider :locale="antDesignVueLocaleZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}"> // [!code ++]
+  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
+  <AConfigProvider :locale="antDesignVueLocaleZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}"> // [!code ++]
     ...
-  </a-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </AConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 
@@ -116,11 +116,11 @@ import { theme } from 'ant-design-vue' // [!code ++]
 </script>
 
 <template>
-  <el-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <a-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :theme="settingsStore.settings.app.colorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}"> // [!code ++]
+  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
+  <AConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :theme="settingsStore.settings.app.colorScheme === 'dark' ? { algorithm: [theme.darkAlgorithm] } : {}"> // [!code ++]
     ...
-  </a-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </AConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 

@@ -64,11 +64,11 @@ import arcoDesignVueLocaleZhCN from '@arco-design/web-vue/es/locale/lang/zh-cn' 
 </script>
 
 <template>
-  <el-config-provider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <a-config-provider :locale="arcoDesignVueLocaleZhCN"> // [!code ++]
+  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
+  <AConfigProvider :locale="arcoDesignVueLocaleZhCN"> // [!code ++]
     ...
-  </a-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </AConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 
@@ -139,11 +139,11 @@ import { theme } from 'ant-design-vue' // [!code ++]
 </script>
 
 <template>
-  <el-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <a-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui"> // [!code ++]
+  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
+  <AConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui"> // [!code ++]
     ...
-  </a-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </AConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 

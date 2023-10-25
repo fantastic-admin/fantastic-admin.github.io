@@ -73,11 +73,11 @@ import tDesignLocaleZhCN from 'tdesign-vue-next/es/locale/zh_CN' // [!code ++]
 </script>
 
 <template>
-  <el-config-provider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <t-config-provider :global-config="tDesignLocaleZhCN"> // [!code ++]
+  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
+  <TConfigProvider :global-config="tDesignLocaleZhCN"> // [!code ++]
     ...
-  </t-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </TConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 
@@ -151,11 +151,11 @@ app.use(TDesign) // [!code ++]
 
 ```vue
 <template>
-  <el-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <t-config-provider :global-config="UILocales[settingsStore.settings.app.defaultLang].ui"> // [!code ++]
+  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
+  <TConfigProvider :global-config="UILocales[settingsStore.settings.app.defaultLang].ui"> // [!code ++]
     ...
-  </t-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </TConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 

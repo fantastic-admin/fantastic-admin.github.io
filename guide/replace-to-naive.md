@@ -64,14 +64,14 @@ import { darkTheme, dateZhCN, zhCN } from 'naive-ui' // [!code ++]
 </script>
 
 <template>
-  <el-config-provider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <n-config-provider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;"> // [!code ++]
+  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
+  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;"> // [!code ++]
     <n-message-provider> // [!code ++]
       ...
       <n-global-style /> // [!code ++]
     </n-message-provider> // [!code ++]
-  </n-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </NConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 
@@ -118,14 +118,14 @@ import { darkTheme } from 'naive-ui' // [!code ++]
 </script>
 
 <template>
-  <el-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <n-config-provider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :date-locale="UILocales[settingsStore.settings.app.defaultLang].uiDate" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;"> // [!code ++]
+  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
+  <NConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :date-locale="UILocales[settingsStore.settings.app.defaultLang].uiDate" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;"> // [!code ++]
     <n-message-provider> // [!code ++]
       ...
       <n-global-style /> // [!code ++]
     </n-message-provider> // [!code ++]
-  </n-config-provider> // [!code ++]
-  </el-config-provider> // [!code --]
+  </NConfigProvider> // [!code ++]
+  </ElConfigProvider> // [!code --]
 </template>
 ```
 
