@@ -12,8 +12,8 @@ import { hex2rgba } from '@unocss/preset-mini/utils'
 export const lightTheme = {
   'color-scheme': 'light', // 请勿删除，用于判断是否为明亮主题
   // 内置 UI
-  '--ui-primary': hex2rgba('#0f0f0f')!.join(','),
-  '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+  '--ui-primary': hex2rgba('#0f0f0f')!.join(' '),
+  '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
   // 主体
   '--g-bg': '#f2f2f2',
   '--g-container-bg': '#fff',
@@ -47,8 +47,8 @@ export const lightTheme = {
 export const darkTheme = {
   'color-scheme': 'dark',
   // 内置 UI
-  '--ui-primary': hex2rgba('#e5e5e5')!.join(','),
-  '--ui-text': hex2rgba('#0f0f0f')!.join(','),
+  '--ui-primary': hex2rgba('#e5e5e5')!.join(' '),
+  '--ui-text': hex2rgba('#0f0f0f')!.join(' '),
   // 主体
   '--g-bg': '#0a0a0a',
   '--g-container-bg': '#141414',
@@ -92,8 +92,8 @@ export default {
     // 颜色主题
     'color-scheme': 'light',
     // 内置 UI
-    '--ui-primary': hex2rgba('#0f0f0f')!.join(','),
-    '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+    '--ui-primary': hex2rgba('#0f0f0f')!.join(' '),
+    '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
     // 主体
     '--g-bg': '#f2f2f2',
     '--g-container-bg': '#fff',
@@ -134,8 +134,8 @@ export default {
     // 颜色主题
     'color-scheme': 'dark',
     // 内置 UI
-    '--ui-primary': hex2rgba('#e5e5e5')!.join(','),
-    '--ui-text': hex2rgba('#0f0f0f')!.join(','),
+    '--ui-primary': hex2rgba('#e5e5e5')!.join(' '),
+    '--ui-text': hex2rgba('#0f0f0f')!.join(' '),
     // 主体
     '--g-bg': '#0a0a0a',
     '--g-container-bg': '#141414',
@@ -187,8 +187,8 @@ export default {
     // 颜色主题
     'color-scheme': 'light', // 可选值 light/dark ，表示该主题在明亮或暗黑模式下的配色
     // 内置 UI
-    '--ui-primary': hex2rgba('#409eff')!.join(','),
-    '--ui-text': hex2rgba('#fcfcfc')!.join(','),
+    '--ui-primary': hex2rgba('#409eff')!.join(' '),
+    '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
     // 主体
     '--g-bg': '#f2f2f2',
     '--g-container-bg': '#fff',

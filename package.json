@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.27",
-    "vitepress": "1.0.0-rc.23",
-    "vue": "^3.3.6"
+    "@antfu/eslint-config": "1.0.0-beta.28",
+    "vitepress": "1.0.0-rc.24",
+    "vue": "^3.3.7"
   },
   "dependencies": {
     "medium-zoom": "^1.0.8"
