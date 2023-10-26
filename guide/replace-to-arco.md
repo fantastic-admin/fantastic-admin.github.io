@@ -215,7 +215,7 @@ watch(() => settings.value.app.colorScheme, (colorScheme) => {
 ```
 .
 └─ src
-   └─ components // 由于下列提供的扩展组件基于 Element Plus 二次封装，需要删除
+   └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
      ├─ ImagePreview
      ├─ ImagesUpload
@@ -227,8 +227,10 @@ watch(() => settings.value.app.colorScheme, (colorScheme) => {
 
 ```
 .
+├─ plop-templates
+│  └─ module // 标准模块模板基于 Element Plus 开发，需要删除
 └─ src
-   └─ components // 由于下列提供的扩展组件基于 Element Plus 二次封装，需要删除
+   └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
      ├─ IconPicker
      ├─ ImagePreview
