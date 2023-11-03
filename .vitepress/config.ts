@@ -118,6 +118,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 link: 'https://gitee.com/sciqtw/quickadmin',
               },
               {
+                text: 'Vexip UI 组件库',
+                link: 'https://www.vexipui.com/zh-CN',
+              },
+              {
                 text: '交换友链 ?',
                 link: '/links',
               },
