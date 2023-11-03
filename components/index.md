@@ -37,6 +37,7 @@
 - 《[替换为 Arco Design Vue](/guide/replace-to-arco)》
 - 《[替换为 Naive UI](/guide/replace-to-naive)》
 - 《[替换为 TDesign](/guide/replace-to-tdesign)》
+- 《[替换为 Vexip UI](/guide/replace-to-vexip)》
 
 如果你想使用的组件库不在上述方案中，可以通过参考任何一份方案，理解替换的整理思路，并自行替换，别担心会很复杂，我们已经将大部分工作做好了。
 :::

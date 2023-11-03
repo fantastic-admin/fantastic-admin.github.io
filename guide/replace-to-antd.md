@@ -1,10 +1,10 @@
 # 替换为 Ant Design Vue
 
 ::: warning 注意
-V4.0 之前，框架不支持替换组件库，所以本文不适用于 V4.0 之前的版本。
+本文适用于 v4.0 及之后的版本，v4.0 之前的版本不支持替换组件库。
 :::
 
-由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 Ant Design Vue，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
+由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [Ant Design Vue](https://www.antdv.com/docs/vue/introduce-cn)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
 
 专业版用户也同样，请到专业版仓库下载框架源码。
 
