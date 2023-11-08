@@ -122,6 +122,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 link: 'https://www.vexipui.com/zh-CN',
               },
               {
+                text: 'Form-create 动态表单生成器',
+                link: 'https://form-create.com',
+              },
+              {
                 text: '交换友链 ?',
                 link: '/links',
               },
