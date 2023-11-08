@@ -34,20 +34,28 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 ## UI 组件库可替换
 
-框架默认使用了 Element Plus 作为 UI 组件库，但你也可以**轻松替换成其它 UI 组件库**，如 Ant Design Vue、Arco Design Vue、Naive UI、TDesign 等。
+框架默认使用了 Element Plus 作为 UI 组件库，但你也可以**轻松替换成其它 UI 组件库**，如下：
 
 <table>
   <tr>
-    <th width="25%" style="text-align: center;">Ant Design Vue</th>
-    <th width="25%" style="text-align: center;">Arco Design Vue</th>
-    <th width="25%" style="text-align: center;">Naive UI</th>
-    <th width="25%" style="text-align: center;">TDesign</th>
+    <th width="33%" style="text-align: center;">Ant Design Vue</th>
+    <th width="33%" style="text-align: center;">Arco Design Vue</th>
+    <th width="33%" style="text-align: center;">Naive UI</th>
   </tr>
-  <tr>
+  <tr style="background-color: inherit;">
     <td><ZoomImg src="/ui-antd.png" /></td>
     <td><ZoomImg src="/ui-arco.png" /></td>
     <td><ZoomImg src="/ui-naive.png" /></td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">TDesign</th>
+    <th style="text-align: center;">Vexip UI</th>
+    <th style="text-align: center;"></th>
+  </tr>
+  <tr style="background-color: inherit;">
     <td><ZoomImg src="/ui-tdesign.png" /></td>
+    <td><ZoomImg src="/ui-vexip.png" /></td>
+    <td></td>
   </tr>
 </table>
 
