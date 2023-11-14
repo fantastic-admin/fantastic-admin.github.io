@@ -68,13 +68,14 @@ app.use(TDesign) // [!code ++]
 <script setup lang="ts">
 ...
 import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
+import { merge } from 'lodash-es' // [!code ++]
 import tDesignLocaleZhCN from 'tdesign-vue-next/es/locale/zh_CN' // [!code ++]
 ...
 </script>
 
 <template>
   <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <TConfigProvider :global-config="tDesignLocaleZhCN"> // [!code ++]
+  <TConfigProvider :global-config="merge(tDesignLocaleZhCN)"> // [!code ++]
     ...
   </TConfigProvider> // [!code ++]
   </ElConfigProvider> // [!code --]
