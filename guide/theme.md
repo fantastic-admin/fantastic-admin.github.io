@@ -322,7 +322,7 @@ const globalSettings: Settings.all = {
      * card 卡片
      * square 方块
      */
-    tabStyle: 'fashion',
+    style: 'fashion',
   },
 }
 ```

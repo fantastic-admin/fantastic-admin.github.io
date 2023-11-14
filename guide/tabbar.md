@@ -10,6 +10,10 @@ const globalSettings: Settings.all = {
 }
 ```
 
+## 风格
+
+详细可阅读《[主题 - 标签栏风格](theme#标签栏风格)》
+
 ## 功能介绍
 
 ### 刷新
