@@ -43,10 +43,10 @@ git clone -b example https://github.com/fantastic-admin/basic.git
 
 ## 开发环境
 
-使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/zh-cn/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
+使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 ::: warning 注意
-Node.js 需要使用 16+ 版本，建议为 18+ 版本。
+Node.js 需要使用 18+ / 20+ 版本。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：
