@@ -108,6 +108,7 @@ meta:
 - [activeMenu](router#activemenu)
 - [cache](router#cache)
 - [noCache](router#nocache) <sup class="pro-badge" />
+- [newWindow](router#newwindow) <sup class="pro-badge" />
 - [link](router#link) <sup class="pro-badge" />
 - [copyright](router#copyright) <sup class="pro-badge" />
 - [paddingBottom](router#paddingbottom) <sup class="pro-badge" />

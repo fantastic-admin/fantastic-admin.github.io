@@ -338,6 +338,14 @@ export default routes
 badge: () => globalStore.number
 ```
 
+### newWindow <sup class="pro-badge" />
+
+|  类型   | 默认值 | 说明             |
+| :-----: | :----: | :--------------- |
+| boolean | false  | 是否在新窗口打开 |
+
+该设置仅在导航里生效，在导航之外的地方访问该路由，依旧保持原有的打开方式。
+
 ### link
 
 |  类型  | 默认值 | 说明         |

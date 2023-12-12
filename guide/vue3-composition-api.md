@@ -13,7 +13,7 @@ Composition API 是 Vue3 全新提供的一种语法，对于从 Vue2 就在使�
 ```vue
 <script setup lang="ts">
 // 无需手动 import 相关 API
-import { ref, computed } from 'vue' // [!code --]
+import { computed, ref } from 'vue' // [!code --]
 import { useRoute, useRouter } from 'vue-router' // [!code --]
 
 const count = ref(0)
@@ -47,7 +47,7 @@ Vue 3.3 开始，你可以使用 `defineOptions` 在 `<script setup>` 里定义�
 ```vue
 <script setup lang="ts">
 defineOptions({
-  name: 'componentName',
+  name: 'ComponentName',
 })
 </script>
 ```

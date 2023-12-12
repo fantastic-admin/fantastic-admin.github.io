@@ -61,11 +61,11 @@ api.post('news/create', {
 ```ts
 import api from '@/api'
 
-api.get('news/list')  // http://localhost:3000/proxy/news/list
-api.post('news/add')  // http://localhost:3000/proxy/news/add
+api.get('news/list') // http://localhost:9000/proxy/news/list
+api.post('news/add') // http://localhost:9000/proxy/news/add
 ```
 
-开启代理后，原有请求都会被指向到本地 `http://localhost:3000/proxy` ，因为 `/proxy` 匹配到了 vite.config.ts 里代理部分的设置，所以实际是请求依旧是 `VITE_APP_API_BASEURL` 所设置的地址。
+开启代理后，原有请求都会被指向到本地 `http://localhost:9000/proxy` ，因为 `/proxy` 匹配到了 vite.config.ts 里代理部分的设置，所以实际是请求依旧是 `VITE_APP_API_BASEURL` 所设置的地址。
 
 ```ts {2-9}
 server: {
@@ -173,7 +173,7 @@ export default [
         data: {
           'list|5-10': [
             {
-              'title': '@ctitle'
+              title: '@ctitle'
             },
           ],
         },
