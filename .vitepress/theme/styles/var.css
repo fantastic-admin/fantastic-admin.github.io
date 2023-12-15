@@ -52,8 +52,8 @@
   font-weight: bold;
   padding: 4px 6px;
   margin-left: 6px;
-  background: var(--vp-c-brand);
-  color: white;
+  color: var(--vp-button-brand-text);
+  background-color: var(--vp-button-brand-bg);
   border-radius: 10px;
   vertical-align: middle;
 }

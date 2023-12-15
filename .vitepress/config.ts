@@ -114,6 +114,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 link: 'https://www.vform666.com',
               },
               {
+                text: 'Form-create 动态表单生成器',
+                link: 'https://form-create.com',
+              },
+              {
                 text: 'QuickAdmin 快速开发管理框架',
                 link: 'https://gitee.com/sciqtw/quickadmin',
               },
@@ -122,8 +126,8 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 link: 'https://www.vexipui.com/zh-CN',
               },
               {
-                text: 'Form-create 动态表单生成器',
-                link: 'https://form-create.com',
+                text: 'iDux 组件库',
+                link: 'https://idux.site',
               },
               {
                 text: '交换友链 ?',
@@ -235,6 +239,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 { text: '替换为 Naive UI', link: '/guide/replace-to-naive' },
                 { text: '替换为 TDesign', link: '/guide/replace-to-tdesign' },
                 { text: '替换为 Vexip UI', link: '/guide/replace-to-vexip' },
+                { text: '替换为 iDux', link: '/guide/replace-to-idux' },
               ],
               collapsed: true,
             }
