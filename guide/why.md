@@ -50,12 +50,12 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
   <tr>
     <th style="text-align: center;">TDesign</th>
     <th style="text-align: center;">Vexip UI</th>
-    <th style="text-align: center;"></th>
+    <th style="text-align: center;">iDux</th>
   </tr>
   <tr style="background-color: inherit;">
     <td><ZoomImg src="/ui-tdesign.png" /></td>
     <td><ZoomImg src="/ui-vexip.png" /></td>
-    <td></td>
+    <td><ZoomImg src="/ui-idux.png" /></td>
   </tr>
 </table>
 
