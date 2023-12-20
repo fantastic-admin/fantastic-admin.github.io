@@ -1,7 +1,9 @@
 # 替换为 Arco Design Vue
 
 ::: warning 注意
-本文适用于 v4.0 及之后的版本，v4.0 之前的版本不支持替换组件库。
+v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
+
+版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.github.io/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-arco.md)。
 :::
 
 由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [Arco Design Vue](https://arco.design/vue/docs/start)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
@@ -20,7 +22,8 @@ pnpm add @arco-design/web-vue -D
 
 ## 代码调整
 
-### 基础版
+<details>
+<summary>基础版</summary>
 
 修改 `/tsconfig.json` 文件
 
@@ -38,179 +41,54 @@ pnpm add @arco-design/web-vue -D
 }
 ```
 
-修改 `/src/main.ts` 文件
+整体修改 `/src/ui-provider/index.ts` 文件
 
 ```ts
-...
-import ElementPlus from 'element-plus' // [!code --]
-import 'element-plus/dist/index.css' // [!code --]
-import 'element-plus/theme-chalk/dark/css-vars.css' // [!code --]
-import ArcoVue from '@arco-design/web-vue' // [!code ++]
-import '@arco-design/web-vue/dist/arco.css' // [!code ++]
-...
-app.use(ElementPlus) // [!code --]
-app.use(ArcoVue) // [!code ++]
-...
+import type { App } from 'vue'
+import ArcoVue from '@arco-design/web-vue'
+import '@arco-design/web-vue/dist/arco.css'
+
+function install(app: App) {
+  app.use(ArcoVue)
+}
+
+export default { install }
 ```
 
-修改 `/src/App.vue` 文件
+整体修改 `/src/ui-provider/index.vue` 文件
 
 ```vue
 <script setup lang="ts">
-...
-import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
-import arcoDesignVueLocaleZhCN from '@arco-design/web-vue/es/locale/lang/zh-cn' // [!code ++]
-...
-</script>
+import zhCN from '@arco-design/web-vue/es/locale/lang/zh-cn'
+import useSettingsStore from '@/store/modules/settings'
 
-<template>
-  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <AConfigProvider :locale="arcoDesignVueLocaleZhCN"> // [!code ++]
-    ...
-  </AConfigProvider> // [!code ++]
-  </ElConfigProvider> // [!code --]
-</template>
-```
+const settingsStore = useSettingsStore()
 
-修改 `/src/store/modules/settings.ts` 文件
-
-```ts
-...
-watch(() => settings.value.app.colorScheme, (colorScheme) => {
+watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
   if (colorScheme === '') {
     colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   }
   switch (colorScheme) {
     case 'light':
-      document.documentElement.classList.remove('dark')
-      document.body.removeAttribute('arco-theme') // [!code ++]
+      document.body.removeAttribute('arco-theme')
       break
     case 'dark':
-      document.documentElement.classList.add('dark')
-      document.body.setAttribute('arco-theme', 'dark') // [!code ++]
+      document.body.setAttribute('arco-theme', 'dark')
       break
   }
 }, {
   immediate: true,
 })
-...
-```
-
-### 专业版
-
-修改 `/tsconfig.json` 文件
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "types": [
-      ...
-      "element-plus/global", // [!code --]
-      ...
-    ],
-    ...
-  }
-}
-```
-
-修改 `/src/main.ts` 文件
-
-```ts
-...
-import ElementPlus from 'element-plus' // [!code --]
-import 'element-plus/dist/index.css' // [!code --]
-import 'element-plus/theme-chalk/dark/css-vars.css' // [!code --]
-import ArcoVue from '@arco-design/web-vue' // [!code ++]
-import '@arco-design/web-vue/dist/arco.css' // [!code ++]
-...
-app.use(ElementPlus) // [!code --]
-app.use(ArcoVue) // [!code ++]
-...
-```
-
-修改 `/src/App.vue` 文件
-
-```vue
-<script setup lang="ts">
-...
-import { theme } from 'ant-design-vue' // [!code ++]
-...
 </script>
 
 <template>
-  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <AConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui"> // [!code ++]
-    ...
-  </AConfigProvider> // [!code ++]
-  </ElConfigProvider> // [!code --]
+  <AConfigProvider :locale="zhCN">
+    <slot />
+  </AConfigProvider>
 </template>
 ```
 
-修改 `/src/locales/index.ts` 文件
-
-```ts
-...
-import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
-import elementPlusLocaleZhTW from 'element-plus/es/locale/lang/zh-tw.mjs' // [!code --]
-import elementPlusLocaleEn from 'element-plus/es/locale/lang/en.mjs' // [!code --]
-import arcoDesignVueLocaleZhCN from '@arco-design/web-vue/es/locale/lang/zh-CN' // [!code ++]
-import arcoDesignVueLocaleZhTW from '@arco-design/web-vue/es/locale/lang/zh-TW' // [!code ++]
-import arcoDesignVueLocaleEn from '@arco-design/web-vue/es/locale/lang/en-US' // [!code ++]
-...
-function getUILocales() {
-  const locales: {
-    [key: string]: any
-  } = {}
-  for (const key in messages) {
-    locales[key] = {}
-    switch (key) {
-      case 'zh-cn':
-        Object.assign(locales[key], { labelName: '中文(简体)' }, { ui: elementPlusLocaleZhCN }) // [!code --]
-        Object.assign(locales[key], { labelName: '中文(简体)' }, { ui: arcoDesignVueLocaleZhCN }) // [!code ++]
-        break
-      case 'zh-tw':
-        Object.assign(locales[key], { labelName: '中文(繁體)' }, { ui: elementPlusLocaleZhTW }) // [!code --]
-        Object.assign(locales[key], { labelName: '中文(繁體)' }, { ui: arcoDesignVueLocaleZhTW }) // [!code ++]
-        break
-      case 'en':
-        Object.assign(locales[key], { labelName: 'English' }, { ui: elementPlusLocaleEn }) // [!code --]
-        Object.assign(locales[key], { labelName: 'English' }, { ui: arcoDesignVueLocaleEn }) // [!code ++]
-        break
-    }
-  }
-  return locales
-}
-...
-```
-
-修改 `/src/store/modules/settings.ts` 文件
-
-```ts
-...
-watch(() => settings.value.app.colorScheme, (colorScheme) => {
-  if (colorScheme === '') {
-    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-  switch (colorScheme) {
-    case 'light':
-      document.documentElement.classList.remove('dark')
-      document.body.removeAttribute('arco-theme') // [!code ++]
-      break
-    case 'dark':
-      document.documentElement.classList.add('dark')
-      document.body.setAttribute('arco-theme', 'dark') // [!code ++]
-      break
-  }
-}, {
-  immediate: true,
-})
-...
-```
-
-## 删除文件
-
-### 基础版
+删除相关文件
 
 ```
 .
@@ -223,7 +101,86 @@ watch(() => settings.value.app.colorScheme, (colorScheme) => {
      └─ PcasCascader
 ```
 
-### 专业版
+</details>
+
+<details>
+<summary>专业版</summary>
+
+修改 `/tsconfig.json` 文件
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      ...
+      "element-plus/global" // [!code --]
+    ],
+    ...
+  }
+}
+```
+
+整体修改 `/src/ui-provider/index.ts` 文件
+
+```ts
+import type { App } from 'vue'
+import ArcoVue from '@arco-design/web-vue'
+import '@arco-design/web-vue/dist/arco.css'
+
+import zhCN from '@arco-design/web-vue/es/locale/lang/zh-CN'
+import zhTW from '@arco-design/web-vue/es/locale/lang/zh-TW'
+import en from '@arco-design/web-vue/es/locale/lang/en-US'
+
+function install(app: App) {
+  app.use(ArcoVue)
+}
+
+// 此处的对象属性和 src/locales/index.ts 中的 messages 对象属性一一对应
+const locales: { [key: string]: any } = {
+  'zh-cn': zhCN,
+  'zh-tw': zhTW,
+  'en': en,
+}
+
+export default { install }
+export { locales }
+```
+
+整体修改 `/src/ui-provider/index.vue` 文件
+
+```vue
+<script setup lang="ts">
+import { locales } from './index'
+import useSettingsStore from '@/store/modules/settings'
+
+const settingsStore = useSettingsStore()
+
+watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
+  if (colorScheme === '') {
+    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+  switch (colorScheme) {
+    case 'light':
+      document.body.removeAttribute('arco-theme')
+      break
+    case 'dark':
+      document.body.setAttribute('arco-theme', 'dark')
+      break
+  }
+}, {
+  immediate: true,
+})
+</script>
+
+<template>
+  <AConfigProvider :locale="locales[settingsStore.lang]">
+    <slot />
+  </AConfigProvider>
+</template>
+```
+
+删除相关文件
 
 ```
 .
@@ -238,6 +195,8 @@ watch(() => settings.value.app.colorScheme, (colorScheme) => {
      ├─ ImageUpload
      └─ PcasCascader
 ```
+
+</details>
 
 ## 修改登录页
 

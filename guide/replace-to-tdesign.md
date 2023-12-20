@@ -1,7 +1,9 @@
 # 替换为 TDesign
 
 ::: warning 注意
-本文适用于 v4.0 及之后的版本，v4.0 之前的版本不支持替换组件库。
+v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
+
+版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.github.io/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-tdesign.md)。
 :::
 
 由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [TDesign](https://tdesign.tencent.com/vue-next)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
@@ -20,7 +22,8 @@ pnpm add tdesign-vue-next
 
 ## 代码调整
 
-### 基础版
+<details>
+<summary>基础版</summary>
 
 修改 `/tsconfig.json` 文件
 
@@ -30,8 +33,7 @@ pnpm add tdesign-vue-next
     ...
     "types": [
       ...
-      "element-plus/global", // [!code --]
-      ...
+      "element-plus/global" // [!code --]
     ],
     ...
   },
@@ -47,183 +49,55 @@ pnpm add tdesign-vue-next
 }
 ```
 
-修改 `/src/main.ts` 文件
+整体修改 `/src/ui-provider/index.ts` 文件
 
 ```ts
-...
-import ElementPlus from 'element-plus' // [!code --]
-import 'element-plus/dist/index.css' // [!code --]
-import 'element-plus/theme-chalk/dark/css-vars.css' // [!code --]
-import TDesign from 'tdesign-vue-next' // [!code ++]
-import 'tdesign-vue-next/es/style/index.css' // [!code ++]
-...
-app.use(ElementPlus) // [!code --]
-app.use(TDesign) // [!code ++]
-...
+import type { App } from 'vue'
+import TDesign from 'tdesign-vue-next'
+import 'tdesign-vue-next/es/style/index.css'
+
+function install(app: App) {
+  app.use(TDesign)
+}
+
+export default { install }
 ```
 
-修改 `/src/App.vue` 文件
+整体修改 `/src/ui-provider/index.vue` 文件
 
 ```vue
 <script setup lang="ts">
-...
-import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
-import { merge } from 'lodash-es' // [!code ++]
-import tDesignLocaleZhCN from 'tdesign-vue-next/es/locale/zh_CN' // [!code ++]
-...
+import { merge } from 'lodash-es'
+import zhCN from 'tdesign-vue-next/es/locale/zh_CN'
+import useSettingsStore from '@/store/modules/settings'
+
+const settingsStore = useSettingsStore()
+
+watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
+  if (colorScheme === '') {
+    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+  switch (colorScheme) {
+    case 'light':
+      document.documentElement.removeAttribute('theme-mode')
+      break
+    case 'dark':
+      document.documentElement.setAttribute('theme-mode', 'dark')
+      break
+  }
+}, {
+  immediate: true,
+})
 </script>
 
 <template>
-  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <TConfigProvider :global-config="merge(tDesignLocaleZhCN)"> // [!code ++]
-    ...
-  </TConfigProvider> // [!code ++]
-  </ElConfigProvider> // [!code --]
+  <TConfigProvider :global-config="merge(zhCN)">
+    <slot />
+  </TConfigProvider>
 </template>
 ```
 
-修改 `/src/store/modules/settings.ts` 文件
-
-```ts
-...
-watch(() => settings.value.app.colorScheme, (colorScheme) => {
-  if (colorScheme === '') {
-    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-  switch (colorScheme) {
-    case 'light':
-      document.documentElement.classList.remove('dark')
-      document.documentElement.removeAttribute('theme-mode') // [!code ++]
-      break
-    case 'dark':
-      document.documentElement.classList.add('dark')
-      document.documentElement.setAttribute('theme-mode', 'dark') // [!code ++]
-      break
-  }
-}, {
-  immediate: true,
-})
-...
-```
-
-### 专业版
-
-修改 `/tsconfig.json` 文件
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "types": [
-      ...
-      "element-plus/global", // [!code --]
-      ...
-    ],
-    ...
-  },
-  ...
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue" // [!code --]
-    "src/**/*.vue", // [!code ++]
-    "node_modules/tdesign-vue-next/global.d.ts" // [!code ++]
-  ]
-}
-```
-
-修改 `/src/main.ts` 文件
-
-```ts
-...
-import ElementPlus from 'element-plus' // [!code --]
-import 'element-plus/dist/index.css' // [!code --]
-import 'element-plus/theme-chalk/dark/css-vars.css' // [!code --]
-import TDesign from 'tdesign-vue-next' // [!code ++]
-import 'tdesign-vue-next/es/style/index.css' // [!code ++]
-...
-app.use(ElementPlus) // [!code --]
-app.use(TDesign) // [!code ++]
-...
-```
-
-修改 `/src/App.vue` 文件
-
-```vue
-<template>
-  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <TConfigProvider :global-config="UILocales[settingsStore.settings.app.defaultLang].ui"> // [!code ++]
-    ...
-  </TConfigProvider> // [!code ++]
-  </ElConfigProvider> // [!code --]
-</template>
-```
-
-修改 `/src/locales/index.ts` 文件
-
-```ts
-...
-import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
-import elementPlusLocaleZhTW from 'element-plus/es/locale/lang/zh-tw.mjs' // [!code --]
-import elementPlusLocaleEn from 'element-plus/es/locale/lang/en.mjs' // [!code --]
-import tDesignLocaleZhCN from 'tdesign-vue-next/es/locale/zh_CN' // [!code ++]
-import tDesignLocaleZhTW from 'tdesign-vue-next/es/locale/zh_TW' // [!code ++]
-import tDesignLocaleEn from 'tdesign-vue-next/es/locale/en_US' // [!code ++]
-...
-function getUILocales() {
-  const locales: {
-    [key: string]: any
-  } = {}
-  for (const key in messages) {
-    locales[key] = {}
-    switch (key) {
-      case 'zh-cn':
-        Object.assign(locales[key], { labelName: '中文(简体)' }, { ui: elementPlusLocaleZhCN }) // [!code --]
-        Object.assign(locales[key], { labelName: '中文(简体)' }, { ui: tDesignLocaleZhCN }) // [!code ++]
-        break
-      case 'zh-tw':
-        Object.assign(locales[key], { labelName: '中文(繁體)' }, { ui: elementPlusLocaleZhTW }) // [!code --]
-        Object.assign(locales[key], { labelName: '中文(繁體)' }, { ui: tDesignLocaleZhTW }) // [!code ++]
-        break
-      case 'en':
-        Object.assign(locales[key], { labelName: 'English' }, { ui: elementPlusLocaleEn }) // [!code --]
-        Object.assign(locales[key], { labelName: 'English' }, { ui: tDesignLocaleEn }) // [!code ++]
-        break
-    }
-  }
-  return locales
-}
-...
-```
-
-修改 `/src/store/modules/settings.ts` 文件
-
-```ts
-...
-watch(() => settings.value.app.colorScheme, (colorScheme) => {
-  if (colorScheme === '') {
-    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-  switch (colorScheme) {
-    case 'light':
-      document.documentElement.classList.remove('dark')
-      document.documentElement.removeAttribute('theme-mode') // [!code ++]
-      break
-    case 'dark':
-      document.documentElement.classList.add('dark')
-      document.documentElement.setAttribute('theme-mode', 'dark') // [!code ++]
-      break
-  }
-}, {
-  immediate: true,
-})
-...
-```
-
-## 删除文件
-
-### 基础版
+删除相关文件
 
 ```
 .
@@ -236,7 +110,96 @@ watch(() => settings.value.app.colorScheme, (colorScheme) => {
      └─ PcasCascader
 ```
 
-### 专业版
+</details>
+
+<details>
+<summary>专业版</summary>
+
+修改 `/tsconfig.json` 文件
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      ...
+      "element-plus/global" // [!code --]
+    ],
+    ...
+  },
+  ...
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue" // [!code --]
+    "src/**/*.vue", // [!code ++]
+    "node_modules/tdesign-vue-next/global.d.ts" // [!code ++]
+  ]
+}
+```
+
+整体修改 `/src/ui-provider/index.ts` 文件
+
+```ts
+import type { App } from 'vue'
+import TDesign from 'tdesign-vue-next'
+import 'tdesign-vue-next/es/style/index.css'
+
+import zhCN from 'tdesign-vue-next/es/locale/zh_CN'
+import zhTW from 'tdesign-vue-next/es/locale/zh_TW'
+import en from 'tdesign-vue-next/es/locale/en_US'
+
+function install(app: App) {
+  app.use(TDesign)
+}
+
+// 此处的对象属性和 src/locales/index.ts 中的 messages 对象属性一一对应
+const locales: { [key: string]: any } = {
+  'zh-cn': zhCN,
+  'zh-tw': zhTW,
+  'en': en,
+}
+
+export default { install }
+export { locales }
+```
+
+整体修改 `/src/ui-provider/index.vue` 文件
+
+```vue
+<script setup lang="ts">
+import { merge } from 'lodash-es'
+import { locales } from './index'
+import useSettingsStore from '@/store/modules/settings'
+
+const settingsStore = useSettingsStore()
+
+watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
+  if (colorScheme === '') {
+    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+  switch (colorScheme) {
+    case 'light':
+      document.documentElement.removeAttribute('theme-mode')
+      break
+    case 'dark':
+      document.documentElement.setAttribute('theme-mode', 'dark')
+      break
+  }
+}, {
+  immediate: true,
+})
+</script>
+
+<template>
+  <TConfigProvider :global-config="merge(locales[settingsStore.lang])">
+    <slot />
+  </TConfigProvider>
+</template>
+```
+
+删除相关文件
 
 ```
 .
@@ -251,6 +214,8 @@ watch(() => settings.value.app.colorScheme, (colorScheme) => {
      ├─ ImageUpload
      └─ PcasCascader
 ```
+
+</details>
 
 ## 修改登录页
 

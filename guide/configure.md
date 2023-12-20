@@ -7,6 +7,8 @@
 ::: code-group
 
 ```yaml [.env.development 开发环境]
+# 应用配置面板
+VITE_APP_SETTING = true
 # 页面标题
 VITE_APP_TITLE = Fantastic-admin
 # 接口请求地址，会设置到 axios 的 baseURL 参数上
@@ -19,6 +21,8 @@ VITE_OPEN_PROXY = false
 ```
 
 ```yaml [.env.test 测试环境]
+# 应用配置面板
+VITE_APP_SETTING = false
 # 页面标题
 VITE_APP_TITLE = Fantastic-admin
 # 接口请求地址，会设置到 axios 的 baseURL 参数上
@@ -35,6 +39,8 @@ VITE_BUILD_COMPRESS = gzip,brotli
 ```
 
 ```yaml [.env.production 生产环境]
+# 应用配置面板
+VITE_APP_SETTING = false
 # 页面标题
 VITE_APP_TITLE = Fantastic-admin
 # 接口请求地址，会设置到 axios 的 baseURL 参数上
@@ -52,9 +58,13 @@ VITE_BUILD_COMPRESS = gzip,brotli
 
 :::
 
-其中 `VITE_APP_TITLE` `VITE_APP_API_BASEURL` `VITE_APP_DEBUG_TOOL` 为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，例如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
+其中 `VITE_APP_SETTING` `VITE_APP_TITLE` `VITE_APP_API_BASEURL` `VITE_APP_DEBUG_TOOL` 为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，例如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
 
 开发者可根据实际业务需求进行扩展，如果对这块不熟悉，请阅读 [Vite - 环境变量和模式](https://cn.vitejs.dev/guide/env-and-mode.html) 章节。
+
+::: warning 注意
+`VITE_APP_SETTING` 该变量是开启应用配置面板，目的是方便开发者在开发阶段调试，生产环境下默认关闭，也建议关闭。
+:::
 
 ## 应用配置（框架配置）
 
@@ -68,7 +78,6 @@ const globalSettings: Settings.all = {
   app: {
     enablePermission: true,
     enableDynamicTitle: true,
-    enableAppSetting: true,
   },
   layout: {
     enableMobileAdaptation: true,
@@ -87,15 +96,3 @@ const globalSettings: Settings.all = {
   },
 }
 ```
-
-::: warning 注意
-```ts {2-4}
-const globalSettings: Settings.all = {
-  app: {
-    enableAppSetting: true,
-  },
-}
-```
-
-该功能主要是方便开发者在开发阶段调试，生产环境下建议关闭。
-:::

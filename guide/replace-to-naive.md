@@ -1,7 +1,9 @@
 # 替换为 Naive UI
 
 ::: warning 注意
-本文适用于 v4.0 及之后的版本，v4.0 之前的版本不支持替换组件库。
+v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
+
+版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.github.io/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-naive.md)。
 :::
 
 由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [Naive UI](https://www.naiveui.com/zh-CN)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
@@ -20,7 +22,8 @@ pnpm add naive-ui -D
 
 ## 代码调整
 
-### 基础版
+<details>
+<summary>基础版</summary>
 
 修改 `/tsconfig.json` 文件
 
@@ -30,143 +33,48 @@ pnpm add naive-ui -D
     ...
     "types": [
       ...
-      "element-plus/global", // [!code --]
-      "naive-ui/volar", // [!code ++]
-      ...
+      "element-plus/global" // [!code --]
+      "naive-ui/volar" // [!code ++]
     ],
     ...
   }
 }
 ```
 
-修改 `/src/main.ts` 文件
+整体修改 `/src/ui-provider/index.ts` 文件
 
 ```ts
-...
-import ElementPlus from 'element-plus' // [!code --]
-import 'element-plus/dist/index.css' // [!code --]
-import 'element-plus/theme-chalk/dark/css-vars.css' // [!code --]
-import naive from 'naive-ui' // [!code ++]
-...
-app.use(ElementPlus) // [!code --]
-app.use(naive) // [!code ++]
-...
+import type { App } from 'vue'
+import naive from 'naive-ui'
+
+function install(app: App) {
+  app.use(naive)
+}
+
+export default { install }
 ```
 
-修改 `/src/App.vue` 文件
+整体修改 `/src/ui-provider/index.vue` 文件
 
 ```vue
 <script setup lang="ts">
-...
-import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
-import { darkTheme, dateZhCN, zhCN } from 'naive-ui' // [!code ++]
-...
+import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
+import useSettingsStore from '@/store/modules/settings'
+
+const settingsStore = useSettingsStore()
 </script>
 
 <template>
-  <ElConfigProvider :locale="elementPlusLocaleZhCN" :button="{ autoInsertSpace: true }"> // [!code --]
-  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;"> // [!code ++]
-    <n-message-provider> // [!code ++]
-      ...
-      <n-global-style /> // [!code ++]
-    </n-message-provider> // [!code ++]
-  </NConfigProvider> // [!code ++]
-  </ElConfigProvider> // [!code --]
+  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
+    <NMessageProvider>
+      <slot />
+      <NGlobalStyle />
+    </NMessageProvider>
+  </NConfigProvider>
 </template>
 ```
 
-### 专业版
-
-修改 `/tsconfig.json` 文件
-
-```json
-{
-  "compilerOptions": {
-    ...
-    "types": [
-      ...
-      "element-plus/global", // [!code --]
-      "naive-ui/volar", // [!code ++]
-      ...
-    ],
-    ...
-  }
-}
-```
-
-修改 `/src/main.ts` 文件
-
-```ts
-...
-import ElementPlus from 'element-plus' // [!code --]
-import 'element-plus/dist/index.css' // [!code --]
-import 'element-plus/theme-chalk/dark/css-vars.css' // [!code --]
-import naive from 'naive-ui' // [!code ++]
-...
-app.use(ElementPlus) // [!code --]
-app.use(naive) // [!code ++]
-...
-```
-
-修改 `/src/App.vue` 文件
-
-```vue
-<script setup lang="ts">
-...
-import { darkTheme } from 'naive-ui' // [!code ++]
-...
-</script>
-
-<template>
-  <ElConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :button="{ autoInsertSpace: true }"> // [!code --]
-  <NConfigProvider :locale="UILocales[settingsStore.settings.app.defaultLang].ui" :date-locale="UILocales[settingsStore.settings.app.defaultLang].uiDate" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;"> // [!code ++]
-    <n-message-provider> // [!code ++]
-      ...
-      <n-global-style /> // [!code ++]
-    </n-message-provider> // [!code ++]
-  </NConfigProvider> // [!code ++]
-  </ElConfigProvider> // [!code --]
-</template>
-```
-
-修改 `/src/locales/index.ts` 文件
-
-```ts
-...
-import elementPlusLocaleZhCN from 'element-plus/es/locale/lang/zh-cn.mjs' // [!code --]
-import elementPlusLocaleZhTW from 'element-plus/es/locale/lang/zh-tw.mjs' // [!code --]
-import elementPlusLocaleEn from 'element-plus/es/locale/lang/en.mjs' // [!code --]
-import { dateZhCN, zhCN, dateZhTW, zhTW, dateEnUS, enUS } from 'naive-ui' // [!code ++]
-...
-function getUILocales() {
-  const locales: {
-    [key: string]: any
-  } = {}
-  for (const key in messages) {
-    locales[key] = {}
-    switch (key) {
-      case 'zh-cn':
-        Object.assign(locales[key], { labelName: '中文(简体)' }, { ui: elementPlusLocaleZhCN }) // [!code --]
-        Object.assign(locales[key], { labelName: '中文(简体)' }, { ui: zhCN, uiDate: dateZhCN }) // [!code ++]
-        break
-      case 'zh-tw':
-        Object.assign(locales[key], { labelName: '中文(繁體)' }, { ui: elementPlusLocaleZhTW }) // [!code --]
-        Object.assign(locales[key], { labelName: '中文(繁體)' }, { ui: zhTW, uiDate: dateZhTW }) // [!code ++]
-        break
-      case 'en':
-        Object.assign(locales[key], { labelName: 'English' }, { ui: elementPlusLocaleEn }) // [!code --]
-        Object.assign(locales[key], { labelName: 'English' }, { ui: enUS, uiDate: dateEnUS }) // [!code ++]
-        break
-    }
-  }
-  return locales
-}
-...
-```
-
-## 删除文件
-
-### 基础版
+删除相关文件
 
 ```
 .
@@ -179,21 +87,79 @@ function getUILocales() {
      └─ PcasCascader
 ```
 
-### 专业版
+</details>
 
+<details>
+<summary>专业版</summary>
+
+修改 `/tsconfig.json` 文件
+
+```json
+{
+  "compilerOptions": {
+    ...
+    "types": [
+      ...
+      "element-plus/global" // [!code --]
+      "naive-ui/volar" // [!code ++]
+    ],
+    ...
+  }
+}
 ```
-.
-├─ plop-templates
-│  └─ module // 标准模块模板基于 Element Plus 开发，需要删除
-└─ src
-   └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
-     ├─ FileUpload
-     ├─ IconPicker
-     ├─ ImagePreview
-     ├─ ImagesUpload
-     ├─ ImageUpload
-     └─ PcasCascader
+
+整体修改 `/src/ui-provider/index.ts` 文件
+
+```ts
+import type { App } from 'vue'
+import naive, { dateEnUS, dateZhCN, dateZhTW, enUS, zhCN, zhTW } from 'naive-ui'
+
+function install(app: App) {
+  app.use(naive)
+}
+
+// 此处的对象属性和 src/locales/index.ts 中的 messages 对象属性一一对应
+const locales: { [key: string]: any } = {
+  'zh-cn': {
+    ui: zhCN,
+    date: dateZhCN,
+  },
+  'zh-tw': {
+    ui: zhTW,
+    date: dateZhTW,
+  },
+  'en': {
+    ui: enUS,
+    date: dateEnUS,
+  },
+}
+
+export default { install }
+export { locales }
 ```
+
+整体修改 `/src/ui-provider/index.vue` 文件
+
+```vue
+<script setup lang="ts">
+import { darkTheme } from 'naive-ui'
+import { locales } from './index'
+import useSettingsStore from '@/store/modules/settings'
+
+const settingsStore = useSettingsStore()
+</script>
+
+<template>
+  <NConfigProvider :locale="locales[settingsStore.lang].ui" :date-locale="locales[settingsStore.lang].date" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
+    <NMessageProvider>
+      <slot />
+      <NGlobalStyle />
+    </NMessageProvider>
+  </NConfigProvider>
+</template>
+```
+
+</details>
 
 ## 修改登录页
 
