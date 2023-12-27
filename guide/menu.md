@@ -74,10 +74,9 @@ const globalSettings: Settings.all = {
 
 你只需要在某个主导航下只保留一个次导航，就像这样：
 
-```ts {3,18-26}
+```ts {17-43}
 import MultilevelMenuExample from './modules/multilevel.menu.example'
 import BreadcrumbExample from './modules/breadcrumb.example'
-import Test from './modules/test'
 
 // 动态路由（异步路由、导航栏路由）
 const asyncRoutes: Route.recordMainRaw[] = [
@@ -97,37 +96,43 @@ const asyncRoutes: Route.recordMainRaw[] = [
       title: '测试',
     },
     children: [
-      Test,
+      {
+        path: '/test',
+        component: () => import('@/layouts/index.vue'),
+        redirect: '/test/page',
+        name: 'test',
+        meta: {
+          title: '演示页面',
+        },
+        children: [
+          {
+            path: 'page',
+            name: 'testPage',
+            component: () => import('@/views/test/page.vue'),
+            meta: {
+              title: '演示页面',
+              sidebar: false,
+            },
+          },
+        ],
+      },
     ],
   },
 ]
 ```
 
-```ts
-import type { RouteRecordRaw } from 'vue-router'
+## 次导航自动收起 <sup class="pro-badge" />
 
-const Layout = () => import('@/layouts/index.vue')
+在应用配置中设置：
 
-const routes: RouteRecordRaw = {
-  path: '/test',
-  component: Layout,
-  redirect: '/test/page',
-  name: 'test',
-  meta: {
-    title: '演示页面',
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    subMenuAutoCollapse: true,
   },
-  children: [
-    {
-      path: 'page',
-      name: 'testPage',
-      component: () => import('@/views/test/page.vue'),
-      meta: {
-        title: '演示页面',
-        sidebar: false,
-      },
-    },
-  ],
 }
-
-export default routes
 ```
+
+当次导航处于收起状态时可以实现如下的效果：
+
+![](/menu-submenuautocollapse.gif){data-zoomable}
