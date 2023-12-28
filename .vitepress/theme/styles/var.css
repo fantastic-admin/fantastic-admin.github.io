@@ -57,6 +57,35 @@
   border-radius: 10px;
   vertical-align: middle;
 }
+.pure-tag {
+  position: relative;
+  left: -68px;
+  top: -30px;
+  display: inline-block;
+  line-height: 1;
+  background: var(--vp-home-hero-name-background);
+  background-clip: text;
+  font-size: 18px;
+  transform-origin: bottom center;
+  animation: swing 2s ease infinite;
+}
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
 /* medium-zoom */
 .medium-zoom-overlay {
   z-index: 30;
