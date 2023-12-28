@@ -22,12 +22,12 @@
 
 ## StyleLint 配置
 
-配置文件为 `.stylelintrc` ，如果你对默认的规则有异议，可以查阅 [Stylelint](https://stylelint.io/) 官网规则并在 `.stylelintrc` 文件中进行修改。
+配置文件为 `stylelint.config.js` ，如果你对默认的规则有异议，可以查阅 [Stylelint](https://stylelint.io/) 官网规则并在 `stylelint.config.js` 文件中进行修改。
 
 当你对规则进行修改后，原有的代码可能会因为规则的变动导致编辑器大量提示错误，你可以通过运行 `pnpm run lint:stylelint` 进行一次格式校验，如果规则支持自动修复，则会将不符合规则的代码自动进行格式化。
 
 ::: tip
-通过修改 `.stylelintignore` 可忽略无需做代码规范校验的文件，例如在项目中导入了一些第三方的插件代码或组件代码，我们就可以将其进行忽略。
+通过修改 `stylelint.config.js` 中 `ignoreFiles` 配置可忽略无需做代码规范校验的文件，例如在项目中导入了一些第三方的插件代码或组件代码，我们就可以将其进行忽略。
 :::
 
 ## simple-git-hooks 和 lint-staged
@@ -55,22 +55,7 @@
 
 如果不想在 git 提交时强制进行代码规范校验，可以在 `package.json` 中移除 `simple-git-hooks` 配置：
 
-::: code-group
-
-```json [基础版]
-{
-  "scripts": {
-    "postinstall": "simple-git-hooks && esno scripts/prepare.js", // [!code --]
-    "postinstall": "esno scripts/prepare.js", // [!code ++]
-  },
-  "simple-git-hooks": { // [!code --]
-    "pre-commit": "pnpm lint-staged", // [!code --]
-    "preserveUnused": true // [!code --]
-  }, // [!code --]
-}
-```
-
-```json [专业版]
+```json
 {
   "scripts": {
     "postinstall": "simple-git-hooks", // [!code --]
@@ -81,7 +66,5 @@
   }, // [!code --]
 }
 ```
-
-:::
 
 然后手动删除 `.git/hooks/pre-commit` 文件即可。
