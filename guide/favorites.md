@@ -1,18 +1,6 @@
 # 收藏夹 <sup class="pro-badge" />
 
-用户可将常用的导航菜单添加进收藏夹，方便快速访问。
-
-## 开启
-
-在应用配置中设置：
-
-```ts {2-4}
-const globalSettings: Settings.all = {
-  favorites: {
-    enable: true,
-  },
-}
-```
+需在工具栏开启，开启后用户可将常用的导航菜单添加进收藏夹，方便快速访问。
 
 ![](/favorites.png){data-zoomable}
 

@@ -4,6 +4,48 @@
 
 ![](/toolbar.png){data-zoomable}
 
+## 收藏夹 <sup class="pro-badge" />
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  toolbar: {
+    favorites: true,
+  },
+}
+```
+
+详细可阅读《[收藏夹](favorites)》。
+
+## 面包屑导航
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  toolbar: {
+    breadcrumb: true,
+  },
+}
+```
+
+移动端访问时，会隐藏面包屑导航。
+
+当使用文件系统路由时，将无法使用面包屑导航，详细可阅读《[基于文件系统的路由](file-system-route)》。
+
+## 导航搜索
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  toolbar: {
+    navSearch: true,
+  },
+}
+```
+
 ## 通知中心 <sup class="pro-badge" />
 
 在应用配置中设置：
@@ -11,7 +53,7 @@
 ```ts {2-4}
 const globalSettings: Settings.all = {
   toolbar: {
-    enableNotification: true,
+    notification: true,
   },
 }
 ```
@@ -28,12 +70,12 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   toolbar: {
-    enableI18n: true,
+    i18n: true,
   },
 }
 ```
 
-如果设置为不启用，并不代表不支持国际化切换，只是不会在工具栏显示切换语言的图标。
+如果设置为不启用，并不代表不支持国际化切换，只是不会在工具栏显示切换语言的图标，详细可阅读《[国际化](i18n)》。
 
 ## 浏览器全屏
 
@@ -42,7 +84,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   toolbar: {
-    enableFullscreen: true,
+    fullscreen: true,
   },
 }
 ```
@@ -54,7 +96,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   toolbar: {
-    enablePageReload: true,
+    pageReload: true,
   },
 }
 ```
@@ -66,7 +108,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   toolbar: {
-    enableColorScheme: true,
+    colorScheme: true,
   },
 }
 ```
