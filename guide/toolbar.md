@@ -114,3 +114,17 @@ const globalSettings: Settings.all = {
 ```
 
 如果设置为不启用，并不代表不支持颜色主题切换，只是不会在工具栏显示切换颜色主题的图标。
+
+## 布局 <sup class="pro-badge" />
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  toolbar: {
+    layout: ['favorites', 'breadcrumb', '->', 'navSearch', 'notification', 'i18n', 'fullscreen', 'pageReload', 'colorScheme'],
+  },
+}
+```
+
+可自定义摆放位置和顺序，其中 `->` 为分隔符，用于分隔左右两侧的工具栏。修改时请确保提供的所有值都存在，不可删减。
