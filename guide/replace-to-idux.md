@@ -121,7 +121,7 @@ import { enUS, zhCN } from '@idux/components/locales'
 import '@idux/components/index.full.css'
 
 // 此处的对象属性和 src/locales/index.ts 中的 messages 对象属性一一对应
-const locales: { [key: string]: any } = {
+const locales: Record<string, any> = {
   'zh-cn': zhCN,
   'zh-tw': zhCN,
   'en': enUS,
