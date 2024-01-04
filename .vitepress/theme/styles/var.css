@@ -69,6 +69,11 @@
   transform-origin: bottom center;
   animation: swing 2s ease infinite;
 }
+@media (max-width: 960px) {
+  .pure-tag {
+    display: none;
+  }
+}
 @keyframes swing {
   20% {
     transform: rotate3d(0, 0, 1, 15deg);
