@@ -3,7 +3,7 @@ import { computed, ref } from 'vue'
 
 const fold = ref(true)
 const images = computed(() => {
-  return fold.value ? 9 : 18
+  return fold.value ? 9 : 19
 })
 </script>
 
@@ -13,7 +13,7 @@ const images = computed(() => {
       <ZoomImg :src="`/customer-${i}.png`" />
     </div>
     <div v-if="fold" class="item more" @click="fold = false">
-      <p>查看全部</p>
+      <p>更多</p>
     </div>
   </div>
 </template>
