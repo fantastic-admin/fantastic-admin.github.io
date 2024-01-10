@@ -64,6 +64,8 @@ VITE_BUILD_COMPRESS = gzip,brotli
 
 ::: warning 注意
 `VITE_APP_SETTING` 该变量是开启应用配置面板，目的是方便开发者在开发阶段调试，生产环境下默认关闭，也建议关闭。
+
+如果希望提供用户一些定制化的能力，可以开启偏好设置，详细可阅读《[用户偏好设置](preferences)》
 :::
 
 ## 应用配置（框架配置）
