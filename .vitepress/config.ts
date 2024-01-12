@@ -48,7 +48,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           },
           {
             text: 'v3 (Vue3版本)',
-            link: 'https://fantastic-admin.github.io/v3-docs/'
+            link: 'https://fantastic-admin.github.io/v3-docs/',
           },
           {
             text: 'Vue2版本',
@@ -87,57 +87,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         link: '/support',
       },
       {
-        text: '生态',
-        items: [
-          {
-            text: '官方',
-            items: [
-              {
-                text: 'Fantastaic-startkit',
-                link: 'https://hooray.gitee.io/fantastic-startkit/',
-              },
-              {
-                text: 'Fantastaic-admin',
-                link: 'https://fantastic-admin.gitee.io',
-              },
-              {
-                text: 'One-step-admin',
-                link: 'https://one-step-admin.gitee.io',
-              },
-            ],
-          },
-          {
-            text: '战略合作',
-            items: [
-              {
-                text: 'VForm 低代码表单',
-                link: 'https://www.vform666.com',
-              },
-              {
-                text: 'Form-create 动态表单生成器',
-                link: 'https://form-create.com',
-              },
-              {
-                text: 'QuickAdmin 快速开发管理框架',
-                link: 'https://gitee.com/sciqtw/quickadmin',
-              },
-              {
-                text: 'Vexip UI 组件库',
-                link: 'https://www.vexipui.com/zh-CN',
-              },
-              {
-                text: 'iDux 组件库',
-                link: 'https://idux.site',
-              },
-              {
-                text: '交换友链 ?',
-                link: '/links',
-              },
-            ],
-          },
-        ],
-      },
-      {
         text: '下载 / 购买',
         items: [
           {
@@ -154,6 +103,35 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           },
         ],
       },
+      {
+        text: '💖 友情推荐',
+        items: [
+          {
+            text: 'VForm 低代码表单',
+            link: 'https://www.vform666.com',
+          },
+          {
+            text: 'Form-create 动态表单生成器',
+            link: 'https://form-create.com',
+          },
+          {
+            text: 'QuickAdmin 快速开发管理框架',
+            link: 'https://gitee.com/sciqtw/quickadmin',
+          },
+          {
+            text: 'Vexip UI 组件库',
+            link: 'https://www.vexipui.com/zh-CN',
+          },
+          {
+            text: 'iDux 组件库',
+            link: 'https://idux.site',
+          },
+          {
+            text: '交换友链 ?',
+            link: '/links',
+          },
+        ],
+      },
     ],
     socialLinks: [
       {
@@ -163,7 +141,8 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         link: 'https://gitee.com/fantastic-admin/basic',
       },
       {
-        icon: 'github', link: 'https://github.com/fantastic-admin/basic',
+        icon: 'github',
+        link: 'https://github.com/fantastic-admin/basic',
       },
     ],
     sidebar: {
@@ -242,7 +221,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 { text: '替换为 iDux', link: '/guide/replace-to-idux' },
               ],
               collapsed: true,
-            }
+            },
           ],
           collapsed: false,
         },
