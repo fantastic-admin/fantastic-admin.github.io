@@ -35,7 +35,9 @@ VITE_BUILD_MOCK = true
 # 在构建时生成 sourcemap
 VITE_BUILD_SOURCEMAP = true
 # 在构建时开启压缩，支持 gzip 和 brotli
-VITE_BUILD_COMPRESS = gzip,brotli
+VITE_BUILD_COMPRESS =
+# 是否在打包后生成存档，支持 zip 和 tar
+VITE_BUILD_ARCHIVE =
 ```
 
 ```yaml [.env.production 生产环境]
@@ -54,6 +56,8 @@ VITE_BUILD_MOCK = false
 VITE_BUILD_SOURCEMAP = false
 # 在构建时开启压缩，支持 gzip 和 brotli
 VITE_BUILD_COMPRESS = gzip,brotli
+# 是否在打包后生成存档，支持 zip 和 tar
+VITE_BUILD_ARCHIVE =
 ```
 
 :::
