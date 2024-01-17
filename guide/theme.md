@@ -329,6 +329,16 @@ const globalSettings: Settings.all = {
 
 ![](/tabbar-style.png){data-zoomable}
 
+同时可以在 `/src/assets/styles/globals.scss` 中设置标签栏中页签的宽度，默认为 `150px` 固定宽度：
+
+```scss
+:root {
+  // 标签页最大最小宽度，两个宽度为同一数值时，则为固定宽度，反之将宽度设置为 unset 则为自适应
+  --g-tabbar-tab-max-width: 150px;
+  --g-tabbar-tab-min-width: 150px;
+}
+```
+
 ## 开发注意
 
 如果只在明亮或暗黑模式中，选择其中一种模式进行业务开发，那没有什么需要注意的，你可以按照以往的开发习惯进行开发，这也是框架推荐的方式。
