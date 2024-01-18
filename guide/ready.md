@@ -15,16 +15,9 @@
 
 ![](/download.png){data-zoomable}
 
-或者也可以从 Gitee/Github 上拉取源码，但需要注意的是，这种方式拉取的是最新的代码，可能会存在一些问题，所以请谨慎使用。
+或者也可以从 Github/Gitee 上拉取源码，但需要注意，直接拉取源码可能会包含未发布的内容，最终发布时可能会有变动，请谨慎使用。
 
 ::: code-group
-
-```sh [从 Gitee 拉取]
-# 拉取框架源码
-git clone https://gitee.com/fantastic-admin/basic.git
-# 拉取演示源码
-git clone -b example https://gitee.com/fantastic-admin/basic.git
-```
 
 ```sh [从 Github 拉取]
 # 拉取框架源码
@@ -33,17 +26,24 @@ git clone https://github.com/fantastic-admin/basic.git
 git clone -b example https://github.com/fantastic-admin/basic.git
 ```
 
+```sh [从 Gitee 拉取]
+# 拉取框架源码
+git clone https://gitee.com/fantastic-admin/basic.git
+# 拉取演示源码
+git clone -b example https://gitee.com/fantastic-admin/basic.git
+```
+
 :::
 
 ### 专业版
 
-专业版用户会邀请加入到私有组织，获取源码的方式和基础版一致，只是仓库地址不同。
+专业版用户会被邀请加入到 [Fantastic-admin](https://github.com/fantastic-admin) Github 官方组织，加入组织后可访问[专业版私有仓库](https://github.com/fantastic-admin/pro)，源码获取方式和基础版无差异，只是源码仓库不同。
 
 如果你想获取专业版源码，可以点[这里](../buy)去购买。
 
 ## 开发环境
 
-使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/) 和 [Visual Studio Code](https://code.visualstudio.com/)。
+使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/)(非必须) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 ::: warning 注意
 Node.js 需要使用 18+ / 20+ 版本。
@@ -59,7 +59,7 @@ Node.js 需要使用 18+ / 20+ 版本。
 - [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
 - [UnoCSS](https://marketplace.visualstudio.com/items?itemName=antfu.unocss)
 
-在 Visual Studio Code 里打开源码的文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
+在 Visual Studio Code 里打开源码文件夹，右下角会自动提示需要安装的依赖，直接点击安装即可。
 
 ![](/vscode.png){data-zoomable}
 
@@ -85,6 +85,6 @@ Node.js 需要使用 18+ / 20+ 版本。
 
 - [Vite](https://cn.vitejs.dev/)
 - [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
-- [Vue Router 4](https://router.vuejs.org/zh/)
+- [Vue Router](https://router.vuejs.org/zh/)
 - [Pinia](https://pinia.vuejs.org/zh/)
 - [UnoCss](https://unocss.dev/)

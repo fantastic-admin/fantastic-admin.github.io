@@ -23,14 +23,23 @@ VITE_BUILD_COMPRESS = brotli
 
 # 或者也可以都开启，两者可以共存
 VITE_BUILD_COMPRESS = gzip,brotli
-
 ```
 
 两者均需要 nginx 安装指定模块并开启后才会生效。
 
-## 其它设置
+## 生成存档
 
-在环境配置文件里除了可以设置压缩选项，还可设置：
+在环境配置文件里设置 `VITE_BUILD_ARCHIVE` 即可在构建完后成生成 `.zip` 或 `.tar.gz` 文件。
+
+```
+# 生成 zip
+VITE_BUILD_ARCHIVE = zip
+
+# 生成 tar.gz
+VITE_BUILD_ARCHIVE = tar
+```
+
+## 其它设置
 
 ```
 # 是否在打包时生成 sourcemap

@@ -1,14 +1,14 @@
 # 路由（导航）
 
-默认配置下，框架导航菜单是通过路由数据自动生成的，所以在使用框架时，你需要了解路由的基本配置。
+默认配置下，导航菜单通过路由数据自动生成。
 
-项目路由配置存放在 `/src/router/modules/` 目录下，每一个 ts 文件会被视为一个路由模块。配置好的路由模块最终会在 `/src/router/routes.ts` 文件里进行引入并放到主导航下。
+项目路由存放在 `/src/router/modules/` 目录下，每一个 ts 文件会被视为一个路由模块。所有路由模块最终会在 `/src/router/routes.ts` 文件里引入并放到不同的主导航下。
 
 ## 基本配置
 
 ### 二级路由
 
-一个路由模块包含以下结构：
+一个最常见的路由模块可参考以下结构：
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -38,18 +38,18 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-:::warning 注意事项
-- 整个项目所有路由的 `name` 不能重复
-- 一级路由的 `component` 需设置为 Layout ，并且 path 前面需要加 `/`，其余子路由都不要以 `/` 开头
+:::warning 注意
+- 所有路由的 `name` 请确保唯一，不能重复
+- 一级路由的 `component` 需设置为 `() => import('@/layouts/index.vue')` ，并且 path 前面需要加 `/`，其余子路由都不要以 `/` 开头
 :::
 
 ### 多级路由
 
-:::tip
-多级路由最终都会转成二级路由并注册，但多级嵌套的层级结构会在侧边栏导航和面包屑导航中得到保留，其设计原因可阅读《[页面缓存](keep-alive)》。
+:::tip 说明
+多级路由最终都会转成二级路由并注册，但多级嵌套的层级结构会在导航菜单和面包屑导航中得到保留，其设计原因可阅读《[页面缓存](keep-alive)》。
 :::
 
-多级路由的中间层级，可以无需设置 `component` 。
+多级路由的中间层级，无需设置 `component` 。
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -68,6 +68,7 @@ const routes: RouteRecordRaw = {
     {
       path: 'level',
       name: 'ExampleLevel',
+      // 无需设置 componment
       meta: {
         title: '中间层级',
       },
@@ -90,7 +91,9 @@ export default routes
 
 ### 主导航
 
-主导航并非路由的一部分，它只是将我们配置好的路由模块进行归类，在 `/src/router/routes.ts` 里进行设置。
+主导航并非路由的一部分，它只是将路由模块进行归类，这么做的目的是方便调整单个路由模块的展示位置，并且不会影响路由路径。
+
+在 `/src/router/routes.ts` 里进行设置：
 
 ```ts
 const asyncRoutes: Route.recordMainRaw[] = [
@@ -118,11 +121,11 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 只接受 `title`、`i18n`、`icon`、`activeIcon`、`auth` 这 5 个参数，`children` 则是存放我们配置的路由模块数据。
+主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`i18n`、`icon`、`activeIcon`、`auth` 这 5 个参数，`children` 则是存放不同的路由模块。
 
 ## 导航配置
 
-框架的核心是通过路由的配置生成对应的导航，所以除了路由的基本配置外，框架还提供了针对导航的自定义配置，这些配置都存放在 `meta` 对象里。
+框架的核心是通过路由数据生成导航菜单，所以除了路由的基本配置外，框架还提供了针对导航的自定义配置，这些配置都存放在 `meta` 对象里。
 
 ### title
 
@@ -144,7 +147,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :----: | :----: | :--------------- |
 | string |   /    | 导航中显示的图标 |
 
-该项配置最终会通过 `<svg-icon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
+该项配置最终会通过 `<SvgIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
 
 ### activeIcon <sup class="pro-badge" />
 
@@ -152,7 +155,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :----: | :----: | :------------------- |
 | string |   /    | 导航激活时显示的图标 |
 
-该项配置最终会通过 `<svg-icon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
+该项配置最终会通过 `<SvgIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
 
 ### defaultOpened
 
@@ -176,7 +179,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :------------: | :----: | :------------------------------------------------------- |
 | string / array |   /    | 该路由访问权限，支持多个权限叠加，只要满足一个，即可进入 |
 
-用户在访问路由时，会判断当前路由是否具备访问权限，不具备访问权限则会显示 403 页面。
+用户在访问路由时，会判断当前路由是否具备访问权限，不具备访问权限则会显示 403 页面，详细可阅读《[权限 - 路由权限](permission#路由权限)》。
 
 为避免多级路由同时设置 `auth` 可能会导致逻辑冲突，框架会以最先设置的 `auth` 为准：
 
@@ -219,15 +222,13 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-用户在登录时，会获取用户权限，根据权限去过滤并动态注册路由。所以没有权限的路由不会被注册，也不会在侧边栏导航里显示，详细可阅读《[权限 - 路由权限](permission#路由权限)》。
-
 ### sidebar
 
-|  类型   | 默认值 | 说明                         |
-| :-----: | :----: | :--------------------------- |
-| boolean |  true  | 该路由是否在侧边栏导航中展示 |
+|  类型   | 默认值 | 说明                       |
+| :-----: | :----: | :------------------------- |
+| boolean |  true  | 该路由是否在菜单导航中展示 |
 
-当子路由里没有可展示的路由时，在侧边栏导航中则只会显示父级路由，例如：
+当子路由里没有可展示的路由时，在菜单导航中则只会显示父级路由，例如：
 
 ```ts {13}
 import type { RouteRecordRaw } from 'vue-router'
@@ -254,19 +255,13 @@ export default routes
 
 ![](/route-meta-sidebar.png){data-zoomable}
 
-### breadcrumb
-
-|  类型   | 默认值 | 说明                         |
-| :-----: | :----: | :--------------------------- |
-| boolean |  true  | 该路由是否在面包屑导航中展示 |
-
 ### activeMenu
 
 |  类型  | 默认值 | 说明                                     |
 | :----: | :----: | :--------------------------------------- |
-| string |   /    | 指定高亮侧边栏路由，需要设置完整路由地址 |
+| string |   /    | 指定高亮的菜单导航，需要设置完整路由地址 |
 
-该参数常与 `sidebar: false` 一起使用，因为路由不在侧边栏导航显示，会导致进入该路由后，侧边栏导航高亮效果失效，所以需要手动指定。
+该参数常与 `sidebar: false` 一起使用，因为路由不在菜单导航显示，会导致进入该路由后，菜单导航高亮效果失效，所以需要手动指定。
 
 ```ts {19-20}
 import type { RouteRecordRaw } from 'vue-router'
@@ -297,6 +292,12 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
+### breadcrumb
+
+|  类型   | 默认值 | 说明                         |
+| :-----: | :----: | :--------------------------- |
+| boolean |  true  | 该路由是否在面包屑导航中展示 |
+
 ### cache
 
 |           类型           | 默认值 | 说明                 |
@@ -307,7 +308,7 @@ export default routes
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面进行缓存，否则不缓存
 - `array` 同 `string` ，可设置一个目标路由的 name 数组
 
-当类型为 `string` 或 `array` 时，可以更精细的去控制页面缓存的逻辑。例如从列表页进入详情页，则需要将列表页进行缓存；而从列表页进入其它页面，则无需将列表页进行缓存。详细介绍请移步[页面缓存](keep-alive)
+当类型为 `string` 或 `array` 时，可以更精细的去控制页面缓存的逻辑。例如从列表页进入详情页，则需要将列表页进行缓存；而从列表页进入其它页面，则无需将列表页进行缓存。详细可阅读《[页面缓存](keep-alive)》。
 
 ### noCache <sup class="pro-badge" />
 
@@ -318,7 +319,7 @@ export default routes
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面清除缓存，否则不清除缓存
 - `array` 同 `string` ，可设置一个目标路由的 name 数组
 
-该属性通常在启用标签栏时会使用到。详细介绍请阅读《[页面缓存 - 标签栏开启时](keep-alive#标签栏开启时)》。
+该属性通常在启用标签栏时会使用到。详细可阅读《[页面缓存 - 标签栏开启时](keep-alive#标签栏开启时)》。
 
 ### badge <sup class="pro-badge" />
 
@@ -344,7 +345,7 @@ badge: () => globalStore.number
 | :-----: | :----: | :--------------- |
 | boolean | false  | 是否在新窗口打开 |
 
-该设置仅在导航里生效，在导航之外的地方访问该路由，依旧保持原有的打开方式。
+该设置仅在菜单导航里点击生效。
 
 ### link
 
@@ -354,7 +355,7 @@ badge: () => globalStore.number
 
 会在新窗口访问该链接。
 
-外部网页无需设置 component ，但需设置 redirect 和 name 属性。
+外部网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性。
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -390,7 +391,7 @@ export default routes
 
 会启用一个 `<iframe>` 并载入该链接。
 
-内嵌网页无需设置 component ，但需设置 redirect 和 name 属性，如果同时设置了 meta.link 则 meta.link 优先级更高。
+内嵌网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性，如果同时设置了 `meta.link` 则 `meta.link` 优先级更高。
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -418,7 +419,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-内嵌网页同样支持使用 meta.cache 和 meta.noCache 属性来开启页面缓存，但考虑到 `<iframe>` 本身的性能问题，框架默认提供最大缓存数量为 3 个，超过 3 个则会自动清除最早的缓存页面。
+内嵌网页同样支持使用 `meta.cache` 和 `meta.noCache` 属性来开启页面缓存，但考虑到 `<iframe>` 本身的性能问题，框架默认提供最大缓存数量为 3 个，超过 3 个则会自动清除最早的缓存页面。
 
 如果需要修改最大缓存数量，请在应用配置中设置：
 
@@ -520,11 +521,11 @@ export default routes
 
 ![](/route-breadcrumb1.gif){data-zoomable}
 
-有时候会遇到这样的需求，要求在不改变侧边栏导航结构的前提下，面包屑导航展示嵌套的结构：
+有时候会遇到这样的需求，要求在不改变菜单导航结构的前提下，面包屑导航展示嵌套的结构：
 
 ![](/route-breadcrumb2.gif){data-zoomable}
 
-要实现这个效果也很简单，根据图中的效果，可以确定路由需要有三级。我们只需在二级放置一个重定向的路由，将其重定向到三级里的某个真实路由上，同时将三级路由均设置成不在侧边栏导航上显示即可，最终实现代码如下：
+要实现这个效果也很简单，根据图中的效果，可以确定路由需要有三级。我们只需在二级放置一个重定向的路由，将其重定向到三级里的某个真实路由上，同时将三级路由均设置成不在菜单导航上显示即可，最终实现代码如下：
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'

@@ -69,12 +69,12 @@ VITE_BUILD_ARCHIVE =
 ::: warning 注意
 `VITE_APP_SETTING` 该变量是开启应用配置面板，目的是方便开发者在开发阶段调试，生产环境下默认关闭，也建议关闭。
 
-如果希望提供用户一些定制化的能力，可以开启偏好设置，详细可阅读《[用户偏好设置](preferences)》
+如果希望提供用户一些定制化的能力，可以开启偏好设置，详细可阅读《[用户偏好设置](preferences)》。
 :::
 
 ## 应用配置（框架配置）
 
-开发者请在 `/src/settings.ts` 文件中设置自定义配置，而 `/src/settings.default.ts` 为框架的默认配置，请勿在该文件内修改。
+请在 `/src/settings.ts` 文件中进行配置，而 `/src/settings.default.ts` 为框架的默认配置，请勿在该文件内修改。
 
 关于配置的类型定义，可以在 `/src/types/globals.d.ts` 文件中查阅。
 
@@ -104,7 +104,9 @@ const globalSettings: Settings.all = {
 ```
 
 ::: warning 注意
-如果文档中提供的配置介绍，在你本地的开发环境中报错或者无法生效，说明你使用的版本不支持或者配置参数有变动，你可以打开 `/src/settings.default.ts` 查看当前版本的完整配置作为参考。并且如果你使用的是 Visual Studio Code ，鼠标悬浮到属性上时，会有属性的介绍：
+文档中提供的配置介绍，如果在本地的开发环境使用中报错或者无法生效，说明你使用的版本不支持或者配置参数有变动，你可以打开 `/src/settings.default.ts` 查看当前版本的完整配置作为参考。
+
+并且如果你使用的是 Visual Studio Code ，鼠标悬浮到属性上时，会有属性的介绍：
 
 ![](/settings.png){data-zoomable}
 :::
