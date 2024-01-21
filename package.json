@@ -10,9 +10,9 @@
     "medium-zoom": "^1.1.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.6.2",
+    "@antfu/eslint-config": "2.6.3",
     "eslint": "^8.56.0",
-    "vitepress": "1.0.0-rc.36",
-    "vue": "^3.4.6"
+    "vitepress": "1.0.0-rc.39",
+    "vue": "^3.4.15"
   }
 }
