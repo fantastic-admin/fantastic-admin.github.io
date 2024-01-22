@@ -36,6 +36,13 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 框架默认使用了 Element Plus 作为 UI 组件库，但你也可以**轻松替换成其它 UI 组件库**，如下：
 
+- 《[替换为 Ant Design Vue](/guide/replace-to-antd)》
+- 《[替换为 Arco Design Vue](/guide/replace-to-arco)》
+- 《[替换为 Naive UI](/guide/replace-to-naive)》
+- 《[替换为 TDesign](/guide/replace-to-tdesign)》
+- 《[替换为 Vexip UI](/guide/replace-to-vexip)》
+- 《[替换为 iDux](/guide/replace-to-idux)》
+
 <table>
   <tr>
     <th width="33%" style="text-align: center;">Ant Design Vue</th>
@@ -79,50 +86,44 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 ## 为什么不是它们？
 
-:::tip
-以下为作者个人主观见解。
+:::tip 说明
+整理了一些市面上 star 数较高，技术栈较新，且还在更新维护的同类产品，也是作者本人比较认可，具有一定实力的同类产品。
 :::
 
-:::details vue-element-admin
-**亮点**：后台框架圈里的老大哥，star 数也是最高。
-
-**缺点**：作者已经不再维护，社区里的问题也堆积如山，框架年久失修。虽然有很多人基于 vue-element-admin 开发了很多魔改的版本，但质量参差不齐，新手用于业务开发容易踩坑。无 Vue3 版本。
-:::
-
-:::details D2 Admin
-**亮点**：布局比较独特，示例丰富。
-
-**缺点**：无 Vue3 版本。
-:::
-
-:::details vue-vben-admin
-**亮点**：流行的技术栈，完成度比较高，示例丰富。
-
-**缺点**：原作者已离开项目，目前由社区维护。使用过的开发者反馈上手成本有点高。
-
-**个人观点**：UI 采用了 ant-design-vue ，个人觉得 ant-design-vue 的使用体验一言难尽，没有 element plus 使用顺手。
-:::
-
-:::details vue-admin-better
-**亮点**：完成度比较高，示例丰富。
-
-**缺点**：开源免费版本功能比较单一。开发文档需要付费加群才能查阅。
-:::
-
-:::details vue-antd-admin
-**亮点**：界面清爽，功能中规中矩。与 vue-vben-admin 一样采用了 ant-design-vue ，上手成本适中。
-
-**缺点**：示例较少。无 Vue3 版本。
-:::
-
-:::details vue-manage-system
-**亮点**：上手成本低。
-
-**缺点**：界面布局有点随性。没有开发文档。没有提供模板源码，使用前需要手动删除示例代码。
-:::
-
-:::details Naive Admin
-**亮点**：流行的技术栈。UI 框架采用了 Naive UI ，是个比较新颖的 UI 。也有提供其它 UI 的版本，选择性更多。
-
-**缺点**：功能中规中矩。不同 UI 版本需单独购买，且价格较贵。
-:::
+- [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
+  - 优势
+    - 示例丰富
+    - 开发文档齐全
+  - 劣势
+    - 原作者已离开项目，目前由社区维护
+    - 使用过的开发者普遍反馈封装过度，导致上手成本有点高
+- [vue-admin-better](https://github.com/chuzhixin/vue-admin-better)
+  - 优势
+    - 示例丰富
+  - 劣势
+    - 开源版本功能较少
+    - 开发文档需要付费加群才能查阅
+    - 付费版本价格较贵
+- [vue-pure-admin](https://github.com/pure-admin/vue-pure-admin)
+  - 优势
+    - 示例丰富
+    - 开发文档齐全
+    - 生态丰富，有提供 electron/tauri 支持
+  - 劣势
+    - 配置项较少，可定制性不高
+    - 精简版本与演示版本更新不同步，且精简版本更新较慢
+    - 封装的工具函数仅对核心成员开源
+- [Naive Admin](https://www.naiveadmin.com/home)
+  - 优势
+    - 示例丰富
+    - 提供多款 UI 组件库的版本，也有提供带后端支持的版本
+  - 劣势
+    - 没有提供开源版本
+    - 不同 UI 组件库的版本需单独购买，且价格较贵
+- [EleAdmin](https://eleadmin.com/)
+  - 优势
+    - 示例丰富
+    - 提供 Element Plus 和 Ant Design Vue 两个版本
+  - 劣势
+    - 没有提供开源版本
+    - 不同 UI 组件库的版本需单独购买，且价格较贵
