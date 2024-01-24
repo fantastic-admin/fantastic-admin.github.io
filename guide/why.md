@@ -86,8 +86,10 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 ## 为什么不是它们？
 
-:::tip 说明
-整理了一些市面上 star 数较高，技术栈较新，且还在更新维护的同类产品，也是作者本人比较认可，具有一定实力的同类产品。
+:::tip 作者寄语
+以下整理的几款同类产品是我相对比较认可的，它们不管在技术栈上，还是更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。
+
+但从我作为 Fantastic-admin 作者的主观角度来看，它们提供的能力和特性或许和 Fantastic-admin 基础版不相上下，但远远比不上 Fantastic-admin 专业版。
 :::
 
 - [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
