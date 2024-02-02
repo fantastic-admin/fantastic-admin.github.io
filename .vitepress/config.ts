@@ -164,6 +164,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: '代码规范', link: '/guide/coding-standard' },
             { text: '术语', link: '/guide/term' },
             { text: '配置', link: '/guide/configure' },
+            { text: '开发者工具', link: '/guide/devtools' },
             { text: '路由（导航）', link: '/guide/router' },
             { text: '与服务端交互', link: '/guide/axios' },
             { text: '全局状态管理', link: '/guide/store' },

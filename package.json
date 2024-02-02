@@ -12,7 +12,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "2.6.3",
     "eslint": "^8.56.0",
-    "vitepress": "1.0.0-rc.39",
+    "vitepress": "1.0.0-rc.41",
     "vue": "^3.4.15"
   }
 }

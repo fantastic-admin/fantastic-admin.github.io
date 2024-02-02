@@ -18,6 +18,8 @@ VITE_APP_DEBUG_TOOL =
 
 # 是否开启代理
 VITE_OPEN_PROXY = false
+# 是否开启开发者工具
+VITE_OPEN_DEVTOOLS = false
 ```
 
 ```yaml [.env.test 测试环境]
