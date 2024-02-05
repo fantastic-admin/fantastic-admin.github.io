@@ -130,7 +130,7 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   </tr>
   <tr>
     <td align="center">标签栏</td>
-    <td align="center"></td>
+    <td align="center">支持部分</td>
     <td align="center">✅</td>
   </tr>
   <tr>

@@ -13,11 +13,9 @@
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layouts/index.vue')
-
 const routes: RouteRecordRaw = {
   path: '/example',
-  component: Layout,
+  component: () => import('@/layouts/index.vue'),
   redirect: '/example/index',
   name: 'Example',
   meta: {
@@ -54,11 +52,9 @@ export default routes
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layouts/index.vue')
-
 const routes: RouteRecordRaw = {
   path: '/example',
-  component: Layout,
+  component: () => import('@/layouts/index.vue'),
   redirect: '/example/level/index',
   name: 'Example',
   meta: {
@@ -67,7 +63,6 @@ const routes: RouteRecordRaw = {
   children: [
     {
       path: 'level',
-      name: 'ExampleLevel',
       // 无需设置 componment
       meta: {
         title: '中间层级',
@@ -230,21 +225,22 @@ export default routes
 
 当子路由里没有可展示的路由时，在菜单导航中则只会显示父级路由，例如：
 
-```ts {13}
+```ts {15}
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
   path: '/permission',
+  component: () => import('@/layouts/index.vue'),
   meta: {
     title: '权限验证',
   },
   children: [
     {
-      path: 'index',
+      path: '',
+      component: () => import('@/views/permission.vue'),
       meta: {
         title: '权限验证',
         sidebar: false,
-        activeMenu: '/permission/index',
       },
     },
   ],
@@ -263,23 +259,26 @@ export default routes
 
 该参数常与 `sidebar: false` 一起使用，因为路由不在菜单导航显示，会导致进入该路由后，菜单导航高亮效果失效，所以需要手动指定。
 
-```ts {19-20}
+```ts {22-23}
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
   path: '/news',
+  component: () => import('@/layouts/index.vue'),
   meta: {
     title: '新闻管理',
   },
   children: [
     {
       path: 'list',
+      component: () => import('@/views/news/list.vue'),
       meta: {
         title: '新闻列表',
       },
     },
     {
       path: 'detail',
+      component: () => import('@/views/news/detail.vue'),
       meta: {
         title: '新闻详情',
         sidebar: false,
@@ -484,11 +483,9 @@ const constantRoutes: RouteRecordRaw[] = [
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layouts/index.vue')
-
 const routes: RouteRecordRaw = {
   path: '/banner',
-  component: Layout,
+  component: () => import('@/layouts/index.vue'),
   redirect: '/banner/list',
   name: 'banner',
   meta: {
@@ -530,11 +527,9 @@ export default routes
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
 
-const Layout = () => import('@/layouts/index.vue')
-
 const routes: RouteRecordRaw = {
   path: '/banner',
-  component: Layout,
+  component: () => import('@/layouts/index.vue'),
   redirect: '/banner/list',
   name: 'banner',
   meta: {
