@@ -28,7 +28,7 @@ onMounted(() => {
   <div v-if="isVisible" class="banner-wrapper" role="banner">
     <div id="banner" @click="switchToMirrorSite">
       <div class="content">
-        官网访问慢？试试国内镜像地址吧！
+        访问慢？点击切换到国内镜像地址
       </div>
       <button id="banner-close" @click.stop="closeBanner">
         <span class="close">&times;</span>
@@ -74,7 +74,7 @@ onMounted(() => {
   font-size: 18px;
   letter-spacing: 2px;
   text-align: center;
-  background: linear-gradient(145deg, #c3ffac, #86ec87, #38a56a);
+  background: linear-gradient(145deg, #c3ffac, #86ec87);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -82,13 +82,20 @@ onMounted(() => {
 
 #banner-close {
   position: absolute;
-  right: 12px;
+  width: 40px;
+  height: 100%;
+  top: 0;
+  right: 0;
   color: #fff;
   font-size: 20px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#banner-close:hover > .close {
+  color: #86ec87;
 }
 
 #banner-close > .close {
