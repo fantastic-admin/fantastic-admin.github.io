@@ -291,6 +291,60 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
+### signleMenu <sup class="pro-badge" />
+
+| 类型  | 默认值 |  说明               |
+| :---: | :----: |:----------------- |
+| boolean  |   /    | 是否为单个一级导航菜单 |
+
+该配置用于简化只想展示一级，没有二级菜单导航的路由配置。
+
+需注意，该配置只能在一级路由上设置，且只在一级路由上生效。
+
+```ts {9}
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/test',
+  component: () => import('@/views/test/index.tsx'),
+  name: 'test',
+  meta: {
+    title: '测试页面',
+    signleMenu: true,
+  },
+}
+
+export default routes
+```
+
+以上路由配置等同于以下配置：
+
+```ts
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/test',
+  component: () => import('@/layouts/index.vue'),
+  name: 'test',
+  meta: {
+    title: '测试页面',
+  },
+  children: [
+    {
+      path: '',
+      component: () => import('@/views/test/index.tsx'),
+      meta: {
+        title: '测试页面',
+        sidebar: false,
+        breadcrumb: false,
+      },
+    },
+  ],
+}
+
+export default routes
+```
+
 ### breadcrumb
 
 |  类型   | 默认值 | 说明                         |
