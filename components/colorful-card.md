@@ -1,4 +1,4 @@
-# ColorfulCard 多彩渐变卡片 <sup class="pro-badge" />
+# ColorfulCard 多彩渐变卡片 <Badge type="pro" text="专业版" />
 
 ## Props
 

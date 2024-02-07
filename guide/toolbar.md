@@ -4,7 +4,7 @@
 
 ![](/toolbar.png){data-zoomable}
 
-## 收藏夹 <sup class="pro-badge" />
+## 收藏夹 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
@@ -46,7 +46,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 通知中心 <sup class="pro-badge" />
+## 通知中心 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
@@ -63,7 +63,7 @@ const globalSettings: Settings.all = {
 - `/src/layouts/components/Tools/Notification/index.vue` 通知中心下拉预览面板
 - `/src/views/personal/notification.vue` 通知中心页面
 
-## 国际化 <sup class="pro-badge" />
+## 国际化 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
@@ -115,7 +115,7 @@ const globalSettings: Settings.all = {
 
 如果设置为不启用，并不代表不支持颜色主题切换，只是不会在工具栏显示切换颜色主题的图标。
 
-## 布局 <sup class="pro-badge" />
+## 布局 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.4.0 新增" />
 
 在应用配置中设置：
 

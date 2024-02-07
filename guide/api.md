@@ -44,7 +44,7 @@ const { reload } = useMainPage()
 reload()
 ```
 
-### 设置自定义标题 <sup class="pro-badge" />
+### 设置自定义标题 <Badge type="pro" text="专业版" />
 
 ```ts
 const { setCustomTitle } = useMainPage()
@@ -52,7 +52,7 @@ const { setCustomTitle } = useMainPage()
 setCustomTitle(title)
 ```
 
-### 重置自定义标题 <sup class="pro-badge" />
+### 重置自定义标题 <Badge type="pro" text="专业版" />
 
 ```ts
 const { resetCustomTitle } = useMainPage()
@@ -60,7 +60,7 @@ const { resetCustomTitle } = useMainPage()
 resetCustomTitle()
 ```
 
-### 最大化 <sup class="pro-badge" />
+### 最大化 <Badge type="pro" text="专业版" />
 
 ```ts
 const { maximize } = useMainPage()
@@ -69,7 +69,7 @@ const { maximize } = useMainPage()
 maximize(status)
 ```
 
-## 标签栏 <sup class="pro-badge" />
+## 标签栏 <Badge type="pro" text="专业版" />
 
 ### 获取当前标签页 tabId
 
@@ -197,7 +197,7 @@ eventBus.emit()
 eventBus.off()
 ```
 
-## 日期 <sup class="pro-badge" />
+## 日期 <Badge type="pro" text="专业版" />
 
 基于 [dayjs](https://day.js.org/zh-CN/) 简单封装，使用方法请查阅官方文档。
 

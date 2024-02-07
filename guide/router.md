@@ -128,7 +128,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :----: | :----: | :----------------------------------- |
 | string |   /    | 导航、面包屑导航以及页面中展示的标题 |
 
-### i18n <sup class="pro-badge" />
+### i18n <Badge type="pro" text="专业版" />
 
 |  类型  | 默认值 | 说明                    |
 | :----: | :----: | :---------------------- |
@@ -144,7 +144,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 该项配置最终会通过 `<SvgIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
 
-### activeIcon <sup class="pro-badge" />
+### activeIcon <Badge type="pro" text="专业版" />
 
 |  类型  | 默认值 | 说明                 |
 | :----: | :----: | :------------------- |
@@ -160,7 +160,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置。
 
-### permanent <sup class="pro-badge" />
+### permanent <Badge type="pro" text="专业版" />
 
 |  类型   | 默认值 | 说明           |
 | :-----: | :----: | :------------- |
@@ -291,7 +291,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-### signleMenu <sup class="pro-badge" />
+### signleMenu <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.6.0 新增" />
 
 | 类型  | 默认值 |  说明               |
 | :---: | :----: |:----------------- |
@@ -374,7 +374,7 @@ export default routes
 
 该属性通常在启用标签栏合并时会使用到。详细可阅读《[页面缓存 - 标签栏开启且合并](keep-alive#标签栏开启且合并)》。
 
-### badge <sup class="pro-badge" />
+### badge <Badge type="pro" text="专业版" />
 
 |           类型            | 默认值 | 说明     |
 | :-----------------------: | :----: | :------- |
@@ -392,7 +392,7 @@ export default routes
 badge: () => globalStore.number
 ```
 
-### newWindow <sup class="pro-badge" />
+### newWindow <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.2.0 新增" />
 
 |  类型   | 默认值 | 说明             |
 | :-----: | :----: | :--------------- |
@@ -436,7 +436,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-### iframe <sup class="pro-badge" />
+### iframe <Badge type="pro" text="专业版" />
 
 |  类型  | 默认值 | 说明         |
 | :----: | :----: | :----------- |
@@ -484,7 +484,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-### copyright <sup class="pro-badge" />
+### copyright <Badge type="pro" text="专业版" />
 
 |  类型   | 默认值 | 说明                       |
 | :-----: | :----: | :------------------------- |
@@ -492,7 +492,7 @@ const globalSettings: Settings.all = {
 
 该参数比应用配置里的 `copyright.enable` 优先级高，不设置则继承应用配置里的设置。
 
-### paddingBottom <sup class="pro-badge" />
+### paddingBottom <Badge type="pro" text="专业版" />
 
 |  类型  | 默认值 | 说明                           |
 | :----: | :----: | :----------------------------- |
@@ -504,7 +504,7 @@ const globalSettings: Settings.all = {
 paddingBottom: '80px'
 ```
 
-### whiteList <sup class="pro-badge" />
+### whiteList <Badge type="pro" text="专业版" />
 
 |  类型   | 默认值 | 说明                                   |
 | :-----: | :----: | :------------------------------------- |

@@ -1,4 +1,4 @@
-# LayoutContainer 布局容器 <sup class="pro-badge" />
+# LayoutContainer 布局容器 <Badge type="pro" text="专业版" />
 
 ## Props
 

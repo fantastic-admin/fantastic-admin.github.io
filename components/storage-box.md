@@ -1,4 +1,4 @@
-# StorageBox 储存箱 <sup class="pro-badge" />
+# StorageBox 储存箱 <Badge type="pro" text="专业版" />
 
 ## Props
 

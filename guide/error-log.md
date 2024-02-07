@@ -1,4 +1,4 @@
-# 错误日志 <sup class="pro-badge" />
+# 错误日志 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 

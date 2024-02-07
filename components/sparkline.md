@@ -1,4 +1,4 @@
-# Sparkline 迷你图 <sup class="pro-badge" />
+# Sparkline 迷你图 <Badge type="pro" text="专业版" />
 
 ## Props
 

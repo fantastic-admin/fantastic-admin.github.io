@@ -9,8 +9,8 @@
 - 顶部模式
 - 侧边栏模式（含主导航）
 - 侧边栏模式（无主导航）
-- 侧边栏精简模式 <sup class="pro-badge" />
-- 顶部精简模式 <sup class="pro-badge" />
+- 侧边栏精简模式 <Badge type="pro" text="专业版" />
+- 顶部精简模式 <Badge type="pro" text="专业版" />
 
 ### 顶部模式
 
@@ -48,7 +48,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-### 侧边栏精简模式 <sup class="pro-badge" />
+### 侧边栏精简模式 <Badge type="pro" text="专业版" />
 
 ![](/menu-mode-only-side.png){data-zoomable}
 
@@ -60,7 +60,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-### 顶部精简模式 <sup class="pro-badge" />
+### 顶部精简模式 <Badge type="pro" text="专业版" />
 
 ![](/menu-mode-only-head.png){data-zoomable}
 
@@ -72,7 +72,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 页宽模式 <sup class="pro-badge" />
+## 页宽模式 <Badge type="pro" text="专业版" />
 
 在应用配置中设置，可实现 4 种基于页宽(页面宽度)模式：
 

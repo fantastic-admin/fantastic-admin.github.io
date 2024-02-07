@@ -111,7 +111,7 @@ const globalSettings: Settings.all = {
 
 当点击关闭标签页时，缓存会自动删除，当然手动调用[关闭当前标签页](tabbar#关闭当前标签页)的方法也会删除缓存。
 
-## 标签栏开启且合并 <sup class="pro-badge" />
+## 标签栏开启且合并 <Badge type="pro" text="专业版" />
 
 :::tip
 请确保已阅读《[标签栏 - 标签页合并](tabbar#标签页合并)》。

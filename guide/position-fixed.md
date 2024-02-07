@@ -1,4 +1,4 @@
-# 高级 position:fixed <sup class="pro-badge" />
+# 高级 position:fixed <Badge type="pro" text="专业版" />
 
 我们都知道 `position:fixed` 是相对于浏览器窗口进行定位的，那在本框架中，要如何实现 `<FixedActionBar />` 组件这种不管在任何布局场景下，始终固定在右侧内容区域内底部呢？
 

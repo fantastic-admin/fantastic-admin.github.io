@@ -2,13 +2,13 @@
 
 需在工具栏开启。
 
-## 风格 <sup class="pro-badge" />
+## 风格 <Badge type="pro" text="专业版" />
 
 详细可阅读《[主题 - 面包屑导航风格](theme#面包屑导航风格)》。
 
 ## 功能介绍
 
-### 显示主导航 <sup class="pro-badge" />
+### 显示主导航 <Badge type="pro" text="专业版" />
 
 在应用配置里设置：
 

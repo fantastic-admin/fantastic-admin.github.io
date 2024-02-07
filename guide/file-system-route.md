@@ -100,18 +100,18 @@ meta:
 需要注意的是，既然使用了基于文件系统的路由，不建议再手动去设置 `path` 和 `name` ，同时因为路由不再承担生成导航的特性，所以 `meta` 对象的可配置项也有部分调整，保留了以下参数：
 
 - [title](router#title)
-- [i18n](router#i18n) <sup class="pro-badge" />
+- [i18n](router#i18n) <Badge type="pro" text="专业版" />
 - [icon](router#icon)
-- [activeIcon](router#activeicon) <sup class="pro-badge" />
-- [permanent](router#permanent) <sup class="pro-badge" />
+- [activeIcon](router#activeicon) <Badge type="pro" text="专业版" />
+- [permanent](router#permanent) <Badge type="pro" text="专业版" />
 - [auth](router#auth)
 - [activeMenu](router#activemenu)
 - [cache](router#cache)
-- [noCache](router#nocache) <sup class="pro-badge" />
-- [newWindow](router#newwindow) <sup class="pro-badge" />
-- [link](router#link) <sup class="pro-badge" />
-- [copyright](router#copyright) <sup class="pro-badge" />
-- [paddingBottom](router#paddingbottom) <sup class="pro-badge" />
+- [noCache](router#nocache) <Badge type="pro" text="专业版" />
+- [newWindow](router#newwindow) <Badge type="pro" text="专业版" />
+- [link](router#link) <Badge type="pro" text="专业版" />
+- [copyright](router#copyright) <Badge type="pro" text="专业版" />
+- [paddingBottom](router#paddingbottom) <Badge type="pro" text="专业版" />
 
 另外还新增了三个特殊参数：
 
@@ -148,9 +148,9 @@ meta:
   - [title](router#title)
   - [i18n](router#i18n)
   - [icon](router#icon)
-  - [activeIcon](router#activeicon) <sup class="pro-badge" />
+  - [activeIcon](router#activeicon) <Badge type="pro" text="专业版" />
   - [auth](router#auth)
-  - [badge](router#badge) <sup class="pro-badge" />
+  - [badge](router#badge) <Badge type="pro" text="专业版" />
 - children 下级导航数组
 
 同样的，导航数据也可通过后端进行返回，只需在应用配置中设置：

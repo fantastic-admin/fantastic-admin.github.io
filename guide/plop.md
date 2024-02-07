@@ -12,7 +12,7 @@
 - `component` 组件文件
 - `store` pinia 全局状态文件
 - `mock` mock 文件
-- `module` 页面模块文件 <sup class="pro-badge" />
+- `module` 页面模块文件 <Badge type="pro" text="专业版" />
 
 除了框架提供的 5 种模式，你还可以自定义新的模式，其原理就是通过预设模板，按照特定规则创建文件或者文件夹。
 
@@ -42,7 +42,7 @@ store 模式则会在 `/src/store/modules/` 目录下生成一个空模板
 
 mock 模式则会在 `/src/mock/` 目录下生成一个标准 CURD 的 mock 数据
 
-## module <sup class="pro-badge" />
+## module <Badge type="pro" text="专业版" />
 
 ![](/plop-module.gif){data-zoomable}
 

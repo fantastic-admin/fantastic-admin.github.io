@@ -19,7 +19,7 @@ const globalSettings: Settings.all = {
 
 ![](/topbar.gif){data-zoomable}
 
-## 切换标签栏和工具栏 <sup class="pro-badge" />
+## 切换标签栏和工具栏 <Badge type="pro" text="专业版" />
 
 默认标签栏在上，工具栏在下，可以在应用配置里设置切换：
 

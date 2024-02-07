@@ -56,7 +56,7 @@ const globalSettings: Settings.all = {
 
 ![](/menu-enablesubmenucollapsebutton.gif){data-zoomable}
 
-## 次导航只有一个导航时自动隐藏 <sup class="pro-badge" />
+## 次导航只有一个导航时自动隐藏 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
@@ -121,7 +121,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-## 次导航自动收起 <sup class="pro-badge" />
+## 次导航自动收起 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.4.0 新增" />
 
 在应用配置中设置：
 

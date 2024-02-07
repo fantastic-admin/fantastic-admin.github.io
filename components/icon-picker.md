@@ -1,4 +1,4 @@
-# IconPicker 图标选择器 <sup class="pro-badge" />
+# IconPicker 图标选择器 <Badge type="pro" text="专业版" />
 
 ## Props
 

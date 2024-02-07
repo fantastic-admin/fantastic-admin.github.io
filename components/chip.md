@@ -1,4 +1,4 @@
-# Chip 纸片 <sup class="pro-badge" />
+# Chip 纸片 <Badge type="pro" text="专业版" />
 
 ## Props
 

@@ -1,4 +1,4 @@
-# I18nSelector 国际化选择器 <sup class="pro-badge" />
+# I18nSelector 国际化选择器 <Badge type="pro" text="专业版" />
 
 ## Slots
 

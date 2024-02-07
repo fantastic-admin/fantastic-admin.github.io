@@ -99,19 +99,10 @@
   z-index: 30;
 }
 /* 专业版 badge */
-.pro-badge {
-  display: inline-block;
-  border-radius: 6px;
-  font-size: .65em;
-  line-height: 1;
-  font-weight: 600;
-  padding: 0.35em 0.4em 0.3em;
-  top: -0.65em;
+.VPBadge.pro {
+  border-color: goldenrod;
   color: #333;
   background-color: #e7c605;
-}
-.pro-badge:before {
-  content: '专业版';
 }
 a.cta {
   text-align: center;

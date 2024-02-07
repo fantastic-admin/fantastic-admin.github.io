@@ -255,7 +255,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 导航栏风格 <sup class="pro-badge" />
+## 导航栏风格 <Badge type="pro" text="专业版" />
 
 ### 填充风格
 
@@ -292,7 +292,7 @@ const globalSettings: Settings.all = {
 
 ![](/menu-active-style.png){data-zoomable}
 
-## 面包屑导航风格 <sup class="pro-badge" />
+## 面包屑导航风格 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
@@ -310,7 +310,7 @@ const globalSettings: Settings.all = {
 
 ![](/breadcrumb-style.png){data-zoomable}
 
-## 标签栏风格 <sup class="pro-badge" />
+## 标签栏风格 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 

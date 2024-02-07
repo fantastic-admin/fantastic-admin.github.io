@@ -28,7 +28,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 标签栏 <sup class="pro-badge" />
+## 标签栏 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
@@ -40,7 +40,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 页面 <sup class="pro-badge" />
+## 页面 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 

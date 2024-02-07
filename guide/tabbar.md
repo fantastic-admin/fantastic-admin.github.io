@@ -10,7 +10,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 风格 <sup class="pro-badge" />
+## 风格 <Badge type="pro" text="专业版" />
 
 详细可阅读《[主题 - 标签栏风格](theme#标签栏风格)》
 
@@ -28,7 +28,7 @@ const globalSettings: Settings.all = {
 
 ![](/tabbar2.gif){data-zoomable}
 
-### 固定 <sup class="pro-badge" />
+### 固定 <Badge type="pro" text="专业版" />
 
 将指定标签页设为固定状态，固定的标签页右键无法直接关闭，同时也不会被关闭其它、关闭左侧、关闭右侧标签页操作所关闭，并且下次访问将保留固定标签页状态。
 
@@ -50,21 +50,21 @@ const globalSettings: Settings.all = {
 为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
 :::
 
-### 最大化 <sup class="pro-badge" />
+### 最大化 <Badge type="pro" text="专业版" />
 
 通过隐藏导航栏和顶栏，将操作内容区最大化。双击标签页可快速进入最大化。
 
 ![](/tabbar4.gif){data-zoomable}
 
-### 拖拽排序 <sup class="pro-badge" />
+### 拖拽排序 <Badge type="pro" text="专业版" />
 
 ![](/tabbar5.gif){data-zoomable}
 
-### 快捷操作下拉菜单 <sup class="pro-badge" />
+### 快捷操作下拉菜单 <Badge type="pro" text="专业版" />
 
 ![](/tabbar6.gif){data-zoomable}
 
-## 标签页合并 <sup class="pro-badge" />
+## 标签页合并 <Badge type="pro" text="专业版" />
 
 标签页合并功能在一定程度上可以减少标签页的数量，让用户能够准确的找到自己想要的标签页。
 
@@ -162,7 +162,7 @@ const globalSettings: Settings.all = {
 
 会根据当前路由配置中的 `meta.icon` 和 `meta.activeIcon` 属性来显示图标，如果未设置，则会根据路由嵌套层级，依次向上查找父级路由的 `meta.icon` 和 `meta.activeIcon` 属性进行显示。
 
-## 记忆功能 <sup class="pro-badge" />
+## 记忆功能 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 

@@ -1,5 +1,5 @@
 import { h, nextTick, onMounted, watch } from 'vue'
-import Theme from 'vitepress/theme'
+import Theme, { VPBadge } from 'vitepress/theme'
 import { useRoute } from 'vitepress'
 import './fonts/fira_code/fira_code.css'
 import './styles/var.css'
@@ -31,6 +31,7 @@ export default {
     )
   },
   enhanceApp({ app }) {
+    app.component('Badge', VPBadge)
     app.component('ZoomImg', ZoomImg)
     app.component('CustomerEvaluate', CustomerEvaluate)
   },
