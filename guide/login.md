@@ -13,4 +13,4 @@
 1. 在 `.env.development` 里检查接口请求地址是否正确。
 2. 在 `/src/api/index.ts` 里修改响应拦截器里的代码，按照实际情况进行调整。例如什么状态下是请求成功，什么状态下是请求异常，并进行错误提示。
 3. 在 `/src/api/modules/user.ts` 里修改 `login` 函数，确保接口可以请求成功。
-4. 在 `/src/store/modules/user.ts` 里修改 `isLogin` 计算属性，这部分需要根据实际存储的用户信息去判断是否登录。例如框架登录是返回 token 和失效时间，则验证是否登录也是通过这两个信息进行逻辑校验。
+4. 在 `/src/store/modules/user.ts` 里修改 `isLogin` 计算属性，这部分需要根据实际存储的用户信息去判断是否登录。
