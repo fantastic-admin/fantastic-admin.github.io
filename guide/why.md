@@ -93,9 +93,9 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript
 ## 为什么不是它们？
 
 :::tip 作者寄语
-以下整理的几款同类产品是我相对比较认可的，它们不管在技术栈上，还是更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。
+以下整理的几款同类产品，它们不管在技术栈上、功能的丰富度上、更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。
 
-但从我作为 Fantastic-admin 作者的主观角度来看，它们提供的能力和特性，或许和 Fantastic-admin 基础版不相上下，但远远比不上 Fantastic-admin 专业版。
+但是可靠并不一定代表好用，同样一个功能的实现，不同的产品会有不同的设计思路，这也是我认为 Fantastic-admin 在一众同类产品中，最有价值的地方。
 :::
 
 ::: details [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
