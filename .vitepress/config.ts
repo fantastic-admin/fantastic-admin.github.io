@@ -123,10 +123,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: 'https://www.vexipui.com/zh-CN',
           },
           {
-            text: 'iDux 组件库',
-            link: 'https://idux.site',
-          },
-          {
             text: '交换友链 ?',
             link: '/links',
           },
