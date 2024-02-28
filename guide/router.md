@@ -291,7 +291,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-### signleMenu <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.6.0 新增" />
+### singleMenu <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.6.0 新增" />
 
 | 类型  | 默认值 |  说明               |
 | :---: | :----: |:----------------- |
@@ -310,7 +310,7 @@ const routes: RouteRecordRaw = {
   name: 'test',
   meta: {
     title: '测试页面',
-    signleMenu: true,
+    singleMenu: true,
   },
 }
 
