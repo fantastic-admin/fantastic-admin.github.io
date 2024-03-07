@@ -101,6 +101,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             text: '定制开发',
             link: '/customize',
           },
+          {
+            text: '免费领取 Vue2 专业版 👑',
+            link: '/get-vue2-pro',
+          },
         ],
       },
       {
@@ -271,6 +275,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           items: [
             { text: '购买专业版', link: '/buy' },
             { text: '定制开发', link: '/customize' },
+            { text: '免费领取 Vue2 专业版', link: '/get-vue2-pro' },
             { text: '技术支持', link: '/support' },
             { text: '我要交换友链', link: '/links' },
           ],
