@@ -155,7 +155,7 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   </tr>
   <tr>
     <td align="center">开发与构建工具</td>
-    <td colspan="2" align="center">Vue 3 / Vite 4</td>
+    <td colspan="2" align="center">Vue 3 / Vite</td>
   </tr>
   <tr>
     <td align="center">UI 组件库</td>
