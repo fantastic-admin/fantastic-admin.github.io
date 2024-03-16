@@ -47,7 +47,7 @@ const routes: RouteRecordRaw = {
       name: 'NewsDetail',
       meta: {
         title: '新闻详情',
-        sidebar: false,
+        menu: false,
         activeMenu: '/news/list',
       },
     },
@@ -76,7 +76,7 @@ const routes: RouteRecordRaw = {
       name: 'NewsDetail',
       meta: {
         title: '新闻详情',
-        sidebar: false,
+        menu: false,
         activeMenu: '/news/list',
       },
     },
@@ -85,7 +85,7 @@ const routes: RouteRecordRaw = {
       name: 'NewsCreate',
       meta: {
         title: '新增新闻',
-        sidebar: false,
+        menu: false,
         activeMenu: '/news/list',
       },
     },
@@ -166,7 +166,7 @@ const routes: RouteRecordRaw = {
       name: 'NewsDetail',
       meta: {
         title: '新闻详情',
-        sidebar: false,
+        menu: false,
         activeMenu: '/news/list',
         cache: true,
         noCache: 'NewsList',
@@ -177,7 +177,7 @@ const routes: RouteRecordRaw = {
       name: 'NewsCreate',
       meta: {
         title: '新增新闻',
-        sidebar: false,
+        menu: false,
         activeMenu: '/news/list',
         cache: true,
         noCache: 'NewsList',

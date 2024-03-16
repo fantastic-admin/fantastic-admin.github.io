@@ -68,7 +68,7 @@ Fantastic-admin 借鉴了 vue-element-admin 通过路由生成导航栏的思路
 
 | vue-element-admin | Fantastic-admin | 说明                                                                                                              |
 | :---------------: | :-------------: | :---------------------------------------------------------------------------------------------------------------- |
-|      hidden       |  meta.sidebar   | 是否在导航栏里显示                                                                                                |
+|      hidden       |    meta.menu    | 是否在导航栏里显示                                                                                                |
 |    alwaysShow     |        /        | 并未提供该设置，因为在 Fantastic-admin 里自动处理的                                                               |
 |    meta.roles     |    meta.auth    | Fantastic-admin 可兼容 vue-element-admin 的权限设计模式，并提供了更高级的权限模式                                 |
 |    meta.title     |   meta.title    | 导航标题                                                                                                          |

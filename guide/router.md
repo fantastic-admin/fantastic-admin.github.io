@@ -95,7 +95,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
   {
     meta: {
       title: '演示',
-      icon: 'sidebar-default',
+      icon: 'menu-default',
     },
     children: [
       MultilevelMenuExample,
@@ -106,7 +106,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
   {
     meta: {
       title: '其它',
-      icon: 'sidebar-other',
+      icon: 'menu-other',
     },
     children: [
       ComponentExample,
@@ -217,7 +217,9 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-### sidebar
+### ~~sidebar~~ <Badge type="warning" text="v4.7.0 弃用" />
+
+### menu <Badge type="tip" text="v4.7.0 新增" />
 
 |  类型   | 默认值 | 说明                       |
 | :-----: | :----: | :------------------------- |
@@ -240,7 +242,7 @@ const routes: RouteRecordRaw = {
       component: () => import('@/views/permission.vue'),
       meta: {
         title: '权限验证',
-        sidebar: false,
+        menu: false,
       },
     },
   ],
@@ -249,7 +251,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-![](/route-meta-sidebar.png){data-zoomable}
+![](/route-meta-menu.png){data-zoomable}
 
 ### activeMenu
 
@@ -257,7 +259,7 @@ export default routes
 | :----: | :----: | :--------------------------------------- |
 | string |   /    | 指定高亮的菜单导航，需要设置完整路由地址 |
 
-该参数常与 `sidebar: false` 一起使用，因为路由不在菜单导航显示，会导致进入该路由后，菜单导航高亮效果失效，所以需要手动指定。
+该参数常与 `menu: false` 一起使用，因为路由不在菜单导航显示，会导致进入该路由后，菜单导航高亮效果失效，所以需要手动指定。
 
 ```ts {22-23}
 import type { RouteRecordRaw } from 'vue-router'
@@ -281,7 +283,7 @@ const routes: RouteRecordRaw = {
       component: () => import('@/views/news/detail.vue'),
       meta: {
         title: '新闻详情',
-        sidebar: false,
+        menu: false,
         activeMenu: '/news/list',
       },
     },
@@ -335,7 +337,7 @@ const routes: RouteRecordRaw = {
       component: () => import('@/views/test/index.tsx'),
       meta: {
         title: '测试页面',
-        sidebar: false,
+        menu: false,
         breadcrumb: false,
       },
     },
@@ -609,7 +611,7 @@ const routes: RouteRecordRaw = {
           component: () => import('@/views/banner/add.vue'),
           meta: {
             title: '新增 Banner',
-            sidebar: false,
+            menu: false,
             activeMenu: '/banner/add',
           }
         },
@@ -619,7 +621,7 @@ const routes: RouteRecordRaw = {
           component: () => import('@/views/banner/list.vue'),
           meta: {
             title: 'Banner 列表',
-            sidebar: false,
+            menu: false,
             breadcrumb: false,
           }
         },

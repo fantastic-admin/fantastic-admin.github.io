@@ -141,7 +141,7 @@ const routes: RouteRecordRaw = {
       meta: {
         title: '编辑 Banner',
         auth: ['admin'],
-        sidebar: false,
+        menu: false,
       },
     },
   ],

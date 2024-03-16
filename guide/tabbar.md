@@ -89,7 +89,7 @@ const routes: RouteRecordRaw = {
       name: 'ManagerCreate',
       meta: {
         title: '新增管理员',
-        sidebar: false,
+        menu: false,
         activeMenu: '/manager',
       },
     },
@@ -98,7 +98,7 @@ const routes: RouteRecordRaw = {
       name: 'ManagerEdit',
       meta: {
         title: '编辑管理员',
-        sidebar: false,
+        menu: false,
         activeMenu: '/manager',
       },
     },

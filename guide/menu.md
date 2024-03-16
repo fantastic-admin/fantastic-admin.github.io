@@ -84,7 +84,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
     meta: {
       title: '演示',
       i18n: 'route.demo',
-      icon: 'sidebar-default',
+      icon: 'menu-default',
     },
     children: [
       MultilevelMenuExample,
@@ -111,7 +111,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
             component: () => import('@/views/test/page.vue'),
             meta: {
               title: '演示页面',
-              sidebar: false,
+              menu: false,
             },
           },
         ],

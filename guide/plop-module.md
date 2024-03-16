@@ -51,7 +51,7 @@ const routes: RouteRecordRaw = {
       component: () => import('@/views/example/detail.vue'),
       meta: {
         title: '新增',
-        sidebar: false,
+        menu: false,
         activeMenu: '/example/list',
       },
     },
@@ -61,7 +61,7 @@ const routes: RouteRecordRaw = {
       component: () => import('@/views/example/detail.vue'),
       meta: {
         title: '编辑',
-        sidebar: false,
+        menu: false,
         activeMenu: '/example/list',
       },
     },
