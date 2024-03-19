@@ -217,6 +217,63 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
+### auths <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
+
+|               类型               | 默认值 | 说明                                                                         |
+| :------------------------------: | :----: | :--------------------------------------------------------------------------- |
+| <div style="width: 150pt">{ name: string; value: string }[]</div> |   /    | 权限池，对路由本身无实际作用，通常用于角色管理模块，展示路由(导航)可配置权限 |
+
+权限池存放了该路由相关的所有权限，包括但不限于：访问权限、按钮权限、颗粒度更细的权限等。以下是一个示例：
+
+:::tip 注意
+- `auths` 里需包含 `auth` 所设置的权限，否则会导致无法设置该路由的访问权限。
+- `auths` 的存放位置并不固定，可以放在任意一级路由上，但通常建议放在某个模块的入口路由上，表示该模块下所有子路由具备的可配置权限。
+:::
+
+```ts {8-15}
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/news',
+  component: () => import('@/layouts/index.vue'),
+  meta: {
+    title: '新闻管理',
+    auths: [
+      { name: '浏览', value: 'browse' },
+      { name: '新增', value: 'add' },
+      { name: '编辑', value: 'edit' },
+      { name: '删除', value: 'delete' },
+      { name: '导出', value: 'export' },
+      { name: '导入', value: 'import' },
+    ],
+  },
+  children: [
+    {
+      path: 'list',
+      component: () => import('@/views/news/list.vue'),
+      meta: {
+        title: '新闻列表',
+        auth: 'browse',
+      },
+    },
+    {
+      path: 'detail',
+      component: () => import('@/views/news/detail.vue'),
+      meta: {
+        title: '新闻详情',
+        menu: false,
+        activeMenu: '/news/list',
+        auth: 'browse',
+      },
+    },
+  ],
+}
+
+export default routes
+```
+
+该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.gitee.io/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
+
 ### ~~sidebar~~ <Badge type="warning" text="v4.7.0 弃用" />
 
 ### menu <Badge type="tip" text="v4.7.0 新增" />
@@ -295,9 +352,9 @@ export default routes
 
 ### singleMenu <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.6.0 新增" />
 
-| 类型  | 默认值 |  说明               |
-| :---: | :----: |:----------------- |
-| boolean  |   /    | 是否为单个一级导航菜单 |
+|  类型   | 默认值 | 说明                   |
+| :-----: | :----: | :--------------------- |
+| boolean |   /    | 是否为单个一级导航菜单 |
 
 该配置用于简化只想展示一级，没有二级菜单导航的路由配置。
 
