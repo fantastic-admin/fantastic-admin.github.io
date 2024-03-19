@@ -5,6 +5,7 @@ import './fonts/fira_code/fira_code.css'
 import './styles/var.css'
 import mediumZoom from 'medium-zoom'
 import MirrorSite from './components/MirrorSite.vue'
+import ActivityCountdown from './components/ActivityCountdown.vue'
 import SponsorsAside from './components/SponsorsAside.vue'
 import HomePreview from './components/HomePreview.vue'
 import ZoomImg from './components/ZoomImg.vue'
@@ -14,7 +15,7 @@ export default {
   ...Theme,
   Layout() {
     return h(Theme.Layout, null, {
-      'layout-top': () => h(MirrorSite),
+      'layout-top': () => h(ActivityCountdown),
       'home-features-after': () => h(HomePreview),
       'aside-bottom': () => h(SponsorsAside),
     })
