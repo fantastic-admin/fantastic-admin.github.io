@@ -154,11 +154,21 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 ### defaultOpened
 
-|  类型   | 默认值 | 说明               |
-| :-----: | :----: | :----------------- |
-| boolean | false  | 次导航是否默认展开 |
+|  类型   | 默认值 | 说明                                                                   |
+| :-----: | :----: | :--------------------------------------------------------------------- |
+| boolean | false  | 次导航是否默认展开，在父级路由上设置后，会默认展开并显示下一级的子路由 |
 
-使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置。
+该特性仅在 `顶部模式` / `侧边栏模式（含主导航）` / `侧边栏模式（无主导航）` 下生效。
+
+使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置，否则可能无法看到效果。
+
+### alwaysOpened <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
+
+|  类型   | 默认值 | 说明                                                                   |
+| :-----: | :----: | :--------------------------------------------------------------------- |
+| boolean | false  | 次导航是否始终展开，在父级路由上设置后，会始终展开并显示下一级的子路由 |
+
+该特性仅在 `顶部模式` / `侧边栏模式（含主导航）` / `侧边栏模式（无主导航）` 下生效。
 
 ### permanent <Badge type="pro" text="专业版" />
 
@@ -219,8 +229,8 @@ export default routes
 
 ### auths <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
 
-|               类型               | 默认值 | 说明                                                                         |
-| :------------------------------: | :----: | :--------------------------------------------------------------------------- |
+|                               类型                                | 默认值 | 说明                                                                         |
+| :---------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------- |
 | <div style="width: 150pt">{ name: string; value: string }[]</div> |   /    | 权限池，对路由本身无实际作用，通常用于角色管理模块，展示路由(导航)可配置权限 |
 
 权限池存放了该路由相关的所有权限，包括但不限于：访问权限、按钮权限、颗粒度更细的权限等。以下是一个示例：
@@ -274,7 +284,9 @@ export default routes
 
 该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.gitee.io/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
 
-### ~~sidebar~~ <Badge type="warning" text="v4.7.0 弃用" />
+### ~~sidebar~~ <Badge type="warning" text="v4.7.0 进入弃用过渡期，预计在 v5.0.0 正式移除" />
+
+请使用下方 `menu` 配置项。
 
 ### menu <Badge type="tip" text="v4.7.0 新增" />
 

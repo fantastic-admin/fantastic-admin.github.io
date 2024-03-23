@@ -174,7 +174,7 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   <tr>
     <td align="center">导航路由配置项</td>
     <td align="center">9 个</td>
-    <td align="center" style="color: #e34d22;">18 个</td>
+    <td align="center" style="color: #e34d22;">22 个</td>
   </tr>
   <tr>
     <td align="center">外链导航</td>
