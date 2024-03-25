@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a4 as e}from"./chunks/framework.B11lDh7E.js";const g=JSON.parse('{"title":"JSX","description":"","frontmatter":{},"headers":[],"relativePath":"guide/jsx.md","filePath":"guide/jsx.md"}'),t={name:"guide/jsx.md"},n=e("",13),l=[n];function h(p,r,k,d,o,c){return a(),i("div",null,l)}const u=s(t,[["render",h]]);export{g as __pageData,u as default};
