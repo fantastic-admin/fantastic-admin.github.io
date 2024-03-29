@@ -47,12 +47,17 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: '/components/index',
           },
           {
-            text: 'v3 文档存档 (Vue3版本)',
-            link: 'https://fantastic-admin.github.io/v3-docs/',
-          },
-          {
-            text: 'v1 文档存档（Vue2版本）',
-            link: 'https://fantastic-admin.github.io/vue2-docs/',
+            text: '历史版本文档',
+            items: [
+              {
+                text: 'v3 (Vue3版本)',
+                link: 'https://fantastic-admin.github.io/v3-docs/',
+              },
+              {
+                text: 'v1 (Vue2版本)',
+                link: 'https://fantastic-admin.github.io/v1-docs/',
+              },
+            ],
           },
         ],
       },
