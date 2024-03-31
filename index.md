@@ -19,11 +19,11 @@ hero:
       text: 为什么选我们 ?
       link: /guide/why
     - theme: alt
-      text: v4.0 更新介绍
-      link: /guide/v4
+      text: 更新日志
+      link: /guide/changelog
     - theme: cta buy
-      text: 购买合集，立减 799.00 元
-      link: /buy
+      text: 免费领取 v1 专业版
+      link: /get-v1-pro
     - theme: cta
       text: 演示地址：基础版 ↗
       link: https://fantastic-admin.gitee.io/basic-example

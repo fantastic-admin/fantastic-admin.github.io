@@ -2,11 +2,13 @@
 import { withBase } from 'vitepress'
 </script>
 
-# 购买专业版
+# 购买永久专业版
 
-## 超值优惠合集，立减 <b style="color: #ff4400;">799</b> 元
+:::tip 什么是永久专业版
+顾名思义，永久专业版是指在任何时候你都可以获取本框架最新专业版源码，并且无需再次付费。
+:::
 
-:::details 查看详情
+:::details 【活动】超值优惠合集，立减 <b style="color: #ff4400;">799</b> 元
 同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://one-step-admin.gitee.io) 专业版 <sup>￥999.00</sup>
 
 原价 ￥2098.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b>
@@ -52,16 +54,16 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">899</span>.00</b></div>
+      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">999</span>.00</b></div>
       <b style="color: #ccc;">原价：￥1099.00</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img :src="withBase('/qrcode-wechat.png')" />
+      <img :src="withBase('/qrcode-wechat-999.png')" />
     </td>
     <td align="center">
-      <img :src="withBase('/qrcode-alipay.png')" />
+      <img :src="withBase('/qrcode-alipay-999.png')" />
     </td>
   </tr>
   <tr>
@@ -109,7 +111,7 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
     <td align="center">5</td>
   </tr>
   <tr>
-    <td align="center">是否允许交付源码</td>
+    <td align="center">是否允许二开后交付源码</td>
     <td align="center"></td>
     <td align="center">✅</td>
   </tr>

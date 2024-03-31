@@ -54,6 +54,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
                 link: 'https://fantastic-admin.github.io/v3-docs/',
               },
               {
+                text: 'v2 (Vue3版本)',
+                link: 'https://fantastic-admin.github.io/v2-docs/',
+              },
+              {
                 text: 'v1 (Vue2版本)',
                 link: 'https://fantastic-admin.github.io/v1-docs/',
               },
@@ -106,10 +110,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             text: '定制开发',
             link: '/customize',
           },
-          {
-            text: '免费领取 Vue2 专业版 👑',
-            link: '/get-vue2-pro',
-          },
         ],
       },
       {
@@ -157,7 +157,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           items: [
             { text: '文档说明', link: '/guide/intro' },
             { text: '为什么选择我们 ?', link: '/guide/why' },
-            { text: 'v4.0 更新介绍', link: '/guide/v4' },
+            { text: '更新日志', link: '/guide/changelog' },
           ],
           collapsed: false,
         },
@@ -279,9 +279,16 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         {
           text: '',
           items: [
-            { text: '购买专业版', link: '/buy' },
+            {
+              text: '专业版',
+              items: [
+                { text: '购买永久专业版', link: '/buy' },
+                { text: '购买 v3 专业版', link: '/buy-v3' },
+                { text: '购买 v2 专业版', link: '/buy-v2' },
+                { text: '免费领取 v1 专业版', link: '/get-v1-pro' },
+              ],
+            },
             { text: '定制开发', link: '/customize' },
-            { text: '免费领取 Vue2 专业版', link: '/get-vue2-pro' },
             { text: '技术支持', link: '/support' },
             { text: '我要交换友链', link: '/links' },
           ],

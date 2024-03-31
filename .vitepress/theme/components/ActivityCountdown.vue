@@ -2,9 +2,9 @@
 import { onMounted, ref } from 'vue'
 
 const isVisible = ref(false)
-const nameStorage = 'ACTIVITY-COUNTDOWN'
 
-const deadline = new Date('2024/4/1').getTime()
+const start = new Date('2024/4/4').getTime()
+const deadline = new Date('2024/4/6').getTime()
 const text = ref('')
 const countdownInterval = ref()
 
@@ -15,16 +15,14 @@ function clickBanner() {
 function closeBanner() {
   clearInterval(countdownInterval.value)
   isVisible.value = false
-  localStorage.setItem(nameStorage, String(true))
   document.documentElement.classList.remove('mirror-site-menu-fixed')
 }
 
 onMounted(() => {
-  isVisible.value = !localStorage.getItem(nameStorage)
+  isVisible.value = new Date().getTime() > start && new Date().getTime() < deadline
   if (isVisible.value) {
     countdownInterval.value = setInterval(() => {
-      const now = new Date().getTime()
-      const distance = deadline - now
+      const distance = deadline - new Date().getTime()
       isVisible.value = distance > 0
       if (distance < 0) {
         closeBanner()
@@ -34,7 +32,7 @@ onMounted(() => {
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-        text.value = `专业版限时优惠，只需 899 元，点击购买<i style="margin-left: 20px; font-size: 0.75em;">距离活动结束还有 ${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒</i>`
+        text.value = `专业版限时优惠，购买立返 100 元，点击购买<i style="margin-left: 20px; font-size: 0.75em;">距离活动结束还有 ${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒</i>`
       }
     }, 1000)
     document.documentElement.classList.add('mirror-site-menu-fixed')
