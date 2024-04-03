@@ -11,7 +11,7 @@ import { withBase } from 'vitepress'
 :::details 【活动】超值优惠合集，立减 <b style="color: #ff4400;">799</b> 元
 同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://one-step-admin.gitee.io) 专业版 <sup>￥999.00</sup>
 
-原价 ￥2098.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b>
+原价 ￥2098.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)。
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
   <tr>
