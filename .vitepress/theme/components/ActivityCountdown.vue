@@ -3,8 +3,8 @@ import { onMounted, ref } from 'vue'
 
 const isVisible = ref(false)
 
-const start = new Date('2024/4/4').getTime()
-const deadline = new Date('2024/4/6').getTime()
+const start = new Date('2024/5/1').getTime()
+const deadline = new Date('2024/5/6').getTime()
 const text = ref('')
 const countdownInterval = ref()
 
