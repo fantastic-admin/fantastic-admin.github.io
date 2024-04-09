@@ -4,6 +4,8 @@ import { withBase } from 'vitepress'
 
 # 免费领取 v1 专业版
 
+> v1 专业版的技术栈为 Vue2
+
 ## 领取方式
 
 只需分别给 Github 和 Gitee 仓库点 ⭐️ ，并将 ⭐️ 截图发送给作者微信，即可免费领取 v1 专业版源码。

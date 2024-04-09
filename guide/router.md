@@ -186,7 +186,50 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 用户在访问路由时，会判断当前路由是否具备访问权限，不具备访问权限则会显示 403 页面，详细可阅读《[权限 - 路由权限](permission#路由权限)》。
 
+如果在某个多级路由的多个层级上均设置了 `auth` ，则框架会依次判断，必须每一层级都具备访问权限，才能访问该路由。
+
+```ts {13,26}
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/system',
+  meta: {
+    title: '系统管理',
+  },
+  children: [
+    {
+      path: 'department',
+      meta: {
+        title: '部门管理',
+        auth: 'a',
+      },
+      children: [
+        {
+          path: 'job',
+          meta: {
+            title: '职位管理',
+          },
+          children: [
+            {
+              path: 'member',
+              meta: {
+                title: '人员管理',
+                auth: 'b', // 只有当用户权限里同时含有 a 和 b 时，才能访问该路由
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
+}
+
+export default routes
+```
+
+::: details v4.8.0 之前版本处理逻辑
 为避免多级路由同时设置 `auth` 可能会导致逻辑冲突，框架会以最先设置的 `auth` 为准：
+
 
 ```ts {13,26}
 import type { RouteRecordRaw } from 'vue-router'
@@ -226,6 +269,7 @@ const routes: RouteRecordRaw = {
 
 export default routes
 ```
+:::
 
 ### auths <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
 
