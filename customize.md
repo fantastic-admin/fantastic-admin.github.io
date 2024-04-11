@@ -93,3 +93,21 @@ import { withBase } from 'vitepress'
     <td><ZoomImg src="/customize-project4.gif" /></td>
   </tr>
 </table>
+
+<table>
+  <tr>
+    <th colspan="2">案例5</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <ul style="margin: 0;">
+        <li>定制侧边导航栏，原LOGO区域展示为主导航，鼠标悬浮时显示主导航切换面板</li>
+        <li>移除工具栏，将工具栏工具按钮放置到标签栏右侧</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><ZoomImg src="/customize-project5-1.png" /></td>
+    <td><ZoomImg src="/customize-project5-2.png" /></td>
+  </tr>
+</table>
