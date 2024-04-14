@@ -1,4 +1,4 @@
-# 替换为 Ant Design Vue
+# 替换为 iDux
 
 ::: warning 注意
 v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
@@ -16,7 +16,7 @@ v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后�
 # 安装依赖
 pnpm install
 
-# 安装 Ant Design Vue
+# 安装 iDux
 pnpm add @idux/cdk @idux/components
 ```
 
@@ -68,7 +68,7 @@ const settingsStore = useSettingsStore()
 </script>
 
 <template>
-  <IxThemeProvider :preset-theme="settingsStore.settings.app.colorScheme === 'dark' ? 'dark' : 'default'">
+  <IxThemeProvider :preset-theme="settingsStore.currentColorScheme === 'dark' ? 'dark' : 'default'">
     <IxMessageProvider>
       <slot />
     </IxMessageProvider>
@@ -148,7 +148,7 @@ watch(() => settingsStore.lang, val => setLocale(locales[settingsStore.lang]))
 </script>
 
 <template>
-  <IxThemeProvider :preset-theme="settingsStore.settings.app.colorScheme === 'dark' ? 'dark' : 'default'">
+  <IxThemeProvider :preset-theme="settingsStore.currentColorScheme === 'dark' ? 'dark' : 'default'">
     <IxMessageProvider>
       <slot />
     </IxMessageProvider>

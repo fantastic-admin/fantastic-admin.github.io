@@ -72,11 +72,22 @@ import useSettingsStore from '@/store/modules/settings'
 
 const settingsStore = useSettingsStore()
 
+const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)')
 watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
   if (colorScheme === '') {
-    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    prefersColorScheme.addEventListener('change', updateTheme)
   }
-  switch (colorScheme) {
+  else {
+    prefersColorScheme.removeEventListener('change', updateTheme)
+  }
+  nextTick(() => {
+    updateTheme()
+  })
+}, {
+  immediate: true,
+})
+function updateTheme() {
+  switch (settingsStore.currentColorScheme) {
     case 'light':
       document.documentElement.removeAttribute('theme-mode')
       break
@@ -84,9 +95,7 @@ watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
       document.documentElement.setAttribute('theme-mode', 'dark')
       break
   }
-}, {
-  immediate: true,
-})
+}
 </script>
 
 <template>
@@ -173,11 +182,22 @@ import useSettingsStore from '@/store/modules/settings'
 
 const settingsStore = useSettingsStore()
 
+const prefersColorScheme = window.matchMedia('(prefers-color-scheme: dark)')
 watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
   if (colorScheme === '') {
-    colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    prefersColorScheme.addEventListener('change', updateTheme)
   }
-  switch (colorScheme) {
+  else {
+    prefersColorScheme.removeEventListener('change', updateTheme)
+  }
+  nextTick(() => {
+    updateTheme()
+  })
+}, {
+  immediate: true,
+})
+function updateTheme() {
+  switch (settingsStore.currentColorScheme) {
     case 'light':
       document.documentElement.removeAttribute('theme-mode')
       break
@@ -185,9 +205,7 @@ watch(() => settingsStore.settings.app.colorScheme, (colorScheme) => {
       document.documentElement.setAttribute('theme-mode', 'dark')
       break
   }
-}, {
-  immediate: true,
-})
+}
 </script>
 
 <template>

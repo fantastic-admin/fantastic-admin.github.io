@@ -64,7 +64,7 @@ const settingsStore = useSettingsStore()
 </script>
 
 <template>
-  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
+  <NConfigProvider :locale="zhCN" :date-locale="dateZhCN" :theme="settingsStore.currentColorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
     <NMessageProvider>
       <slot />
       <NGlobalStyle />
@@ -148,7 +148,7 @@ const settingsStore = useSettingsStore()
 </script>
 
 <template>
-  <NConfigProvider :locale="locales[settingsStore.lang].ui" :date-locale="locales[settingsStore.lang].date" :theme="settingsStore.settings.app.colorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
+  <NConfigProvider :locale="locales[settingsStore.lang].ui" :date-locale="locales[settingsStore.lang].date" :theme="settingsStore.currentColorScheme === 'dark' ? darkTheme : undefined" style="height: 100%;">
     <NMessageProvider>
       <slot />
       <NGlobalStyle />
