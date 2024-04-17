@@ -10,6 +10,8 @@
 | right-side-width       | 右侧栏宽度             | number / string | -      | 300    |
 | hide-left-side-toggle  | 是否隐藏左侧栏切换按钮 | boolean         | -      | false  |
 | hide-right-side-toggle | 是否隐藏右侧栏切换按钮 | boolean         | -      | false  |
+| left-side-visiable     | 是否显示左侧栏         | boolean         | -      | true   |
+| right-side-visiable    | 是否显示右侧栏         | boolean         | -      | true   |
 
 ## Slots
 
