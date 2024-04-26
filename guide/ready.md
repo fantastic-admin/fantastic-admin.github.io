@@ -2,14 +2,14 @@
 
 ## 源码
 
-阅读开发文档前，请确保手上已经有 Fantastic-admin 源码，因为文档中提及的内容，都是需要在本地项目中编写或修改代码并运行才能呈现的。如果还没有源码，可以通过下面两种方式获取：
+阅读开发文档前，请确保手上已经有 Fantastic-admin 源码，因为文档中提及的内容，都是需要在本地项目中编写或修改代码并运行才能呈现的。
 
-### 基础版
-
-:::tip 说明
+:::tip 源码分为两种：
 - **框架源码** 不含示例代码，可直接用于实际开发
 - **演示源码** 同演示站，在框架源码基础上，提供了大量示例代码
 :::
+
+### 基础版
 
 到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载最新版本的压缩包，如下图所示：
 
@@ -46,7 +46,7 @@ git clone -b example https://gitee.com/fantastic-admin/basic.git
 使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/)(非必须) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 ::: warning 注意
-Node.js 需要使用 18+ / 20+ 版本。
+在 [package.json](https://github.com/fantastic-admin/basic/blob/main/package.json#L4-L6) 文件中有限制 node 要求版本，建议使用最新 LTS 版本。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：
@@ -80,4 +80,4 @@ Node.js 需要使用 18+ / 20+ 版本。
 - [Vue 3](https://cn.vuejs.org/) ([v3 迁移指南](https://v3-migration.vuejs.org/))
 - [Vue Router](https://router.vuejs.org/zh/)
 - [Pinia](https://pinia.vuejs.org/zh/)
-- [UnoCss](https://unocss.dev/)
+- [UnoCSS](https://unocss.dev/)
