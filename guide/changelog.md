@@ -1,6 +1,45 @@
 # 更新日志
 
-只记录 feat/fix 以及破坏性更新记录。
+只记录 feat/fix 以及破坏性变更。
+
+## 4.8.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.8.0)
+🚨 Breaking Changes
+
+- 路由 `meta.auth` 保持元信息默认合并行为，路由访问改为通过 `route.matched` 进行逐级鉴权 &nbsp;-&nbsp; by @hooray [<samp>(4911a)</samp>](https://github.com/fantastic-admin/basic/commit/4911aff)
+
+🚀 Features
+
+- 登录页增加扫码登录参考 &nbsp;-&nbsp; by @hooray [<samp>(98d21)</samp>](https://github.com/fantastic-admin/basic/commit/98d2184)
+
+🐞 Bug Fixes
+
+- 修复一级路由设置 `meta.menu: false` 无效 &nbsp;-&nbsp; by @hooray [<samp>(cb53f)</samp>](https://github.com/fantastic-admin/basic/commit/cb53f4c)
+- 标签栏右键菜单自定义样式没在指定 class 范围内生效 &nbsp;-&nbsp; by @hooray [<samp>(5269d)</samp>](https://github.com/fantastic-admin/basic/commit/5269dba)
+- 标签栏解绑错误快捷键 &nbsp;-&nbsp; by @hooray [<samp>(14583)</samp>](https://github.com/fantastic-admin/basic/commit/14583bb)
+- 修复类型定义 &nbsp;-&nbsp; by @hooray [<samp>(44949)</samp>](https://github.com/fantastic-admin/basic/commit/449495f)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.8.0)
+🚨 Breaking Changes
+
+- 路由 `meta.auth` 保持元信息默认合并行为，路由访问改为通过 `route.matched` 进行逐级鉴权 &nbsp;-&nbsp; by @hooray [<samp>(aad34)</samp>](https://github.com/fantastic-admin/pro/commit/aad3408d)
+- 路由`meta.title`支持设置i18n的key，同时`meta.i18n`进入弃用过渡期 &nbsp;-&nbsp; by @hooray [<samp>(68e5c)</samp>](https://github.com/fantastic-admin/pro/commit/68e5ce3e)
+
+🚀 Features
+
+- `LayoutContainer` 组件支持设置侧边栏默认显示状态 &nbsp;-&nbsp; by @hooray [<samp>(28708)</samp>](https://github.com/fantastic-admin/pro/commit/28708912)
+- 登录页增加扫码登录参考 &nbsp;-&nbsp; by @hooray [<samp>(3a561)</samp>](https://github.com/fantastic-admin/pro/commit/3a561264)
+
+🐞 Bug Fixes
+
+- 修复水印开启报错 &nbsp;-&nbsp; by @hooray [<samp>(06729)</samp>](https://github.com/fantastic-admin/pro/commit/06729004)
+- 修复一级路由设置 `meta.menu: false` 无效 &nbsp;-&nbsp; by @hooray [<samp>(39522)</samp>](https://github.com/fantastic-admin/pro/commit/39522ac9)
+- 标签栏右键菜单自定义样式没在指定 class 范围内生效 &nbsp;-&nbsp; by @hooray [<samp>(d8934)</samp>](https://github.com/fantastic-admin/pro/commit/d8934471)
+- 标签栏解绑错误快捷键 &nbsp;-&nbsp; by @hooray [<samp>(368ac)</samp>](https://github.com/fantastic-admin/pro/commit/368accda)
+- 修复类型定义 &nbsp;-&nbsp; by @hooray [<samp>(13bd9)</samp>](https://github.com/fantastic-admin/pro/commit/13bd94b7)
+:::
 
 ## 4.7.0
 

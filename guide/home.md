@@ -55,7 +55,6 @@ const systemRoutes: RouteRecordRaw[] = [
     path: '/',
     component: () => import('@/layouts/index.vue'),
     meta: {
-      title: () => useSettingsStore().settings.home.title,
       breadcrumb: false,
     },
     children: [
@@ -64,8 +63,7 @@ const systemRoutes: RouteRecordRaw[] = [
         path: 'home', // [!code ++]
         component: () => import('@/views/index.vue'),
         meta: {
-          title: () => useSettingsStore().settings.home.title,
-          i18n: $t('route.home'),
+          title: $t(useSettingsStore(pinia).settings.home.title),
           icon: 'i-ant-design:home-twotone',
           breadcrumb: false,
         },
@@ -165,8 +163,7 @@ const constantRoutes: RouteRecordRaw[] = [
     component: () => import('@/views/login.vue'),
     meta: {
       whiteList: true,
-      title: '登录',
-      i18n: $t('route.login'),
+      title: $t('route.login'),
     },
   },
   ...

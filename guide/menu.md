@@ -74,7 +74,7 @@ const globalSettings: Settings.all = {
 
 你只需要在某个主导航下只保留一个次导航，就像这样：
 
-```ts {17-43}
+```ts {16-42}
 import MultilevelMenuExample from './modules/multilevel.menu.example'
 import BreadcrumbExample from './modules/breadcrumb.example'
 
@@ -82,8 +82,7 @@ import BreadcrumbExample from './modules/breadcrumb.example'
 const asyncRoutes: Route.recordMainRaw[] = [
   {
     meta: {
-      title: '演示',
-      i18n: 'route.demo',
+      title: $t('route.demo'),
       icon: 'menu-default',
     },
     children: [

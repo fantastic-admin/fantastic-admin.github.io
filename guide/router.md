@@ -128,7 +128,9 @@ const asyncRoutes: Route.recordMainRaw[] = [
 | :----: | :----: | :----------------------------------- |
 | string |   /    | 导航、面包屑导航以及页面中展示的标题 |
 
-### i18n <Badge type="pro" text="专业版" />
+<Badge type="tip" text="v4.8.0" /> 开始，<Badge type="pro" text="专业版" /> 支持设置 i18n 对应的 key 值，详细可阅读《[国际化](i18n)》。
+
+### ~~i18n~~ <Badge type="pro" text="专业版" /> <Badge type="warning" text="v4.8.0 进入弃用过渡期，预计在 v5.0.0 正式移除" />
 
 |  类型  | 默认值 | 说明                    |
 | :----: | :----: | :---------------------- |
