@@ -338,7 +338,7 @@
 
 - 移除 Element Plus 自定义主题配置
 
-  > 如果你依旧需要自定义 Element Plus 的主题，可以阅读 Element Plus 官方文档《[自定义主题](https://element-plus.gitee.io/zh-CN/guide/theming.html)》，或者参考下面提供的最佳实践。
+  > 如果你依旧需要自定义 Element Plus 的主题，可以阅读 Element Plus 官方文档《[自定义主题](https://element-plus.org/zh-CN/guide/theming.html)》，或者参考下面提供的最佳实践。
   >
   > 在 `/src/assets/styles/` 目录下分别新建 `element-plus.scss` 和 `element-plus.dark.scss` 并写入下面的代码：
   >

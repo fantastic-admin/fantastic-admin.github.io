@@ -4,14 +4,14 @@
       作者其他作品
     </div>
     <div class="sponsor-container special">
-      <a href="https://hooray.gitee.io/fantastic-startkit/" target="_blank" class="sponsor-item">
+      <a href="https://hooray.github.io/fantastic-startkit/" target="_blank" class="sponsor-item">
         <div class="info">
           <div class="main">Fantastic-startkit</div>
           <div class="sub">简单好用的 Vue3 项目启动套件</div>
         </div>
       </a>
-      <a href="https://one-step-admin.gitee.io/" target="_blank" class="sponsor-item">
-        <img src="https://one-step-admin.gitee.io/logo.png">
+      <a href="https://one-step-admin.github.io/" target="_blank" class="sponsor-item">
+        <img src="https://one-step-admin.github.io/logo.png">
         <div class="info">
           <div class="main">One-step-admin</div>
           <div class="sub">巧妙的管理系统框架</div>

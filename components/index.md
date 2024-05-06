@@ -49,7 +49,7 @@
 
 内建组件存放在 `/src/layouts/ui-kit/` 目录下，并配置了使用时自动引入。
 
-你也可以点击 [基础版](https://fantastic-admin.gitee.io/basic-example/#/components/built-in) 或 [专业版](https://fantastic-admin.gitee.io/pro-example/#/components/built-in) 查看内建组件示例页面。
+你也可以点击 [基础版](https://fantastic-admin.github.io/basic-example/#/components/built-in) 或 [专业版](https://fantastic-admin.github.io/pro-example/#/components/built-in) 查看内建组件示例页面。
 
 ## 扩展组件
 

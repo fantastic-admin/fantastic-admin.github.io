@@ -83,19 +83,19 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             text: '专业版',
             link: 'https://fantastic-admin.github.io/pro-example',
           },
-          {
-            text: '备用地址 (gitee)',
-            items: [
-              {
-                text: '基础版',
-                link: 'https://fantastic-admin.gitee.io/basic-example',
-              },
-              {
-                text: '专业版',
-                link: 'https://fantastic-admin.gitee.io/pro-example',
-              },
-            ],
-          },
+          // {
+          //   text: '备用地址 (gitee)',
+          //   items: [
+          //     {
+          //       text: '基础版',
+          //       link: 'https://fantastic-admin.gitee.io/basic-example',
+          //     },
+          //     {
+          //       text: '专业版',
+          //       link: 'https://fantastic-admin.gitee.io/pro-example',
+          //     },
+          //   ],
+          // },
         ],
       },
       {

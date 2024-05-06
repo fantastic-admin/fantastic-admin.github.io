@@ -9,7 +9,7 @@ import { withBase } from 'vitepress'
 :::
 
 :::details 【活动】超值优惠合集，立减 <b style="color: #ff4400;">799</b> 元
-同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://one-step-admin.gitee.io) 专业版 <sup>￥999.00</sup>
+同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://one-step-admin.github.io) 专业版 <sup>￥999.00</sup>
 
 原价 ￥2098.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)。
 
@@ -262,10 +262,10 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   <tr>
     <td align="center">演示地址</td>
     <td align="center">
-      <a href="https://fantastic-admin.gitee.io/basic-example" target="_blank">访问</a>
+      <a href="https://fantastic-admin.github.io/basic-example" target="_blank">访问</a>
     </td>
     <td align="center">
-      <a href="https://fantastic-admin.gitee.io/pro-example" target="_blank">访问</a>
+      <a href="https://fantastic-admin.github.io/pro-example" target="_blank">访问</a>
     </td>
   </tr>
 </table>
@@ -293,7 +293,7 @@ Fantastic-admin 在探索商业化的道路上，离不开开源项目的支持�
 目前已经赞助过的项目和作者：
 
 - [Vue.js](https://cn.vuejs.org/) ￥15000.00
-- [Element Plus](https://element-plus.org/zh-CN/) ￥8000.00
+- [Element Plus](https://element-plus.org/zh-CN/) ￥4000.00 + ￥4000.00 + ￥2000.00
 - [antfu](https://github.com/antfu) ￥1024.00
 - [sxzz](https://github.com/sxzz) ￥256.00
 - [condorheroblog](https://github.com/condorheroblog) ￥100.00

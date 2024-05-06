@@ -328,7 +328,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.gitee.io/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
+该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.github.io/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
 
 ### ~~sidebar~~ <Badge type="warning" text="v4.7.0 进入弃用过渡期，预计在 v5.0.0 正式移除" />
 

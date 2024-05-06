@@ -16,7 +16,7 @@ import { withBase } from 'vitepress'
 
     `Fantastic-admin 开箱即用的管理系统框架`
 
-    `https://fantastic-admin.gitee.io`
+    `https://fantastic-admin.github.io`
 
 3. 在你的产品官网里加上 Fantastic-admin 的友链，参考上方介绍和链接
 
