@@ -8,10 +8,10 @@ import { withBase } from 'vitepress'
 顾名思义，永久专业版是指在任何时候你都可以获取本框架最新专业版源码，并且无需再次付费。
 :::
 
-:::details 【活动】超值优惠合集，立减 <b style="color: #ff4400;">799</b> 元
-同时购买 Fantastic-admin 专业版 <sup>￥1099.00</sup> 和 [One-step-admin](https://one-step-admin.github.io) 专业版 <sup>￥999.00</sup>
+:::details 【活动】超值优惠合集，立减 <b style="color: #ff4400;">899</b> 元
+同时购买 Fantastic-admin 专业版 <sup>￥1199.00</sup> 和 [One-step-admin](https://one-step-admin.github.io) 专业版 <sup>￥999.00</sup>
 
-原价 ￥2098.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)。
+原价 ￥2198.00 ，现在只需 <b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)。
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
   <tr>
@@ -54,16 +54,16 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">999</span>.00</b></div>
-      <b style="color: #ccc;">原价：￥1099.00</b>
+      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">899</span>.00</b></div>
+      <b style="color: #ccc;">原价：￥1199.00</b>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img :src="withBase('/qrcode-wechat-999.png')" />
+      <img :src="withBase('/qrcode-wechat-899.png')" />
     </td>
     <td align="center">
-      <img :src="withBase('/qrcode-alipay-999.png')" />
+      <img :src="withBase('/qrcode-alipay-899.png')" />
     </td>
   </tr>
   <tr>
