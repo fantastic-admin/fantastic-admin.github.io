@@ -423,8 +423,8 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
   path: '/test',
-  component: () => import('@/views/test/index.tsx'),
   name: 'test',
+  component: () => import('@/views/test/index.tsx'),
   meta: {
     title: '测试页面',
     singleMenu: true,
@@ -442,13 +442,13 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw = {
   path: '/test',
   component: () => import('@/layouts/index.vue'),
-  name: 'test',
   meta: {
     title: '测试页面',
   },
   children: [
     {
       path: '',
+      name: 'test',
       component: () => import('@/views/test/index.tsx'),
       meta: {
         title: '测试页面',
