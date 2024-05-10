@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Fantastic-admin 官方文档',
-  description: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite4 技术栈。',
+  description: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite 技术栈。',
   lang: 'zh-CN',
   base: '/',
   head: [
@@ -13,7 +13,7 @@ export default defineConfig({
     ['meta', { 'http-equiv': 'Cache', 'content': 'no-cache' }],
     ['meta', { name: 'keywords', content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
     ['keywords', { content: 'fantastic-admin,后台系统,管理后台,后台模版,vue后台,vue-admin,vue-element-admin,vue-admin-template' }],
-    ['description', { content: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite4 技术栈。' }],
+    ['description', { content: '一款开箱即用的 Vue 中后台管理系统框架，采用 Vue3 + Vite 技术栈。' }],
     ['script', {}, `
 var _hmt = _hmt || [];
 _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
