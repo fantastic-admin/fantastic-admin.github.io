@@ -157,6 +157,22 @@ const settingsStore = useSettingsStore()
 </template>
 ```
 
+删除相关文件
+
+```
+.
+├─ plop-templates
+│  └─ module // 标准模块模板基于 Element Plus 开发，需要删除
+└─ src
+   └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
+     ├─ FileUpload
+     ├─ IconPicker
+     ├─ ImagePreview
+     ├─ ImagesUpload
+     ├─ ImageUpload
+     └─ PcasCascader
+```
+
 :::
 
 ## 修改登录页
