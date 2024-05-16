@@ -8,13 +8,11 @@ import { withBase } from 'vitepress'
 
 ## 领取方式
 
-只需分别给 Github 和 Gitee 仓库点 ⭐️ ，并将 ⭐️ 截图发送给作者微信，即可免费领取 v1 专业版源码。
+只需给下方三个项目的 Github 和 Gitee 仓库分别点 ⭐️ ，并将 ⭐️ 截图发送到邮箱 `304327508#qq.com` (`#`替换成`@`)，即可免费领取 v1 专业版源码。
 
-[![star](https://img.shields.io/github/stars/fantastic-admin/basic?style=social)](https://github.com/fantastic-admin/basic)
-
-[![star](https://gitee.com/fantastic-admin/basic/badge/star.svg?theme=dark)](https://gitee.com/fantastic-admin/basic)
-
-<p align="center"><img :src="withBase('/friend-wechat.png')" width="300" /></p>
+- Fantastic-startkit [[Github](https://github.com/hooray/fantastic-startkit)] [[Gitee](https://gitee.com/hooray/fantastic-startkit)]
+- Fantastic-admin [[Github](https://github.com/fantastic-admin/basic)] [[Gitee](https://gitee.com/fantastic-admin/basic)]
+- One-step-admin [[Github](https://github.com/one-step-admin/basic)] [[Gitee](https://gitee.com/one-step-admin/basic)]
 
 ## Q&A
 
