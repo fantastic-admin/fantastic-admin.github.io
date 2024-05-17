@@ -290,10 +290,13 @@ Fantastic-admin 和 One-step-admin 都是管理后台框架，它们的区别在
 
 Fantastic-admin 在探索商业化的道路上，离不开开源项目的支持，所以每一笔专业版的收入，将会拿出 10~20% 赞助给开源项目或作者。这意味着购买专业版的你，也在以另一种方式参与建设开源社区，让开源社区变得更美好。
 
-目前已经赞助过的项目和作者：
+历史赞助时间线：
 
-- [Vue.js](https://cn.vuejs.org/) ￥15000.00
-- [Element Plus](https://element-plus.org/zh-CN/) ￥4000.00 + ￥4000.00 + ￥2000.00
-- [antfu](https://github.com/antfu) ￥1024.00
-- [sxzz](https://github.com/sxzz) ￥256.00
-- [condorheroblog](https://github.com/condorheroblog) ￥100.00
+- 2022/05/08 [Element Plus](https://element-plus.org/zh-CN/) ￥4000.00
+- 2022/07/06 [Element Plus](https://element-plus.org/zh-CN/) ￥4000.00
+- 2022/08/08 [Element Plus](https://element-plus.org/zh-CN/) ￥4000.00
+- 2024/01/09 [condorheroblog](https://github.com/condorheroblog) ￥100.00
+- 2024/01/12 [antfu](https://github.com/antfu) ￥1024.00
+- 2024/01/12 [sxzz](https://github.com/sxzz) ￥256.00
+- 2024/02/04 [Vue.js](https://cn.vuejs.org/) ￥15000.00
+- 2024/05/06 [Element Plus](https://element-plus.org/zh-CN/) ￥2000.00
