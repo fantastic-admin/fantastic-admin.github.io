@@ -2,13 +2,10 @@
 import { onMounted, ref } from 'vue'
 
 const isVisible = ref(false)
-const nameStorage = 'GITEE-MIRROR-SITE'
+const nameStorage = 'ACTIVITY-FANTASTIC-MOBILE'
 
-function switchToMirrorSite() {
-  window.location.href = location.href.replace(
-    'github.io',
-    'gitee.io',
-  )
+function go() {
+  window.location.href = 'https://fantastic-mobile.github.io/'
 }
 
 function closeBanner() {
@@ -18,7 +15,7 @@ function closeBanner() {
 }
 
 onMounted(() => {
-  isVisible.value = !localStorage.getItem(nameStorage) && location.href.includes('github.io')
+  isVisible.value = !localStorage.getItem(nameStorage)
   if (isVisible.value)
     document.documentElement.classList.add('mirror-site-menu-fixed')
 })
@@ -26,9 +23,9 @@ onMounted(() => {
 
 <template>
   <div v-if="isVisible" class="banner-wrapper" role="banner">
-    <div id="banner" @click="switchToMirrorSite">
+    <div id="banner" @click="go">
       <div class="content">
-        访问慢？点击切换到国内镜像地址
+        全新移动端 H5 框架 Fantastic-mobile 开启预购，点击查看详情
       </div>
       <button id="banner-close" @click.stop="closeBanner">
         <span class="close">&times;</span>
