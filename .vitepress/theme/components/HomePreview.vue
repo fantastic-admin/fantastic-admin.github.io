@@ -148,6 +148,7 @@ const infos = ref([
   }
 
   .home-preview {
+    width: 100%;
     max-width: 1152px;
     margin: 0 auto;
     display: flex;
@@ -225,6 +226,7 @@ const infos = ref([
       aspect-ratio: 16 / 9;
 
       video {
+        width: 100%;
         box-shadow: 0 0 0 1px var(--vp-c-divider);
         border-radius: 6px;
         aspect-ratio: 16 / 9;
@@ -237,9 +239,9 @@ const infos = ref([
     margin: 0 auto;
     font-size: 24px;
     font-weight: 500;
-    line-height: 48px;
+    line-height: 36px;
     text-align: center;
-    color: var(--vp-c-text-2);
+    color: var(--vp-c-text-3);
   }
 }
 
