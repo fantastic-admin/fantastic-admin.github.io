@@ -2,6 +2,20 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.8.1
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.8.1)
+🐞 Bug Fixes
+
+- 修复后端返回路由数据中 children 为空数组导致菜单无法正常生成 &nbsp;-&nbsp; by @hooray [<samp>(e0236)</samp>](https://github.com/fantastic-admin/basic/commit/e023671)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.8.1)
+🐞 Bug Fixes
+
+- 修复后端返回路由数据中 children 为空数组导致菜单无法正常生成 &nbsp;-&nbsp; by @hooray [<samp>(3c8e2)</samp>](https://github.com/fantastic-admin/pro/commit/3c8e2f15)
+:::
+
 ## 4.8.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.8.0)
