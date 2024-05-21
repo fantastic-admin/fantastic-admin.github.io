@@ -41,7 +41,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   home: {
-    fullPage: '/home',
+    fullPath: '/home',
   },
 }
 ```
