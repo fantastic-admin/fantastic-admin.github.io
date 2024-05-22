@@ -345,7 +345,7 @@ const globalSettings: Settings.all = {
 
 但如果需要让用户可以自己选择明亮或暗黑模式，或者是根据浏览器主题来判断是使用明亮还是暗黑模式。这时候开发则需要注意，业务页面里使用到的颜色将不能写成固定值（例如 color 、background-color 、border-color 、box-shadow 等有涉及到颜色的属性），因为同一个色值是无法顾及到明亮和暗黑两种模式的。
 
-这时候我们建议使用 UnoCSS 进行样式编写，例如 `text-dark dark:text-white` 、`bg-green dark:bg-red` 。如果你不习惯使用 UnoCSS ，那也可以使用下面这种方法，在页面中去自定义一些颜色。
+这时候我们建议使用 UnoCSS 进行样式编写，例如 `text-dark dark-text-white` 、`bg-green dark-bg-red` 。如果你不习惯使用 UnoCSS ，那也可以使用下面这种方法，在页面中去自定义一些颜色。
 
 ```scss
 html {
