@@ -88,7 +88,7 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript
 
 ## 基于文件系统的路由
 
-摆脱传统 Vue 开发手动配置路由的过程，Fantastic-admin 支持**通过文件的目录结构，自动生成路由配置**，大大提高开发效率。
+可通过配置启用，启用后将摆脱传统 Vue 开发手动配置路由的过程，Fantastic-admin 支持**通过文件的目录结构，自动生成路由配置**，大大提高开发效率。
 
 ## 为什么不是它们？
 
