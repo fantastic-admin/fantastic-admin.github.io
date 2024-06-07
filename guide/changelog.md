@@ -2,6 +2,20 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.8.2
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.8.2)
+🏎 Performance
+
+- 优化标签栏滚动体验 &nbsp;-&nbsp; by @hooray [<samp>(03e5e)</samp>](https://github.com/fantastic-admin/basic/commit/03e5e99)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.8.2)
+🏎 Performance
+
+- 优化标签栏滚动体验 &nbsp;-&nbsp; by @hooray [<samp>(971d9)</samp>](https://github.com/fantastic-admin/pro/commit/971d9341)
+:::
+
 ## 4.8.1
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.8.1)
