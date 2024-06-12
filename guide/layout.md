@@ -1,16 +1,18 @@
 # 布局
 
-通过 5 种导航栏模式和 4 种页宽模式的组合搭配，可实现 20 种布局结构，再搭配默认提供的 6 款主题，**即可实现上百种界面风格**。
+通过 7 种导航栏模式和 4 种页宽模式的组合搭配，可实现 28 种布局结构，再搭配默认提供的 6 款主题，**即可实现上百种界面风格**。
 
 ## 导航栏模式
 
-在应用配置中设置，可实现 5 种导航栏模式：
+在应用配置中设置，可实现 7 种导航栏模式：
 
 - 顶部模式
 - 侧边栏模式（含主导航）
 - 侧边栏模式（无主导航）
 - 侧边栏精简模式 <Badge type="pro" text="专业版" />
 - 顶部精简模式 <Badge type="pro" text="专业版" />
+- 侧边栏面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
+- 顶部面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
 
 ### 顶部模式
 
@@ -68,6 +70,30 @@ const globalSettings: Settings.all = {
 const globalSettings: Settings.all = {
   menu: {
     menuMode: 'only-head',
+  },
+}
+```
+
+### 侧边栏面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
+
+![](/menu-mode-side-panel.png){data-zoomable}
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'side-panel',
+  },
+}
+```
+
+### 顶部面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
+
+![](/menu-mode-head-panel.png){data-zoomable}
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  menu: {
+    menuMode: 'head-panel',
   },
 }
 ```
