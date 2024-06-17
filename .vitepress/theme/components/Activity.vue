@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 
 const isVisible = ref(false)
-const nameStorage = 'ACTIVITY-FANTASTIC-MOBILE'
+const nameStorage = 'ACTIVITY-FANTASTIC-MOBILE-1'
 
 function go() {
   window.location.href = 'https://fantastic-mobile.github.io/'
@@ -25,7 +25,7 @@ onMounted(() => {
   <div v-if="isVisible" class="banner-wrapper" role="banner">
     <div id="banner" @click="go">
       <div class="content">
-        全新移动端 H5 框架 Fantastic-mobile 开启预购，点击查看详情
+        全新移动端 H5 框架 Fantastic-mobile 正式发布，点击查看详情
       </div>
       <button id="banner-close" @click.stop="closeBanner">
         <span class="close">&times;</span>

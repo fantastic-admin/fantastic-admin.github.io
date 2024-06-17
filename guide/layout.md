@@ -179,4 +179,6 @@ const globalSettings: Settings.all = {
 由于后台系统属于生产效率工具，而移动端天生不适合复杂的操作，尤其是遇到一些比较复杂的表单，在移动端上操作是极其“恼火”的。
 
 依据作者的开发经验，建议移动端后台可以独立开发一套，在功能上进行删减，保留轻量级的管理操作。
+
+如果打算独立开发一套移动端的系统，建议使用 [Fantastic-mobile](https://fantastic-mobile.github.io/)。
 :::
