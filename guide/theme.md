@@ -348,11 +348,10 @@ const globalSettings: Settings.all = {
 这时候我们建议使用 UnoCSS 进行样式编写，例如 `text-dark dark-text-white` 、`bg-green dark-bg-red` 。如果你不习惯使用 UnoCSS ，那也可以使用下面这种方法，在页面中去自定义一些颜色。
 
 ```scss
-html {
-  div {
-    color: #000;
-  }
-  &.dark div {
+div {
+  color: #000;
+
+  [data-theme="dark"] & {
     color: #fff;
   }
 }
