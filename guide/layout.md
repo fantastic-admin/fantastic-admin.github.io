@@ -21,7 +21,7 @@
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'head',
+    mode: 'head', // v4.9.0 之前版本为 menuMode
   },
 }
 ```
@@ -33,7 +33,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'side',
+    mode: 'side', // v4.9.0 之前版本为 menuMode
   },
 }
 ```
@@ -45,7 +45,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'single',
+    mode: 'single', // v4.9.0 之前版本为 menuMode
   },
 }
 ```
@@ -57,7 +57,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'only-side',
+    mode: 'only-side', // v4.9.0 之前版本为 menuMode
   },
 }
 ```
@@ -69,7 +69,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'only-head',
+    mode: 'only-head', // v4.9.0 之前版本为 menuMode
   },
 }
 ```
@@ -81,7 +81,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'side-panel',
+    mode: 'side-panel',
   },
 }
 ```
@@ -93,7 +93,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   menu: {
-    menuMode: 'head-panel',
+    mode: 'head-panel',
   },
 }
 ```
