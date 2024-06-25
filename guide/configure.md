@@ -15,6 +15,8 @@ VITE_APP_TITLE = Fantastic-admin
 VITE_APP_API_BASEURL = /
 # 调试工具，可设置 eruda 或 vconsole，如果不需要开启则留空
 VITE_APP_DEBUG_TOOL =
+# 是否禁用开发者工具，可防止被调试
+VITE_APP_DISABLE_DEVTOOL = false
 
 # 是否开启代理
 VITE_OPEN_PROXY = false
@@ -31,6 +33,8 @@ VITE_APP_TITLE = Fantastic-admin
 VITE_APP_API_BASEURL = /
 # 调试工具，可设置 eruda 或 vconsole，如果不需要开启则留空
 VITE_APP_DEBUG_TOOL =
+# 是否禁用开发者工具，可防止被调试
+VITE_APP_DISABLE_DEVTOOL = false
 
 # 是否在打包时启用 Mock
 VITE_BUILD_MOCK = true
@@ -51,6 +55,8 @@ VITE_APP_TITLE = Fantastic-admin
 VITE_APP_API_BASEURL = /
 # 调试工具，可设置 eruda 或 vconsole，如果不需要开启则留空
 VITE_APP_DEBUG_TOOL =
+# 是否禁用开发者工具，可防止被调试
+VITE_APP_DISABLE_DEVTOOL = false
 
 # 是否在打包时启用 Mock
 VITE_BUILD_MOCK = false
@@ -64,7 +70,7 @@ VITE_BUILD_ARCHIVE =
 
 :::
 
-其中 `VITE_APP_SETTING` `VITE_APP_TITLE` `VITE_APP_API_BASEURL` `VITE_APP_DEBUG_TOOL` 为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，例如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
+其中 `VITE_APP_SETTING` `VITE_APP_TITLE` `VITE_APP_API_BASEURL` `VITE_APP_DEBUG_TOOL` `VITE_APP_DISABLE_DEVTOOL` 为必要配置，即不管是在开发、测试，还是生产环境都需要使用到。而其余配置则在不同环境下有不同用途，例如开发环境用于本地开发使用，测试环境和生产环境用于构建使用。
 
 开发者可根据实际业务需求进行扩展，如果对这块不熟悉，请阅读 [Vite - 环境变量和模式](https://cn.vitejs.dev/guide/env-and-mode.html) 章节。
 

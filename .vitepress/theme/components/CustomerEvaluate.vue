@@ -1,19 +1,7 @@
-<script lang="ts" setup>
-import { computed, ref } from 'vue'
-
-const fold = ref(true)
-const images = computed(() => {
-  return fold.value ? 9 : 19
-})
-</script>
-
 <template>
   <div class="customer-evaluate">
-    <div v-for="i in images" :key="i" class="item">
+    <div v-for="i in 19" :key="i" class="item">
       <ZoomImg :src="`/customer-${i}.png`" />
-    </div>
-    <div v-if="fold" class="item more" @click="fold = false">
-      <p>更多</p>
     </div>
   </div>
 </template>
@@ -30,11 +18,6 @@ const images = computed(() => {
   padding: 8px;
   padding: 8px;
   display: inline-flex;
-}
-
-.customer-evaluate .item.more {
-  cursor: pointer;
-  color: #999;
 }
 
 .customer-evaluate .item p {

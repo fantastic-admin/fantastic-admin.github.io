@@ -407,7 +407,7 @@
 
 - 移除应用配置中 Element Plus 默认尺寸的配置项
 
-  > 如果你依旧需要全局配置 Element Plus 的默认尺寸，可以参考《[Config Provider 全局配置](http://element-plus.org/zh-CN/component/config-provider.html)》并在 `/src/App.vue` 中进行修改。
+  > 如果你依旧需要全局配置 Element Plus 的默认尺寸，可以参考《[Config Provider 全局配置](http://element-plus.org/zh-CN/component/config-provider.html)》并在 `/src/ui-provider/index.vue` 中进行修改。
 
 - 移除精灵图支持
 
