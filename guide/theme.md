@@ -255,6 +255,30 @@ const globalSettings: Settings.all = {
 }
 ```
 
+## 哀悼模式 <Badge type="tip" text="v4.9.0 新增" />
+
+在应用配置中设置：
+
+```ts {2-9}
+const globalSettings: Settings.all = {
+  app: {
+    enableMournMode: true,
+  },
+}
+```
+
+## 色弱模式 <Badge type="tip" text="v4.9.0 新增" />
+
+在应用配置中设置：
+
+```ts {2-9}
+const globalSettings: Settings.all = {
+  app: {
+    enableColorAmblyopiaMode: true,
+  },
+}
+```
+
 ## 导航栏风格 <Badge type="pro" text="专业版" />
 
 ### 风格
