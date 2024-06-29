@@ -2,6 +2,45 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.9.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.9.0)
+🚨 Breaking Changes
+
+- 配置项 `menu.menuMode` 变更为 `menu.mode` &nbsp;-&nbsp; by @hooray [<samp>(57fcd)</samp>](https://github.com/fantastic-admin/basic/commit/57fcd27)
+
+🚀 Features
+
+- 增加禁用开发者工具环境变量 &nbsp;-&nbsp; by @hooray [<samp>(90b58)</samp>](https://github.com/fantastic-admin/basic/commit/90b5880)
+- 新增哀悼模式和色弱模式 &nbsp;-&nbsp; by @hooray [<samp>(456ef)</samp>](https://github.com/fantastic-admin/basic/commit/456ef83)
+
+🐞 Bug Fixes
+
+- 修复vscode失效配置 &nbsp;-&nbsp; by @hooray [<samp>(3c8b4)</samp>](https://github.com/fantastic-admin/basic/commit/3c8b488)
+- 修复主导航 children 为空时报错 &nbsp;-&nbsp; by @hooray [<samp>(9e444)</samp>](https://github.com/fantastic-admin/basic/commit/9e444c8)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.9.0)
+🚨 Breaking Changes
+
+- 配置项 `menu.menuActiveStyle` 变更为 `menu.style` &nbsp;-&nbsp; by @hooray [<samp>(d055f)</samp>](https://github.com/fantastic-admin/pro/commit/d055f821)
+- 配置项 `menu.menuMode` 变更为 `menu.mode` &nbsp;-&nbsp; by @hooray [<samp>(d4ce5)</samp>](https://github.com/fantastic-admin/pro/commit/d4ce59cf)
+
+🚀 Features
+
+- 增加2种导航栏模式 `side-panel` / `head-panel` &nbsp;-&nbsp; by @hooray [<samp>(14996)</samp>](https://github.com/fantastic-admin/pro/commit/14996568)
+- 新增`tabbar.dblclickAction`标签页双击执行动作配置项 &nbsp;-&nbsp; by @hooray [<samp>(5092f)</samp>](https://github.com/fantastic-admin/pro/commit/5092fdb7)
+- 增加禁用开发者工具环境变量 &nbsp;-&nbsp; by @hooray [<samp>(b0037)</samp>](https://github.com/fantastic-admin/pro/commit/b003752a)
+- 新增哀悼模式和色弱模式 &nbsp;-&nbsp; by @hooray [<samp>(ea5ad)</samp>](https://github.com/fantastic-admin/pro/commit/ea5ade1f)
+
+🐞 Bug Fixes
+
+- 修复类型警告 &nbsp;-&nbsp; by @hooray [<samp>(26bd1)</samp>](https://github.com/fantastic-admin/pro/commit/26bd1d27)
+- 移除无用逻辑判断 &nbsp;-&nbsp; by @hooray [<samp>(55ee2)</samp>](https://github.com/fantastic-admin/pro/commit/55ee281e)
+- 修复vscode失效配置 &nbsp;-&nbsp; by @hooray [<samp>(031db)</samp>](https://github.com/fantastic-admin/pro/commit/031dbf0b)
+- 修复主导航 children 为空时报错 &nbsp;-&nbsp; by @hooray [<samp>(62b56)</samp>](https://github.com/fantastic-admin/pro/commit/62b56ba0)
+:::
+
 ## 4.8.2
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.8.2)

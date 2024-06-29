@@ -10,10 +10,10 @@
     "medium-zoom": "^1.1.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.21.1",
-    "eslint": "^9.5.0",
+    "@antfu/eslint-config": "2.21.2",
+    "eslint": "^9.6.0",
     "sass": "^1.77.6",
     "vitepress": "1.2.3",
-    "vue": "^3.4.30"
+    "vue": "^3.4.31"
   }
 }
