@@ -92,55 +92,12 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript
 
 ## 为什么不是它们？
 
+欢迎访问 [hooray/pick-the-right-admin](https://github.com/hooray/pick-the-right-admin) 了解同类产品详细对比。
+
 :::tip 作者寄语
-以下整理的几款同类产品，它们不管在技术栈上、功能的丰富度上、更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。
+整理的几款同类产品，它们不管在技术栈上、功能的丰富度上、更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。
 
 但是可靠并不一定代表好用，同样一个功能的实现，不同的产品会有不同的设计思路，这也是我认为 Fantastic-admin 在一众同类产品中，最有价值的地方。
-:::
 
-::: details [vue-vben-admin](https://github.com/vbenjs/vue-vben-admin)
-- 优势
-  - 示例丰富
-  - 开发文档齐全
-- 劣势
-  - 原作者已离开项目，目前由社区维护
-  - 使用过的开发者普遍反馈封装过度，导致上手成本有点高
-:::
-
-::: details [vue-admin-better](https://github.com/chuzhixin/vue-admin-better)
-- 优势
-  - 示例丰富
-- 劣势
-  - 开源版本功能较少
-  - 开发文档需要付费加群才能查阅
-  - 付费版本价格较贵
-:::
-
-::: details [vue-pure-admin](https://github.com/pure-admin/vue-pure-admin)
-- 优势
-  - 示例丰富
-  - 开发文档齐全
-  - 生态丰富，有提供 electron/tauri 支持
-- 劣势
-  - 配置项较少，可定制性不高
-  - 精简版本与演示版本更新不同步，且精简版本更新较慢
-  - 封装的工具函数仅对核心成员开源
-:::
-
-::: details [Naive Admin](https://www.naiveadmin.com/home)
-  - 优势
-    - 示例丰富
-    - 提供多款 UI 组件库的版本，也有提供带后端支持的版本
-  - 劣势
-    - 没有提供开源版本
-    - 不同 UI 组件库的版本需单独购买，且价格较贵
-:::
-
-::: details [EleAdmin](https://eleadmin.com/)
-  - 优势
-    - 示例丰富
-    - 提供 Element Plus 和 Ant Design Vue 两个版本
-  - 劣势
-    - 没有提供开源版本
-    - 不同 UI 组件库的版本需单独购买，且价格较贵
+当然，大家在做技术选型的时候，也需要保持自己的独立思考，这样才能选出真正适合自己的产品。
 :::

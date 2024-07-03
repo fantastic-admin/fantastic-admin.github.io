@@ -307,3 +307,4 @@ Fantastic-admin 在探索商业化的道路上，离不开开源项目的支持�
 | 2024/01/12 |           [sxzz](https://github.com/sxzz)           |       256.00 |
 | 2024/02/04 |           [Vue.js](https://cn.vuejs.org/)           |     15000.00 |
 | 2024/05/06 |   [Element Plus](https://element-plus.org/zh-CN/)   |      2000.00 |
+| 2024/07/17 |          [Vxe Table](https://vxetable.cn/)          |       800.00 |
