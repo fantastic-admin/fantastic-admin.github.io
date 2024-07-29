@@ -69,7 +69,7 @@ const { maximize } = useMainPage()
 maximize(status)
 ```
 
-## 标签栏 <Badge type="pro" text="专业版" />
+## 标签栏
 
 ### 获取当前标签页 tabId
 
