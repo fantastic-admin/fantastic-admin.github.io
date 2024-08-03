@@ -2,6 +2,38 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.10.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.10.0)
+🚨 Breaking Changes
+
+- 移除`createInjectionKey`函数 &nbsp;-&nbsp; by @hooray [<samp>(9a733)</samp>](https://github.com/fantastic-admin/basic/commit/9a7331f)
+
+🚀 Features
+
+- 次导航支持隐藏 &nbsp;-&nbsp; by @hooray [<samp>(23d36)</samp>](https://github.com/fantastic-admin/basic/commit/23d3643)
+- 上传组件增加自定义上传 &nbsp;-&nbsp; by @hooray [<samp>(66c0e)</samp>](https://github.com/fantastic-admin/basic/commit/66c0e4f)
+- FileUpload 组件文件列表增加下载功能 &nbsp;-&nbsp; by @hooray [<samp>(bd5c9)</samp>](https://github.com/fantastic-admin/basic/commit/bd5c921)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.10.0)
+🚨 Breaking Changes
+
+- 移除 `menu.subMenuOnlyOneHide` 应用配置项，修改为根据路由 `meta.menu` 配置实现相同效果 &nbsp;-&nbsp; by @hooray [<samp>(85b56)</samp>](https://github.com/fantastic-admin/pro/commit/85b56695)
+- 移除`createInjectionKey`函数，全局provide的`generateI18nTitle`函数放到`useMenu()`里提供 &nbsp;-&nbsp; by @hooray [<samp>(fd2a5)</samp>](https://github.com/fantastic-admin/pro/commit/fd2a57e3)
+- 调整 `menu.enableSubMenuCollapseButton` 的展示逻辑 &nbsp;-&nbsp; by @hooray [<samp>(64b73)</samp>](https://github.com/fantastic-admin/pro/commit/64b733bd)
+
+🚀 Features
+
+- 上传组件增加自定义上传 &nbsp;-&nbsp; by @hooray [<samp>(10295)</samp>](https://github.com/fantastic-admin/pro/commit/10295742)
+- FileUpload 组件文件列表增加下载功能 &nbsp;-&nbsp; by @hooray [<samp>(29fc0)</samp>](https://github.com/fantastic-admin/pro/commit/29fc0c36)
+
+🐞 Bug Fixes
+
+- 修复导航模式为精简和面板模式时，点击无子导航的主导航路由报错 &nbsp;-&nbsp; by @hooray [<samp>(d99f2)</samp>](https://github.com/fantastic-admin/pro/commit/d99f2a63)
+- 修复主题跟随系统且系统为明亮模式时，水印不生效 &nbsp;-&nbsp; by @hooray [<samp>(038b4)</samp>](https://github.com/fantastic-admin/pro/commit/038b4656)
+:::
+
 ## 4.9.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.9.0)
