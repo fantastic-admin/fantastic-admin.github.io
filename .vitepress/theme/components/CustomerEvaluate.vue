@@ -1,6 +1,6 @@
 <template>
   <div class="customer-evaluate">
-    <div v-for="i in 19" :key="i" class="item">
+    <div v-for="i in 20" :key="i" class="item">
       <ZoomImg :src="`/customer-${i}.png`" />
     </div>
   </div>

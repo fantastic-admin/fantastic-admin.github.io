@@ -555,15 +555,15 @@ export default routes
 
 ### iframe <Badge type="pro" text="专业版" />
 
-|  类型  | 默认值 | 说明         |
-| :----: | :----: | :----------- |
-| string |   /    | 内嵌网页链接 |
+|       类型       | 默认值 | 说明         |
+| :--------------: | :----: | :----------- |
+| string / boolean |   /    | 内嵌网页链接 |
 
 会启用一个 `<iframe>` 并载入该链接。
 
 内嵌网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性，如果同时设置了 `meta.link` 则 `meta.link` 优先级更高。
 
-```ts
+```ts {11-19}
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw = {
@@ -599,6 +599,59 @@ const globalSettings: Settings.all = {
     iframeCacheMax: 3,
   },
 }
+```
+
+<Badge type="tip" text="v4.11.0" /> 开始，增加了动态设置 iframe 链接，只需要配置一份如下路由：
+
+```ts {20-29}
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/xxx',
+  component: () => import('@/layouts/index.vue'),
+  redirect: '/xxx/iframe',
+  meta: {
+    title: '内嵌网页',
+  },
+  children: [
+    {
+      path: 'iframe',
+      redirect: '',
+      name: 'Iframe',
+      meta: {
+        title: 'Gitee 仓库',
+        iframe: 'https://gitee.com/fantastic-admin/basic',
+      },
+    },
+    {
+      path: 'dynamic',
+      redirect: '',
+      name: 'Dynamic',
+      meta: {
+        title: '外部链接',
+        menu: false,
+        iframe: true,
+      },
+    },
+  ],
+}
+
+export default routes
+```
+
+然后就可以通过跳转路由的方式动态设置 iframe 链接了：
+
+```ts
+const router = useRouter()
+
+router.push({
+  name: 'Dynamic',
+  // 这里需要使用到 query 参数，且约定参数名为 title 和 iframe
+  query: {
+    title: '自定义标题', // 非必须，默认使用该路由的 meta.title
+    iframe: 'https://fantastic-admin.github.io/', // 必须
+  },
+})
 ```
 
 ### copyright <Badge type="pro" text="专业版" />
