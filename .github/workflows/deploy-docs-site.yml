@@ -22,7 +22,7 @@ jobs:
         with:
           # 选择要使用的 node 版本
           node-version: 20
-          # registry-url: https://registry.npmmirror.com/
+          registry-url: https://registry.npmmirror.com/
 
       - uses: pnpm/action-setup@v3
         name: Install pnpm
