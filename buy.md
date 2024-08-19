@@ -9,7 +9,7 @@ import { withBase } from 'vitepress'
 :::
 
 :::details 专业版超值优惠合集①：Fantastic-admin ＋ One-step-admin
-原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.github.io)</sup> ＝ ￥2198.00
+原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.hurui.me)</sup> ＝ ￥2198.00
 
 合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)
 
@@ -17,7 +17,7 @@ import { withBase } from 'vitepress'
 :::
 
 :::details 专业版超值优惠合集②：Fantastic-admin ＋ Fantastic-mobile
-原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.github.io)</sup> ＝ ￥1798.00
+原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.hurui.me)</sup> ＝ ￥1798.00
 
 合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1099</span>.00</b> (本价格不参与任何限时优惠活动)
 
@@ -25,7 +25,7 @@ import { withBase } from 'vitepress'
 :::
 
 :::details 专业版超值优惠合集③：Fantastic-admin ＋ One-step-admin ＋ Fantastic-mobile
-原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.github.io)</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.github.io)</sup> ＝ ￥2797.00
+原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.hurui.me)</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.hurui.me)</sup> ＝ ￥2797.00
 
 合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1499</span>.00</b> (本价格不参与任何限时优惠活动)
 
@@ -267,10 +267,10 @@ import { withBase } from 'vitepress'
   <tr>
     <td align="center">演示地址</td>
     <td align="center">
-      <a href="https://fantastic-admin.github.io/basic-example" target="_blank">访问</a>
+      <a href="https://fantastic-admin.hurui.me/basic-example" target="_blank">访问</a>
     </td>
     <td align="center">
-      <a href="https://fantastic-admin.github.io/pro-example" target="_blank">访问</a>
+      <a href="https://fantastic-admin.hurui.me/pro-example" target="_blank">访问</a>
     </td>
   </tr>
 </table>

@@ -180,5 +180,5 @@ const globalSettings: Settings.all = {
 
 依据作者的开发经验，建议移动端后台可以独立开发一套，在功能上进行删减，保留轻量级的管理操作。
 
-如果打算独立开发一套移动端的系统，建议使用 [Fantastic-mobile](https://fantastic-mobile.github.io/)。
+如果打算独立开发一套移动端的系统，建议使用 [Fantastic-mobile](https://fantastic-mobile.hurui.me/)。
 :::

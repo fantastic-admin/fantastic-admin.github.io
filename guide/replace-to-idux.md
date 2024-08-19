@@ -3,7 +3,7 @@
 ::: warning 注意
 v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
 
-版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.github.io/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-idux.md)。
+版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.hurui.me/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-idux.md)。
 :::
 
 由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [iDux](https://idux.site/)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
@@ -191,6 +191,6 @@ pnpm remove element-plus
 
 ## 示例
 
-如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/fantastic-admin/idux-example)查看示例源码，以及[此链接](https://fantastic-admin.github.io/idux-example/)查看示例网站。
+如果对上述的步骤还有不清楚的地方，可以访问[此仓库](https://github.com/fantastic-admin/idux-example)查看示例源码，以及[此链接](https://fantastic-admin.hurui.me/idux-example/)查看示例网站。
 
 ![](/ui-idux.png){data-zoomable}

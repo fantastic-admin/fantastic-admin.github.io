@@ -10,15 +10,15 @@
           <div class="sub">简单好用的 Vue3 项目启动套件</div>
         </div>
       </a>
-      <a href="https://one-step-admin.github.io/" target="_blank" class="sponsor-item">
-        <img src="https://one-step-admin.github.io/logo.png">
+      <a href="https://one-step-admin.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://one-step-admin.hurui.me/logo.png">
         <div class="info">
           <div class="main">One-step-admin</div>
           <div class="sub">巧妙的管理系统框架</div>
         </div>
       </a>
-      <a href="https://fantastic-mobile.github.io/" target="_blank" class="sponsor-item">
-        <img src="https://fantastic-mobile.github.io/logo.png">
+      <a href="https://fantastic-mobile.hurui.me/" target="_blank" class="sponsor-item">
+        <img src="https://fantastic-mobile.hurui.me/logo.png">
         <div class="info">
           <div class="main">Fantastic-mobile</div>
           <div class="sub">自成一派的 H5 框架</div>

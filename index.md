@@ -26,10 +26,10 @@ hero:
       link: /get-v1-pro
     - theme: cta
       text: 演示地址：基础版 ↗
-      link: https://fantastic-admin.github.io/basic-example
+      link: https://fantastic-admin.hurui.me/basic-example
     - theme: cta
       text: 演示地址：专业版 ↗
-      link: https://fantastic-admin.github.io/pro-example
+      link: https://fantastic-admin.hurui.me/pro-example
 
 features:
 - icon: 💪

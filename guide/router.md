@@ -328,7 +328,7 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.github.io/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
+该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.hurui.me/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
 
 ### ~~sidebar~~ <Badge type="warning" text="v4.7.0 进入弃用过渡期，预计在 v5.0.0 正式移除" />
 
@@ -649,7 +649,7 @@ router.push({
   // 这里需要使用到 query 参数，且约定参数名为 title 和 iframe
   query: {
     title: '自定义标题', // 非必须，默认使用该路由的 meta.title
-    iframe: 'https://fantastic-admin.github.io/', // 必须
+    iframe: 'https://fantastic-admin.hurui.me/', // 必须
   },
 })
 ```

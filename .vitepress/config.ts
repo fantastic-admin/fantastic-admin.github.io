@@ -23,7 +23,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
 }]);
 (function() {
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?7bb58fdfd1fe8ab146d4b4f23686b768";
+  hm.src = "https://hm.baidu.com/hm.js?c458e5e4952cbc8ff4d06838d3df3e78";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
@@ -58,15 +58,15 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             items: [
               {
                 text: 'v3 (Vue3版本)',
-                link: 'https://fantastic-admin.github.io/v3-docs/',
+                link: 'https://fantastic-admin.hurui.me/v3-docs/',
               },
               {
                 text: 'v2 (Vue3版本)',
-                link: 'https://fantastic-admin.github.io/v2-docs/',
+                link: 'https://fantastic-admin.hurui.me/v2-docs/',
               },
               {
                 text: 'v1 (Vue2版本)',
-                link: 'https://fantastic-admin.github.io/v1-docs/',
+                link: 'https://fantastic-admin.hurui.me/v1-docs/',
               },
             ],
           },
@@ -76,20 +76,15 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         text: '在线演示',
         items: [
           {
-            text: 'Github',
-            items: [
-              {
-                text: '基础版',
-                link: 'https://fantastic-admin.github.io/basic-example',
-              },
-              {
-                text: '专业版',
-                link: 'https://fantastic-admin.github.io/pro-example',
-              },
-            ],
+            text: '基础版',
+            link: 'https://fantastic-admin.hurui.me/basic-example',
           },
           {
-            text: 'Cloudflare',
+            text: '专业版',
+            link: 'https://fantastic-admin.hurui.me/pro-example',
+          },
+          {
+            text: '备用地址',
             items: [
               {
                 text: '基础版',

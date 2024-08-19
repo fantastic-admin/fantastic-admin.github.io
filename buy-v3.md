@@ -45,7 +45,7 @@ import { withBase } from 'vitepress'
 ![](public/v3-pro.png){data-zoomable}
 
 <p align="center">
-  <a href="https://fantastic-admin.github.io/v3-pro-example/" target="_blank">访问演示地址</a>
+  <a href="https://fantastic-admin.hurui.me/v3-pro-example/" target="_blank">访问演示地址</a>
   |
-  <a href="https://fantastic-admin.github.io/v3-docs/" target="_blank">访问历史文档</a>
+  <a href="https://fantastic-admin.hurui.me/v3-docs/" target="_blank">访问历史文档</a>
 </p>

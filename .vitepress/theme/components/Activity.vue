@@ -5,7 +5,7 @@ const isVisible = ref(false)
 const nameStorage = 'ACTIVITY-FANTASTIC-MOBILE-1'
 
 function go() {
-  window.location.href = 'https://fantastic-mobile.github.io/'
+  window.location.href = 'https://fantastic-mobile.hurui.me/'
 }
 
 function closeBanner() {

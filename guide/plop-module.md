@@ -95,31 +95,48 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 先打开 `list.vue` 文件，找到 `onCreate()` 和 `onEdit()` 方法并替换：
 
-```ts {4,16}
+```ts {5,10,24,32}
 function onCreate() {
-  if (data.value.formMode === 'router') {
-    router.push({
-      name: 'exampleCreate',
-    })
+  if (formMode.value === 'router') {
+    if (settingsStore.settings.tabbar.enable && settingsStore.settings.tabbar.mergeTabsBy !== 'activeMenu') {
+      tabbar.open({
+        name: 'routeName',
+      })
+    }
+    else {
+      router.push({
+        name: 'routeName',
+      })
+    }
   }
   else {
-    data.value.formModeProps.id = ''
-    data.value.formModeProps.visible = true
+    formModeProps.value.id = ''
+    formModeProps.value.visible = true
   }
 }
 
-function onEdit(row) {
-  if (data.value.formMode === 'router') {
-    router.push({
-      name: 'exampleEdit',
-      params: {
-        id: row.id,
-      },
-    })
+function onEdit(row: any) {
+  if (formMode.value === 'router') {
+    if (settingsStore.settings.tabbar.enable && settingsStore.settings.tabbar.mergeTabsBy !== 'activeMenu') {
+      tabbar.open({
+        name: 'routeName',
+        params: {
+          id: row.id,
+        },
+      })
+    }
+    else {
+      router.push({
+        name: 'routeName',
+        params: {
+          id: row.id,
+        },
+      })
+    }
   }
   else {
-    data.value.formModeProps.id = row.id
-    data.value.formModeProps.visible = true
+    formModeProps.value.id = row.id
+    formModeProps.value.visible = true
   }
 }
 ```
@@ -127,20 +144,20 @@ function onEdit(row) {
 然后打开 `detail.vue` 文件，替换以下两处：
 
 ```vue-html {1}
-<page-header :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
-  <el-button size="mini" round @click="goBack">
+<PageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
+  <ElButton size="default" round @click="goBack">
     <template #icon>
-      <svg-icon name="ep:arrow-left" />
+      <SvgIcon name="i-ep:arrow-left" />
     </template>
     返回
-  </el-button>
-</page-header>
+  </ElButton>
+</PageHeader>
 ```
 
 ```ts {3,6}
 function goBack() {
-  if (settingsStore.tabbar.enable && !settingsStore.tabbar.mergeTabs) {
-    useTabbar().close({ name: 'exampleList' })
+  if (settingsStore.settings.tabbar.enable && settingsStore.settings.tabbar.mergeTabsBy !== 'activeMenu') {
+    tabbar.close({ name: 'exampleList' })
   }
   else {
     router.push({ name: 'exampleList' })
@@ -156,52 +173,53 @@ function goBack() {
 
 功能部分的介绍主要还是要看代码，先从列表页 `list.vue` 开始。
 
-最先看到的是这句文件导入代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/utils/composables/pagination/index.ts` 方便复用。
+最先看到的是这行代码，因为几乎每个列表页都需要翻页功能，所以把翻页相关的东西都存放在 `/src/utils/composables/usePagination.ts` 方便复用。
 
 ```ts
-import usePagination from '@/utils/composables/usePagination'
-
 const { pagination, getParams, onSizeChange, onCurrentChange, onSortChange } = usePagination()
 ```
 
-接着在 `data` 里存放的是标准模块提供的一些配置项和必要数据参数字段。
+接着是标准模块提供的一些配置项和必要数据字段。
 
-```ts {11,27}
-const data = ref({
-  loading: false,
-  // 表格是否自适应高度
-  tableAutoHeight: false,
-  /**
-   * 详情展示模式
-   * router 路由跳转
-   * dialog 对话框
-   * drawer 抽屉
-   */
-  formMode: 'router',
-  // 详情
-  formModeProps: {
-    visible: false,
-    id: '',
-  },
-  // 搜索
-  search: {
-    account: '',
-    name: '',
-    mobile: '',
-    sex: '',
-  },
-  searchMore: false,
-  // 批量操作
-  batch: {
-    enable: true,
-    selectionDataList: [],
-  },
-  // 列表数据
-  dataList: [],
+```ts {10}
+// 表格是否自适应高度
+const tableAutoHeight = ref(false)
+
+/**
+ * 详情展示模式
+ * router 路由跳转
+ * dialog 对话框
+ * drawer 抽屉
+ */
+const formMode = ref<'router' | 'dialog' | 'drawer'>('router')
+
+// 详情
+const formModeProps = ref({
+  visible: false,
+  id: '',
 })
+
+// 搜索
+const searchDefault = {
+  title: '',
+}
+const search = ref({ ...searchDefault })
+function searchReset() {
+  Object.assign(search.value, searchDefault)
+}
+
+// 批量操作
+const batch = ref({
+  enable: true,
+  selectionDataList: [],
+})
+
+// 列表
+const loading = ref(false)
+const dataList = ref([])
 ```
 
-标准模块提供了 3 种详情展示模式，默认是路由跳转的方式，你可以修改 `formMode: 'dialog'` 开启详情弹窗模式，保存后效果如下：
+标准模块提供了 3 种详情展示模式，默认是路由跳转的方式，你可以修改 `formMode` 开启详情弹窗模式，保存后效果如下：
 
 ![](/module2.gif){data-zoomable}
 
@@ -210,7 +228,7 @@ const data = ref({
 ```ts
 onMounted(() => {
   getDataList()
-  if (data.value.formMode === 'router') {
+  if (formMode.value === 'router') {
     eventBus.on('get-data-list', () => {
       getDataList()
     })
@@ -218,8 +236,9 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  if (data.value.formMode === 'router')
+  if (formMode.value === 'router') {
     eventBus.off('get-data-list')
+  }
 })
 ```
 

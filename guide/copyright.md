@@ -49,7 +49,7 @@ const globalSettings: Settings.all = {
 ```ts {2-4}
 const globalSettings: Settings.all = {
   copyright: {
-    website: 'https://fantastic-admin.github.io',
+    website: 'https://fantastic-admin.hurui.me',
   },
 }
 ```
