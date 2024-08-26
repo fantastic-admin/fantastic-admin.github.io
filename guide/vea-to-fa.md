@@ -42,19 +42,15 @@ vue-element-admin 将 svg 文件存放在 `/src/icons/svg/` 目录下，这部�
 
 vue-element-admin 将图片存放在 `/src/assets/` 目录下，这部分的图片资源可直接拷贝到 Fantastic-admin 的 `/src/assets/images/` 目录下即可。
 
-### 精灵图
-
-这是 Fantastic-admin 单独提供的特性，如果在项目中使用了较多尺寸不大的素材图，你可以考虑使用精灵图的方式将多张小图合并成一张大图，通过 css 背景图定位的方式去展示使用，详细可阅读《[全局资源 - 精灵图](global-resources#精灵图)》。
-
 ### 样式
 
 vue-element-admin 将样式存放在 `/src/styles/` 目录下，这个目录存放的基本是和框架相关的样式，迁移过程中基本是无需关注的，你只需要关注你新增的样式文件，将这些文件拷贝到 Fantastic-admin 的 `/src/assets/styles/` 目录下，并在相关使用到的地方引入即可。
 
-另外 Fantastic-admin 还提供了一个 `/src/assets/styles/resources/` 目录用来单独存放 SCSS 资源，这个目录下的文件会被框架自动引入，可在页面上直接使用，详细可阅读《[全局资源 - 样式](global-resources#样式)》。
+另外 Fantastic-admin 还提供了一个 `/src/assets/styles/resources/` 目录用来单独存放 SCSS 资源，这个目录下的文件会被框架自动引入，可在页面上直接使用，详细可阅读《[资源 - 样式](resources#样式)》。
 
 ### 组件
 
-vue-element-admin 将组件存放在 `/src/components/` 目录下，并且使用时需要单独注册，而 Fantastic-admin 提供了全局组件自动注册的特性，你只需将全局组件同样放到 Fantastic-admin 的 `/src/components/` 目录下即可在页面中直接使用，详细可阅读《[全局资源 - 组件](global-resources#组件)》。
+vue-element-admin 将组件存放在 `/src/components/` 目录下，并且使用时需要单独注册，而 Fantastic-admin 提供了全局组件自动注册的特性，你只需将全局组件同样放到 Fantastic-admin 的 `/src/components/` 目录下即可在页面中直接使用，详细可阅读《[资源 - 组件](resources#组件)》。
 
 ### 与服务端交互
 

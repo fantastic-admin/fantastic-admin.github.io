@@ -157,7 +157,7 @@ const globalSettings: Settings.all = {
 
 ## 变量
 
-布局相关的变量存放在 `/src/assets/styles/globals.scss` 文件中（注意看注释），均为 CSS 变量。
+布局相关的变量存放在 `/src/assets/styles/globals.css` 文件中（注意看注释），均为 CSS 变量。
 
 ## 移动端
 

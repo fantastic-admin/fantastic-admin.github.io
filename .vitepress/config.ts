@@ -180,7 +180,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: '路由（导航）', link: '/guide/router' },
             { text: '与服务端交互', link: '/guide/axios' },
             { text: '全局状态管理', link: '/guide/store' },
-            { text: '全局资源', link: '/guide/global-resources' },
+            { text: '资源', link: '/guide/resources' },
             { text: '图标', link: '/guide/svg-icon' },
             { text: '构建与预览', link: '/guide/build' },
           ],

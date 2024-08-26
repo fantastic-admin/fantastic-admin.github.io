@@ -353,7 +353,7 @@ const globalSettings: Settings.all = {
 
 ![](/tabbar-style.png){data-zoomable}
 
-同时可以在 `/src/assets/styles/globals.scss` 中设置标签栏中页签的宽度，默认为 `150px` 固定宽度：
+同时可以在 `/src/assets/styles/globals.css` 中设置标签栏中页签的宽度，默认为 `150px` 固定宽度：
 
 ```scss
 :root {
