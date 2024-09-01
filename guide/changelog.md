@@ -2,6 +2,46 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.11.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.11.0)
+🚨 Breaking Changes
+
+- 重构登录页面 &nbsp;-&nbsp; by @hooray [<samp>(cb230)</samp>](https://github.com/fantastic-admin/basic/commit/cb230f7)
+
+🚀 Features
+
+- 扩充 unocss 自定义 shortcuts &nbsp;-&nbsp; by @hooray [<samp>(6f59d)</samp>](https://github.com/fantastic-admin/basic/commit/6f59ddf)
+- SvgIcon 组件支持传入本地图片，网络图片增加载入和失败状态 &nbsp;-&nbsp; by @hooray [<samp>(e79bd)</samp>](https://github.com/fantastic-admin/basic/commit/e79bd1d)
+- 引入 postcss-nested &nbsp;-&nbsp; by @hooray [<samp>(2fe0f)</samp>](https://github.com/fantastic-admin/basic/commit/2fe0fc9)
+
+🐞 Bug Fixes
+
+- 修复带参路由无法记录到标签栏中 &nbsp;-&nbsp; by @hooray [<samp>(1e155)</samp>](https://github.com/fantastic-admin/basic/commit/1e15536)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.11.0)
+🚨 Breaking Changes
+
+- 重构登录页面 &nbsp;-&nbsp; by @hooray [<samp>(cedbb)</samp>](https://github.com/fantastic-admin/pro/commit/cedbbaf1)
+- 移除 I18nSelector 组件 &nbsp;-&nbsp; by @hooray [<samp>(c6444)</samp>](https://github.com/fantastic-admin/pro/commit/c6444b61)
+
+🚀 Features
+
+- Iframe路由支持动态传入src &nbsp;-&nbsp; by @hooray [<samp>(0faf5)</samp>](https://github.com/fantastic-admin/pro/commit/0faf5f68)
+- 扩展组件增加 i18n 支持 &nbsp;-&nbsp; by @hooray [<samp>(30a33)</samp>](https://github.com/fantastic-admin/pro/commit/30a33f66)
+- 手动登出时，清空非固定和非常驻的标签页 &nbsp;-&nbsp; by @hooray [<samp>(7c88a)</samp>](https://github.com/fantastic-admin/pro/commit/7c88ae30)
+- 扩充 unocss 自定义 shortcuts &nbsp;-&nbsp; by @hooray [<samp>(23b9b)</samp>](https://github.com/fantastic-admin/pro/commit/23b9b165)
+- SvgIcon 组件支持传入本地图片，网络图片增加载入和失败状态 &nbsp;-&nbsp; by @hooray [<samp>(818c8)</samp>](https://github.com/fantastic-admin/pro/commit/818c8a25)
+- 固定或常驻标签页可在相邻且同类型的标签页间拖动 &nbsp;-&nbsp; by @hooray [<samp>(59fd4)</samp>](https://github.com/fantastic-admin/pro/commit/59fd43f0)
+- 标准模块增加搜索项重置 &nbsp;-&nbsp; by @hooray [<samp>(c4342)</samp>](https://github.com/fantastic-admin/pro/commit/c4342314)
+- 引入 postcss-nested &nbsp;-&nbsp; by @hooray [<samp>(1c631)</samp>](https://github.com/fantastic-admin/pro/commit/1c631579)
+
+🐞 Bug Fixes
+
+- 修复标签页可以拖动到固定或常驻标签页前面的问题 &nbsp;-&nbsp; by @hooray [<samp>(089e0)</samp>](https://github.com/fantastic-admin/pro/commit/089e0c6a)
+:::
+
 ## 4.10.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.10.0)
