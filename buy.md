@@ -5,34 +5,41 @@ import { withBase } from 'vitepress'
 # 购买永久专业版
 
 :::tip 什么是永久专业版
-顾名思义，永久专业版是指在任何时候你都可以获取本框架最新专业版源码，并且无需再次付费。
+顾名思义，永久专业版是指本框架后续发布的新版本，无需再次购买即可获得最新专业版源码。
 :::
 
-:::details 专业版超值优惠合集①：Fantastic-admin ＋ One-step-admin
-原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.hurui.me)</sup> ＝ ￥2198.00
+## 购买
 
-合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)
-
-请加作者微信进行购买
-:::
-
-:::details 专业版超值优惠合集②：Fantastic-admin ＋ Fantastic-mobile
-原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.hurui.me)</sup> ＝ ￥1798.00
-
-合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1099</span>.00</b> (本价格不参与任何限时优惠活动)
-
-请加作者微信进行购买
-:::
-
-:::details 专业版超值优惠合集③：Fantastic-admin ＋ One-step-admin ＋ Fantastic-mobile
-原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.hurui.me)</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.hurui.me)</sup> ＝ ￥2797.00
-
-合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1499</span>.00</b> (本价格不参与任何限时优惠活动)
-
-请加作者微信进行购买
-:::
-
-## 购买流程
+<table style="width: 100%; display: table; margin: 1rem auto;">
+  <tr>
+    <th colspan="2" width="50%" style="text-align: center;">个人</th>
+    <th colspan="2" width="50%" style="text-align: center;">企业/团队</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">899</span>.00</b></div>
+      <b style="color: #ccc;">原价：￥1199.00</b>
+    </td>
+    <td colspan="2" align="center">
+      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">3599</span>.00</b></div>
+      <b style="color: #ccc;">原价：￥4599.00</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img :src="withBase('/qrcode-wechat-personal.png')" />
+    </td>
+    <td align="center">
+      <img :src="withBase('/qrcode-alipay-personal.png')" />
+    </td>
+    <td align="center">
+      <img :src="withBase('/qrcode-wechat-team.png')" />
+    </td>
+    <td align="center">
+      <img :src="withBase('/qrcode-alipay-team.png')" />
+    </td>
+  </tr>
+</table>
 
 1. 请先加作者微信进行在线咨询。
 
@@ -45,119 +52,46 @@ import { withBase } from 'vitepress'
     - **Github 用户名**。专业版源码托管在 Github 平台，需提供你的 Github 用户名，我们会邀请你加入组织。
 4. 同意邀请后，进入[专业版开发者私有组织](https://github.com/fantastic-admin)，获取源码。
 
-## 支付方式
+## 优惠合集（仅限个人购买）
 
-:::tip 领红包
-若你打算使用支付宝进行付款，可以先扫下面这个二维码领取红包。
+:::details 超值优惠合集①：Fantastic-admin ＋ One-step-admin
+原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.hurui.me)</sup> ＝ ￥2198.00
 
-<img :src="withBase('/qrcode-alipay-hongbao.jpg')" width="200" />
+合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1299</span>.00</b> (本价格不参与任何限时优惠活动)
+
+请加作者微信进行购买
 :::
 
-<table style="width: 100%; display: table; margin: 1rem auto;">
-  <tr>
-    <th colspan="2" style="text-align: center;">Fantastic-admin 专业版</th>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">899</span>.00</b></div>
-      <b style="color: #ccc;">原价：￥1199.00</b>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img :src="withBase('/qrcode-wechat-899.png')" />
-    </td>
-    <td align="center">
-      <img :src="withBase('/qrcode-alipay-899.png')" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2">专业版用户可加入专业版微信群（群内提供框架技术支持），除此之外，每一位专业版用户可<b>免费绑定</b>一位开发者（不支持换绑），绑定的开发者同样可加入专业版微信群，额外绑定更多开发者为 200 元/人。</td>
-  </tr>
-</table>
+:::details 超值优惠合集②：Fantastic-admin ＋ Fantastic-mobile
+原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.hurui.me)</sup> ＝ ￥1798.00
 
-::: details 企业/团队购买
+合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1099</span>.00</b> (本价格不参与任何限时优惠活动)
 
-如果你有以下场景需求，推荐购买企业/团队版：
+请加作者微信进行购买
+:::
 
-- 我们是公司，开发团队有多名开发者，需要都能加入到 Github 组织；同时考虑到人员流动，需要可以更换加入到 Github 组织的开发者账号
-- 我们是给客户开发项目的，开发完毕后需要将完整源码一起交付给客户
-- 我们希望能有一个独立的技术支持微信群，方便我们的开发者可以随时咨询框架相关问题
+:::details 超值优惠合集③：Fantastic-admin ＋ One-step-admin ＋ Fantastic-mobile
+原价：￥1199.00 <sup>Fantastic-admin</sup> ＋ ￥999.00 <sup>[One-step-admin](https://one-step-admin.hurui.me)</sup> ＋ ￥599.00 <sup>[Fantastic-mobile](https://fantastic-mobile.hurui.me)</sup> ＝ ￥2797.00
 
-<table style="width: 100%; display: table; margin: 1rem auto;">
-  <tr>
-    <th colspan="2" style="text-align: center;">Fantastic-admin 专业版 (企业/团队版)</th>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <div>限时优惠：<b style="color: #ff4400;">￥<span style="font-size: 24px;">3599</span>.00</b></div>
-      <b style="color: #ccc;">原价：￥4599.00</b>
-    </td>
-  </tr>
-  <!-- <tr>
-    <td align="center">
-      <img :src="withBase('/qrcode-wechat.png')" />
-    </td>
-    <td align="center">
-      <img :src="withBase('/qrcode-alipay.png')" />
-    </td>
-  </tr> -->
-</table>
+合集优惠价：<b style="color: #ff4400;">￥<span style="font-size: 24px;">1499</span>.00</b> (本价格不参与任何限时优惠活动)
 
-<table style="width: 100%; display: table; margin: 1rem auto;">
-  <tr>
-    <th width="40%" style="text-align: center;">⭐服务⭐</th>
-    <th width="30%" style="text-align: center;">个人</th>
-    <th width="30%" style="text-align: center;">企业/团队</th>
-  </tr>
-  <tr>
-    <td align="center">允许加入 Github 组织账号数</td>
-    <td align="center">1</td>
-    <td align="center">5</td>
-  </tr>
-  <tr>
-    <td align="center">是否允许二开后交付源码</td>
-    <td align="center"></td>
-    <td align="center">✅</td>
-  </tr>
-  <tr>
-    <td align="center">提供独立技术支持微信群</td>
-    <td align="center"></td>
-    <td align="center">✅</td>
-  </tr>
-  <tr>
-    <td align="center">是否可以开发票</td>
-    <td align="center"></td>
-    <td align="center">支持开普票，价格已含税</td>
-  </tr>
-</table>
-
+请加作者微信进行购买
 :::
 
 ## 部分客户评价
 
 <CustomerEvaluate />
 
-## 使用说明
-
-- 购买者可将本产品用于任意「**符合国家法律法规**」的应用平台，禁止用于黄赌毒等危害国家安全与稳定的网站。
-- 本产品购买后可用于开发商业项目，不限制域名和项目数量。
-- 购买者需保证不传播产品源码，不得直接对本产品（或简单包装成同类产品）进行二次转售或发布。无论有意或无意，我们有权利收回产品授权及更新权限。
-- 本产品的源码（包含全部源码，及部分源码片段），在未经我们许可下，不可以用于任何形式的开源项目，否则我们有权利收回产品授权及更新权限。
-- 因使用本产品所产生的损害及风险，包括但不限于个人损害、商业赢利丧失、贸易中断、商业信息丢失或任何其它经济损失，需由购买者自行承担，我们不承担任何责任。
-- 虚拟物品不支持退货退款。
-- 最终解释权归 Fantastic-admin 所有。
-
-## 专业版与基础版区别
+## 基础版与专业版区别
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
   <tr>
-    <th width="40%" style="text-align: center;">⭐功能与服务⭐</th>
+    <th width="40%" style="text-align: center;">⭐功能⭐</th>
     <th width="30%" style="text-align: center;">基础版</th>
     <th width="30%" style="text-align: center;">专业版</th>
   </tr>
   <tr>
-    <td align="center">长期维护更新，提供新特性</td>
+    <td align="center">长期更新维护</td>
     <td colspan="2" align="center">✅</td>
   </tr>
   <tr>
@@ -179,7 +113,7 @@ import { withBase } from 'vitepress'
     <td align="center" style="color: #e34d22;">明亮 6 款 / 暗黑 6 款</td>
   </tr>
   <tr>
-    <td align="center">导航路由配置项</td>
+    <td align="center">导航路由功能配置项</td>
     <td align="center">9 个</td>
     <td align="center" style="color: #e34d22;">22 个</td>
   </tr>
@@ -259,12 +193,6 @@ import { withBase } from 'vitepress'
     <td align="center">可删除</td>
   </tr>
   <tr>
-    <td align="center">技术支持</td>
-    <td colspan="2" align="center">
-      <a href="support">查看</a>
-    </td>
-  </tr>
-  <tr>
     <td align="center">演示地址</td>
     <td align="center">
       <a href="https://fantastic-admin.hurui.me/basic-example" target="_blank">访问</a>
@@ -274,6 +202,60 @@ import { withBase } from 'vitepress'
     </td>
   </tr>
 </table>
+
+## 专业版个人与企业团队区别
+
+<table style="width: 100%; display: table; margin: 1rem auto;">
+  <tr>
+    <th width="40%" style="text-align: center;">⭐权益⭐</th>
+    <th width="30%" style="text-align: center;">个人</th>
+    <th width="30%" style="text-align: center;">企业/团队</th>
+  </tr>
+  <tr>
+    <td align="center">
+      允许加入 Github 组织账号数
+      <div style="opacity: 0.5; font-size: 12px;">加入组织后可自由获取源码</div>
+    </td>
+    <td align="center">1 个</td>
+    <td align="center">5 个</td>
+  </tr>
+  <tr>
+    <td align="center">
+      允许二开后交付源码
+      <div style="opacity: 0.5; font-size: 12px;">可以向您的客户交付源码</div>
+    </td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td align="center">
+      技术支持
+      <div style="opacity: 0.5; font-size: 12px;">提供框架使用相关的技术支持</div>
+    </td>
+    <td align="center">
+      专业版开发者微信群
+      <div style="opacity: 0.5; font-size: 12px;">除本人外可关联 1 位开发者进群(不提供更换)，关联更多开发者200/人</div>
+    </td>
+    <td align="center">
+      专属独立微信群
+      <div style="opacity: 0.5; font-size: 12px;">不限人数，可自行邀请团队成员</div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">是否可以开发票</td>
+    <td colspan="2" align="center">✅</td>
+  </tr>
+</table>
+
+## 使用说明
+
+- 购买者可将本产品用于任意「**符合国家法律法规**」的应用平台，禁止用于黄赌毒等危害国家安全与稳定的网站。
+- 本产品购买后可用于开发商业项目，不限制域名和项目数量。
+- 购买者需保证不传播产品源码，不得直接对本产品（或简单包装成同类产品）进行二次转售或发布。无论有意或无意，我们有权利收回产品授权及更新权限。
+- 本产品的源码（包含全部源码，及部分源码片段），在未经我们许可下，不可以用于任何形式的开源项目，否则我们有权利收回产品授权及更新权限。
+- 因使用本产品所产生的损害及风险，包括但不限于个人损害、商业赢利丧失、贸易中断、商业信息丢失或任何其它经济损失，需由购买者自行承担，我们不承担任何责任。
+- 虚拟物品不支持退货退款。
+- 最终解释权归 Fantastic-admin 所有。
 
 ## 什么场景需要 Fantastic-admin
 

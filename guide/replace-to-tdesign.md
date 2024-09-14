@@ -3,7 +3,7 @@
 ::: warning 注意
 v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
 
-版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.hurui.me/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-tdesign.md)。
+版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.github.io/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-tdesign.md)。
 :::
 
 由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [TDesign](https://tdesign.tencent.com/vue-next)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。

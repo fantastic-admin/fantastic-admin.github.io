@@ -1,15 +1,15 @@
-import { h, nextTick, onMounted, watch } from 'vue'
-import Theme, { VPBadge } from 'vitepress/theme'
+import mediumZoom from 'medium-zoom'
 import { useRoute } from 'vitepress'
+import Theme, { VPBadge } from 'vitepress/theme'
+import { h, nextTick, onMounted, watch } from 'vue'
+import Activity from './components/Activity.vue'
+import CustomerEvaluate from './components/CustomerEvaluate.vue'
+import HomePreview from './components/HomePreview.vue'
 import './fonts/fira_code/fira_code.css'
 import './styles/var.css'
-import mediumZoom from 'medium-zoom'
-import Activity from './components/Activity.vue'
 // import ActivityCountdown from './components/ActivityCountdown.vue'
 import SponsorsAside from './components/SponsorsAside.vue'
-import HomePreview from './components/HomePreview.vue'
 import ZoomImg from './components/ZoomImg.vue'
-import CustomerEvaluate from './components/CustomerEvaluate.vue'
 
 export default {
   ...Theme,
