@@ -7,7 +7,9 @@
 那么在两级路由下，我们要如何实现页面缓存，请继续往下看。
 
 :::warning 注意
-开启缓存必须保证每个页面组件必须设置 `name` ，并且确保 `name` 唯一，可以考虑将路由 `name` 和组件 `name` 设置成一致。
+开启缓存必须保证每个页面组件必须设置 `name` ，并且确保 `name` 唯一，可以考虑将路由 `name` 和组件 `name` 设置成一致，方便记忆。
+
+如何设置组件 `name` 详细可阅读《[使用 Composition API 开发 - 组件 name](vue3-composition-api#组件-name)》。
 :::
 
 :::tip 说明
