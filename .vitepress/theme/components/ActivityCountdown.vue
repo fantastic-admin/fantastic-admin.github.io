@@ -3,13 +3,13 @@ import { onMounted, ref } from 'vue'
 
 const isVisible = ref(false)
 
-const start = new Date('2024/5/1').getTime()
-const deadline = new Date('2024/5/6').getTime()
+const start = new Date('2024/10/17').getTime()
+const deadline = new Date('2024/11/18').getTime()
 const text = ref('')
 const countdownInterval = ref()
 
 function clickBanner() {
-  location.href = '/buy.html'
+  location.href = '/buy-4yr'
 }
 
 function closeBanner() {
@@ -32,7 +32,7 @@ onMounted(() => {
         const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-        text.value = `专业版限时优惠，购买立返 100 元，点击购买<i style="margin-left: 20px; font-size: 0.75em;">距离活动结束还有 ${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒</i>`
+        text.value = `Fantastic-admin 四周年庆，全年最低价，点击查看<i style="margin-left: 20px; font-size: 0.75em;">距离活动结束还有 ${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒</i>`
       }
     }, 1000)
     document.documentElement.classList.add('mirror-site-menu-fixed')
@@ -62,7 +62,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   max-height: 40px;
-  background: linear-gradient(45deg, #0a2b4e, #835ec2);
+  background: #131A24;
   overflow: hidden;
   margin: 0;
   transition: background-size 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -88,7 +88,7 @@ onMounted(() => {
   font-size: 18px;
   letter-spacing: 2px;
   text-align: center;
-  background: linear-gradient(145deg, #c3ffac, #86ec87);
+  background: linear-gradient(145deg, #FFB800, #FF1A7A);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -127,22 +127,5 @@ onMounted(() => {
 <style>
 html.mirror-site-menu-fixed {
   --vp-layout-top-height: 40px;
-}
-html.mirror-site-menu-fixed .VPNav,
-html.mirror-site-menu-fixed .VPSidebar {
-  top: 40px;
-}
-html.mirror-site-menu-fixed {
-  scroll-padding-top: 104px;
-  overflow: auto;
-}
-html.mirror-site-menu-fixed {
-  margin-top: 42px;
-}
-@media (max-width: 960px) {
-  html.mirror-site-menu-fixed .VPNav,
-  html.mirror-site-menu-fixed .VPSidebar {
-    top: 0;
-  }
 }
 </style>

@@ -2,20 +2,20 @@ import mediumZoom from 'medium-zoom'
 import { useRoute } from 'vitepress'
 import Theme, { VPBadge } from 'vitepress/theme'
 import { h, nextTick, onMounted, watch } from 'vue'
-import Activity from './components/Activity.vue'
+// import Activity from './components/Activity.vue'
+import ActivityCountdown from './components/ActivityCountdown.vue'
 import CustomerEvaluate from './components/CustomerEvaluate.vue'
 import HomePreview from './components/HomePreview.vue'
-import './fonts/fira_code/fira_code.css'
-import './styles/var.css'
-// import ActivityCountdown from './components/ActivityCountdown.vue'
 import SponsorsAside from './components/SponsorsAside.vue'
 import ZoomImg from './components/ZoomImg.vue'
+import './fonts/fira_code/fira_code.css'
+import './styles/var.css'
 
 export default {
   ...Theme,
   Layout() {
     return h(Theme.Layout, null, {
-      'layout-top': () => h(Activity),
+      'layout-top': () => h(ActivityCountdown),
       'home-features-after': () => h(HomePreview),
       'aside-bottom': () => h(SponsorsAside),
     })

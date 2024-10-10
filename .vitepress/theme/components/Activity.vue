@@ -111,21 +111,4 @@ onMounted(() => {
 html.mirror-site-menu-fixed {
   --vp-layout-top-height: 40px;
 }
-html.mirror-site-menu-fixed .VPNav,
-html.mirror-site-menu-fixed .VPSidebar {
-  top: 40px;
-}
-html.mirror-site-menu-fixed {
-  scroll-padding-top: 104px;
-  overflow: auto;
-}
-html.mirror-site-menu-fixed {
-  margin-top: 42px;
-}
-@media (max-width: 960px) {
-  html.mirror-site-menu-fixed .VPNav,
-  html.mirror-site-menu-fixed .VPSidebar {
-    top: 0;
-  }
-}
 </style>
