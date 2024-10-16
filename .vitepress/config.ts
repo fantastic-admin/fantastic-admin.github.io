@@ -139,6 +139,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: 'https://www.vexipui.com/zh-CN',
           },
           {
+            text: 'unibest 最好的 uniapp 开发框架',
+            link: 'https://codercup2.github.io/unibest-docs',
+          },
+          {
             text: '交换友链 ?',
             link: '/links',
           },
@@ -261,7 +265,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           text: '扩展组件',
           items: [
             { text: 'Auth 鉴权', link: '/components/auth' },
-            { text: 'AuthAll 鉴权', link: '/components/auth-all' },
             { text: 'PageHeader 页头', link: '/components/page-header' },
             { text: 'PageMain 内容块', link: '/components/page-main' },
             { text: 'FixedActionBar 固定底部操作栏', link: '/components/fixed-action-bar' },
