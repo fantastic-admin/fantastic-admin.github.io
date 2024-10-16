@@ -2,6 +2,46 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.12.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.12.0)
+🚨 Breaking Changes
+
+- 重构鉴权指令、鉴权组件 &nbsp;-&nbsp; by @hooray [<samp>(c34c2)</samp>](https://github.com/fantastic-admin/basic/commit/c34c2d1)
+
+🐞 Bug Fixes
+
+- 修复顶部相关布局时，工具栏重复渲染 &nbsp;-&nbsp; by @hooray [<samp>(026df)</samp>](https://github.com/fantastic-admin/basic/commit/026dfdb)
+- 修复顶部相关布局时，移动端下工具栏不显示 &nbsp;-&nbsp; by @hooray [<samp>(efd85)</samp>](https://github.com/fantastic-admin/basic/commit/efd8536)
+- 修复vscode无法校验css文件 &nbsp;-&nbsp; by @hooray [<samp>(5fcfc)</samp>](https://github.com/fantastic-admin/basic/commit/5fcfcb7)
+
+🏎 Performance
+
+- 优化导航菜单折叠 &nbsp;-&nbsp; by @hooray [<samp>(15983)</samp>](https://github.com/fantastic-admin/basic/commit/1598324)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.12.0)
+🚨 Breaking Changes
+
+- 使用 watermark-js-plus 重构水印功能 &nbsp;-&nbsp; by @hooray [<samp>(3cce7)</samp>](https://github.com/fantastic-admin/pro/commit/3cce73ce)
+- 重构鉴权指令、鉴权组件 &nbsp;-&nbsp; by @hooray [<samp>(f70e5)</samp>](https://github.com/fantastic-admin/pro/commit/f70e5d6c)
+
+🚀 Features
+
+- Dayjs 国际化跟随框架设置 &nbsp;-&nbsp; by @hooray [<samp>(8226c)</samp>](https://github.com/fantastic-admin/pro/commit/8226c68d)
+
+🐞 Bug Fixes
+
+- 修复应用配置里工具栏关闭的功能依旧会在在偏好设置里显示的bug &nbsp;-&nbsp; by @hooray [<samp>(00089)</samp>](https://github.com/fantastic-admin/pro/commit/00089514)
+- 修复顶部相关布局时，工具栏重复渲染 &nbsp;-&nbsp; by @hooray [<samp>(d0ad1)</samp>](https://github.com/fantastic-admin/pro/commit/d0ad1deb)
+- 修复顶部相关布局时，移动端下工具栏不显示 &nbsp;-&nbsp; by @hooray [<samp>(d7107)</samp>](https://github.com/fantastic-admin/pro/commit/d71075d8)
+- 修复vscode无法校验css文件 &nbsp;-&nbsp; by @hooray [<samp>(e2d64)</samp>](https://github.com/fantastic-admin/pro/commit/e2d64439)
+
+🏎 Performance
+
+- 优化导航菜单折叠 &nbsp;-&nbsp; by @hooray [<samp>(2cfe6)</samp>](https://github.com/fantastic-admin/pro/commit/2cfe6b5c)
+:::
+
 ## 4.11.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.11.0)
