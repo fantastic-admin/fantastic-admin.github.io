@@ -31,9 +31,24 @@ meta: {
 
 路由权限是比较暴力的，即没有权限则该路由页面无法访问，并且也不会在导航栏中显示。但在实际业务中，遇到更多的情况通常是，可以访问路由页面，但会根据不同权限，使用页面里的不同功能，这时候就需要用到下面三种鉴权方式。
 
+## 鉴权指令
+
+对于单个元素，提供了 `v-auth` 指令。
+
+```vue-html
+<!-- 单权限验证 -->
+<button v-auth="'department.create'">新增部门</button>
+
+<!-- 多权限验证，用户只要具备其中任何一个权限，则验证通过 -->
+<button v-auth="['department.create', 'department.edit']">新增部门</button>
+
+<!-- 多权限验证，用户必须具备全部权限，才验证通过 -->
+<button v-auth.all="['department.create', 'department.edit']">新增部门</button>
+```
+
 ## 鉴权组件
 
-页面中某个模块，当前用户具备该权限是如何显示，不具备该权限又是如何显示，针对这样的需求，框架提供了 `<Auth>` 和 `<AuthAll>` 组件，具体使用如下：
+页面中某个模块，当前用户具备该权限是如何显示，不具备该权限又是如何显示，针对这样的需求，框架提供了 `<Auth>` 组件。
 
 ```vue-html
 <!-- 单权限验证 -->
@@ -53,27 +68,12 @@ meta: {
 </Auth>
 
 <!-- 多权限验证，用户必须具备全部权限，才验证通过 -->
-<AuthAll :value="['department.create', 'department.edit']">
+<Auth :value="['department.create', 'department.edit']" all>
   <p>你有该权限</p>
   <template #no-auth>
     <p>你没有该权限</p>
   </template>
-</AuthAll>
-```
-
-## 鉴权指令
-
-对于单个元素，也提供了 `v-auth` 和 `v-auth-all` 鉴权指令，使用上对比鉴权组件更方便，当然它能做的事情也更简单。
-
-```vue-html
-<!-- 单权限验证 -->
-<button v-auth="'department.create'">新增部门</button>
-
-<!-- 多权限验证，用户只要具备其中任何一个权限，则验证通过 -->
-<button v-auth="['department.create', 'department.edit']">新增部门</button>
-
-<!-- 多权限验证，用户必须具备全部权限，才验证通过 -->
-<button v-auth-all="['department.create', 'department.edit']">新增部门</button>
+</Auth>
 ```
 
 ## 鉴权函数
