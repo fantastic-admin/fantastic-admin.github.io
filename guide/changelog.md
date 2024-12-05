@@ -2,6 +2,23 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## 4.12.1
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.12.1)
+🐞 Bug Fixes
+
+- 修复文件系统路由模式下主导航高亮效果不更新 &nbsp;-&nbsp; by @hooray [<samp>(d40c4)</samp>](https://github.com/fantastic-admin/basic/commit/d40c42a)
+- 修复退出登录后Tab页不清除的问题 &nbsp;-&nbsp; by @ResJI and @hooray in https://github.com/fantastic-admin/basic/issues/46 [<samp>(88900)</samp>](https://github.com/fantastic-admin/basic/commit/88900d6)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v4.12.1)
+🐞 Bug Fixes
+
+- 修复文件系统路由模式下主导航高亮效果不更新 &nbsp;-&nbsp; by @hooray [<samp>(7a031)</samp>](https://github.com/fantastic-admin/pro/commit/7a03105f)
+- 修复双击标签页可关闭固定或常驻标签的问题 &nbsp;-&nbsp; by @hooray [<samp>(9a836)</samp>](https://github.com/fantastic-admin/pro/commit/9a836f9f)
+- 修复导航顶部面板模式切换路由时会自动显示bug &nbsp;-&nbsp; by @hooray [<samp>(68aa3)</samp>](https://github.com/fantastic-admin/pro/commit/68aa3339)
+:::
+
 ## 4.12.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v4.12.0)
