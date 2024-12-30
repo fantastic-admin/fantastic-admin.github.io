@@ -136,7 +136,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 - 默认值：`undefined`
 - 说明：导航中显示的图标
 
-该项配置最终会通过 `<FaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
+该项配置最终会通过 `<FaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
 
 ### activeIcon <Badge type="pro" text="专业版" />
 
@@ -144,7 +144,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 - 默认值：`undefined`
 - 说明：导航激活时显示的图标
 
-该项配置最终会通过 `<FaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
+该项配置最终会通过 `<FaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
 
 ### defaultOpened
 

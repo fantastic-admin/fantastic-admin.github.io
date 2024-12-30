@@ -13,17 +13,17 @@
 
 ```vue-html
 <!-- 无法使用 -->
-<el-button icon="el-icon-edit">编辑</el-button>
+<ElButton icon="el-icon-edit">编辑</ElButton>
 
 <!-- 可以使用插槽代替 -->
-<el-button>
+<ElButton>
   <template #icon>
-    <el-icon>
-      <svg-icon name="ep:edit" />
-    </el-icon>
+    <ElIcon>
+      <FaIcon name="ep:edit" />
+    </ElIcon>
   </template>
   编辑
-</el-button>
+</ElButton>
 ```
 
 如果你习惯 Element Plus 官方图标的使用方式，需执行 `pnpm install @element-plus/icons-vue` 安装依赖，并按照官方的使用方式引入图标，点击[查看](http://element-plus.org/zh-CN/component/icon.html)详细介绍。

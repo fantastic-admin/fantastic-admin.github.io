@@ -36,7 +36,7 @@ vue-element-admin 一共只提供了 6 个配置项（`title` `showSettings` `ta
 
 ### SVG 图标
 
-vue-element-admin 将 svg 文件存放在 `/src/icons/svg/` 目录下，这部分的 svg 文件可直接拷贝到 Fantastic-admin 的 `/src/assets/icon/` 目录下，并且我们还提供了 `<svg-icon />` 组件方便直接使用，详细可阅读《[图标](svg-icon)》。
+vue-element-admin 将 svg 文件存放在 `/src/icons/svg/` 目录下，这部分的 svg 文件可直接拷贝到 Fantastic-admin 的 `/src/assets/icon/` 目录下，并且我们还提供了 `<FaIcon />` 组件方便直接使用，详细可阅读《[图标](icon)》。
 
 ### 图片
 
