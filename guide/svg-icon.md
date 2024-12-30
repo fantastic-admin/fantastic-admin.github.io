@@ -4,11 +4,11 @@
 
 ## 自定义图标
 
-你可以去[阿里巴巴矢量图标库](https://www.iconfont.cn/)，或者其它支持下载 SVG 图标文件的网站，又或者是设计师绘制的 SVG 文件，将准备好的 SVG 图标文件放到 `/src/assets/icons/` 目录下，然后在页面中就可以通过 SvgIcon 组件使用了，name 就是 svg 的文件名。
+你可以去[阿里巴巴矢量图标库](https://www.iconfont.cn/)，或者其它支持下载 SVG 图标文件的网站，又或者是设计师绘制的 SVG 文件，将准备好的 SVG 图标文件放到 `/src/assets/icons/` 目录下，然后在页面中就可以通过 FaIcon 组件使用了，name 就是 svg 的文件名。
 
 ```vue
 <!-- /src/assets/icons/example.svg -->
-<SvgIcon name="example" />
+<FaIcon name="example" />
 ```
 
 ## Iconify 图标
@@ -36,10 +36,10 @@ Unocss 方案采用了 CSS 去处理图标的展示，框架大部分核心模�
 <i class="i-ep:search" />
 ```
 
-当然你同样也可以通过 SvgIcon 使用它。
+当然你同样也可以通过 FaIcon 使用它。
 
 ```vue
-<SvgIcon name="i-ep:arrow-right" />
+<FaIcon name="i-ep:arrow-right" />
 ```
 
 在使用 Unocss 图标时，需要注意以下两点：
@@ -48,7 +48,7 @@ Unocss 方案采用了 CSS 去处理图标的展示，框架大部分核心模�
 
     ```vue
     <!-- 这样不会生效 -->
-    <SvgIcon :name="'i-ep' + ':search'" />
+    <FaIcon :name="'i-ep' + ':search'" />
     ```
 
 - 图标字符串不支持异步返回
@@ -56,7 +56,7 @@ Unocss 方案采用了 CSS 去处理图标的展示，框架大部分核心模�
     ```vue
     <!-- 这样不会生效 -->
     <!-- 假设 name 是异步请求返回的数据，name 为 i-ep:search -->
-    <SvgIcon :name="name" />
+    <FaIcon :name="name" />
     ```
 
 如果确实有以上需求，你可以使用 Iconify 原生提供的方案。
@@ -77,10 +77,10 @@ import { Icon } from '@iconify/vue'
 </template>
 ```
 
-当然这么使用并没有很方便，依旧还是需要手动导入一个 Icon 组件。如果你也觉得麻烦的话，那么你可以使用 SvgIcon 组件来展示，框架已经帮你做好的所有处理。
+当然这么使用并没有很方便，依旧还是需要手动导入一个 Icon 组件。如果你也觉得麻烦的话，那么你可以使用 FaIcon 组件来展示，框架已经帮你做好的所有处理。
 
 ```vue
-<SvgIcon name="ep:arrow-right" />
+<FaIcon name="ep:arrow-right" />
 ```
 
 ### 离线/内网环境使用

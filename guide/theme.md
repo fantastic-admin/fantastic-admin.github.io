@@ -255,7 +255,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 哀悼模式 <Badge type="tip" text="v4.9.0 新增" />
+## 哀悼模式
 
 在应用配置中设置：
 
@@ -267,7 +267,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 色弱模式 <Badge type="tip" text="v4.9.0 新增" />
+## 色弱模式
 
 在应用配置中设置：
 

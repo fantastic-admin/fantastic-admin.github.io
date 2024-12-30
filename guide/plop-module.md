@@ -147,7 +147,7 @@ function onEdit(row: any) {
 <PageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
   <ElButton size="default" round @click="goBack">
     <template #icon>
-      <SvgIcon name="i-ep:arrow-left" />
+      <FaIcon name="i-ep:arrow-left" />
     </template>
     返回
   </ElButton>

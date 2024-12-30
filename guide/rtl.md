@@ -1,4 +1,4 @@
-# RTL 模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
+# RTL 模式 <Badge type="pro" text="专业版" />
 
 ## 使用
 

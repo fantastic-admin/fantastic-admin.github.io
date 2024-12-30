@@ -11,8 +11,8 @@
 - 侧边栏模式（无主导航）
 - 侧边栏精简模式 <Badge type="pro" text="专业版" />
 - 顶部精简模式 <Badge type="pro" text="专业版" />
-- 侧边栏面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
-- 顶部面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
+- 侧边栏面板模式 <Badge type="pro" text="专业版" />
+- 顶部面板模式 <Badge type="pro" text="专业版" />
 
 ### 顶部模式
 
@@ -74,7 +74,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-### 侧边栏面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
+### 侧边栏面板模式 <Badge type="pro" text="专业版" />
 
 ![](/menu-mode-side-panel.png){data-zoomable}
 
@@ -86,7 +86,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-### 顶部面板模式 <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.9.0 新增" />
+### 顶部面板模式 <Badge type="pro" text="专业版" />
 
 ![](/menu-mode-head-panel.png){data-zoomable}
 

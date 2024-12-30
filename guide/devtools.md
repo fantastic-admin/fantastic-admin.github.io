@@ -1,4 +1,4 @@
-# 开发者工具 <Badge type="tip" text="v4.5.0 新增" />
+# 开发者工具
 
 :::info
 该特性由 [Vue DevTools Next](https://github.com/vuejs/devtools-next) 提供技术支持。

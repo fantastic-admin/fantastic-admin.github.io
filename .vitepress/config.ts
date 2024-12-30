@@ -57,6 +57,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             text: '历史版本文档',
             items: [
               {
+                text: 'v4 (Vue3版本)',
+                link: 'https://fantastic-admin.hurui.me/v4-docs/',
+              },
+              {
                 text: 'v3 (Vue3版本)',
                 link: 'https://fantastic-admin.hurui.me/v3-docs/',
               },
@@ -273,7 +277,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'ImagesUpload 多图上传', link: '/components/images-upload' },
             { text: 'FileUpload 文件上传', link: '/components/file-upload' },
             { text: 'ImagePreview 图片预览', link: '/components/image-preview' },
-            { text: 'SvgIcon SVG图标', link: '/components/svg-icon' },
+            { text: 'FaIcon 图标', link: '/components/svg-icon' },
             { text: 'Trend 趋势标记', link: '/components/trend' },
             { text: 'PcasCascader 省市区街道联动', link: '/components/pcas-cascader' },
             { text: 'LayoutContainer 布局容器', link: '/components/layout-container' },
@@ -294,6 +298,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
               text: '专业版',
               items: [
                 { text: '购买永久专业版', link: '/buy' },
+                { text: '购买 v4 专业版', link: '/buy-v4' },
                 { text: '购买 v3 专业版', link: '/buy-v3' },
                 { text: '购买 v2 专业版', link: '/buy-v2' },
                 { text: '免费领取 v1 专业版', link: '/get-v1-pro' },

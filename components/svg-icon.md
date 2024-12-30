@@ -1,4 +1,4 @@
-# SvgIcon SVG图标
+# FaIcon 图标
 
 ## Props
 
