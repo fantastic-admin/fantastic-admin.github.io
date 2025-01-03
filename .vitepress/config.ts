@@ -299,6 +299,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaSwitch 开关', link: '/components/fa-switch' },
             { text: 'FaTabs 标签页', link: '/components/fa-tabs' },
             { text: 'FaTooltip 文字提示', link: '/components/fa-tooltip' },
+            { text: 'FaToast 轻提示', link: '/components/fa-toast' },
             { text: 'FaTrend 趋势标记', link: '/components/fa-trend' },
           ],
         },
