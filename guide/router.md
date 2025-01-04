@@ -116,7 +116,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`i18n`、`icon`、`activeIcon`、`auth` 这 5 个参数，`children` 则是存放不同的路由模块。
+主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`icon`、`activeIcon`、`badge`、`badgeVariant`、`auth` 这 6 个参数，`children` 则是存放不同的路由模块。
 
 ## 导航配置
 

@@ -2,241 +2,11 @@
 
 ## 框架主题
 
-主题配色存放在 `/themes/index.ts` 文件中，基础版和专业版内容略有不同。
+主题配色存放在 `/themes/index.ts` 文件中，基础版只提供了一套默认主题，在此不做过多介绍。
 
-### 基础版
-
-```ts
-import { hex2rgba } from '@unocss/preset-mini/utils'
-
-export const lightTheme = {
-  'color-scheme': 'light', // 请勿删除，用于判断是否为明亮主题
-  // 内置 UI
-  '--ui-primary': hex2rgba('#0f0f0f')!.join(' '),
-  '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
-  // 主体
-  '--g-bg': '#f2f2f2',
-  '--g-container-bg': '#fff',
-  '--g-border-color': '#f2f2f2',
-  // 头部
-  '--g-header-bg': '#fff',
-  '--g-header-color': '#0f0f0f',
-  '--g-header-menu-color': '#0f0f0f',
-  '--g-header-menu-hover-bg': '#dde1e3',
-  '--g-header-menu-hover-color': '#0f0f0f',
-  '--g-header-menu-active-bg': '#0f0f0f',
-  '--g-header-menu-active-color': '#fff',
-  // 主导航
-  '--g-main-sidebar-bg': '#f2f2f2',
-  '--g-main-sidebar-menu-color': '#0f0f0f',
-  '--g-main-sidebar-menu-hover-bg': '#dde1e3',
-  '--g-main-sidebar-menu-hover-color': '#0f0f0f',
-  '--g-main-sidebar-menu-active-bg': '#0f0f0f',
-  '--g-main-sidebar-menu-active-color': '#fff',
-  // 次导航
-  '--g-sub-sidebar-bg': '#fff',
-  '--g-sub-sidebar-logo-bg': '#0f0f0f',
-  '--g-sub-sidebar-logo-color': '#fff',
-  '--g-sub-sidebar-menu-color': '#0f0f0f',
-  '--g-sub-sidebar-menu-hover-bg': '#dde1e3',
-  '--g-sub-sidebar-menu-hover-color': '#0f0f0f',
-  '--g-sub-sidebar-menu-active-bg': '#0f0f0f',
-  '--g-sub-sidebar-menu-active-color': '#fff',
-}
-
-export const darkTheme = {
-  'color-scheme': 'dark',
-  // 内置 UI
-  '--ui-primary': hex2rgba('#e5e5e5')!.join(' '),
-  '--ui-text': hex2rgba('#0f0f0f')!.join(' '),
-  // 主体
-  '--g-bg': '#0a0a0a',
-  '--g-container-bg': '#141414',
-  '--g-border-color': '#15191e',
-  // 头部
-  '--g-header-bg': '#141414',
-  '--g-header-color': '#e5e5e5',
-  '--g-header-menu-color': '#a8a29e',
-  '--g-header-menu-hover-bg': '#141414',
-  '--g-header-menu-hover-color': '#e5e5e5',
-  '--g-header-menu-active-bg': '#e5e5e5',
-  '--g-header-menu-active-color': '#0a0a0a',
-  // 主导航
-  '--g-main-sidebar-bg': '#0a0a0a',
-  '--g-main-sidebar-menu-color': '#a8a29e',
-  '--g-main-sidebar-menu-hover-bg': '#141414',
-  '--g-main-sidebar-menu-hover-color': '#e5e5e5',
-  '--g-main-sidebar-menu-active-bg': '#e5e5e5',
-  '--g-main-sidebar-menu-active-color': '#0a0a0a',
-  // 次导航
-  '--g-sub-sidebar-bg': '#141414',
-  '--g-sub-sidebar-logo-bg': '#0f0f0f',
-  '--g-sub-sidebar-logo-color': '#e5e5e5',
-  '--g-sub-sidebar-menu-color': '#a8a29e',
-  '--g-sub-sidebar-menu-hover-bg': '#0a0a0a',
-  '--g-sub-sidebar-menu-hover-color': '#e5e5e5',
-  '--g-sub-sidebar-menu-active-bg': '#e5e5e5',
-  '--g-sub-sidebar-menu-active-color': '#0a0a0a',
-}
-```
-
-### 专业版
-
-与基础版不同，专业版默认提供了 12 款主题，明亮和暗黑模式各 6 款，并且主题在运行时共存，可实现动态切换。
-
-```ts
-import { hex2rgba } from '@unocss/preset-mini/utils'
-
-export default {
-  light: {
-    // 颜色主题
-    'color-scheme': 'light',
-    // 内置 UI
-    '--ui-primary': hex2rgba('#0f0f0f')!.join(' '),
-    '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
-    // 主体
-    '--g-bg': '#f2f2f2',
-    '--g-container-bg': '#fff',
-    '--g-border-color': '#f2f2f2',
-    // 头部
-    '--g-header-bg': '#fff',
-    '--g-header-color': '#0f0f0f',
-    '--g-header-menu-color': '#0f0f0f',
-    '--g-header-menu-hover-bg': '#dde1e3',
-    '--g-header-menu-hover-color': '#0f0f0f',
-    '--g-header-menu-active-bg': '#0f0f0f',
-    '--g-header-menu-active-color': '#fff',
-    // 主导航
-    '--g-main-sidebar-bg': '#f2f2f2',
-    '--g-main-sidebar-menu-color': '#0f0f0f',
-    '--g-main-sidebar-menu-hover-bg': '#dde1e3',
-    '--g-main-sidebar-menu-hover-color': '#0f0f0f',
-    '--g-main-sidebar-menu-active-bg': '#0f0f0f',
-    '--g-main-sidebar-menu-active-color': '#fff',
-    // 次导航
-    '--g-sub-sidebar-bg': '#fff',
-    '--g-sub-sidebar-logo-bg': '#0f0f0f',
-    '--g-sub-sidebar-logo-color': '#fff',
-    '--g-sub-sidebar-menu-color': '#0f0f0f',
-    '--g-sub-sidebar-menu-hover-bg': '#dde1e3',
-    '--g-sub-sidebar-menu-hover-color': '#0f0f0f',
-    '--g-sub-sidebar-menu-active-bg': '#0f0f0f',
-    '--g-sub-sidebar-menu-active-color': '#fff',
-    // 标签栏
-    '--g-tabbar-dividers-bg': '#a3a3a3',
-    '--g-tabbar-tab-color': '#a3a3a3',
-    '--g-tabbar-tab-hover-bg': '#e5e5e5',
-    '--g-tabbar-tab-hover-color': '#0f0f0f',
-    '--g-tabbar-tab-active-color': '#0f0f0f',
-  },
-  ...
-  dark: {
-    // 颜色主题
-    'color-scheme': 'dark',
-    // 内置 UI
-    '--ui-primary': hex2rgba('#e5e5e5')!.join(' '),
-    '--ui-text': hex2rgba('#0f0f0f')!.join(' '),
-    // 主体
-    '--g-bg': '#0a0a0a',
-    '--g-container-bg': '#141414',
-    '--g-border-color': '#15191e',
-    // 头部
-    '--g-header-bg': '#141414',
-    '--g-header-color': '#e5e5e5',
-    '--g-header-menu-color': '#a8a29e',
-    '--g-header-menu-hover-bg': '#141414',
-    '--g-header-menu-hover-color': '#e5e5e5',
-    '--g-header-menu-active-bg': '#e5e5e5',
-    '--g-header-menu-active-color': '#0a0a0a',
-    // 主导航
-    '--g-main-sidebar-bg': '#0a0a0a',
-    '--g-main-sidebar-menu-color': '#a8a29e',
-    '--g-main-sidebar-menu-hover-bg': '#141414',
-    '--g-main-sidebar-menu-hover-color': '#e5e5e5',
-    '--g-main-sidebar-menu-active-bg': '#e5e5e5',
-    '--g-main-sidebar-menu-active-color': '#0a0a0a',
-    // 次导航
-    '--g-sub-sidebar-bg': '#141414',
-    '--g-sub-sidebar-logo-bg': '#0f0f0f',
-    '--g-sub-sidebar-logo-color': '#e5e5e5',
-    '--g-sub-sidebar-menu-color': '#a8a29e',
-    '--g-sub-sidebar-menu-hover-bg': '#0a0a0a',
-    '--g-sub-sidebar-menu-hover-color': '#e5e5e5',
-    '--g-sub-sidebar-menu-active-bg': '#e5e5e5',
-    '--g-sub-sidebar-menu-active-color': '#0a0a0a',
-    // 标签栏
-    '--g-tabbar-dividers-bg': '#a8a29e',
-    '--g-tabbar-tab-color': '#a8a29e',
-    '--g-tabbar-tab-hover-bg': '#1b1b1b',
-    '--g-tabbar-tab-hover-color': '#e5e5e5',
-    '--g-tabbar-tab-active-color': '#e5e5e5',
-  },
-  ...
-}
-```
+<Badge type="pro" text="专业版" /> 提供了 8 套主题，每套主题都支持明亮和暗黑两种模式，并且主题支持在运行时共存，可实现动态切换。
 
 ![](/theme.gif){data-zoomable}
-
-如果框架提供的主题风格满足不了你的需求，你还可以自定义新的主题。
-
-```ts
-import { hex2rgba } from '@unocss/preset-mini/utils'
-
-export default {
-  newThemeName: { // 主题名称
-    // 颜色主题
-    'color-scheme': 'light', // 可选值 light/dark ，表示该主题在明亮或暗黑模式下的配色
-    // 内置 UI
-    '--ui-primary': hex2rgba('#409eff')!.join(' '),
-    '--ui-text': hex2rgba('#fcfcfc')!.join(' '),
-    // 主体
-    '--g-bg': '#f2f2f2',
-    '--g-container-bg': '#fff',
-    '--g-border-color': '#f2f2f2',
-    // 头部
-    '--g-header-bg': '#222b45',
-    '--g-header-color': '#fff',
-    '--g-header-menu-color': '#fff',
-    '--g-header-menu-hover-bg': '#334067',
-    '--g-header-menu-hover-color': '#fff',
-    '--g-header-menu-active-bg': '#334067',
-    '--g-header-menu-active-color': '#fff',
-    // 主导航
-    '--g-main-sidebar-bg': '#222b45',
-    '--g-main-sidebar-menu-color': '#fff',
-    '--g-main-sidebar-menu-hover-bg': '#334067',
-    '--g-main-sidebar-menu-hover-color': '#fff',
-    '--g-main-sidebar-menu-active-bg': '#334067',
-    '--g-main-sidebar-menu-active-color': '#fff',
-    // 次导航
-    '--g-sub-sidebar-bg': '#fff',
-    '--g-sub-sidebar-logo-bg': '#222b45',
-    '--g-sub-sidebar-logo-color': '#fff',
-    '--g-sub-sidebar-menu-color': '#0f0f0f',
-    '--g-sub-sidebar-menu-hover-bg': '#dde1e3',
-    '--g-sub-sidebar-menu-hover-color': '#0f0f0f',
-    '--g-sub-sidebar-menu-active-bg': '#409eff',
-    '--g-sub-sidebar-menu-active-color': '#fff',
-    // 标签栏
-    '--g-tabbar-dividers-bg': '#a3a3a3',
-    '--g-tabbar-tab-color': '#a3a3a3',
-    '--g-tabbar-tab-hover-bg': '#e5e5e5',
-    '--g-tabbar-tab-hover-color': '#0f0f0f',
-    '--g-tabbar-tab-active-color': '#0f0f0f',
-  },
-}
-```
-
-最后在应用配置中使用该主题：
-
-```ts {2-5}
-const globalSettings: Settings.all = {
-  app: {
-    // 如果主题是暗黑模式下使用的，则 darkTheme: 'newThemeName'
-    lightTheme: 'newThemeName',
-  },
-}
-```
 
 ## 颜色方案
 
@@ -255,11 +25,39 @@ const globalSettings: Settings.all = {
 }
 ```
 
+## 主题同步 <Badge type="pro" text="专业版" />
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    themeSync: true,
+  },
+}
+```
+
+由于一套主题分别有明亮和暗黑两种模式，开启时将共用一套主题，关闭后可以分别设置明亮和暗黑模式的主题。
+
+## 圆角系数
+
+在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    radius: 0.5,
+  },
+}
+```
+
+该设置会影响到框架中所有圆角组件的圆角系数，例如按钮、卡片、弹窗等。
+
 ## 哀悼模式
 
 在应用配置中设置：
 
-```ts {2-9}
+```ts {2-4}
 const globalSettings: Settings.all = {
   app: {
     enableMournMode: true,
@@ -271,7 +69,7 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-9}
+```ts {2-4}
 const globalSettings: Settings.all = {
   app: {
     enableColorAmblyopiaMode: true,
@@ -280,8 +78,6 @@ const globalSettings: Settings.all = {
 ```
 
 ## 导航栏风格 <Badge type="pro" text="专业版" />
-
-### 风格
 
 在应用配置中设置：
 
@@ -294,27 +90,12 @@ const globalSettings: Settings.all = {
      * line 线条
      * dot 圆点
      */
-    style: '', // v4.9.0 之前版本为 menuActiveStyle
+    style: '',
   },
 }
 ```
 
 ![](/menu-style.png){data-zoomable}
-
-### 圆角
-
-在应用配置中设置：
-
-```ts {2-5}
-const globalSettings: Settings.all = {
-  menu: {
-    // 导航栏是否圆角
-    isRounded: true,
-  },
-}
-```
-
-![](/menu-isrounded.png){data-zoomable}
 
 ## 面包屑导航风格 <Badge type="pro" text="专业版" />
 

@@ -110,12 +110,12 @@ import { withBase } from 'vitepress'
   <tr>
     <td align="center">主题风格</td>
     <td align="center">明亮 1 款 / 暗黑 1 款</td>
-    <td align="center" style="color: #e34d22;">明亮 6 款 / 暗黑 6 款</td>
+    <td align="center" style="color: #e34d22;">明亮 8 款 / 暗黑 8 款</td>
   </tr>
   <tr>
-    <td align="center">导航路由功能配置项</td>
-    <td align="center">9 个</td>
-    <td align="center" style="color: #e34d22;">22 个</td>
+    <td align="center">路由(导航)功能配置项</td>
+    <td align="center">10 个</td>
+    <td align="center" style="color: #e34d22;">24 个</td>
   </tr>
   <tr>
     <td align="center">外链导航</td>
@@ -143,9 +143,9 @@ import { withBase } from 'vitepress'
     <td align="center">✅</td>
   </tr>
   <tr>
-    <td align="center">扩展组件</td>
-    <td align="center">13 个</td>
-    <td align="center" style="color: #e34d22;">21 个</td>
+    <td align="center">内建组件</td>
+    <td align="center">29 个</td>
+    <td align="center" style="color: #e34d22;">35 个</td>
   </tr>
   <tr>
     <td align="center">用户偏好设置</td>
@@ -169,6 +169,11 @@ import { withBase } from 'vitepress'
   </tr>
   <tr>
     <td align="center">错误日志上报</td>
+    <td align="center"></td>
+    <td align="center">✅</td>
+  </tr>
+  <tr>
+    <td align="center">网站更新提示</td>
     <td align="center"></td>
     <td align="center">✅</td>
   </tr>

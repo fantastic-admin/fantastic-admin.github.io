@@ -226,6 +226,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: '私有 Storage 数据', link: '/guide/storage' },
             { text: '首屏 Loading', link: '/guide/loading' },
             { text: '页面水印', link: '/guide/watermark' },
+            { text: '检查更新', link: '/guide/check-updates' },
             { text: '错误日志', link: '/guide/error-log' },
             { text: '自定义字体', link: '/guide/font' },
             { text: '用户偏好设置', link: '/guide/preferences' },
