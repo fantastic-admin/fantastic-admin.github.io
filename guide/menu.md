@@ -1,24 +1,30 @@
 # 导航菜单
 
-## 切换主导航同时跳转页面
+## 主导航点击模式
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-10}
 const globalSettings: Settings.all = {
   menu: {
-    switchMainMenuAndPageJump: true,
+    /**
+     * 主导航点击模式
+     * @默认值 `'switch'` 切换
+     * @可选值 `'jump'` 跳转
+     * @可选值 `'smart'` 智能选择，判断次导航是否只有且只有一个可访问的菜单进行切换或跳转操作
+     */
+    mainMenuClickMode: 'jump',
   },
 }
 ```
 
-![](/menu-switchmainmenuandpagejump.gif){data-zoomable}
+![](/menu-mainmenuclickmode.gif){data-zoomable}
 
 :::tip 扩展阅读
 
 该特性可以扩展出次导航只有一个导航时自动隐藏的效果：
 
-![](/menu-switchmainmenuandpagejumpplus.gif){data-zoomable}
+![](/menu-mainmenuclickmodeplus.gif){data-zoomable}
 
 你只需要在某个主导航下只保留一个次导航，并且通过 `meta.menu` 将其隐藏，就像这样：
 

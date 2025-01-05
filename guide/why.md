@@ -24,7 +24,7 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 先进的技术栈能保证开发者可以使用更新的特性和语法糖去编写业务代码，Fantastic-admin 采用了目前最先进的技术栈，包括但不限于：
 
-Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript
+Vite + Vue3 + Vue-router + Pinia + UnoCSS + Shadcn-vue + TypeScript
 
 ## 颜值在线
 
@@ -32,11 +32,9 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript
 
 ## 风格可配置
 
-提供明亮和暗黑共计 **12** 款颜色主题，**7** 款导航栏模式，**2** 款导航栏填充风格，**4** 款导航栏激活风格和 **4** 款页宽模式。
+提供明亮和暗黑共计 **16** 款颜色主题，**7** 款导航栏模式，**4** 款导航栏激活风格和 **4** 款页宽模式。
 
 通过布局与主题组合搭配，可实现**数百种**不同风格的界面。
-
-![](/intro-1.png){data-zoomable}
 
 ## UI 组件库可替换
 
@@ -72,11 +70,9 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + TypeScript
   </tr>
 </table>
 
-## 丰富的导航设置
+## 丰富的菜单导航设置
 
 对比同类产品只有几种基础的设置项，Fantastic-admin 提供了**十余种**设置项，可以设置导航的各种展示形态，包括但不限于标题、图标、徽标、外链、权限、缓存等。
-
-详细可阅读《[路由（导航）- 导航配置](router#导航配置)》。
 
 ## 导航分组
 

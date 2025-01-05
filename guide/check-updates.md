@@ -4,11 +4,19 @@
 
 在应用配置中设置：
 
-```ts {2-5}
+```ts {2-13}
 const globalSettings: Settings.all = {
   app: {
-    enableCheckUpdates: true,
-    checkUpdatesInterval: 1,
+    /**
+     * 是否开启检查更新
+     * @默认值 `false`
+     */
+    enableCheckUpdates: true
+    /**
+     * 检查更新间隔时间，单位分钟
+     * @默认值 `1`
+     */
+    checkUpdatesInterval: 1
   },
 }
 ```

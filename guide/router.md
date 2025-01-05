@@ -443,7 +443,7 @@ export default routes
 
 - 类型：`boolean | string | number | (() => boolean | string | number)`
 - 默认值：`false`
-- 说明：导航标记
+- 说明：导航徽章
 
 设置不同的类型值，展示效果也会不同：
 
@@ -461,7 +461,7 @@ badge: () => globalStore.number
 
 - 类型：`'default' | 'secondary' | 'destructive' | (() => 'default' | 'secondary' | 'destructive')`
 - 默认值：`'default'`
-- 说明：导航标记颜色
+- 说明：导航徽章颜色
 
 如果标记需要动态更新，请设置为箭头函数形式，并返回外部变量，例如搭配 pinia 一起使用。
 
