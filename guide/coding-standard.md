@@ -68,3 +68,11 @@
 ```
 
 然后手动删除 `.git/hooks/pre-commit` 文件即可。
+
+## 规范化 commit
+
+::: info
+该特性由 [cz-git](https://github.com/Zhengqbbb/cz-git) 提供技术支持。
+:::
+
+需先全局安装 `pnpm install -g commitizen` ，然后就可以使用 `pnpm run commit` 来规范化 commit 信息。
