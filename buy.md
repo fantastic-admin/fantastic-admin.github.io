@@ -144,8 +144,8 @@ import { withBase } from 'vitepress'
   </tr>
   <tr>
     <td align="center">内建组件</td>
-    <td align="center">29 个</td>
-    <td align="center" style="color: #e34d22;">35 个</td>
+    <td align="center">28 个</td>
+    <td align="center" style="color: #e34d22;">38 个</td>
   </tr>
   <tr>
     <td align="center">用户偏好设置</td>

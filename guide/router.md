@@ -116,7 +116,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`icon`、`activeIcon`、`badge`、`badgeVariant`、`auth` 这 6 个参数，`children` 则是存放不同的路由模块。
+主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`icon`、`activeIcon`、`badge`、`badgeVariant`、`auth`、`sort` 这些参数，`children` 则是存放不同的路由模块。
 
 ## 导航配置
 
@@ -499,40 +499,6 @@ badgeVariant: () => globalStore.status
 
 该设置仅在菜单导航里点击生效。
 
-### link
-
-- 类型：`string`
-- 默认值：`undefined`
-- 说明：外部网页链接，会在浏览器新窗口访问该链接
-
-外部网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性。
-
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/xxx',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/xxx/link',
-  meta: {
-    title: '外部网页',
-  },
-  children: [
-    {
-      path: 'link',
-      redirect: '',
-      name: 'Link',
-      meta: {
-        title: 'Gitee 仓库',
-        link: 'https://gitee.com/fantastic-admin/basic',
-      },
-    },
-  ],
-}
-
-export default routes
-```
-
 ### iframe <Badge type="pro" text="专业版" />
 
 - 类型：`string | boolean`
@@ -632,6 +598,40 @@ router.push({
 })
 ```
 
+### link
+
+- 类型：`string`
+- 默认值：`undefined`
+- 说明：外部网页链接，会在浏览器新窗口访问该链接
+
+外部网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性。
+
+```ts
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/xxx',
+  component: () => import('@/layouts/index.vue'),
+  redirect: '/xxx/link',
+  meta: {
+    title: '外部网页',
+  },
+  children: [
+    {
+      path: 'link',
+      redirect: '',
+      name: 'Link',
+      meta: {
+        title: 'Gitee 仓库',
+        link: 'https://gitee.com/fantastic-admin/basic',
+      },
+    },
+  ],
+}
+
+export default routes
+```
+
 ### copyright <Badge type="pro" text="专业版" />
 
 - 类型：`boolean`
@@ -639,6 +639,12 @@ router.push({
 - 说明：是否显示底部版权信息
 
 该设置比应用配置里的 `copyright.enable` 优先级高，不设置则继承应用配置里的设置。
+
+### sort <Badge type="pro" text="专业版" />
+
+- 类型：`number`
+- 默认值：`0`
+- 说明：导航排序，数字越大越靠前
 
 ### whiteList <Badge type="pro" text="专业版" />
 

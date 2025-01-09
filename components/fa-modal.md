@@ -12,8 +12,10 @@
 | closable              | 是否显示关闭按钮   | `boolean`                                     | `true`   |
 | maximize              | 是否最大化         | `boolean`                                     | `false`  |
 | maximizable           | 是否显示最大化按钮 | `boolean`                                     | `false`  |
-| centered              | 头部是否居中       | `boolean`                                     | `false`  |
-| bordered              | 是否显示边框       | `boolean`                                     | `true`   |
+| draggable             | 是否可拖动         | `boolean`                                     | `false`  |
+| center                | 是否内容居中       | `boolean`                                     | `false`  |
+| border                | 是否显示边框       | `boolean`                                     | `true`   |
+| alignCenter           | 是否窗口居中       | `boolean`                                     | `false`  |
 | overlay               | 是否显示遮罩       | `boolean`                                     | `true`   |
 | overlayBlur           | 是否开启遮罩模糊   | `boolean`                                     | `false`  |
 | showConfirmButton     | 是否显示确认按钮   | `boolean`                                     | `true`   |
