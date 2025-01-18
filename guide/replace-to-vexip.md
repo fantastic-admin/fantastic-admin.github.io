@@ -1,11 +1,5 @@
 # 替换为 Vexip UI
 
-::: warning 注意
-v4.0 之前的版本不支持替换组件库，本文适用于 v4.3.0 及之后的版本。
-
-版本号 ≥ v4.0 且 < v4.3.0 请查看[历史文档](https://github.com/fantastic-admin/fantastic-admin.github.io/blob/01be97f74f8ae7b14ccdec108941b5fd5b58bd28/guide/replace-to-vexip.md)。
-:::
-
 由于框架默认使用的是 Element Plus 组件库，并且演示源码中大量示例也使用了 Element Plus，如果你需要使用 [Vexip UI](https://www.vexipui.com/zh-CN/)，请拉取框架源码分支，或者到 [Github Releases](https://github.com/fantastic-admin/basic/releases) 页面下载框架源码压缩包。
 
 专业版用户也同样，请到专业版仓库下载框架源码。
@@ -39,7 +33,7 @@ pnpm add vexip-ui
 }
 ```
 
-整体修改 `/src/ui-provider/index.ts` 文件
+整体修改 `/src/ui/provider/index.ts` 文件
 
 ```ts
 import type { App } from 'vue'
@@ -56,7 +50,7 @@ function install(app: App) {
 export default { install }
 ```
 
-整体修改 `/src/ui-provider/index.vue` 文件
+整体修改 `/src/ui/provider/index.vue` 文件
 
 ```vue
 <script setup lang="ts">
@@ -79,8 +73,7 @@ import { zhCNLocale } from 'vexip-ui'
      ├─ FileUpload
      ├─ ImagePreview
      ├─ ImagesUpload
-     ├─ ImageUpload
-     └─ PcasCascader
+     └─ ImageUpload
 ```
 
 :::
@@ -102,7 +95,7 @@ import { zhCNLocale } from 'vexip-ui'
 }
 ```
 
-整体修改 `/src/ui-provider/index.ts` 文件
+整体修改 `/src/ui/provider/index.ts` 文件
 
 ```ts
 import type { App } from 'vue'
@@ -127,12 +120,12 @@ export default { install }
 export { locales }
 ```
 
-整体修改 `/src/ui-provider/index.vue` 文件
+整体修改 `/src/ui/provider/index.vue` 文件
 
 ```vue
 <script setup lang="ts">
-import { locales } from './index'
 import useSettingsStore from '@/store/modules/settings'
+import { locales } from './index'
 
 const settingsStore = useSettingsStore()
 </script>
@@ -153,7 +146,6 @@ const settingsStore = useSettingsStore()
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ IconPicker
      ├─ ImagePreview
      ├─ ImagesUpload
      ├─ ImageUpload
@@ -161,10 +153,6 @@ const settingsStore = useSettingsStore()
 ```
 
 :::
-
-## 修改登录页
-
-由于登录页使用了 Element Plus 组件，并且删除会导致框架无法正常使用，所以此处需要开发者自行修改或者重新制作登录页，或者也可以参考下方示例中已经修改好的登录页。
 
 ## 卸载
 
