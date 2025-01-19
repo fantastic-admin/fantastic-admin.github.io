@@ -197,18 +197,17 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
         {
           text: '进阶',
           items: [
-            { text: '登录', link: '/guide/login' },
+            { text: '登录相关', link: '/guide/login' },
             { text: '权限', link: '/guide/permission' },
             { text: '主页', link: '/guide/home' },
             { text: '布局', link: '/guide/layout' },
             { text: '主题', link: '/guide/theme' },
             { text: '动态标题', link: '/guide/title' },
             { text: '导航菜单', link: '/guide/menu' },
-            { text: '顶栏', link: '/guide/topbar' },
-            { text: '标签栏', link: '/guide/tabbar' },
-            { text: '工具栏', link: '/guide/toolbar' },
-            { text: '收藏夹', link: '/guide/favorites' },
-            { text: '面包屑导航', link: '/guide/breadcrumb' },
+            { text: '顶栏', link: '/guide/topbar', items: [
+              { text: '标签栏', link: '/guide/tabbar' },
+              { text: '工具栏', link: '/guide/toolbar' },
+            ] },
             { text: '快捷键', link: '/guide/hotkeys' },
             { text: '版权信息', link: '/guide/copyright' },
           ],

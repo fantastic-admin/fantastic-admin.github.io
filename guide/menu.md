@@ -20,9 +20,7 @@ const globalSettings: Settings.all = {
 
 ![](/menu-mainmenuclickmode.gif){data-zoomable}
 
-:::tip 扩展阅读
-
-该特性可以扩展出次导航只有一个导航时自动隐藏的效果：
+该特性支持次导航只有一个导航时自动隐藏：
 
 ![](/menu-mainmenuclickmodeplus.gif){data-zoomable}
 
@@ -75,8 +73,6 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-:::
-
 ## 次导航可同时展开多个子项
 
 在应用配置中设置：
@@ -103,7 +99,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-![](/menu-submenucollapse.gif){data-zoomable}
+![](/menu-submenucollapse.png){data-zoomable}
 
 ## 开启次导航展开/收起按钮
 

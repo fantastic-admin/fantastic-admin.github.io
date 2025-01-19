@@ -14,25 +14,15 @@ const globalSettings: Settings.all = {
 
 详细可阅读《[主题 - 标签栏风格](theme#标签栏风格)》
 
-## 功能介绍
+## 右键菜单
 
-### 刷新
+其中**固定**、**最大化**、**新窗口打开**为 <Badge type="pro" text="专业版" /> 功能。
 
-对当前标签页进行刷新，非激活的标签页无法刷新，并且刷新操作会强制清除页面缓存数据。
-
-![](/tabbar1.gif){data-zoomable}
-
-### 关闭
-
-关闭标签页分关闭当前、关闭其它、关闭左侧、关闭右侧，当不满足关闭条件时，选项置灰，无法点击。
-
-![](/tabbar2.gif){data-zoomable}
+![](/tabbar-context.png){data-zoomable}
 
 ### 固定 <Badge type="pro" text="专业版" />
 
-将指定标签页设为固定状态，固定的标签页右键无法直接关闭，同时也不会被关闭其它、关闭左侧、关闭右侧标签页操作所关闭，并且下次访问将保留固定标签页状态。
-
-![](/tabbar3.gif){data-zoomable}
+固定的标签页无法直接关闭，并且下次访问将保留固定标签页状态。
 
 固定标签页默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `tabbar.storageTo` 配置项来实现，具体配置如下：
 
@@ -50,19 +40,33 @@ const globalSettings: Settings.all = {
 为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
 :::
 
-### 最大化 <Badge type="pro" text="专业版" />
+## 拖拽排序 <Badge type="pro" text="专业版" />
 
-通过隐藏导航栏和顶栏，将操作内容区最大化。双击标签页可快速进入最大化。
+![](/tabbar-draggable.gif){data-zoomable}
 
-![](/tabbar4.gif){data-zoomable}
+## 快捷操作 <Badge type="pro" text="专业版" />
 
-### 拖拽排序 <Badge type="pro" text="专业版" />
+![](/tabbar-action.png){data-zoomable}
 
-![](/tabbar5.gif){data-zoomable}
+## 标签栏双击 <Badge type="pro" text="专业版" />
 
-### 快捷操作下拉菜单 <Badge type="pro" text="专业版" />
+在应用配置中设置：
 
-![](/tabbar6.gif){data-zoomable}
+```ts {2-12}
+const globalSettings: Settings.all = {
+  tabbar: {
+    /**
+     * 标签栏双击执行动作
+     * @默认值 `'close'` 关闭
+     * @可选值 `'reload'` 刷新
+     * @可选值 `'pin'` 固定/取消固定
+     * @可选值 `'maximize'` 最大化
+     * @可选值 `'window'` 新窗口打开
+     */
+    dblclickAction: 'close',
+  },
+}
+```
 
 ## 标签页合并 <Badge type="pro" text="专业版" />
 

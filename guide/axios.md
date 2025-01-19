@@ -152,7 +152,7 @@ Mock 数据是前端开发过程中必不可少的一环，是分离前后端开
 :::tip
 模板使用 [vite-plugin-fake-server](https://github.com/condorheroblog/vite-plugin-fake-server) 提供开发和生产模拟服务。
 
-Mock 数据编写规则请阅读 [Mockjs](https://github.com/nuysoft/Mock) 官方文档。
+Mock 数据编写规则请阅读 [faker](https://github.com/faker-js/faker) 官方文档。
 :::
 
 ### 开发环境 mock
@@ -162,24 +162,29 @@ mock 文件存放在 `/src/mock/` 下，建议按照不同模块区分文件夹�
 以下为示例代码：
 
 ```ts
+import { faker } from '@faker-js/faker/locale/zh_CN'
 import { defineFakeRoute } from 'vite-plugin-fake-server/client'
-import Mock from 'mockjs'
 
 export default defineFakeRoute([
   {
-    url: '/mock/news/list',
+    url: '/mock/user/list',
     method: 'get',
     response: () => {
+      const list: any[] = []
+      for (let i = 0; i < 50; i++) {
+        list.push({
+          id: i + 1,
+          account: faker.person.firstName(),
+          name: faker.person.fullName(),
+          sex: faker.number.int(2),
+          mobile: faker.phone.number({ style: 'international' }),
+          status: faker.datatype.boolean(),
+        })
+      }
       return {
         error: '',
         status: 1,
-        data: Mock.mock({
-          'list|5-10': [
-            {
-              title: '@ctitle',
-            },
-          ],
-        }),
+        data: list,
       }
     },
   },
@@ -193,12 +198,12 @@ export default defineFakeRoute([
 
 为了让 mock 接口与真实接口共存，即项目开发中，部分请求 mock 接口，部分请求真实接口。需要在配置 mock 接口的时候，给 `url` 参数统一设置 `/mock/` 前缀，并在调用接口的时候，使用 `baseURL` 强制修改此次请求的地址。
 
-如下所示，其中 `news/list` 会请求本地的 mock 接口，而 `news/create` 依旧请求真实接口，即使开启跨域代理也不影响。
+如下所示，其中 `user/list` 会请求本地的 mock 接口，而 `user/create` 依旧请求真实接口，即使开启跨域代理也不影响。
 
 ```ts {4}
 import api from '@/api'
 
-api.get('news/list', {
+api.get('user/list', {
   baseURL: '/mock/',
   params: {
     page: 1,
@@ -208,9 +213,9 @@ api.get('news/list', {
   // 后续业务代码
 })
 
-api.post('news/create', {
-  title: '新闻标题',
-  content: '新闻内容',
+api.post('user/create', {
+  account: 'admin',
+  name: '管理员',
 }).then((res) => {
   // 后续业务代码
 })

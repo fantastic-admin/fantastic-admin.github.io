@@ -16,7 +16,27 @@ const globalSettings: Settings.all = {
 }
 ```
 
-详细可阅读《[收藏夹](favorites)》。
+开启后可将常用的导航菜单添加进收藏夹，方便快速访问。
+
+![](/favorites.png){data-zoomable}
+
+### 数据存储
+
+收藏夹默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `favorites.storageTo` 配置项来实现，具体配置如下：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  favorites: {
+    storageTo: 'server',
+  },
+}
+```
+
+然后到 `/src/api/modules/user.ts` 中找到 `favorites()` 和 `favoritesEdit()` 这两个函数，并分别修改这两个函数的请求地址。
+
+:::tip 建议
+为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
+:::
 
 ## 面包屑导航
 
@@ -33,6 +53,24 @@ const globalSettings: Settings.all = {
 移动端访问时，会隐藏面包屑导航。
 
 当使用文件系统路由时，将无法使用面包屑导航，详细可阅读《[基于文件系统的路由](file-system-route)》。
+
+### 风格 <Badge type="pro" text="专业版" />
+
+详细可阅读《[主题 - 面包屑导航风格](theme#面包屑导航风格)》。
+
+### 显示主导航 <Badge type="pro" text="专业版" />
+
+在应用配置里设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  breadcrumb: {
+    enableMainMenu: true,
+  },
+}
+```
+
+![](/breadcrumb-mainmenu.png){data-zoomable}
 
 ## 导航搜索
 

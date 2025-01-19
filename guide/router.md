@@ -318,7 +318,7 @@ export default routes
 - 默认值：`undefined`
 - 说明：指定高亮的导航，需要设置完整路由地址
 
-该配置与 `meta.menu: false` 一起使用，因为子导航不在不显示，会导致进入该导航路由后，导航高亮效果失效，所以需要手动指定。
+该配置与 `meta.menu: false` 一起使用，因为子导航不显示，会导致进入该导航路由后，导航高亮效果失效，所以需要手动指定。
 
 ```ts {22-23}
 import type { RouteRecordRaw } from 'vue-router'
@@ -368,7 +368,7 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw = {
   path: '/test',
   name: 'test',
-  component: () => import('@/views/test/index.tsx'),
+  component: () => import('@/views/test/index.vue'),
   meta: {
     title: '测试页面',
     singleMenu: true,
@@ -393,7 +393,7 @@ const routes: RouteRecordRaw = {
     {
       path: '',
       name: 'test',
-      component: () => import('@/views/test/index.tsx'),
+      component: () => import('@/views/test/index.vue'),
       meta: {
         title: '测试页面',
         menu: false,
@@ -671,107 +671,6 @@ const constantRoutes: RouteRecordRaw[] = [
 ```
 
 需要注意，请勿在**系统路由**和**动态路由**上设置该属性，因为这里面的路由，它们的一级路由调用的是 Layout 组件，而 Layout 组件是必须登录才能正常使用。
-
-## 小技巧
-
-通常我们配置的路由都是这样的：
-
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/banner',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/banner/list',
-  name: 'banner',
-  meta: {
-    title: 'Banner 管理',
-  },
-  children: [
-    {
-      path: 'add',
-      name: 'bannerAdd',
-      component: () => import('@/views/banner/add.vue'),
-      meta: {
-        title: '新增 banner',
-      },
-    },
-    {
-      path: 'list',
-      name: 'bannerList',
-      component: () => import('@/views/banner/list.vue'),
-      meta: {
-        title: 'banner 列表',
-      },
-    },
-  ],
-}
-
-export default routes
-```
-
-对应的展示效果如下：
-
-![](/route-breadcrumb1.gif){data-zoomable}
-
-有时候会遇到这样的需求，要求在不改变菜单导航结构的前提下，面包屑导航展示嵌套的结构：
-
-![](/route-breadcrumb2.gif){data-zoomable}
-
-要实现这个效果也很简单，根据图中的效果，可以确定路由需要有三级。我们只需在二级放置一个重定向的路由，将其重定向到三级里的某个真实路由上，同时将三级路由均设置成不在菜单导航上显示即可，最终实现代码如下：
-
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/banner',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/banner/list',
-  name: 'banner',
-  meta: {
-    title: 'Banner 管理',
-  },
-  children: [
-    {
-      path: 'add',
-      redirect: '/banner/list/add',
-      meta: {
-        title: '新增 Banner',
-      },
-    },
-    {
-      path: 'list',
-      meta: {
-        title: 'Banner 列表'
-      },
-      children: [
-        {
-          path: 'add',
-          name: 'bannerAdd',
-          component: () => import('@/views/banner/add.vue'),
-          meta: {
-            title: '新增 Banner',
-            menu: false,
-            activeMenu: '/banner/add',
-          }
-        },
-        {
-          path: '',
-          name: 'bannerList',
-          component: () => import('@/views/banner/list.vue'),
-          meta: {
-            title: 'Banner 列表',
-            menu: false,
-            breadcrumb: false,
-          }
-        },
-      ],
-    },
-  ],
-}
-
-export default routes
-```
 
 ## 后端配置导航
 

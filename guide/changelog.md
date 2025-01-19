@@ -23,17 +23,18 @@
 
   - 移除 `meta.i18n` ，`meta.title` 支持国际化
   - 移除 `meta.sidebar` ，改为 `meta.menu`
-  - 移除 `meta.paddingBottom` ，由框架自动处理
+  - 移除 `meta.paddingBottom` ，改为由框架自动处理
   - 新增 `meta.badgeVariant` ，用于设置导航徽章颜色
   - 新增 `meta.query` ，用于设置点击导航时进行路由跳转时，携带的参数
-  - 新增 `meta.maximize` ，用于设置访问该导航的路由时，是否最大化
-  - 新增 `meta.exitMaximize` ，用于设置离开该导航的路由时，是否退出最大化
+  - 新增 `meta.maximize` ，用于设置访问导航的路由时，是否最大化
+  - 新增 `meta.exitMaximize` ，用于设置离开导航的路由时，是否退出最大化
+  - 新增 `meta.sort` ，用于设置导航的排序
 
 - 主导航增加徽章和徽章颜色设置
-- 新增 `app.loginExpiredMode` 应用设置，设置登录过期后的行为
+- 新增 `app.loginExpiredMode` 应用设置，设置登录状态过期后的行为
 - 新增 `app.enableCheckUpdates` 和 `app.checkUpdatesInterval` 应用设置，检查网站是否有更新，并提示更新
 - 移除 `menu.switchMainMenuAndPageJump` 应用设置，新增 `menu.mainMenuClickMode` 应用设置，更灵活控制主导航的点击行为
-- 增加全局插槽，用于在主导航、工具栏等位置插入自定义内容
+- 增加全局插槽，用于在导航、顶栏等位置插入自定义内容
 
 ## v4.x
 
