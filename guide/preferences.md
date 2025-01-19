@@ -6,9 +6,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   userPreferences: {
+    /**
+     * 是否开启用户偏好设置
+     * @默认值 `false`
+     */
     enable: true,
   },
 }
@@ -40,9 +44,14 @@ const preferences = ref<Settings.all>({
 
 用户偏好设置默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `userPreferences.storageTo` 配置项来实现，具体配置如下：
 
-```ts {2-4}
+```ts {2-9}
 const globalSettings: Settings.all = {
   userPreferences: {
+    /**
+     * 存储位置
+     * @默认值 `'local'` 本地存储
+     * @可选值 `'server'` 服务器存储
+     */
     storageTo: 'server',
   },
 }

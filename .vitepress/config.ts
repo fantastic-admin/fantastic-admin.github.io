@@ -6,7 +6,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: './favicon.ico' }],
+    ['link', { rel: 'icon', href: './favicon.svg' }],
     ['meta', { 'http-equiv': 'Expires', 'content': '0' }],
     ['meta', { 'http-equiv': 'Pragma', 'content': 'no-cache' }],
     ['meta', { 'http-equiv': 'Cache-control', 'content': 'no-cache' }],
@@ -37,7 +37,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
     `],
   ],
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.svg',
     footer: {
       copyright: 'Copyright © 2020-present Fantastic-admin',
     },
@@ -233,7 +233,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'JSX', link: '/guide/jsx' },
             { text: '基于文件系统的路由', link: '/guide/file-system-route' },
             { text: '使用 Composition API 开发', link: '/guide/vue3-composition-api' },
-            { text: '高级 position:fixed', link: '/guide/position-fixed' },
             {
               text: '替换 UI 组件库',
               items: [

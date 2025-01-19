@@ -2,9 +2,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   tabbar: {
+    /**
+     * 是否开启标签栏
+     * @默认值 `false`
+     */
     enable: true,
   },
 }
@@ -12,7 +16,38 @@ const globalSettings: Settings.all = {
 
 ## 风格 <Badge type="pro" text="专业版" />
 
-详细可阅读《[主题 - 标签栏风格](theme#标签栏风格)》
+在应用配置中设置：
+
+```ts {2-11}
+const globalSettings: Settings.all = {
+  tabbar: {
+    /**
+     * 标签栏风格
+     * @默认值 `''` 默认
+     * @可选值 `'fashion'` 时尚
+     * @可选值 `'card'` 卡片
+     * @可选值 `'square'` 方块
+     */
+    style: 'fashion',
+  },
+}
+```
+
+![](/tabbar-style.png){data-zoomable}
+
+## 宽度自适应 <Badge type="pro" text="专业版" />
+
+在 `/src/assets/styles/globals.css` 中设置标签栏中页签的宽度，默认为 `150px` 固定宽度，例如将 2 个变量均设置为 `unset` 时，标签页宽度将随页面标题长度自适应，效果如下：
+
+```scss
+:root {
+  // 标签页最大最小宽度，两个宽度为同一数值时，则为固定宽度，反之将宽度设置为 unset 则为自适应
+  --g-tabbar-tab-max-width: unset;
+  --g-tabbar-tab-min-width: unset;
+}
+```
+
+![](/tabbar-width.png){data-zoomable}
 
 ## 右键菜单
 
@@ -26,9 +61,14 @@ const globalSettings: Settings.all = {
 
 固定标签页默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `tabbar.storageTo` 配置项来实现，具体配置如下：
 
-```ts {2-4}
+```ts {2-9}
 const globalSettings: Settings.all = {
   tabbar: {
+    /**
+     * 固定标签页存储位置
+     * @默认值 `'local'` 本地存储
+     * @可选值 `'server'` 服务器存储
+     */
     storageTo: 'server',
   },
 }
@@ -72,6 +112,22 @@ const globalSettings: Settings.all = {
 
 标签页合并功能在一定程度上可以减少标签页的数量，让用户能够准确的找到自己想要的标签页。
 
+在应用配置中设置：
+
+```ts {2-10}
+const globalSettings: Settings.all = {
+  tabbar: {
+    /**
+     * 标签页合并规则
+     * @默认值 `''` 不合并
+     * @可选值 `'routeName'` 根据路由名称，相同路由名称的路由合并
+     * @可选值 `'activeMenu'` 根据路由的 `meta.activeMenu` 字段，与指向的目标路由合并
+     */
+    mergeTabsBy: '',
+  },
+}
+```
+
 以下面这段路由配置为例：
 
 ```ts
@@ -112,41 +168,17 @@ const routes: RouteRecordRaw = {
 
 ### 不合并
 
-```ts {2-4}
-const globalSettings: Settings.all = {
-  tabbar: {
-    mergeTabsBy: '',
-  },
-}
-```
-
 从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，可打开多个不同的**编辑管理员**标签页，效果如下：
 
 ![](/tabbar-no-merge.gif){data-zoomable}
 
 ### 根据路由名称合并
 
-```ts {2-4}
-const globalSettings: Settings.all = {
-  tabbar: {
-    mergeTabsBy: 'routeName',
-  },
-}
-```
-
 从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，打开多个不同的详情页，只会保持一个**编辑管理员**标签页，效果如下：
 
 ![](/tabbar-merge-routename.gif){data-zoomable}
 
 ### 根据 `meta.activeMenu` 字段合并
-
-```ts {2-4}
-const globalSettings: Settings.all = {
-  tabbar: {
-    mergeTabsBy: 'activeMenu',
-  },
-}
-```
 
 从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
 
@@ -156,9 +188,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   tabbar: {
+    /**
+     * 是否开启标签栏图标显示
+     * @默认值 `false`
+     */
     enableIcon: true,
   },
 }
@@ -170,9 +206,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   tabbar: {
+    /**
+     * 是否开启标签栏记忆功能
+     * @默认值 `false`
+     */
     enableMemory: true,
   },
 }

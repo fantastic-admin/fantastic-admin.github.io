@@ -12,13 +12,14 @@
 
 在应用配置中设置：
 
-```ts {2-9}
+```ts {2-10}
 const globalSettings: Settings.all = {
   app: {
     /**
-     * 留空跟随系统
-     * light 明亮模式
-     * dark 暗黑模式
+     * 颜色方案
+     * @默认值 `''` 跟随系统
+     * @可选值 `'light'` 明亮模式
+     * @可选值 `'dark'` 暗黑模式
      */
     colorScheme: '',
   },
@@ -29,9 +30,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 主题同步，当开启时，切换颜色方案将共用一套主题
+     * @默认值 `true`
+     */
     themeSync: true,
   },
 }
@@ -43,9 +48,14 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-9}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 圆角系数
+     * @默认值 `0.5`
+     * @可选值 `0` / `0.25` / `0.5` / `0.75` / `1`
+     */
     radius: 0.5,
   },
 }
@@ -57,9 +67,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 是否开启哀悼模式
+     * @默认值 `false`
+     */
     enableMournMode: true,
   },
 }
@@ -69,78 +83,15 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 是否开启色弱模式
+     * @默认值 `false`
+     */
     enableColorAmblyopiaMode: true,
   },
-}
-```
-
-## 导航栏风格 <Badge type="pro" text="专业版" />
-
-在应用配置中设置：
-
-```ts {2-10}
-const globalSettings: Settings.all = {
-  menu: {
-    /**
-     * 留空默认
-     * arrow 箭头
-     * line 线条
-     * dot 圆点
-     */
-    style: '',
-  },
-}
-```
-
-![](/menu-style.png){data-zoomable}
-
-## 面包屑导航风格 <Badge type="pro" text="专业版" />
-
-在应用配置中设置：
-
-```ts {2-8}
-const globalSettings: Settings.all = {
-  breadcrumb: {
-    /**
-     * 留空默认
-     * modern 现代
-     */
-    style: '',
-  },
-}
-```
-
-![](/breadcrumb-style.png){data-zoomable}
-
-## 标签栏风格 <Badge type="pro" text="专业版" />
-
-在应用配置中设置：
-
-```ts {2-8}
-const globalSettings: Settings.all = {
-  tabbar: {
-    /**
-     * fashion 时尚
-     * card 卡片
-     * square 方块
-     */
-    style: 'fashion',
-  },
-}
-```
-
-![](/tabbar-style.png){data-zoomable}
-
-同时可以在 `/src/assets/styles/globals.css` 中设置标签栏中页签的宽度，默认为 `150px` 固定宽度：
-
-```scss
-:root {
-  // 标签页最大最小宽度，两个宽度为同一数值时，则为固定宽度，反之将宽度设置为 unset 则为自适应
-  --g-tabbar-tab-max-width: 150px;
-  --g-tabbar-tab-min-width: 150px;
 }
 ```
 

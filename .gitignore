@@ -2,3 +2,5 @@ node_modules
 .vitepress/cache
 .vitepress/dist
 .eslintcache
+
+.DS_Store

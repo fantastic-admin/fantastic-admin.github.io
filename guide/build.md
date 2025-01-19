@@ -43,9 +43,9 @@ VITE_BUILD_ARCHIVE = zip
 VITE_BUILD_ARCHIVE = tar
 ```
 
-## 禁用开发者工具
+## 禁用浏览器开发者工具
 
-在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOLS` 即可在构建后禁用开发者工具。
+在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOLS` 即可在构建后禁用浏览器开发者工具。
 
 ```
 # 禁用开发者工具

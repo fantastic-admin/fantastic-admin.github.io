@@ -19,7 +19,7 @@
 <ElButton>
   <template #icon>
     <ElIcon>
-      <FaIcon name="ep:edit" />
+      <FaIcon name="i-ep:edit" />
     </ElIcon>
   </template>
   编辑

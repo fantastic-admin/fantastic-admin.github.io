@@ -15,7 +15,7 @@
 **此版本有较多破坏性的变更，如果打算从 v4.x 升级，请仔细阅读并谨慎迁移代码。**
 
 - 引入 [shadcn-vue](https://www.shadcn-vue.com/) ，内建组件和部分扩展组件基于 shadcn-vue 进行重构
-- 所有内建组件名均改为 `Fa` 开头，例如 `FaButton` 。部分扩展组件也转为内建组件，例如 `FaPageHeader` 。为与扩展组件做区分，内建组件存放在 `/src/ui/components/` 目录下
+- 所有内建组件名均改为 `Fa` 开头，例如 `FaButton` 。部分扩展组件也转为内建组件，例如 `FaPageHeader` 。新增了一系列基于 shadcn-vue 的组件，例如 `FaPopover` 。为与扩展组件做区分，内建组件存放在 `/src/ui/components/` 目录下
 - 登录页使用内建组件进行重构，不再依赖 `element-plus` ，更方便迁移其他 UI 组件库
 - 系统主题重构，挑选了 shadcn-vue 中的 8 款主题并进行定制
 - 新增 `app.themeSync` 应用设置

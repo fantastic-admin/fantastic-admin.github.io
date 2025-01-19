@@ -77,9 +77,13 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   menu: {
+    /**
+     * 次导航是否只保持一个子项的展开
+     * @默认值 `true`
+     */
     subMenuUniqueOpened: false,
   },
 }
@@ -91,9 +95,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   menu: {
+    /**
+     * 次导航是否收起
+     * @默认值 `false`
+     */
     subMenuCollapse: true,
   },
 }
@@ -105,9 +113,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   menu: {
+    /**
+     * 是否开启次导航的展开/收起按钮
+     * @默认值 `false`
+     */
     enableSubMenuCollapseButton: true,
   },
 }
@@ -119,9 +131,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   menu: {
+    /**
+     * 次导航是否自动收起
+     * @默认值 `false`
+     */
     subMenuAutoCollapse: true,
   },
 }

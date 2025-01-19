@@ -8,9 +8,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启收藏夹
+     * @默认值 `false`
+     */
     favorites: true,
   },
 }
@@ -24,9 +28,14 @@ const globalSettings: Settings.all = {
 
 收藏夹默认存储在浏览器本地 localStorage 里，如果需要将数据存储到服务器，可以通过 `favorites.storageTo` 配置项来实现，具体配置如下：
 
-```ts {2-4}
+```ts {2-9}
 const globalSettings: Settings.all = {
   favorites: {
+    /**
+     * 存储位置
+     * @默认值 `'local'` 本地存储
+     * @可选值 `'server'` 服务器存储
+     */
     storageTo: 'server',
   },
 }
@@ -42,9 +51,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启面包屑导航
+     * @默认值 `true`
+     */
     breadcrumb: true,
   },
 }
@@ -56,15 +69,34 @@ const globalSettings: Settings.all = {
 
 ### 风格 <Badge type="pro" text="专业版" />
 
-详细可阅读《[主题 - 面包屑导航风格](theme#面包屑导航风格)》。
+在应用配置中设置：
+
+```ts {2-9}
+const globalSettings: Settings.all = {
+  breadcrumb: {
+    /**
+     * 面包屑导航风格
+     * @默认值 `''` 默认
+     * @可选值 `'modern'` 现代
+     */
+    style: '',
+  },
+}
+```
+
+![](/breadcrumb-style.png){data-zoomable}
 
 ### 显示主导航 <Badge type="pro" text="专业版" />
 
 在应用配置里设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   breadcrumb: {
+    /**
+     * 是否在面包屑导航里显示主导航
+     * @默认值 `false`
+     */
     enableMainMenu: true,
   },
 }
@@ -76,9 +108,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启导航搜索
+     * @默认值 `true`
+     */
     navSearch: true,
   },
 }
@@ -88,26 +124,31 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启通知中心
+     * @默认值 `false`
+     */
     notification: true,
   },
 }
 ```
 
-通知中心不涉及具体业务，需开发者自行实现，相关文件在：
-
-- `/src/layouts/components/Tools/Notification/index.vue` 通知中心下拉预览面板
-- `/src/views/personal/notification.vue` 通知中心页面
+通知中心不涉及具体业务，需开发者自行实现，相关文件在 `/src/layouts/components/Topbar/Toolbar/Notification` 目录下。
 
 ## 国际化 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启国际化
+     * @默认值 `false`
+     */
     i18n: true,
   },
 }
@@ -119,9 +160,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启全屏
+     * @默认值 `false`
+     */
     fullscreen: true,
   },
 }
@@ -131,9 +176,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启页面刷新
+     * @默认值 `false`
+     */
     pageReload: true,
   },
 }
@@ -143,9 +192,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 是否开启颜色主题
+     * @默认值 `false`
+     */
     colorScheme: true,
   },
 }
@@ -157,12 +210,14 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   toolbar: {
+    /**
+     * 布局设置，可自定义摆放位置和顺序，其中 `->` 为分隔符，用于分隔左右两侧的工具栏。修改时请确保默认值里的所有值都存在，不可删减。
+     * @默认值 `['favorites', 'breadcrumb', '->', 'navSearch', 'notification', 'i18n', 'fullscreen', 'pageReload', 'colorScheme']`
+     */
     layout: ['favorites', 'breadcrumb', '->', 'navSearch', 'notification', 'i18n', 'fullscreen', 'pageReload', 'colorScheme'],
   },
 }
 ```
-
-可自定义摆放位置和顺序，其中 `->` 为分隔符，用于分隔左右两侧的工具栏。修改时请确保提供的所有值都存在，不可删减。

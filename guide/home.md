@@ -8,9 +8,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   home: {
+    /**
+     * 是否开启主页
+     * @默认值 `true`
+     */
     enable: false,
   },
 }
@@ -24,9 +28,13 @@ const globalSettings: Settings.all = {
 
 如果要更改主页显示的标题，可以在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   home: {
+    /**
+     * 主页名称，可直接设置名称，专业版支持设置为 i18n 的 key
+     * @默认值 基础版为 `'主页'`，专业版为 `'app.route.home'`
+     */
     title: '主页',
   },
 }
@@ -36,11 +44,15 @@ const globalSettings: Settings.all = {
 
 ## 主页完整路径
 
-主页默认路径为根路径 `/` ，即 `http://localhost:9000/#/` ，但也可以将其修改为其他路径，例如 `/home` ，在应用配置中设置：
+可以将其修改为其他路径，例如 `/home` ，在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   home: {
+    /**
+     * 主页完整路径
+     * @默认值 `'/'`
+     */
     fullPath: '/home',
   },
 }

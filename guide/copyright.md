@@ -8,9 +8,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   copyright: {
+    /**
+     * 是否开启底部版权，同时在路由 meta 对象里可以单独设置某个路由是否显示底部版权信息
+     * @默认值 `false`
+     */
     enable: true,
   },
 }
@@ -22,9 +26,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   copyright: {
+    /**
+     * 网站运行日期
+     * @默认值 `''`
+     */
     dates: '2020-2022',
   },
 }
@@ -34,9 +42,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   copyright: {
+    /**
+     * 公司名称
+     * @默认值 `''`
+     */
     company: 'Fantastic-admin',
   },
 }
@@ -46,9 +58,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   copyright: {
+    /**
+     * 网站地址
+     * @默认值 `''`
+     */
     website: 'https://fantastic-admin.hurui.me',
   },
 }
@@ -60,9 +76,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   copyright: {
+    /**
+     * 网站备案号
+     * @默认值 `''`
+     */
     beian: '',
   },
 }

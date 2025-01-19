@@ -4,9 +4,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 是否开启页面水印
+     * @默认值 `false`
+     */
     enableWatermark: true,
   },
 }
