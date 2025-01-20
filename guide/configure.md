@@ -82,7 +82,7 @@ VITE_BUILD_ARCHIVE =
 
 ## 应用配置（框架配置）
 
-请在 `/src/settings.ts` 文件中进行配置，而 `/src/settings.default.ts` 为框架的默认配置，请勿在该文件内修改。
+请在 `/src/settings.ts` 文件中进行配置，而不是在 `/src/settings.default.ts` 文件中，后者为框架的完整默认配置。
 
 关于配置的类型定义，可以在 `/src/types/globals.d.ts` 文件中查阅。
 

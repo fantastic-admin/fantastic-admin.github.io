@@ -1,7 +1,7 @@
-# 开发者工具 <Badge type="tip" text="v4.5.0 新增" />
+# 开发者工具
 
 :::info
-该特性由 [Vue DevTools Next](https://github.com/vuejs/devtools-next) 提供技术支持。
+该特性由 [Vue DevTools](https://github.com/vuejs/devtools) 提供技术支持。
 :::
 
 ## 使用介绍
@@ -13,6 +13,6 @@
 VITE_OPEN_DEVTOOLS = true
 ```
 
-开启后，在本地运行时，默认会在页面底部中间显示一个开发者工具按钮，点击即可打开开发者工具。
+开启后，在本地运行时，默认会在页面底部中间显示一个开发者工具按钮。
 
 ![](/devtools.gif){data-zoomable}

@@ -116,7 +116,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 ]
 ```
 
-主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`i18n`、`icon`、`activeIcon`、`auth` 这 5 个参数，`children` 则是存放不同的路由模块。
+主导航只需设置 `meta` 和 `children` 两个参数，其中 `meta` 接受 `title`、`icon`、`activeIcon`、`badge`、`badgeVariant`、`auth`、`sort` 这些参数，`children` 则是存放不同的路由模块。
 
 ## 导航配置
 
@@ -124,67 +124,59 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 ### title
 
-|  类型  | 默认值 | 说明                                 |
-| :----: | :----: | :----------------------------------- |
-| string |   /    | 导航、面包屑导航以及页面中展示的标题 |
+- 类型：`string`
+- 默认值：`undefined`
+- 说明：导航、标签页、面包屑导航以及页面中展示的标题
 
-<Badge type="tip" text="v4.8.0" /> 开始，<Badge type="pro" text="专业版" /> 支持设置 i18n 对应的 key 值，详细可阅读《[国际化](i18n)》。
-
-### ~~i18n~~ <Badge type="pro" text="专业版" /> <Badge type="warning" text="v4.8.0 进入弃用过渡期，预计在 v5.0.0 正式移除" />
-
-|  类型  | 默认值 | 说明                    |
-| :----: | :----: | :---------------------- |
-| string |   /    | 标题国际化对应的 key 值 |
-
-详细可阅读《[国际化](i18n)》。
+专业版支持设置 i18n 对应的 key 值，详细可阅读《[国际化](i18n)》。
 
 ### icon
 
-|  类型  | 默认值 | 说明             |
-| :----: | :----: | :--------------- |
-| string |   /    | 导航中显示的图标 |
+- 类型：`string`
+- 默认值：`undefined`
+- 说明：导航中显示的图标
 
-该项配置最终会通过 `<SvgIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
+该项配置最终会通过 `<FaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
 
 ### activeIcon <Badge type="pro" text="专业版" />
 
-|  类型  | 默认值 | 说明                 |
-| :----: | :----: | :------------------- |
-| string |   /    | 导航激活时显示的图标 |
+- 类型：`string`
+- 默认值：`undefined`
+- 说明：导航激活时显示的图标
 
-该项配置最终会通过 `<SvgIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[SVG 图标](./svg-icon)》。
+该项配置最终会通过 `<FaIcon />` 组件进行展示，意味着你可以使用自定义图标，也可使用 Iconify 提供的图标，详细可阅读《[图标](./icon)》。
 
 ### defaultOpened
 
-|  类型   | 默认值 | 说明                                                                   |
-| :-----: | :----: | :--------------------------------------------------------------------- |
-| boolean | false  | 次导航是否默认展开，在父级路由上设置后，会默认展开并显示下一级的子路由 |
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：子导航是否默认展开
 
 该特性仅在 `顶部模式` / `侧边栏模式（含主导航）` / `侧边栏模式（无主导航）` 下生效。
 
-使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置，否则可能无法看到效果。
+使用该特性时，建议在应用配置中关闭 `menu.subMenuUniqueOpened` 设置。
 
-### alwaysOpened <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
+### alwaysOpened <Badge type="pro" text="专业版" />
 
-|  类型   | 默认值 | 说明                                                                   |
-| :-----: | :----: | :--------------------------------------------------------------------- |
-| boolean | false  | 次导航是否始终展开，在父级路由上设置后，会始终展开并显示下一级的子路由 |
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：子导航是否始终展开
 
 该特性仅在 `顶部模式` / `侧边栏模式（含主导航）` / `侧边栏模式（无主导航）` 下生效。
 
 ### permanent <Badge type="pro" text="专业版" />
 
-|  类型   | 默认值 | 说明           |
-| :-----: | :----: | :------------- |
-| boolean | false  | 是否常驻标签页 |
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否常驻标签页
 
 使用该特性时，需要在应用配置中开启 `tabbar.enable` 设置，同时需注意，请勿在带有参数的路由上设置该特性。
 
 ### auth
 
-|       类型        | 默认值 | 说明                                                     |
-| :---------------: | :----: | :------------------------------------------------------- |
-| string / string[] |   /    | 该路由访问权限，支持多个权限叠加，只要满足一个，即可进入 |
+- 类型：`string | string[]`
+- 默认值：`undefined`
+- 说明：该路由访问权限，支持多个权限叠加，只要满足一个，即可进入
 
 用户在访问路由时，会判断当前路由是否具备访问权限，不具备访问权限则会显示 403 页面，详细可阅读《[权限 - 路由权限](permission#路由权限)》。
 
@@ -229,55 +221,11 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-::: details v4.8.0 之前版本处理逻辑
-为避免多级路由同时设置 `auth` 可能会导致逻辑冲突，框架会以最先设置的 `auth` 为准：
+### auths <Badge type="pro" text="专业版" />
 
-
-```ts {13,26}
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/system',
-  meta: {
-    title: '系统管理',
-  },
-  children: [
-    {
-      path: 'department',
-      meta: {
-        title: '部门管理',
-        auth: 'a',
-      },
-      children: [
-        {
-          path: 'job',
-          meta: {
-            title: '职位管理',
-          },
-          children: [
-            {
-              path: 'member',
-              meta: {
-                title: '人员管理',
-                auth: 'b', // 无效设置，该路由的访问权限会以 auth: 'a' 为准
-              },
-            },
-          ],
-        },
-      ],
-    },
-  ],
-}
-
-export default routes
-```
-:::
-
-### auths <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.7.0 新增" />
-
-|                               类型                                | 默认值 | 说明                                                                         |
-| :---------------------------------------------------------------: | :----: | :--------------------------------------------------------------------------- |
-| <div style="width: 150pt">{ name: string; value: string }[]</div> |   /    | 权限池，对路由本身无实际作用，通常用于角色管理模块，展示路由(导航)可配置权限 |
+- 类型：`{ name: string; value: string }[]`
+- 默认值：`undefined`
+- 说明：权限池，对路由本身无实际作用，通常用于角色管理模块，展示路由(导航)可配置权限
 
 权限池存放了该路由相关的所有权限，包括但不限于：访问权限、按钮权限、颗粒度更细的权限等。以下是一个示例：
 
@@ -330,17 +278,13 @@ export default routes
 
 该配置的具体应用可参考专业版演示站[示例](https://fantastic-admin.hurui.me/pro-example/#/pages_example/general/role)及[源码](https://github.com/fantastic-admin/pro/tree/example/src/views/pages_example/role)。
 
-### ~~sidebar~~ <Badge type="warning" text="v4.7.0 进入弃用过渡期，预计在 v5.0.0 正式移除" />
+### menu
 
-请使用下方 `menu` 配置项。
+- 类型：`boolean`
+- 默认值：`true`
+- 说明：是否在导航中展示
 
-### menu <Badge type="tip" text="v4.7.0 新增" />
-
-|  类型   | 默认值 | 说明                       |
-| :-----: | :----: | :------------------------- |
-| boolean |  true  | 该路由是否在菜单导航中展示 |
-
-当子路由里没有可展示的路由时，在菜单导航中则只会显示父级路由，例如：
+当子导航里没有可展示的导航时，会直接显示父导航，例如：
 
 ```ts {15}
 import type { RouteRecordRaw } from 'vue-router'
@@ -370,11 +314,11 @@ export default routes
 
 ### activeMenu
 
-|  类型  | 默认值 | 说明                                     |
-| :----: | :----: | :--------------------------------------- |
-| string |   /    | 指定高亮的菜单导航，需要设置完整路由地址 |
+- 类型：`string`
+- 默认值：`undefined`
+- 说明：指定高亮的导航，需要设置完整路由地址
 
-该参数常与 `menu: false` 一起使用，因为路由不在菜单导航显示，会导致进入该路由后，菜单导航高亮效果失效，所以需要手动指定。
+该配置与 `meta.menu: false` 一起使用，因为子导航不显示，会导致进入该导航路由后，导航高亮效果失效，所以需要手动指定。
 
 ```ts {22-23}
 import type { RouteRecordRaw } from 'vue-router'
@@ -408,13 +352,13 @@ const routes: RouteRecordRaw = {
 export default routes
 ```
 
-### singleMenu <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.6.0 新增" />
+### singleMenu <Badge type="pro" text="专业版" />
 
-|  类型   | 默认值 | 说明                   |
-| :-----: | :----: | :--------------------- |
-| boolean |   /    | 是否为单个一级导航菜单 |
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否为单个一级导航
 
-该配置用于简化只想展示一级，没有二级菜单导航的路由配置。
+该配置用于简化只想展示一级，没有二级导航的路由配置。
 
 需注意，该配置只能在一级路由上设置，且只在一级路由上生效。
 
@@ -424,7 +368,7 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw = {
   path: '/test',
   name: 'test',
-  component: () => import('@/views/test/index.tsx'),
+  component: () => import('@/views/test/index.vue'),
   meta: {
     title: '测试页面',
     singleMenu: true,
@@ -449,7 +393,7 @@ const routes: RouteRecordRaw = {
     {
       path: '',
       name: 'test',
-      component: () => import('@/views/test/index.tsx'),
+      component: () => import('@/views/test/index.vue'),
       meta: {
         title: '测试页面',
         menu: false,
@@ -464,15 +408,17 @@ export default routes
 
 ### breadcrumb
 
-|  类型   | 默认值 | 说明                         |
-| :-----: | :----: | :--------------------------- |
-| boolean |  true  | 该路由是否在面包屑导航中展示 |
+- 类型：`boolean`
+- 默认值：`true`
+- 说明：是否在面包屑导航中展示
 
 ### cache
 
-|            类型             | 默认值 | 说明                 |
-| :-------------------------: | :----: | :------------------- |
-| boolean / string / string[] |   /    | 是否对该页面进行缓存 |
+- 类型：`boolean | string | string[]`
+- 默认值：`undefined`
+- 说明：是否对该页面进行缓存
+
+设置不同的类型值，可满足不同场景的缓存需求：
 
 - `boolean` 设置为 true 时，该路由页面会被一直缓存
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面进行缓存，否则不缓存
@@ -482,9 +428,11 @@ export default routes
 
 ### noCache
 
-|       类型        | 默认值 | 说明                                        |
-| :---------------: | :----: | :------------------------------------------ |
-| string / string[] |   /    | 是否对该页面清除缓存，须设置 cache 才会生效 |
+- 类型：`string | string[]`
+- 默认值：`undefined`
+- 说明：是否对该页面清除缓存，须设置 cache 才会生效
+
+设置不同的类型值，可满足不同场景的缓存需求：
 
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面清除缓存，否则不清除缓存
 - `string[]` ，可设置一个目标路由的 name 数组
@@ -493,11 +441,11 @@ export default routes
 
 ### badge <Badge type="pro" text="专业版" />
 
-|           类型            | 默认值 | 说明     |
-| :-----------------------: | :----: | :------- |
-| boolean / number / string |   /    | 导航标记 |
+- 类型：`boolean | string | number | (() => boolean | string | number)`
+- 默认值：`false`
+- 说明：导航徽章
 
-设置不同的类型值，展示效果也会不同。
+设置不同的类型值，展示效果也会不同：
 
 - `boolean` 展示形式为点，当值为 false 时隐藏
 - `number` 展示形式为文本，当值小于等于 0 时隐藏
@@ -509,57 +457,53 @@ export default routes
 badge: () => globalStore.number
 ```
 
-### newWindow <Badge type="pro" text="专业版" /> <Badge type="tip" text="v4.2.0 新增" />
+### badgeVariant <Badge type="pro" text="专业版" />
 
-|  类型   | 默认值 | 说明             |
-| :-----: | :----: | :--------------- |
-| boolean | false  | 是否在新窗口打开 |
+- 类型：`'default' | 'secondary' | 'destructive' | (() => 'default' | 'secondary' | 'destructive')`
+- 默认值：`'default'`
+- 说明：导航徽章颜色
+
+如果标记需要动态更新，请设置为箭头函数形式，并返回外部变量，例如搭配 pinia 一起使用。
+
+```ts
+badgeVariant: () => globalStore.status
+```
+
+### query <Badge type="pro" text="专业版" />
+
+- 类型：`Record<string, T>`
+- 默认值：`{}`
+- 说明：点击导航时进行路由跳转时，携带的参数
+
+### maximize <Badge type="pro" text="专业版" />
+
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否最大化
+
+访问该导航的路由时，是否最大化业务页面组件展示区。
+
+### exitMaximize <Badge type="pro" text="专业版" />
+
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否退出最大化
+
+离开该导航的路由时，是否退出最大化业务页面组件展示区。
+
+### newWindow <Badge type="pro" text="专业版" />
+
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否在新窗口打开
 
 该设置仅在菜单导航里点击生效。
 
-### link
-
-|  类型  | 默认值 | 说明         |
-| :----: | :----: | :----------- |
-| string |   /    | 外部网页链接 |
-
-会在新窗口访问该链接。
-
-外部网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性。
-
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/xxx',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/xxx/link',
-  meta: {
-    title: '外部网页',
-  },
-  children: [
-    {
-      path: 'link',
-      redirect: '',
-      name: 'Link',
-      meta: {
-        title: 'Gitee 仓库',
-        link: 'https://gitee.com/fantastic-admin/basic',
-      },
-    },
-  ],
-}
-
-export default routes
-```
-
 ### iframe <Badge type="pro" text="专业版" />
 
-|       类型       | 默认值 | 说明         |
-| :--------------: | :----: | :----------- |
-| string / boolean |   /    | 内嵌网页链接 |
-
-会启用一个 `<iframe>` 并载入该链接。
+- 类型：`string | boolean`
+- 默认值：`false`
+- 说明：内嵌网页链接，会启用一个 `<iframe>` 并载入该链接
 
 内嵌网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性，如果同时设置了 `meta.link` 则 `meta.link` 优先级更高。
 
@@ -601,7 +545,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-<Badge type="tip" text="v4.11.0" /> 开始，增加了动态设置 iframe 链接，只需要配置一份如下路由：
+iframe 支持动态设置外部链接，只需要配置一份如下路由：
 
 ```ts {20-29}
 import type { RouteRecordRaw } from 'vue-router'
@@ -654,33 +598,61 @@ router.push({
 })
 ```
 
-### copyright <Badge type="pro" text="专业版" />
+### link
 
-|  类型   | 默认值 | 说明                       |
-| :-----: | :----: | :------------------------- |
-| boolean |   /    | 该路由是否显示底部版权信息 |
+- 类型：`string`
+- 默认值：`undefined`
+- 说明：外部网页链接，会在浏览器新窗口访问该链接
 
-该参数比应用配置里的 `copyright.enable` 优先级高，不设置则继承应用配置里的设置。
-
-### paddingBottom <Badge type="pro" text="专业版" />
-
-|  类型  | 默认值 | 说明                           |
-| :----: | :----: | :----------------------------- |
-| string |   /    | 该路由是否需要空出距离底部距离 |
-
-当使用类似 `<FixedActionBar />` 这类通过 `position: fixed` 固定在底部的组件时，需要手动设置该参数，目的是为了防止页面底部可能被遮挡。
+外部网页无需设置 `component` ，但需设置 `redirect` 和 `name` 属性。
 
 ```ts
-paddingBottom: '80px'
+import type { RouteRecordRaw } from 'vue-router'
+
+const routes: RouteRecordRaw = {
+  path: '/xxx',
+  component: () => import('@/layouts/index.vue'),
+  redirect: '/xxx/link',
+  meta: {
+    title: '外部网页',
+  },
+  children: [
+    {
+      path: 'link',
+      redirect: '',
+      name: 'Link',
+      meta: {
+        title: 'Gitee 仓库',
+        link: 'https://gitee.com/fantastic-admin/basic',
+      },
+    },
+  ],
+}
+
+export default routes
 ```
+
+### copyright <Badge type="pro" text="专业版" />
+
+- 类型：`boolean`
+- 默认值：`undefined`
+- 说明：是否显示底部版权信息
+
+该设置比应用配置里的 `copyright.enable` 优先级高，不设置则继承应用配置里的设置。
+
+### sort <Badge type="pro" text="专业版" />
+
+- 类型：`number`
+- 默认值：`0`
+- 说明：导航排序，数字越大越靠前
 
 ### whiteList <Badge type="pro" text="专业版" />
 
-|  类型   | 默认值 | 说明                                   |
-| :-----: | :----: | :------------------------------------- |
-| boolean |   /    | 是否开启白名单，开启后无需登录即可访问 |
+- 类型：`boolean`
+- 默认值：`false`
+- 说明：是否开启白名单，开启后无需登录即可访问
 
-这个属性比较特殊，因为基于后台框架的页面基本上都是需要登录后才能访问，如果希望增加免登录的页面（白名单页面），也就是脱离框架本身，相对独立的页面，你可以按照下面的方式处理：
+这个设置比较特殊，因为基于后台框架的页面基本上都是需要登录后才能访问，如果希望增加免登录的页面（白名单页面），也就是脱离框架本身，相对独立的页面，你可以按照下面的方式处理：
 
 首先在 `/src/router/routes.ts` 里 `constantRoutes` 配置免登录页面的路由，然后在 `meta` 对象里设置 `whiteList: true` ，例子如下：
 
@@ -700,113 +672,12 @@ const constantRoutes: RouteRecordRaw[] = [
 
 需要注意，请勿在**系统路由**和**动态路由**上设置该属性，因为这里面的路由，它们的一级路由调用的是 Layout 组件，而 Layout 组件是必须登录才能正常使用。
 
-## 小技巧
+## 后端配置导航
 
-通常我们配置的路由都是这样的：
+:::danger 特别注意！
+后端配置导航这个需求，基本上是后端开发者刚接触前端后台项目开发时最常问的一个问题，但当真正做过前端开发并了解 Vue 的开发模式后，会意识到这是个伪需求，反而会增加开发成本。
 
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/banner',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/banner/list',
-  name: 'banner',
-  meta: {
-    title: 'Banner 管理',
-  },
-  children: [
-    {
-      path: 'add',
-      name: 'bannerAdd',
-      component: () => import('@/views/banner/add.vue'),
-      meta: {
-        title: '新增 banner',
-      },
-    },
-    {
-      path: 'list',
-      name: 'bannerList',
-      component: () => import('@/views/banner/list.vue'),
-      meta: {
-        title: 'banner 列表',
-      },
-    },
-  ],
-}
-
-export default routes
-```
-
-对应的展示效果如下：
-
-![](/route-breadcrumb1.gif){data-zoomable}
-
-有时候会遇到这样的需求，要求在不改变菜单导航结构的前提下，面包屑导航展示嵌套的结构：
-
-![](/route-breadcrumb2.gif){data-zoomable}
-
-要实现这个效果也很简单，根据图中的效果，可以确定路由需要有三级。我们只需在二级放置一个重定向的路由，将其重定向到三级里的某个真实路由上，同时将三级路由均设置成不在菜单导航上显示即可，最终实现代码如下：
-
-```ts
-import type { RouteRecordRaw } from 'vue-router'
-
-const routes: RouteRecordRaw = {
-  path: '/banner',
-  component: () => import('@/layouts/index.vue'),
-  redirect: '/banner/list',
-  name: 'banner',
-  meta: {
-    title: 'Banner 管理',
-  },
-  children: [
-    {
-      path: 'add',
-      redirect: '/banner/list/add',
-      meta: {
-        title: '新增 Banner',
-      },
-    },
-    {
-      path: 'list',
-      meta: {
-        title: 'Banner 列表'
-      },
-      children: [
-        {
-          path: 'add',
-          name: 'bannerAdd',
-          component: () => import('@/views/banner/add.vue'),
-          meta: {
-            title: '新增 Banner',
-            menu: false,
-            activeMenu: '/banner/add',
-          }
-        },
-        {
-          path: '',
-          name: 'bannerList',
-          component: () => import('@/views/banner/list.vue'),
-          meta: {
-            title: 'Banner 列表',
-            menu: false,
-            breadcrumb: false,
-          }
-        },
-      ],
-    },
-  ],
-}
-
-export default routes
-```
-
-## 后端生成
-
-:::danger 不推荐！
-导航后端配置并生成这个需求，基本上是后端开发者刚接触前端后台项目开发时最常问的一个问题，但当真正做过前端开发并了解 Vue 的开发模式后，会意识到这个需求是多此一举的，并且会导致框架提供的部分导航特性无法使用，是得不偿失的做法。
-
-其根本原因在于，导航是通过路由生成的，而路由是与页面组件直接挂钩，即一个路由则对应着一个 `.vue` 的页面组件文件。即便将路由数据通过后端配置，也要确保路由对应的页面组件在项目中存在，这就导致在开发环境下，通过后端配置好路由数据后，还需要在项目中新增对应的 `.vue` 文件写业务代码，**并不是后端新增一个路由，前端就能直接访问到该路由页面**，这也就意味着在生产环境中不能随意修改路由数据，可能会导致导航无法访问，因为很多路由设置和业务逻辑是高度耦合的，例如页面跳转用到的 `name` 和 `path` 不能随意修改，`component` 不能设置不存在的页面组件。能交给后端动态配置的最多也就只有 `title` 和 `icon` 这两个属性，所以仅仅为了这个需求，而让开发流程复杂化，是得不偿失的一种做法。
+其根本原因在于，导航是通过路由生成的，而路由是与页面组件直接挂钩，即一个路由则对应着一个 `.vue` 的页面组件文件。即便将路由数据通过后端配置，也要确保路由对应的页面组件在项目中存在。这就导致在开发环境下，通过后端配置好路由数据后，还需要在项目中新增对应的 `.vue` 文件写业务代码，**并不是后端新增一个路由，前端就能直接访问到该路由页面**。这也就意味着在生产环境中不能随意修改路由数据，可能会导致导航无法访问，因为很多路由设置和业务逻辑是高度耦合的，例如页面跳转用到的 `name` 和 `path` 不能随意修改，`component` 不能设置不存在的页面组件，所以仅仅为了这个需求，而让开发流程复杂化，是得不偿失的一种做法。
 
 如果你执意使用该特性，请确保你了解该特性在上面所说的优缺点，并谨慎使用！
 :::

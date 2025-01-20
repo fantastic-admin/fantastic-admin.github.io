@@ -9,7 +9,7 @@ hero:
   text: 杰出的管理系统框架
   tagline: 开箱即用，提供舒适开发体验
   image:
-    src: /logo.png
+    src: /logo.svg
     alt: Fantastic-admin
   actions:
     - theme: brand

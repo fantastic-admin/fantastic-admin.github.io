@@ -4,9 +4,13 @@
 
 解决同源 storage 数据冲突的方式就是增加前缀区分，首先需要在应用配置中设置一个唯一且不重名的前缀：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * localStorage/sessionStorage 前缀
+     * @默认值 `'fa_'`
+     */
     storagePrefix: 'fa_',
   },
 }

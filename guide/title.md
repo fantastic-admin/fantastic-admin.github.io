@@ -6,9 +6,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 是否开启动态标题
+     * @默认值 `false`
+     */
     enableDynamicTitle: true,
   },
 }

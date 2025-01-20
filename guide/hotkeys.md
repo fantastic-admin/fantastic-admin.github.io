@@ -8,9 +8,13 @@
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   navSearch: {
+    /**
+     * 是否开启导航搜索快捷键
+     * @默认值 `true`
+     */
     enableHotkeys: true,
   },
 }
@@ -20,9 +24,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   menu: {
+    /**
+     * 是否开启主导航切换快捷键
+     * @默认值 `false`
+     */
     enableHotkeys: true,
   },
 }
@@ -32,9 +40,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   tabbar: {
+    /**
+     * 是否开启标签栏快捷键
+     * @默认值 `false`
+     */
     enableHotkeys: true,
   },
 }
@@ -44,9 +56,13 @@ const globalSettings: Settings.all = {
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-8}
 const globalSettings: Settings.all = {
   mainPage: {
+    /**
+     * 是否开启页面快捷键
+     * @默认值 `true`
+     */
     enableHotkeys: true,
   },
 }

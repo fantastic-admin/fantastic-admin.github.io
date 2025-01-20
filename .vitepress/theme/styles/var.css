@@ -11,24 +11,36 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #e60000 30%,
-    #F766B4
+    #42B883 30%,
+    #35495E
   );
   --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #e60000 50%,
-    #F766B4 50%
+    115deg,
+    #42B883 30%,
+    #35495E 50%
   );
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-image-filter: blur(96px);
+}
+.dark {
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    30deg,
+    #42B883 70%,
+    #35495E
+  );
+  --vp-home-hero-image-background-image: linear-gradient(
+    115deg,
+    #42B883 30%,
+    #35495E 10%
+  );
 }
 @media (min-width: 640px) {
   :root {
-    --vp-home-hero-image-filter: blur(56px);
+    --vp-home-hero-image-filter: blur(96px);
   }
 }
 @media (min-width: 960px) {
   :root {
-    --vp-home-hero-image-filter: blur(72px);
+    --vp-home-hero-image-filter: blur(128px);
   }
 }
 .VPFeature {

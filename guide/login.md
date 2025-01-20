@@ -1,4 +1,8 @@
-# 登录
+# 登录相关
+
+登录相关功能包括登录、注册、忘记密码等，所有的表单组件均存放在 `/src/components/AccountForm` 目录下。
+
+## 登录
 
 开发者通常在简单熟悉本框架后，涉及到的第一步业务开发就是修改登录功能，将其替换为自己的登录接口。
 
@@ -14,3 +18,23 @@
 2. 在 `/src/api/index.ts` 里修改响应拦截器里的代码，按照实际情况进行调整。例如什么状态下是请求成功，什么状态下是请求异常，并进行错误提示。
 3. 在 `/src/api/modules/user.ts` 里修改 `login` 函数，确保接口可以请求成功。
 4. 在 `/src/store/modules/user.ts` 里修改 `isLogin` 计算属性，这部分需要根据实际存储的用户信息去判断是否登录。
+
+## 注册、忘记密码
+
+如果不需要注册、忘记密码功能，可以在 `/src/views/login.vue` 中删除相关组件使用的代码。
+
+## 登录过期弹窗 <Badge type="pro" text="专业版" />
+
+默认情况下，登录过期后会直接跳转到登录页，但框架也支持弹出重新登录的弹窗，需要在应用配置中设置：
+
+```ts {2-4}
+const globalSettings: Settings.all = {
+  app: {
+    loginExpiredMode: 'popup',
+  },
+}
+```
+
+![](/login-expired.png){data-zoomable}
+
+需注意，重新登录表单需要开发者自行接入后端接口。

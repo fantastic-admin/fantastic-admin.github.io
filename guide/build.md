@@ -31,7 +31,7 @@ VITE_BUILD_COMPRESS = gzip,brotli
 
 两者均需要 nginx 安装指定模块并开启后才会生效。
 
-## 生成存档 <Badge type="tip" text="v4.5.0 新增" />
+## 生成存档
 
 在环境配置文件里设置 `VITE_BUILD_ARCHIVE` 即可在构建完后成生成 `.zip` 或 `.tar.gz` 文件。
 
@@ -41,6 +41,15 @@ VITE_BUILD_ARCHIVE = zip
 
 # 生成 tar.gz
 VITE_BUILD_ARCHIVE = tar
+```
+
+## 禁用浏览器开发者工具
+
+在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOLS` 即可在构建后禁用浏览器开发者工具。
+
+```
+# 禁用开发者工具
+VITE_APP_DISABLE_DEVTOOLS = true
 ```
 
 ## 其它设置

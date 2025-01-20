@@ -1,5 +1,9 @@
 # 首屏 Loading
 
+:::info
+该特性由 [vite-plugin-app-loading](https://github.com/hooray/vite-plugin-app-loading) 提供技术支持。
+:::
+
 首屏 Loading 是指首次访问页面，在页面上空白的等待时间时，会展示一个 Loading 动画，直到页面加载完成。
 
 ![](/loading.png){data-zoomable}
