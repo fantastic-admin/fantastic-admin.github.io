@@ -1,12 +1,12 @@
-# FaStorageBox 储存箱 <Badge type="pro" text="专业版" />
+# FaStorageBox 储物箱 <Badge type="pro" text="专业版" />
 
 ## Props
 
-| 属性名 | 说明               | 类型              | 默认值     |
-| ------ | ------------------ | ----------------- | ---------- |
-| data   | 需要储存的数据     | `object \| any[]` | -          |
-| name   | 数据存放的命名空间 | `string`          | -          |
-| title  | 下拉面板标题       | `string`          | `'储存箱'` |
+| 属性名 | 说明               | 类型              | 默认值 |
+| ------ | ------------------ | ----------------- | ------ |
+| data   | 需要储存的数据     | `object \| any[]` | -      |
+| name   | 数据存放的命名空间 | `string`          | -      |
+| title  | 下拉面板标题       | `string`          | -      |
 
 ## Slots
 

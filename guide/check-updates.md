@@ -4,7 +4,7 @@
 
 在应用配置中设置：
 
-```ts {2-13}
+```ts {2-8}
 const globalSettings: Settings.all = {
   app: {
     /**
@@ -12,11 +12,6 @@ const globalSettings: Settings.all = {
      * @默认值 `false`
      */
     enableCheckUpdates: true
-    /**
-     * 检查更新间隔时间，单位分钟
-     * @默认值 `1`
-     */
-    checkUpdatesInterval: 1
   },
 }
 ```
@@ -30,18 +25,3 @@ const globalSettings: Settings.all = {
 框架默认采用轮询请求 `index.html`，并获取响应头中的 `etag` 或 `last-modified` 作为版本标识的方法来判断页面是否有更新。
 
 你也可以修改 `/src/layouts/components/CheckUpdates/index.vue` 文件中的 `getVersionTag` 方法，实现自定义检查更新。
-
-```ts
-async function getVersionTag() {
-  try {
-    const response = await fetch(`${location.origin}${location.pathname}`, {
-      cache: 'no-cache',
-      method: 'HEAD',
-    })
-    return response.headers.get('etag') || response.headers.get('last-modified')
-  }
-  catch {
-    console.error('检查更新失败')
-  }
-}
-```

@@ -2,10 +2,13 @@
 
 ## Props
 
-| 属性名      | 说明 | 类型     | 默认值 |
-| ----------- | ---- | -------- | ------ |
-| title       | 标题 | `string` | -      |
-| description | 描述 | `string` | -      |
+| 属性名       | 说明         | 类型     | 默认值 |
+| ------------ | ------------ | -------- | ------ |
+| title        | 标题         | `string` | -      |
+| description  | 描述         | `string` | -      |
+| class        | 自定义类名   | `string` | -      |
+| mainClass    | 主容器类名   | `string` | -      |
+| defaultClass | 默认容器类名 | `string` | -      |
 
 ## Slots
 
