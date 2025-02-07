@@ -54,6 +54,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: '/components/index',
           },
           {
+            text: '技术揭秘',
+            link: 'https://juejin.cn/column/7469775184427221026',
+          },
+          {
             text: '历史版本文档',
             items: [
               {

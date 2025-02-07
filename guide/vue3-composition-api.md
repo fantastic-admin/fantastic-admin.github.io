@@ -24,23 +24,9 @@ router.push('/dashboard')
 </script>
 ```
 
-## 组件 name
+## 定义组件名
 
-`<script setup>` 可以和普通的 `<script>` 一起使用，所以可以这样定义组件 name：
-
-```vue
-<script lang="ts">
-export default {
-  name: 'componentName',
-}
-</script>
-
-<script setup lang="ts">
-...
-</script>
-```
-
-Vue 3.3 开始，你可以使用 `defineOptions` 在 `<script setup>` 里定义组件的 name：
+使用 `defineOptions` 在 `<script setup>` 里定义组件名：
 
 ```vue
 <script setup lang="ts">

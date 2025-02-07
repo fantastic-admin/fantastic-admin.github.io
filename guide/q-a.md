@@ -83,7 +83,7 @@ Vite 4.3 显著提升了开发服务器的性能，具体可以阅读这篇文�
 ```json {3}
 {
   "scripts": {
-    "build": "vue-tsc --noEmit && cross-env NODE_OPTIONS=--max-old-space-size=8192 vite build"
+    "build": "vue-tsc -b && cross-env NODE_OPTIONS=--max-old-space-size=8192 vite build"
   }
 }
 ```
