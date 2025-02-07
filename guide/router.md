@@ -44,10 +44,8 @@ export default routes
 ### 多级路由
 
 :::tip 说明
-多级路由最终都会转成二级路由并注册，但多级嵌套的层级结构会在导航菜单和面包屑导航中得到保留，其设计原因可阅读《[页面缓存](keep-alive)》。
+多级路由的中间层级，无需设置 `component` ，其原因可阅读《[关于 KeepAlive 多级路由缓存问题的终极解决方案](https://juejin.cn/post/7471722655933579290)》。
 :::
-
-多级路由的中间层级，无需设置 `component` 。
 
 ```ts
 import type { RouteRecordRaw } from 'vue-router'
@@ -63,6 +61,7 @@ const routes: RouteRecordRaw = {
   children: [
     {
       path: 'level',
+      name: 'ExampleLevel',
       // 无需设置 componment
       meta: {
         title: '中间层级',
@@ -70,7 +69,7 @@ const routes: RouteRecordRaw = {
       children: [
         {
           path: 'index',
-          name: 'ExampleIndex',
+          name: 'ExampleLevelIndex',
           component: () => import('@/views/example/index.vue'),
           meta: {
             title: '演示页面',
