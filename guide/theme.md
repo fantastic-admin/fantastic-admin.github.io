@@ -17,14 +17,18 @@ const globalSettings: Settings.all = {
   app: {
     /**
      * 颜色方案
-     * @默认值 `''` 跟随系统
-     * @可选值 `'light'` 明亮模式
+     * @默认值 `'light'` 明亮模式
      * @可选值 `'dark'` 暗黑模式
+     * @可选值 `''` 跟随系统
      */
     colorScheme: '',
   },
 }
 ```
+
+当设置为 `''` 时，将跟随系统：
+
+![](/theme-colorScheme.gif){data-zoomable}
 
 ## 主题同步 <Badge type="pro" text="专业版" />
 
@@ -44,6 +48,15 @@ const globalSettings: Settings.all = {
 
 由于一套主题分别有明亮和暗黑两种模式，开启时将共用一套主题，关闭后可以分别设置明亮和暗黑模式的主题。
 
+:::: tabs
+::: tab 开启主题同步
+![](/theme-themeSync-true.gif){data-zoomable}
+:::
+::: tab 关闭主题同步
+![](/theme-themeSync-false.gif){data-zoomable}
+:::
+::::
+
 ## 圆角系数
 
 在应用配置中设置：
@@ -62,6 +75,8 @@ const globalSettings: Settings.all = {
 ```
 
 该设置会影响到框架中所有圆角组件的圆角系数，例如按钮、卡片、弹窗等。
+
+![](/theme-radius.gif){data-zoomable}
 
 ## 哀悼模式
 
@@ -94,6 +109,24 @@ const globalSettings: Settings.all = {
   },
 }
 ```
+
+## 载入进度条
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  app: {
+    /**
+     * 是否开启载入进度条
+     * @默认值 `true`
+     */
+    enableProgress: true
+  },
+}
+```
+
+![](/theme-progress.gif){data-zoomable}
 
 ## 开发注意
 

@@ -4,7 +4,7 @@
 
 主页对应的页面文件为 `/src/views/index.vue`
 
-## 关闭主页
+## 是否开启
 
 在应用配置中设置：
 
@@ -90,8 +90,8 @@ const systemRoutes: RouteRecordRaw[] = [
 
 下面是一个补充完整的例子：
 
-::: details 基础版
-
+:::: tabs
+::: tab 基础版
 在 `src/router/routes.ts` 中增加：
 
 ```ts {3-10}
@@ -148,11 +148,8 @@ router.beforeEach(async (to, from, next) => {
 ```
 
 现在就可以通过 `http://localhost:9000/#/` 访问新创建的这个页面了，并且无需登录。
-
 :::
-
-::: details 专业版
-
+::: tab 专业版
 在 `src/router/routes.ts` 中增加：
 
 ```ts {3-11}
@@ -181,5 +178,5 @@ const constantRoutes: RouteRecordRaw[] = [
 ```
 
 现在就可以通过 `http://localhost:9000/#/` 访问新创建的这个页面了，并且无需登录。
-
 :::
+::::

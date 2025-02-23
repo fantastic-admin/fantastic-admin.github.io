@@ -1,5 +1,72 @@
 # 导航菜单
 
+## 模式
+
+提供 7 种导航栏模式，其中后 4 种为 <Badge type="pro" text="专业版" /> 才有，在应用配置中设置：
+
+```ts {2-14}
+const globalSettings: Settings.all = {
+  menu: {
+    /**
+     * 导航栏模式
+     * @默认值 `'side'` 侧边栏模式（有主导航）
+     * @可选值 `'head'` 顶部模式
+     * @可选值 `'single'` 侧边栏模式（无主导航）
+     * @可选值 `'only-side'` 侧边栏精简模式
+     * @可选值 `'only-head'` 顶部精简模式
+     * @可选值 `'side-panel'` 侧边栏面板模式
+     * @可选值 `'head-panel'` 顶部面板模式
+     */
+    mode: 'head',
+  },
+}
+```
+
+:::: tabs
+::: tab head
+![](/menu-mode-head.png){data-zoomable}
+:::
+::: tab side
+![](/menu-mode-side.png){data-zoomable}
+:::
+::: tab single
+![](/menu-mode-single.png){data-zoomable}
+:::
+::: tab only-side
+![](/menu-mode-only-side.png){data-zoomable}
+:::
+::: tab only-head
+![](/menu-mode-only-head.png){data-zoomable}
+:::
+::: tab side-panel
+![](/menu-mode-side-panel.png){data-zoomable}
+:::
+::: tab head-panel
+![](/menu-mode-head-panel.png){data-zoomable}
+:::
+::::
+
+## 风格 <Badge type="pro" text="专业版" />
+
+在应用配置中设置：
+
+```ts {2-11}
+const globalSettings: Settings.all = {
+  menu: {
+    /**
+     * 导航栏风格
+     * @默认值 `''`
+     * @可选值 `'arrow'` 箭头
+     * @可选值 `'line'` 线条
+     * @可选值 `'dot'` 圆点
+     */
+    style: '',
+  },
+}
+```
+
+![](/menu-style.png){data-zoomable}
+
 ## 主导航点击模式
 
 在应用配置中设置：
@@ -20,7 +87,7 @@ const globalSettings: Settings.all = {
 
 ![](/menu-mainmenuclickmode.gif){data-zoomable}
 
-该特性支持次导航只有一个导航时自动隐藏：
+当设置成 `'jump'` 或 `'smart'` 时，支持次导航只有一个导航时，点击主导航会跳转并隐藏：
 
 ![](/menu-mainmenuclickmodeplus.gif){data-zoomable}
 
@@ -109,24 +176,6 @@ const globalSettings: Settings.all = {
 
 ![](/menu-submenucollapse.png){data-zoomable}
 
-## 开启次导航展开/收起按钮
-
-在应用配置中设置：
-
-```ts {2-8}
-const globalSettings: Settings.all = {
-  menu: {
-    /**
-     * 是否开启次导航的展开/收起按钮
-     * @默认值 `false`
-     */
-    enableSubMenuCollapseButton: true,
-  },
-}
-```
-
-![](/menu-enablesubmenucollapsebutton.gif){data-zoomable}
-
 ## 次导航自动收起 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：
@@ -146,3 +195,21 @@ const globalSettings: Settings.all = {
 当次导航处于收起状态时可以实现如下的效果：
 
 ![](/menu-submenuautocollapse.gif){data-zoomable}
+
+## 开启次导航展开/收起按钮
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  menu: {
+    /**
+     * 是否开启次导航的展开/收起按钮
+     * @默认值 `false`
+     */
+    enableSubMenuCollapseButton: true,
+  },
+}
+```
+
+![](/menu-enablesubmenucollapsebutton.gif){data-zoomable}

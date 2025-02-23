@@ -683,9 +683,15 @@ const constantRoutes: RouteRecordRaw[] = [
 
 在应用配置中设置：
 
-```ts {2-4}
+```ts {2-9}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 路由数据来源
+     * @默认值 `'frontend'` 前端
+     * @可选值 `'backend'` 后端
+     * @可选值 `'filesystem'` 文件系统
+     */
     routeBaseOn: 'backend'
   }
 }

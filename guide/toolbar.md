@@ -1,9 +1,5 @@
 # 工具栏
 
-工具栏主要是红框处各类功能图标。
-
-![](/toolbar.png){data-zoomable}
-
 ## 收藏夹 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：

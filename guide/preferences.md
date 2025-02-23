@@ -18,7 +18,7 @@ const globalSettings: Settings.all = {
 }
 ```
 
-![](/preferences.png){data-zoomable}
+![](/preferences.gif){data-zoomable}
 
 ## 定制偏好设置内容
 

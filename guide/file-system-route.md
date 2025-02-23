@@ -14,9 +14,10 @@
 const globalSettings: Settings.all = {
   app: {
     /**
-     * 导航栏数据来源，当 `app.routeBaseOn: 'filesystem'` 时生效
+     * 路由数据来源
      * @默认值 `'frontend'` 前端
      * @可选值 `'backend'` 后端
+     * @可选值 `'filesystem'` 文件系统
      */
     routeBaseOn: 'filesystem',
   },

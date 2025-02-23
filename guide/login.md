@@ -27,9 +27,14 @@
 
 默认情况下，登录过期后会直接跳转到登录页，但框架也支持弹出重新登录的弹窗，需要在应用配置中设置：
 
-```ts {2-4}
+```ts {2-9}
 const globalSettings: Settings.all = {
   app: {
+    /**
+     * 登录过期模式
+     * @默认值 `'redirect'` 跳转到登录页
+     * @可选值 `'popup'` 弹出登录窗口
+     */
     loginExpiredMode: 'popup',
   },
 }

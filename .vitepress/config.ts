@@ -1,3 +1,4 @@
+import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
@@ -278,6 +279,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaButton 按钮', link: '/components/fa-button' },
             { text: 'FaCard 卡片', link: '/components/fa-card' },
             { text: 'FaCheckbox 复选框', link: '/components/fa-checkbox' },
+            { text: 'FaCode 代码块', link: '/components/fa-code' },
             { text: 'FaCountTo 计数到', link: '/components/fa-count-to' },
             { text: 'FaDigitalCard 数字卡片', link: '/components/fa-digital-card' },
             { text: 'FaDivider 分割线', link: '/components/fa-divider' },
@@ -355,6 +357,11 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
           },
         },
       },
+    },
+  },
+  markdown: {
+    config: (md) => {
+      tabsPlugin(md)
     },
   },
 })
