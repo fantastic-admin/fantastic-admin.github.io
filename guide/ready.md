@@ -46,7 +46,8 @@ git clone -b example https://gitee.com/fantastic-admin/basic.git
 使用本模板前，需要在本地依次安装好 [Node.js](https://nodejs.org/), [pnpm](https://pnpm.io/zh/), [Git](https://git-scm.com/)(非必须) 和 [Visual Studio Code](https://code.visualstudio.com/)。
 
 ::: warning 注意
-在 [package.json](https://github.com/fantastic-admin/basic/blob/main/package.json#L4-L6) 文件中有限制 node 要求版本，建议使用最新 LTS 版本。
+- 在 [package.json](https://github.com/fantastic-admin/basic/blob/main/package.json#L4-L6) 文件中有限制 node 要求版本，建议使用最新 LTS 版本。
+- 如果你不想使用 VSCode ，我们也强烈建议你使用基于 VSCode 内核的 IDE ，如 [Cursor](https://www.cursor.com/) 。
 :::
 
 然后在 Visual Studio Code 里安装好以下扩展：

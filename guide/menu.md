@@ -69,6 +69,8 @@ const globalSettings: Settings.all = {
 
 ## 主导航点击模式
 
+<Badge text="导航栏模式为 side / head 时支持" />
+
 在应用配置中设置：
 
 ```ts {2-10}
@@ -142,6 +144,8 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 ## 次导航可同时展开多个子项
 
+<Badge text="导航栏模式为 side / head / single 时支持" />
+
 在应用配置中设置：
 
 ```ts {2-8}
@@ -160,6 +164,8 @@ const globalSettings: Settings.all = {
 
 ## 次导航默认收起
 
+<Badge text="导航栏模式为 side / head / single 时支持" />
+
 在应用配置中设置：
 
 ```ts {2-8}
@@ -177,6 +183,8 @@ const globalSettings: Settings.all = {
 ![](/menu-submenucollapse.png){data-zoomable}
 
 ## 次导航自动收起 <Badge type="pro" text="专业版" />
+
+<Badge text="导航栏模式为 side / head / single 时支持" />
 
 在应用配置中设置：
 
@@ -197,6 +205,8 @@ const globalSettings: Settings.all = {
 ![](/menu-submenuautocollapse.gif){data-zoomable}
 
 ## 开启次导航展开/收起按钮
+
+<Badge text="导航栏模式为 side / head / single 时支持" />
 
 在应用配置中设置：
 

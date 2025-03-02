@@ -1,4 +1,4 @@
-# FaCode 代码块
+# FaCode 代码块 <Badge type="pro" text="专业版" /> <Badge text="v5.1.0" />
 
 ## Props
 

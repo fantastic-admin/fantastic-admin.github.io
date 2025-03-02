@@ -2,13 +2,45 @@
 
 只记录 feat/fix 以及破坏性变更。
 
-<!-- ## v5.1.0
+## v5.1.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.1.0)
+🚨 Breaking Changes
+
+- 重构注册路由数据结构 &nbsp;-&nbsp; by @hooray [<samp>(cfb4f)</samp>](https://github.com/fantastic-admin/basic/commit/cfb4f23)
+
+🚀 Features
+
+- `FaSelect` 组件增加 class props &nbsp;-&nbsp; by @hooray [<samp>(eff07)</samp>](https://github.com/fantastic-admin/basic/commit/eff07c2)
+- 刷新按钮增加按住ctrl使用原生浏览器刷新功能 &nbsp;-&nbsp; by @hooray [<samp>(2100b)</samp>](https://github.com/fantastic-admin/basic/commit/2100bbe)
+- 增加 vue devtools 启动编辑器环境变量 &nbsp;-&nbsp; by @hooray [<samp>(643d4)</samp>](https://github.com/fantastic-admin/basic/commit/643d458)
+- `FaPopover` 组件增加手动控制面板显示 &nbsp;-&nbsp; by @hooray [<samp>(6d58f)</samp>](https://github.com/fantastic-admin/basic/commit/6d58f1c)
+
+🐞 Bug Fixes
+
+- 导航搜索面板唤起时输入框未聚焦 &nbsp;-&nbsp; by @hooray [<samp>(a6e66)</samp>](https://github.com/fantastic-admin/basic/commit/a6e66c3)
+- 修复 `useFaModal` 弹窗警告 &nbsp;-&nbsp; by @hooray [<samp>(b3b89)</samp>](https://github.com/fantastic-admin/basic/commit/b3b8947)
 :::
 
 :::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.1.0)
-::: -->
+🚨 Breaking Changes
+
+- 重构注册路由数据结构 &nbsp;-&nbsp; by @hooray [<samp>(c0d8b)</samp>](https://github.com/fantastic-admin/pro/commit/c0d8b9bf)
+
+🚀 Features
+
+- `FaSelect` 组件增加 class props &nbsp;-&nbsp; by @hooray [<samp>(83e5a)</samp>](https://github.com/fantastic-admin/pro/commit/83e5a9e3)
+- 新增 `FaCode` 组件 &nbsp;-&nbsp; by @hooray [<samp>(ac4e1)</samp>](https://github.com/fantastic-admin/pro/commit/ac4e1678)
+- 刷新按钮增加按住ctrl使用原生浏览器刷新功能 &nbsp;-&nbsp; by @hooray [<samp>(a152b)</samp>](https://github.com/fantastic-admin/pro/commit/a152b948)
+- `FaLayoutContainer` 组件增加顶部底部区域 &nbsp;-&nbsp; by @hooray [<samp>(66def)</samp>](https://github.com/fantastic-admin/pro/commit/66def612)
+- 增加 vue devtools 启动编辑器环境变量 &nbsp;-&nbsp; by @hooray [<samp>(f1e86)</samp>](https://github.com/fantastic-admin/pro/commit/f1e863d1)
+- `FaPopover` 组件增加手动控制面板显示 &nbsp;-&nbsp; by @hooray [<samp>(9c961)</samp>](https://github.com/fantastic-admin/pro/commit/9c961713)
+
+🐞 Bug Fixes
+
+- 导航搜索面板唤起时输入框未聚焦 &nbsp;-&nbsp; by @hooray [<samp>(0611c)</samp>](https://github.com/fantastic-admin/pro/commit/0611ca1a)
+- 修复 `useFaModal` 弹窗警告 &nbsp;-&nbsp; by @hooray [<samp>(a2384)</samp>](https://github.com/fantastic-admin/pro/commit/a2384f0e)
+:::
 
 ## v5.0.0
 
