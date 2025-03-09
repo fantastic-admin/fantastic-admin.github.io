@@ -24,9 +24,8 @@
 | footer                | 是否显示底部内容   | `boolean`                                | `true`    |
 | closeOnClickOverlay   | 是否点击遮罩关闭   | `boolean`                                | `true`    |
 | closeOnPressEscape    | 是否按下 ESC 关闭  | `boolean`                                | `true`    |
-| class                 | 自定义类名         | `string`                                 | -         |
-| headerClass           | 头部自定义类名     | `string`                                 | -         |
 | contentClass          | 内容自定义类名     | `string`                                 | -         |
+| headerClass           | 头部自定义类名     | `string`                                 | -         |
 | footerClass           | 底部自定义类名     | `string`                                 | -         |
 
 ## Slots
