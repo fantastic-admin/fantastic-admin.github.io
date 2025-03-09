@@ -10,7 +10,7 @@
 
 框架默认不启用该特性，如果需要开启，需要到应用配置里修改设置。
 
-```ts {2-9}
+```ts {2-10}
 const globalSettings: Settings.all = {
   app: {
     /**
