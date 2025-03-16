@@ -9,7 +9,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: './favicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
     ['meta', { 'http-equiv': 'Expires', 'content': '0' }],
     ['meta', { 'http-equiv': 'Pragma', 'content': 'no-cache' }],
     ['meta', { 'http-equiv': 'Cache-control', 'content': 'no-cache' }],
@@ -154,6 +154,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: 'https://github.com/mineadmin/mineadmin',
           },
           {
+            text: 'Go-Ldap-Admin openLDAP后台管理项目',
+            link: 'https://ldapdoc.eryajf.net',
+          },
+          {
             text: '交换友链 ?',
             link: '/links',
           },
@@ -282,6 +286,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaBlurReveal 模糊显示', link: '/components/fa-blur-reveal' },
             { text: 'FaButton 按钮', link: '/components/fa-button' },
             { text: 'FaCard 卡片', link: '/components/fa-card' },
+            { text: 'FaCarousel 轮播图', link: '/components/fa-carousel' },
             { text: 'FaCheckbox 复选框', link: '/components/fa-checkbox' },
             { text: 'FaCode 代码块', link: '/components/fa-code' },
             { text: 'FaCountTo 计数到', link: '/components/fa-count-to' },

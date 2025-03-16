@@ -314,7 +314,7 @@ function open(url: string) {
         </BlurReveal>
       </div>
       <div class="relative mx-auto h-100 max-w-7xl overflow-hidden border border-[var(--vp-c-divider)] rounded-xl border-solid bg-white shadow-lg dark:bg-dark">
-        <div class="pointer-events-none absolute left-1/2 top-8 z-20 my-4 border rounded-3xl bg-white/30 p-2 backdrop-blur-md -translate-x-1/2">
+        <div class="pointer-events-none absolute left-1/2 top-8 z-20 my-4 border border-[var(--vp-c-divider)] rounded-3xl border-solid bg-white/30 p-2 backdrop-blur-md -translate-x-1/2">
           <img src="/logo.svg" class="size-20">
         </div>
         <div class="pointer-events-none absolute inset-0 z-10 mt-30 flex flex-col items-center justify-center px-4 text-center">

@@ -18,7 +18,7 @@ pnpm add naive-ui -D
 
 ::: details 基础版
 
-修改 `/tsconfig.json` 文件
+修改 `/tsconfig.app.json` 文件
 
 ```json
 {
@@ -83,7 +83,7 @@ const settingsStore = useSettingsStore()
 
 ::: details 专业版
 
-修改 `/tsconfig.json` 文件
+修改 `/tsconfig.app.json` 文件
 
 ```json
 {
