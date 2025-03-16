@@ -52,32 +52,32 @@ meta: {
 
 ## 鉴权组件
 
-页面中某个模块，当前用户具备该权限是如何显示，不具备该权限又是如何显示，针对这样的需求，框架提供了 `<Auth>` 组件。
+页面中某个模块，当前用户具备该权限是如何显示，不具备该权限又是如何显示，针对这样的需求，框架提供了 `<FaAuth>` 组件。
 
 ```vue-html
 <!-- 单权限验证 -->
-<Auth :value="'department.create'">
+<FaAuth :value="'department.create'">
   <p>你有该权限</p>
   <template #no-auth>
     <p>你没有该权限</p>
   </template>
-</Auth>
+</FaAuth>
 
 <!-- 多权限验证，用户只要具备其中任何一个权限，则验证通过 -->
-<Auth :value="['department.create', 'department.edit']">
+<FaAuth :value="['department.create', 'department.edit']">
   <p>你有该权限</p>
   <template #no-auth>
     <p>你没有该权限</p>
   </template>
-</Auth>
+</FaAuth>
 
 <!-- 多权限验证，用户必须具备全部权限，才验证通过 -->
-<Auth :value="['department.create', 'department.edit']" all>
+<FaAuth :value="['department.create', 'department.edit']" all>
   <p>你有该权限</p>
   <template #no-auth>
     <p>你没有该权限</p>
   </template>
-</Auth>
+</FaAuth>
 ```
 
 ## 鉴权函数

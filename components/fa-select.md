@@ -1,4 +1,4 @@
-# Select 选择器
+# FaSelect 选择器
 
 ## Props
 
