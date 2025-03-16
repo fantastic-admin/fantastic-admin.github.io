@@ -34,6 +34,23 @@ const globalSettings: Settings.all = {
 :::
 ::::
 
+## 页宽模式应用范围 <Badge type="pro" text="专业版" /> <Badge text="v5.2.0" />
+
+在应用配置中设置：
+
+```ts {2-9}
+const globalSettings: Settings.all = {
+  layout: {
+    /**
+     * 页宽模式作用范围
+     * @默认值 `'outer'` 外层
+     * @可选值 `'inner'` 内层
+     */
+    widthModeScope: 'inner',
+  },
+}
+```
+
 ## 变量
 
 布局相关的变量存放在 `/src/assets/styles/globals.css` 文件中（注意看注释），均为 CSS 变量。
