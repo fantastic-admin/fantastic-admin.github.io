@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vitepress'
+import llmstxt from 'vitepress-plugin-llms'
 
 export default defineConfig({
   title: 'Fantastic-admin 官方文档',
@@ -9,7 +10,7 @@ export default defineConfig({
   lang: 'zh-CN',
   base: '/',
   head: [
-    ['link', { rel: 'icon', href: './favicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.svg' }],
     ['meta', { 'http-equiv': 'Expires', 'content': '0' }],
     ['meta', { 'http-equiv': 'Pragma', 'content': 'no-cache' }],
     ['meta', { 'http-equiv': 'Cache-control', 'content': 'no-cache' }],
@@ -154,6 +155,10 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: 'https://github.com/mineadmin/mineadmin',
           },
           {
+            text: 'Go-Ldap-Admin openLDAP后台管理项目',
+            link: 'https://ldapdoc.eryajf.net',
+          },
+          {
             text: '交换友链 ?',
             link: '/links',
           },
@@ -282,7 +287,9 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaBlurReveal 模糊显示', link: '/components/fa-blur-reveal' },
             { text: 'FaButton 按钮', link: '/components/fa-button' },
             { text: 'FaCard 卡片', link: '/components/fa-card' },
+            { text: 'FaCarousel 轮播图', link: '/components/fa-carousel' },
             { text: 'FaCheckbox 复选框', link: '/components/fa-checkbox' },
+            { text: 'FaCodePreview 代码预览', link: '/components/fa-code-preview' },
             { text: 'FaCode 代码块', link: '/components/fa-code' },
             { text: 'FaCountTo 计数到', link: '/components/fa-count-to' },
             { text: 'FaDigitalCard 数字卡片', link: '/components/fa-digital-card' },
@@ -316,6 +323,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaScrollArea 滚动区域', link: '/components/fa-scroll-area' },
             { text: 'FaSearchBar 搜索面板', link: '/components/fa-search-bar' },
             { text: 'FaSelect 选择器', link: '/components/fa-select' },
+            { text: 'FaSlider 滑块', link: '/components/fa-slider' },
             { text: 'FaSparklesText 闪烁文字', link: '/components/fa-sparkles-text' },
             { text: 'FaSparkline 迷你图', link: '/components/fa-sparkline' },
             { text: 'FaSpotlightCard 聚光卡片', link: '/components/fa-spotlight-card' },
@@ -394,6 +402,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
     },
     plugins: [
       UnoCSS(),
+      llmstxt(),
     ],
   },
 })

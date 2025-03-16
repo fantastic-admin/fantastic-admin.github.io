@@ -18,7 +18,7 @@ pnpm add ant-design-vue@4.x
 
 ::: details 基础版
 
-修改 `/tsconfig.json` 文件
+修改 `/tsconfig.app.json` 文件
 
 ```json
 {
@@ -85,7 +85,7 @@ const themeConfig = computed(() => ({
 
 ::: details 专业版
 
-修改 `/tsconfig.json` 文件
+修改 `/tsconfig.app.json` 文件
 
 ```json
 {

@@ -1,0 +1,13 @@
+# FaCodePreview 代码预览 <Badge type="pro" text="专业版" /> <Badge text="v5.2.0" />
+
+## Props
+
+| 属性名 | 说明 | 类型     | 默认值 |
+| ------ | ---- | -------- | ------ |
+| code   | 代码 | `string` | -      |
+
+## Slots
+
+| 插槽名  | 说明     |
+| ------- | -------- |
+| default | 默认插槽 |
