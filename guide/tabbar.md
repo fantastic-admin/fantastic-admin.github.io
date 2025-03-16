@@ -77,7 +77,7 @@ const globalSettings: Settings.all = {
 然后到 `/src/api/modules/user.ts` 中找到 `tabbar()` 和 `tabbarEdit()` 这两个函数，并分别修改这两个函数的请求地址。
 
 :::tip 建议
-为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `lonetext` 。
+为减轻后端处理，数据会直接以 JSON 字符串进行存储，建议后端可以在用户表增加相关字段，并将字段类型设为 `longtext` 。
 :::
 
 ## 拖拽排序 <Badge type="pro" text="专业版" />

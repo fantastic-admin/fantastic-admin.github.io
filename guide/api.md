@@ -79,7 +79,11 @@ const { getId } = useTabbar()
 getId()
 ```
 
-### 打开新标签页
+### ~~打开新标签页~~ <Badge text="v5.2.0 弃用" type="danger" />
+
+:::danger 注意
+该方法已弃用，直接使用 `router.push(to)` 即可达到相同效果。
+:::
 
 该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-push)。
 
@@ -91,7 +95,11 @@ const { open } = useTabbar()
 open(to)
 ```
 
-### 后退标签页
+### ~~后退标签页~~ <Badge text="v5.2.0 弃用" type="danger" />
+
+:::danger 注意
+该方法已弃用，直接使用 `router.go(delta)` 即可达到相同效果。
+:::
 
 该方法接收一个 `delta` 参数，该参数与 `router.go(delta)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-go)。
 
@@ -101,6 +109,22 @@ open(to)
 const { go } = useTabbar()
 
 go(delta)
+```
+
+### ~~替换当前标签页~~ <Badge text="v5.2.0 弃用" type="danger" />
+
+:::danger 注意
+该方法已弃用，直接使用 `router.replace(to)` 即可达到相同效果。
+:::
+
+该方法接收一个 `to` 参数，该参数与 `router.replace(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-replace)。
+
+通过该方式替换当前标签页，可以同时关闭当前标签页，而直接通过路由替换，当前标签页会被保留。
+
+```ts
+const { replace } = useTabbar()
+
+replace(to)
 ```
 
 ### 关闭当前标签页

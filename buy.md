@@ -297,3 +297,4 @@ Fantastic-admin 在探索商业化的道路上，离不开开源项目的支持�
 | 2024/07/17 |          [Vxe Table](https://vxetable.cn/)          |       800.00 |
 | 2024/10/18 |   [Element Plus](https://element-plus.org/zh-CN/)   |      2000.00 |
 | 2025/02/28 |         [hyoban](https://github.com/hyoban)         |        60.00 |
+| 2025/03/19 |   [Element Plus](https://element-plus.org/zh-CN/)   |     10000.00 |
