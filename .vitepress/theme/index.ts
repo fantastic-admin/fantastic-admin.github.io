@@ -12,6 +12,7 @@ import ZoomImg from './components/ZoomImg.vue'
 import '@red-asuka/vitepress-plugin-tabs/dist/style.css'
 import './fonts/fira_code/fira_code.css'
 import './styles/var.css'
+import 'virtual:uno.css'
 
 export default {
   ...Theme,

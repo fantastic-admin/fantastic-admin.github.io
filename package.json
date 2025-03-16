@@ -8,14 +8,22 @@
     "taze": "taze minor -wIr"
   },
   "dependencies": {
-    "medium-zoom": "^1.1.0"
+    "@vueuse/core": "^13.0.0",
+    "clsx": "^2.1.1",
+    "medium-zoom": "^1.1.0",
+    "motion-v": "^0.13.0",
+    "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.3.0",
+    "@iconify/json": "^2.2.317",
     "@red-asuka/vitepress-plugin-tabs": "^0.0.4",
-    "eslint": "^9.21.0",
+    "@unocss/eslint-plugin": "66.1.0-beta.5",
+    "eslint": "^9.22.0",
     "sass": "^1.85.1",
-    "taze": "^18.6.0",
+    "taze": "^18.7.1",
+    "unocss": "66.1.0-beta.5",
+    "unocss-preset-animations": "^1.1.1",
     "vitepress": "1.6.3",
     "vue": "^3.5.13",
     "vue3-tabs-component": "^1.3.7"

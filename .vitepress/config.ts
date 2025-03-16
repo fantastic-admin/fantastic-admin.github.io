@@ -1,4 +1,6 @@
+import { fileURLToPath, URL } from 'node:url'
 import tabsPlugin from '@red-asuka/vitepress-plugin-tabs'
+import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
@@ -378,5 +380,20 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
     config: (md) => {
       tabsPlugin(md)
     },
+  },
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPHome\.vue$/,
+          replacement: fileURLToPath(
+            new URL('./theme/components/custom-home/index.vue', import.meta.url),
+          ),
+        },
+      ],
+    },
+    plugins: [
+      UnoCSS(),
+    ],
   },
 })
