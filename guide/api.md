@@ -103,6 +103,18 @@ const { go } = useTabbar()
 go(delta)
 ```
 
+### 替换当前标签页
+
+该方法接收一个 `to` 参数，该参数与 `router.replace(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-replace)。
+
+通过该方式替换当前标签页，可以同时关闭当前标签页，而直接通过路由替换，当前标签页会被保留。
+
+```ts
+const { replace } = useTabbar()
+
+replace(to)
+```
+
 ### 关闭当前标签页
 
 该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-push)。

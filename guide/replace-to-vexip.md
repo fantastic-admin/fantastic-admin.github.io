@@ -18,7 +18,7 @@ pnpm add vexip-ui
 
 ::: details 基础版
 
-修改 `/tsconfig.json` 文件
+修改 `/tsconfig.app.json` 文件
 
 ```json
 {
@@ -80,7 +80,7 @@ import { zhCNLocale } from 'vexip-ui'
 
 ::: details 专业版
 
-修改 `/tsconfig.json` 文件
+修改 `/tsconfig.app.json` 文件
 
 ```json
 {
