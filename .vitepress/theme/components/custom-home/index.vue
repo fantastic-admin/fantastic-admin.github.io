@@ -89,7 +89,7 @@ function open(url: string) {
             text-end-color="hsl(var(--accent))"
           >
             <FlipWords
-              :words="['开箱即用的', '界面精美的', '操作丝滑的', '广受好评的']"
+              :words="['开箱即用的', '风格百变的', '广受好评的']"
               :duration="3000"
             />
           </TextHighlight>

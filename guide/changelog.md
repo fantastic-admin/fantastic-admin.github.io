@@ -2,6 +2,38 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## v5.3.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.3.0)
+🚀 Features
+
+- `FileUpload` 组件增加 `onRemove` 事件回调 &nbsp;-&nbsp; by @hooray [<samp>(59560)</samp>](https://github.com/fantastic-admin/basic/commit/5956008)
+- 将账号信息按钮封装为 `AccountButton` 组件，并优化工具栏和导航栏的显示逻辑 &nbsp;-&nbsp; by @hooray [<samp>(a1d32)</samp>](https://github.com/fantastic-admin/basic/commit/a1d3268)
+- 新增预设插槽 `header-after-menu`、`main-sidebar-after-menu` 和 `sub-sidebar-after-menu` &nbsp;-&nbsp; by @hooray [<samp>(d7808)</samp>](https://github.com/fantastic-admin/basic/commit/d7808da)
+- 新增工具栏全局开关设置 &nbsp;-&nbsp; by @hooray [<samp>(f8794)</samp>](https://github.com/fantastic-admin/basic/commit/f8794e2)
+
+🐞 Bug Fixes
+
+- 修复 `FaDrawer` 和 `FaModal` 组件中遗漏的 props &nbsp;-&nbsp; by @hooray [<samp>(97757)</samp>](https://github.com/fantastic-admin/basic/commit/97757e3)
+- 修复导航logo在禁用主页时依旧显示可点击状态 &nbsp;-&nbsp; by @hooray [<samp>(3be15)</samp>](https://github.com/fantastic-admin/basic/commit/3be15b2)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.3.0)
+🚀 Features
+
+- `FileUpload` 组件增加 `onRemove` 事件回调 &nbsp;-&nbsp; by @hooray [<samp>(32fcc)</samp>](https://github.com/fantastic-admin/pro/commit/32fcc315)
+- 新增 `FaAnimatedCountTo` 组件 &nbsp;-&nbsp; by @hooray [<samp>(b3a73)</samp>](https://github.com/fantastic-admin/pro/commit/b3a73afd)
+- 将账号信息按钮封装为 `AccountButton` 组件，并优化工具栏和导航栏的显示逻辑 &nbsp;-&nbsp; by @hooray [<samp>(fb498)</samp>](https://github.com/fantastic-admin/pro/commit/fb498a4b)
+- 新增预设插槽 `header-after-menu`、`main-sidebar-after-menu` 和 `sub-sidebar-after-menu` &nbsp;-&nbsp; by @hooray [<samp>(f850a)</samp>](https://github.com/fantastic-admin/pro/commit/f850a606)
+- 新增工具栏全局开关设置 &nbsp;-&nbsp; by @hooray [<samp>(06966)</samp>](https://github.com/fantastic-admin/pro/commit/06966d77)
+
+🐞 Bug Fixes
+
+- 修复 `FaDrawer` 和 `FaModal` 组件中遗漏的 props &nbsp;-&nbsp; by @hooray [<samp>(c9d20)</samp>](https://github.com/fantastic-admin/pro/commit/c9d20568)
+- 修复登录页 copyright 展示位置错误 &nbsp;-&nbsp; by @hooray [<samp>(ce8bf)</samp>](https://github.com/fantastic-admin/pro/commit/ce8bf1a3)
+- 修复导航logo在禁用主页时依旧显示可点击状态 &nbsp;-&nbsp; by @hooray [<samp>(009d3)</samp>](https://github.com/fantastic-admin/pro/commit/009d3c8e)
+:::
+
 ## v5.2.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.2.0)

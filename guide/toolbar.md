@@ -1,5 +1,61 @@
 # 工具栏
 
+## 是否启用 <Badge text="v5.3.0" />
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  toolbar: {
+    /**
+     * 是否开启工具栏
+     * @默认值 `true`
+     */
+    enable: false,
+  },
+}
+```
+
+该设置仅控制工具栏区域是否启用。
+
+意味着你可以通过关闭工具栏，并使用 `HeaderAfterMenu` 预留插槽，将原本工具栏内的功能模块移至头部显示，如下：
+
+![](/toolbar-slots.png){data-zoomable}
+
+::: code-group
+```ts {7-12} [src/settings.ts]
+import type { RecursiveRequired, Settings } from '#/global'
+import settingsDefault from '@/settings.default'
+import { merge } from '@/utils/object'
+import { cloneDeep } from 'es-toolkit'
+
+const globalSettings: Settings.all = {
+  menu: {
+    mode: 'head',
+  },
+  toolbar: {
+    enable: false,
+  },
+}
+
+export default merge(globalSettings, cloneDeep(settingsDefault)) as RecursiveRequired<Settings.all>
+```
+
+```vue [src/slots/HeaderAfterMenu/index.vue]
+<script setup lang="ts">
+import ToolbarLeftSide from '@/layouts/components/Topbar/Toolbar/leftSide.vue'
+import ToolbarRightSide from '@/layouts/components/Topbar/Toolbar/rightSide.vue'
+</script>
+
+<template>
+  <div class="flex -me-4">
+    <ToolbarLeftSide />
+    <ToolbarRightSide />
+  </div>
+</template>
+```
+:::
+
 ## 收藏夹 <Badge type="pro" text="专业版" />
 
 在应用配置中设置：

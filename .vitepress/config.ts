@@ -143,10 +143,6 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             link: 'https://form-create.com',
           },
           {
-            text: 'QuickAdmin 快速开发管理框架',
-            link: 'https://gitee.com/sciqtw/quickadmin',
-          },
-          {
             text: 'Vexip UI 组件库',
             link: 'https://www.vexipui.com/zh-CN',
           },
@@ -302,6 +298,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaFlipWords 翻转文字', link: '/components/fa-flip-words' },
             { text: 'FaGlowyCard 发光卡片', link: '/components/fa-glowy-card' },
             { text: 'FaGradientButton 渐变按钮', link: '/components/fa-gradient-button' },
+            { text: 'FaHoverCard 悬浮卡片', link: '/components/fa-hover-card' },
             { text: 'FaIcon 图标', link: '/components/fa-icon' },
             { text: 'FaIconPicker 图标选择器', link: '/components/fa-icon-picker' },
             { text: 'FaInput 输入框', link: '/components/fa-input' },
@@ -333,6 +330,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaTabs 标签页', link: '/components/fa-tabs' },
             { text: 'FaTextHighlight 文字高亮', link: '/components/fa-text-highlight' },
             { text: 'FaTimeAgo 可阅读时间', link: '/components/fa-time-ago' },
+            { text: 'FaTimeline 时间线', link: '/components/fa-timeline' },
             { text: 'FaTooltip 文字提示', link: '/components/fa-tooltip' },
             { text: 'FaToast 轻提示', link: '/components/fa-toast' },
             { text: 'FaTrend 趋势标记', link: '/components/fa-trend' },
