@@ -50,6 +50,25 @@ api.post('news/create', {
 
 参考代码里只做了简单的拦截处理，例如请求的时候会自动带上 token ，响应的时候会根据错误信息判断是登录失效还是接口报错，并做相应动作。
 
+### 请求重试 <Badge text="5.4.0" />
+
+框架扩展了请求配置参数，只需在请求时增加 `retry` 配置项，即可开启请求重试。
+
+```ts
+api.get('news/list', {
+  retry: true,
+})
+
+api.post('news/create', {
+  title: '新闻标题',
+  content: '新闻内容',
+}, {
+  retry: true,
+})
+```
+
+默认请求重试次数为 3 次，请求间隔为 1000 毫秒，可在 `/src/api/index.ts` 文件中修改 `MAX_RETRY_COUNT` 和 `RETRY_DELAY` 的默认配置。
+
 ## 模块管理
 
 如果项目里的接口很多，推荐根据模块来统一管理接口，目录为 `/src/api/modules/` 。

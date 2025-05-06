@@ -95,19 +95,12 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 先打开 `list.vue` 文件，找到 `onCreate()` 和 `onEdit()` 方法并替换：
 
-```ts {5,10,24,32}
+```ts {4,16}
 function onCreate() {
   if (formMode.value === 'router') {
-    if (settingsStore.settings.tabbar.enable && settingsStore.settings.tabbar.mergeTabsBy !== 'activeMenu') {
-      tabbar.open({
-        name: 'routeName',
-      })
-    }
-    else {
-      router.push({
-        name: 'routeName',
-      })
-    }
+    router.push({
+      name: 'routeName',
+    })
   }
   else {
     formModeProps.value.id = ''
@@ -117,22 +110,12 @@ function onCreate() {
 
 function onEdit(row: any) {
   if (formMode.value === 'router') {
-    if (settingsStore.settings.tabbar.enable && settingsStore.settings.tabbar.mergeTabsBy !== 'activeMenu') {
-      tabbar.open({
-        name: 'routeName',
-        params: {
-          id: row.id,
-        },
-      })
-    }
-    else {
-      router.push({
-        name: 'routeName',
-        params: {
-          id: row.id,
-        },
-      })
-    }
+    router.push({
+      name: 'routeName',
+      params: {
+        id: row.id,
+      },
+    })
   }
   else {
     formModeProps.value.id = row.id
@@ -144,14 +127,14 @@ function onEdit(row: any) {
 然后打开 `detail.vue` 文件，替换以下两处：
 
 ```vue-html {1}
-<PageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
+<FaPageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
   <ElButton size="default" round @click="goBack">
     <template #icon>
       <FaIcon name="i-ep:arrow-left" />
     </template>
     返回
   </ElButton>
-</PageHeader>
+</FaPageHeader>
 ```
 
 ```ts {3,6}

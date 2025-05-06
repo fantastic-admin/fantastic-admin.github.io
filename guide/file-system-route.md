@@ -106,7 +106,6 @@ meta:
 需要注意的是，既然使用了基于文件系统的路由，不建议再手动去设置 `path` 和 `name` ，同时因为路由不再承担生成导航的特性，所以 `meta` 对象的可配置项也有部分调整，仅支持以下参数：
 
 - [title](router#title)
-- [i18n](router#i18n) <Badge type="pro" text="专业版" />
 - [icon](router#icon)
 - [activeIcon](router#activeicon) <Badge type="pro" text="专业版" />
 - [permanent](router#permanent) <Badge type="pro" text="专业版" />
@@ -149,7 +148,6 @@ meta:
 - path 完整路由地址，如果有下级导航，则无需设置
 - meta 同路由 `meta` 对象，支持以下参数：
   - [title](router#title)
-  - [i18n](router#i18n)
   - [icon](router#icon)
   - [activeIcon](router#activeicon) <Badge type="pro" text="专业版" />
   - [auth](router#auth)
