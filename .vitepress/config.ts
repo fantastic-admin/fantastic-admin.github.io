@@ -317,6 +317,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaPatternBg 图案背景', link: '/components/fa-pattern-bg' },
             { text: 'FaPinInput 数字输入框', link: '/components/fa-pin-input' },
             { text: 'FaPopover 浮动面板', link: '/components/fa-popover' },
+            { text: 'FaProgress 进度条', link: '/components/fa-progress' },
             { text: 'FaScratchOff 刮刮乐', link: '/components/fa-scratch-off' },
             { text: 'FaScrollArea 滚动区域', link: '/components/fa-scroll-area' },
             { text: 'FaSearchBar 搜索面板', link: '/components/fa-search-bar' },
