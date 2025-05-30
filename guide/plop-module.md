@@ -12,11 +12,12 @@
 ? 请输入模块名 example
 ? 请输入模块中文名称 演示
 ? 是否生成 Mock Yes
-√  ++ \src\views\example\list.vue
-√  ++ \src\views\example\detail.vue
-√  ++ \src\views\example\components\DetailForm\index.vue
-√  ++ \src\views\example\components\FormMode\index.vue
-√  ++ \src\mock\example.ts
+? 是否为基于文件系统的路由页面 No
+✔  ++ /src/views/example/list.vue
+✔  ++ /src/views/example/detail.vue
+✔  ++ /src/views/example/components/DetailForm/index.vue
+✔  ++ /src/api/modules/example.ts
+✔  ++ /src/mock/example.ts
 ```
 
 这里我已经通过命令在 `/src/views/` 目录下创建好了一个 example 文件夹，并且也生成了 mock 数据。接下来需要去配置下路由，这样我们才可以在导航栏里访问到。
@@ -73,18 +74,17 @@ export default routes
 
 然后到 `/src/router/routes.ts` 文件里加上这个路由配置文件的引用。
 
-```ts {1,12}
+```ts {1,11}
 import Example from './modules/example'
 
 const asyncRoutes: Route.recordMainRaw[] = [
-  ...,
   {
     meta: {
-      title: '页面',
-      icon: 'ri-pages-line',
+      title: '演示',
+      icon: 'i-uim:box',
     },
     children: [
-      ...PagesExample,
+      MultilevelMenuExample,
       Example,
     ],
   },
@@ -95,7 +95,7 @@ const asyncRoutes: Route.recordMainRaw[] = [
 
 先打开 `list.vue` 文件，找到 `onCreate()` 和 `onEdit()` 方法并替换：
 
-```ts {4,16}
+```ts {4,27}
 function onCreate() {
   if (formMode.value === 'router') {
     router.push({
@@ -104,7 +104,18 @@ function onCreate() {
   }
   else {
     formModeProps.value.id = ''
-    formModeProps.value.visible = true
+    if (formMode.value === 'modal') {
+      updateModal({
+        title: '新增',
+      })
+      openModal()
+    }
+    else {
+      updateDrawer({
+        title: '新增',
+      })
+      openDrawer()
+    }
   }
 }
 
@@ -119,7 +130,18 @@ function onEdit(row: any) {
   }
   else {
     formModeProps.value.id = row.id
-    formModeProps.value.visible = true
+    if (formMode.value === 'modal') {
+      updateModal({
+        title: '编辑',
+      })
+      openModal()
+    }
+    else {
+      updateDrawer({
+        title: '编辑',
+      })
+      openDrawer()
+    }
   }
 }
 ```
@@ -127,24 +149,17 @@ function onEdit(row: any) {
 然后打开 `detail.vue` 文件，替换以下两处：
 
 ```vue-html {1}
-<FaPageHeader :title="route.name == 'exampleCreate' ? '新增演示' : '编辑演示'">
-  <ElButton size="default" round @click="goBack">
-    <template #icon>
-      <FaIcon name="i-ep:arrow-left" />
-    </template>
+<FaPageHeader :title="route.name === 'routerName' ? '新增演示' : '编辑演示'">
+  <FaButton variant="outline" size="sm" class="rounded-full" @click="onCancel">
+    <FaIcon name="i-ep:arrow-left" />
     返回
-  </ElButton>
+  </FaButton>
 </FaPageHeader>
 ```
 
-```ts {3,6}
-function goBack() {
-  if (settingsStore.settings.tabbar.enable && settingsStore.settings.tabbar.mergeTabsBy !== 'activeMenu') {
-    tabbar.close({ name: 'exampleList' })
-  }
-  else {
-    router.push({ name: 'exampleList' })
-  }
+```ts {2}
+function onCancel() {
+  router.close({ name: 'routeName' })
 }
 ```
 
@@ -171,14 +186,13 @@ const tableAutoHeight = ref(false)
 /**
  * 详情展示模式
  * router 路由跳转
- * dialog 对话框
+ * modal 模态框
  * drawer 抽屉
  */
-const formMode = ref<'router' | 'dialog' | 'drawer'>('router')
+const formMode = ref<'router' | 'modal' | 'drawer'>('router')
 
 // 详情
 const formModeProps = ref({
-  visible: false,
   id: '',
 })
 
@@ -227,9 +241,7 @@ onBeforeUnmount(() => {
 
 再往下就是需要你修改或编写业务代码的部分，这里就不继续展开了。
 
-详情页的代码就不多介绍了，相对比较简单，可自行阅读理解。其中表单部分单独封装成组件存放在 `/src/views/[模块文件夹]/components/DetailForm/index.vue` 里了，同样你在 `components/` 文件夹下还能看到另外一个 `FormMode` 的文件夹，这样的用意是让表单可以复用，**可以通过路由跳转的形式进入详情页，也可以通过弹窗或抽屉的形式打开详情页**。
-
-可能有人会有疑问，为什么不在生成文件的时候直接让我选择用哪种形式，这样生成出来就是哪种，而是在生成好的代码文件里再进行配置？
+详情页的代码就不多介绍了，相对比较简单，可自行阅读理解。其中表单部分单独封装成组件存放在 `/src/views/[模块文件夹]/components/DetailForm/index.vue` 里了。可能有人会有疑问，为什么不在生成文件的时候直接让我选择用哪种形式，这样生成出来就是哪种，而是在生成好的代码文件里再进行配置？
 
 这样设计的目的主要有三点：
 

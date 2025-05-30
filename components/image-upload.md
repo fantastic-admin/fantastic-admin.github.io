@@ -1,4 +1,8 @@
-# ImageUpload 单图上传
+# ImageUpload 单图上传 <Badge type="danger" text="v5.6.0 弃用" />
+
+:::danger 注意
+该组件已弃用，请使用 `FaImageUpload` 组件。
+:::
 
 ## Props
 

@@ -47,7 +47,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
     },
     nav: [
       {
-        text: '文档',
+        text: '文档 <img src="https://img.shields.io/github/v/release/fantastic-admin/basic?style=flat-square&label=%20&color=%2335495F" style="display: inline-block; margin-top: -2px; margin-left: 4px; vertical-align: middle;" />',
         items: [
           {
             text: '指南',
@@ -228,12 +228,18 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: '国际化', link: '/guide/i18n' },
             { text: '预留插槽', link: '/guide/slots' },
             { text: 'RTL 模式', link: '/guide/rtl' },
-            { text: '代码文件自动生成', link: '/guide/plop' },
-            { text: '标准模块', link: '/guide/plop-module' },
+            {
+              text: '代码文件自动生成',
+              link: '/guide/plop',
+              items: [
+                { text: '标准模块', link: '/guide/plop-module' },
+              ],
+            },
             { text: '常用 API', link: '/guide/api' },
             { text: '私有 Storage 数据', link: '/guide/storage' },
             { text: '首屏 Loading', link: '/guide/loading' },
             { text: '页面水印', link: '/guide/watermark' },
+            { text: '反馈', link: '/guide/feedback' },
             { text: '检查更新', link: '/guide/check-updates' },
             { text: '错误日志', link: '/guide/error-log' },
             { text: '自定义字体', link: '/guide/font' },
@@ -293,6 +299,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaDivider 分割线', link: '/components/fa-divider' },
             { text: 'FaDrawer 抽屉', link: '/components/fa-drawer' },
             { text: 'FaDropdown 下拉菜单', link: '/components/fa-dropdown' },
+            { text: 'FaFileUpload 文件上传', link: '/components/fa-file-upload' },
             { text: 'FaFixedActionBar 固定底部操作栏', link: '/components/fa-fixed-action-bar' },
             { text: 'FaFlipCard 翻转卡片', link: '/components/fa-flip-card' },
             { text: 'FaFlipWords 翻转文字', link: '/components/fa-flip-words' },
@@ -300,6 +307,8 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaGradientButton 渐变按钮', link: '/components/fa-gradient-button' },
             { text: 'FaHoverCard 悬浮卡片', link: '/components/fa-hover-card' },
             { text: 'FaIcon 图标', link: '/components/fa-icon' },
+            { text: 'FaImagePreview 图片预览', link: '/components/fa-image-preview' },
+            { text: 'FaImageUpload 图片上传', link: '/components/fa-image-upload' },
             { text: 'FaIconPicker 图标选择器', link: '/components/fa-icon-picker' },
             { text: 'FaInput 输入框', link: '/components/fa-input' },
             { text: 'FaInteractiveButton 交互式按钮', link: '/components/fa-interactive-button' },

@@ -56,8 +56,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
-
 const settingsStore = useSettingsStore()
 </script>
 
@@ -68,18 +66,6 @@ const settingsStore = useSettingsStore()
     </IxMessageProvider>
   </IxThemeProvider>
 </template>
-```
-
-删除相关文件
-
-```
-.
-└─ src
-   └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
-     ├─ FileUpload
-     ├─ ImagePreview
-     ├─ ImagesUpload
-     └─ ImageUpload
 ```
 
 :::
@@ -130,7 +116,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { useGlobalConfig } from '@idux/components/config'
 import { locales } from './index'
 
@@ -157,10 +142,6 @@ watch(() => settingsStore.lang, val => setLocale(locales[settingsStore.lang]))
 │  └─ module // 标准模块模板基于 Element Plus 开发，需要删除
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
-     ├─ FileUpload
-     ├─ ImagePreview
-     ├─ ImagesUpload
-     ├─ ImageUpload
      └─ PcasCascader
 ```
 

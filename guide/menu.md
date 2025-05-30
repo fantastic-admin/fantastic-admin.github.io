@@ -67,6 +67,24 @@ const globalSettings: Settings.all = {
 
 ![](/menu-style.png){data-zoomable}
 
+## 暗黑导航栏 <Badge type="pro" text="专业版" /> <Badge text="v5.5.0" />
+
+在应用配置中设置：
+
+```ts {2-8}
+const globalSettings: Settings.all = {
+  menu: {
+    /**
+     * 是否开启暗色模式，仅在亮色模式下生效
+     * @默认值 `false`
+     */
+    enableDark: true,
+  },
+}
+```
+
+![](/menu-dark.png){data-zoomable}
+
 ## 主导航点击模式
 
 <Badge text="导航栏模式为 side / head 时支持" />

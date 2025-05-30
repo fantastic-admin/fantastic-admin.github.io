@@ -1,6 +1,8 @@
 # FaButton 按钮
 
-## Props
+包含 `FaButton` 和 `FaButtonGroup` <Badge text="v5.5.0" /> 两个组件。
+
+## `FaButton` Props
 
 | 属性名   | 说明       | 类型                                                                          | 默认值      |
 | -------- | ---------- | ----------------------------------------------------------------------------- | ----------- |
@@ -10,7 +12,19 @@
 | disabled | 是否禁用   | `boolean`                                                                     | `false`     |
 | loading  | 是否加载中 | `boolean`                                                                     | `false`     |
 
-## Slots
+## `FaButton` Slots
+
+| 插槽名  | 说明           |
+| ------- | -------------- |
+| default | 自定义默认内容 |
+
+## `FaButtonGroup` Props
+
+| 属性名   | 说明     | 类型      | 默认值  |
+| -------- | -------- | --------- | ------- |
+| vertical | 是否垂直 | `boolean` | `false` |
+
+## `FaButtonGroup` Slots
 
 | 插槽名  | 说明           |
 | ------- | -------------- |

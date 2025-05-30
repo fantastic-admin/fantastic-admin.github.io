@@ -79,7 +79,7 @@ const { getId } = useTabbar()
 getId()
 ```
 
-### ~~打开新标签页~~ <Badge text="v5.2.0 弃用" type="danger" />
+### ~~打开新标签页~~ <Badge type="danger" text="v5.2.0 弃用" />
 
 :::danger 注意
 该方法已弃用，直接使用 `router.push(to)` 即可达到相同效果。
@@ -95,7 +95,7 @@ const { open } = useTabbar()
 open(to)
 ```
 
-### ~~后退标签页~~ <Badge text="v5.2.0 弃用" type="danger" />
+### ~~后退标签页~~ <Badge type="danger" text="v5.2.0 弃用" />
 
 :::danger 注意
 该方法已弃用，直接使用 `router.go(delta)` 即可达到相同效果。
@@ -111,7 +111,7 @@ const { go } = useTabbar()
 go(delta)
 ```
 
-### ~~替换当前标签页~~ <Badge text="v5.2.0 弃用" type="danger" />
+### ~~替换当前标签页~~ <Badge type="danger" text="v5.2.0 弃用" />
 
 :::danger 注意
 该方法已弃用，直接使用 `router.replace(to)` 即可达到相同效果。
@@ -127,7 +127,13 @@ const { replace } = useTabbar()
 replace(to)
 ```
 
-### 关闭当前标签页
+### ~~关闭当前标签页~~ <Badge type="danger" text="v5.5.0 弃用" />
+
+:::danger 注意
+该方法已弃用，直接使用 `router.close(to)` 即可达到相同效果。
+
+注意 `close` 方法为框架扩展的 API ，并非 vue-router 原生提供。
+:::
 
 该方法接收一个 `to` 参数，该参数与 `router.push(to)` 一致，点击阅读[参数说明](https://router.vuejs.org/zh/api/interfaces/Router.html#Methods-push)。
 

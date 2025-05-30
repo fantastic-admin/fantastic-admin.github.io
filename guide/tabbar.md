@@ -110,7 +110,11 @@ const globalSettings: Settings.all = {
 }
 ```
 
-## 标签页合并 <Badge type="pro" text="专业版" />
+## ~~标签页合并~~ <Badge type="pro" text="专业版" /> <Badge type="danger" text="v5.5.0 弃用" />
+
+:::danger 注意
+该配置已弃用，可在路由中针对某个路由单独配置。
+:::
 
 标签页合并功能在一定程度上可以减少标签页的数量，让用户能够准确的找到自己想要的标签页。
 
@@ -178,13 +182,13 @@ const routes: RouteRecordRaw = {
 
 从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，打开多个不同的详情页，只会保持一个**编辑管理员**标签页，效果如下：
 
-![](/tabbar-merge-routename.gif){data-zoomable}
+![](/route-meta-tabmerge-routename.gif){data-zoomable}
 
 ### 根据 `meta.activeMenu` 字段合并
 
 从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
 
-![](/tabbar-merge-activemenu.gif){data-zoomable}
+![](/route-meta-tabmerge-activemenu.gif){data-zoomable}
 
 ## 显示图标
 
