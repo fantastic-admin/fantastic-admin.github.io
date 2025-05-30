@@ -47,7 +47,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
     },
     nav: [
       {
-        text: '文档',
+        text: '文档 <img src="https://img.shields.io/github/v/release/fantastic-admin/basic?style=flat-square&label=%20&color=%2335495F" style="display: inline-block; margin-top: -2px; margin-left: 4px; vertical-align: middle;" />',
         items: [
           {
             text: '指南',
@@ -300,6 +300,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaGradientButton 渐变按钮', link: '/components/fa-gradient-button' },
             { text: 'FaHoverCard 悬浮卡片', link: '/components/fa-hover-card' },
             { text: 'FaIcon 图标', link: '/components/fa-icon' },
+            { text: 'FaImagePreview 图片预览', link: '/components/fa-image-preview' },
             { text: 'FaIconPicker 图标选择器', link: '/components/fa-icon-picker' },
             { text: 'FaInput 输入框', link: '/components/fa-input' },
             { text: 'FaInteractiveButton 交互式按钮', link: '/components/fa-interactive-button' },
