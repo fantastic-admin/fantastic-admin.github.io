@@ -71,7 +71,6 @@ import { zhCNLocale } from 'vexip-ui'
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ ImagePreview
      ├─ ImagesUpload
      └─ ImageUpload
 ```
@@ -124,7 +123,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { locales } from './index'
 
 const settingsStore = useSettingsStore()
@@ -146,7 +144,6 @@ const settingsStore = useSettingsStore()
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ ImagePreview
      ├─ ImagesUpload
      ├─ ImageUpload
      └─ PcasCascader

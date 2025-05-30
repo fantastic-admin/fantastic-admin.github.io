@@ -423,7 +423,7 @@ export default routes
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面进行缓存，否则不缓存
 - `string[]` ，可设置一个目标路由的 name 数组
 
-当类型为 `string` 或 `string[]` 时，可以更精细的去控制页面缓存的逻辑。例如从列表页进入详情页，则需要将列表页进行缓存；而从列表页进入其它页面，则无需将列表页进行缓存。详细可阅读《[页面缓存](keep-alive)》。
+当类型为 `string` 或 `string[]` 时，可以更精细的去控制页面缓存的逻辑。例如从列表页进入详情页，则需要将列表页进行缓存；而从列表页进入其它页面，则无需将列表页进行缓存。详细可阅读《[页面缓存 - 基础用法](keep-alive#基础用法)》。
 
 ### noCache
 
@@ -436,7 +436,7 @@ export default routes
 - `string` 设置某个目标路由的 name ，表示当前路由页面跳转到设置的 name 对应的路由页面时，则将当前路由页面清除缓存，否则不清除缓存
 - `string[]` ，可设置一个目标路由的 name 数组
 
-该属性通常在启用标签栏合并时会使用到。详细可阅读《[页面缓存 - 标签栏开启且合并](keep-alive#标签栏开启且合并)》。
+该属性通常在启用标签栏合并时会使用到。详细可阅读《[页面缓存 - 高级用法](keep-alive#高级用法)》。
 
 ### badge <Badge type="pro" text="专业版" />
 
@@ -467,6 +467,85 @@ badge: () => globalStore.number
 ```ts
 badgeVariant: () => globalStore.status
 ```
+
+### tabMerge <Badge type="pro" text="专业版" /> <Badge text="v5.5.0" />
+
+- 类型：`'routeName' | 'activeMenu'`
+- 默认值：`undefined`
+- 说明：标签页合并方式
+
+:::: tabs
+::: tab routeName 根据路由名称合并
+以下面这段路由配置为例：
+
+```ts {16,21}
+const routes: RouteRecordRaw = {
+  path: '/manager',
+  meta: {
+    title: '管理员管理',
+  },
+  children: [
+    {
+      path: '',
+      name: 'ManagerList'
+      meta: {
+        title: '管理员列表',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'ManagerEdit',
+      meta: {
+        title: '编辑管理员',
+        menu: false,
+        activeMenu: '/manager',
+        tabMerge: 'routeName',
+      },
+    },
+  ],
+}
+```
+
+从列表页进入详情页时，框架会新增一个**编辑管理员**的标签页，并且在不关闭详情页时，打开多个不同的详情页，只会保持一个**编辑管理员**标签页，效果如下：
+
+![](/route-meta-tabmerge-routename.gif){data-zoomable}
+:::
+::: tab activeMenu 根据激活菜单合并
+以下面这段路由配置为例：
+
+```ts {20,21}
+const routes: RouteRecordRaw = {
+  path: '/manager',
+  meta: {
+    title: '管理员管理',
+  },
+  children: [
+    {
+      path: '',
+      name: 'ManagerList'
+      meta: {
+        title: '管理员列表',
+      },
+    },
+    {
+      path: 'detail/:id',
+      name: 'ManagerEdit',
+      meta: {
+        title: '编辑管理员',
+        menu: false,
+        activeMenu: '/manager',
+        tabMerge: 'activeMenu',
+      },
+    },
+  ],
+}
+```
+
+从始至终只会保持一个标签页，其中的关键条件就是 `activeMenu` 这个参数，也就是框架会将设置过 `activeMenu` 的路由与 `activeMenu` 指向的目标路由合并为一个标签页，当在这些路由里相互跳转时，始终只保持一个标签页，效果如下：
+
+![](/route-meta-tabmerge-activemenu.gif){data-zoomable}
+:::
+::::
 
 ### query <Badge type="pro" text="专业版" />
 
@@ -683,7 +762,7 @@ const constantRoutes: RouteRecordRaw[] = [
 
 在应用配置中设置：
 
-```ts {2-9}
+```ts {2-10}
 const globalSettings: Settings.all = {
   app: {
     /**

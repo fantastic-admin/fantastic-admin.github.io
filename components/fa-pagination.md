@@ -1,4 +1,4 @@
-# FaPagination 分页
+# FaPagination 分页 <Badge type="pro" text="专业版" />
 
 ## Props
 

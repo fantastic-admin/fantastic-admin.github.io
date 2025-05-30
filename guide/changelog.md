@@ -2,6 +2,121 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## v5.5.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.5.0)
+🚨 Breaking Changes
+
+- 新增 `FaImagePreview` 组件，并移除 `ImagePreview` 组件 &nbsp;-&nbsp; by @hooray [<samp>(1a0eb)</samp>](https://github.com/fantastic-admin/basic/commit/1a0eb39)
+- 移除 `useViewTransition` 函数封装 &nbsp;-&nbsp; by @hooray [<samp>(0ac47)</samp>](https://github.com/fantastic-admin/basic/commit/0ac4738)
+- Pinia store 改为自动导入 &nbsp;-&nbsp; by @hooray [<samp>(8d597)</samp>](https://github.com/fantastic-admin/basic/commit/8d59733)
+- 扩展路由 `close` 函数，并移除 useTabbar 中 `close` 函数 &nbsp;-&nbsp; by @hooray [<samp>(59e68)</samp>](https://github.com/fantastic-admin/basic/commit/59e683c)
+
+🚀 Features
+
+- 新增 `FaButtonGroup` 组件 &nbsp;-&nbsp; by @hooray [<samp>(e553f)</samp>](https://github.com/fantastic-admin/basic/commit/e553fef)
+- `FaModal` 组件增加 `beforeClose` 回调函数，优化关闭逻辑并支持异步处理 &nbsp;-&nbsp; by @hooray [<samp>(6febf)</samp>](https://github.com/fantastic-admin/basic/commit/6febfea)
+- 为 `FaTabs` 组件添加 `listClass` 和 `contentClass` 属性，以支持自定义样式 &nbsp;-&nbsp; by @hooray [<samp>(e3aa5)</samp>](https://github.com/fantastic-admin/basic/commit/e3aa58e)
+- `FaDrawer` 和 `FaModal` 组件新增 `destroyOnClose` 属性 &nbsp;-&nbsp; by @hooray [<samp>(6fc89)</samp>](https://github.com/fantastic-admin/basic/commit/6fc8942)
+- 个人设置弹窗适配移动端 &nbsp;-&nbsp; by @hooray [<samp>(bfe66)</samp>](https://github.com/fantastic-admin/basic/commit/bfe6607)
+- 标签页右键菜单补充图标 &nbsp;-&nbsp; by @hooray [<samp>(e2cd4)</samp>](https://github.com/fantastic-admin/basic/commit/e2cd484)
+- Vite 升级到 7.0 &nbsp;-&nbsp; by @hooray [<samp>(fa537)</samp>](https://github.com/fantastic-admin/basic/commit/fa537b7)
+
+🐞 Bug Fixes
+
+- 更新viewport设置以改善移动设备上的显示效果 &nbsp;-&nbsp; by @hooray [<samp>(4ef21)</samp>](https://github.com/fantastic-admin/basic/commit/4ef21b7)
+- 修复权限未开启时菜单未过滤的问题，并简化菜单过滤逻辑 &nbsp;-&nbsp; by @hooray [<samp>(3859c)</samp>](https://github.com/fantastic-admin/basic/commit/3859c26)
+- 修复账户按钮移动端次导航下不实现用户名 &nbsp;-&nbsp; by @hooray [<samp>(28cc8)</samp>](https://github.com/fantastic-admin/basic/commit/28cc84f)
+
+🏎 Performance
+
+- 优化导航菜单动效执行性能 &nbsp;-&nbsp; by @hooray [<samp>(7ee93)</samp>](https://github.com/fantastic-admin/basic/commit/7ee93b0)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.5.0)
+🚨 Breaking Changes
+
+- 简化页宽模式，仅保留自适应和居中两种模式 &nbsp;-&nbsp; by @hooray [<samp>(37735)</samp>](https://github.com/fantastic-admin/pro/commit/377359f9)
+- 新增 `FaImagePreview` 组件，并移除 `ImagePreview` 组件 &nbsp;-&nbsp; by @hooray [<samp>(b5251)</samp>](https://github.com/fantastic-admin/pro/commit/b52513bc)
+- 移除 `useViewTransition` 函数封装 &nbsp;-&nbsp; by @hooray [<samp>(45e3b)</samp>](https://github.com/fantastic-admin/pro/commit/45e3bec3)
+- Pinia store 改为自动导入 &nbsp;-&nbsp; by @hooray [<samp>(427e9)</samp>](https://github.com/fantastic-admin/pro/commit/427e991a)
+- 扩展路由 `close` 函数，并移除 useTabbar 中 `close` 函数 &nbsp;-&nbsp; by @hooray [<samp>(2b7aa)</samp>](https://github.com/fantastic-admin/pro/commit/2b7aa1ee)
+- 路由增加 `meta.tabMerge` 属性，移除应用配置中标签页合并配置项 &nbsp;-&nbsp; by @hooray [<samp>(e717e)</samp>](https://github.com/fantastic-admin/pro/commit/e717e2b6)
+- Storage 前缀配置移入环境变量配置文件中 &nbsp;-&nbsp; by @hooray [<samp>(6d058)</samp>](https://github.com/fantastic-admin/pro/commit/6d058e65)
+- 移除 storage 工具函数，重写了 localStorage 和 sessionStorage ，可直接使用原生 API &nbsp;-&nbsp; by @hooray [<samp>(2470e)</samp>](https://github.com/fantastic-admin/pro/commit/2470e627)
+
+🚀 Features
+
+- 新增 `FaMultiStepLoader` 组件 &nbsp;-&nbsp; by @hooray [<samp>(f2f57)</samp>](https://github.com/fantastic-admin/pro/commit/f2f57a5c)
+- 新增 `FaButtonGroup` 组件 &nbsp;-&nbsp; by @hooray [<samp>(5b455)</samp>](https://github.com/fantastic-admin/pro/commit/5b455871)
+- `FaModal` 组件增加 `beforeClose` 回调函数，优化关闭逻辑并支持异步处理 &nbsp;-&nbsp; by @hooray [<samp>(0046b)</samp>](https://github.com/fantastic-admin/pro/commit/0046bcba)
+- `FaTabs` 组件增加 `listClass` 和 `contentClass` 属性以支持自定义样式 &nbsp;-&nbsp; by @hooray [<samp>(588af)</samp>](https://github.com/fantastic-admin/pro/commit/588af68f)
+- 新增导航栏暗黑模式，可在亮色模式下启用 &nbsp;-&nbsp; by @hooray [<samp>(7e17a)</samp>](https://github.com/fantastic-admin/pro/commit/7e17a46b)
+- `FaDrawer` 和 `FaModal` 组件新增 `destroyOnClose` 属性 &nbsp;-&nbsp; by @hooray [<samp>(dd5e4)</samp>](https://github.com/fantastic-admin/pro/commit/dd5e4053)
+- 在 `FaStorageBox` 组件中新增名称验证提示，确保名称不能为空且不重复 &nbsp;-&nbsp; by @hooray [<samp>(02b22)</samp>](https://github.com/fantastic-admin/pro/commit/02b22b8f)
+- 个人设置弹窗适配移动端 &nbsp;-&nbsp; by @hooray [<samp>(55537)</samp>](https://github.com/fantastic-admin/pro/commit/55537882)
+- 标签页右键菜单补充图标 &nbsp;-&nbsp; by @hooray [<samp>(1bebb)</samp>](https://github.com/fantastic-admin/pro/commit/1bebbcf1)
+- Vite 升级到 7.0 &nbsp;-&nbsp; by @hooray [<samp>(010d0)</samp>](https://github.com/fantastic-admin/pro/commit/010d0214)
+
+🐞 Bug Fixes
+
+- 更新viewport设置以改善移动设备上的显示效果 &nbsp;-&nbsp; by @hooray [<samp>(fce07)</samp>](https://github.com/fantastic-admin/pro/commit/fce07d6c)
+- 修复权限未开启时菜单未过滤的问题，并简化菜单过滤逻辑 &nbsp;-&nbsp; by @hooray [<samp>(0023f)</samp>](https://github.com/fantastic-admin/pro/commit/0023ff4e)
+- 修复标签页移出动画乱飘 &nbsp;-&nbsp; by @hooray [<samp>(27c5f)</samp>](https://github.com/fantastic-admin/pro/commit/27c5f982)
+- 修复账户按钮移动端次导航下不实现用户名 &nbsp;-&nbsp; by @hooray [<samp>(422a9)</samp>](https://github.com/fantastic-admin/pro/commit/422a9ce9)
+- 修复暗黑导航栏始终展开菜单字体颜色显示错误 &nbsp;-&nbsp; by @hooray [<samp>(e158c)</samp>](https://github.com/fantastic-admin/pro/commit/e158c43b)
+- 修复 `FaTimeline` 组件数据少于或等于1条时候报错 &nbsp;-&nbsp; by @hooray [<samp>(8fead)</samp>](https://github.com/fantastic-admin/pro/commit/8fead16e)
+- 修复页面最大化时边距计算错误 &nbsp;-&nbsp; by @hooray [<samp>(259c3)</samp>](https://github.com/fantastic-admin/pro/commit/259c3184)
+
+🏎 Performance
+
+- 优化导航菜单动效执行性能 &nbsp;-&nbsp; by @hooray [<samp>(f1b74)</samp>](https://github.com/fantastic-admin/pro/commit/f1b74c37)
+:::
+
+## v5.4.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.4.0)
+🚀 Features
+
+- `FaScrollArea` 组件新增 onScroll 事件 &nbsp;-&nbsp; by @hooray [<samp>(9b500)</samp>](https://github.com/fantastic-admin/basic/commit/9b5003f)
+- 对未设置 `redirect` 的父路由，访问时将自动重定向到允许访问的子路由 &nbsp;-&nbsp; by @hooray [<samp>(8d4e2)</samp>](https://github.com/fantastic-admin/basic/commit/8d4e226)
+- 新增 `FaHoverCard` 组件 &nbsp;-&nbsp; by @hooray [<samp>(eb306)</samp>](https://github.com/fantastic-admin/basic/commit/eb306b1)
+- 新增 `FaProgress` 组件 &nbsp;-&nbsp; by @hooray [<samp>(b7c62)</samp>](https://github.com/fantastic-admin/basic/commit/b7c627c)
+- 增加请求重试机制 &nbsp;-&nbsp; by @hooray [<samp>(3b889)</samp>](https://github.com/fantastic-admin/basic/commit/3b889f6)
+- 将 `FaDropdown` 组件插槽名从 `label` 修改为 `header`，并新增 `footer` 插槽 &nbsp;-&nbsp; by @hooray [<samp>(b9741)</samp>](https://github.com/fantastic-admin/basic/commit/b974139)
+
+🐞 Bug Fixes
+
+- 优化菜单点击处理逻辑，增加对链接的判断 &nbsp;-&nbsp; by @hooray [<samp>(9f374)</samp>](https://github.com/fantastic-admin/basic/commit/9f37438)
+- 修复次导航收起时页面展示错误 &nbsp;-&nbsp; by @hooray [<samp>(05261)</samp>](https://github.com/fantastic-admin/basic/commit/05261b3)
+- 修复激活标签页定位可能不居中的问题 &nbsp;-&nbsp; by @hooray [<samp>(8bfa0)</samp>](https://github.com/fantastic-admin/basic/commit/8bfa0f0)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.4.0)
+🚨 Breaking Changes
+
+- 调整 `FaLayoutContainer` 组件 props &nbsp;-&nbsp; by @hooray [<samp>(f97c1)</samp>](https://github.com/fantastic-admin/pro/commit/f97c17fa)
+
+🚀 Features
+
+- `FaScrollArea` 组件新增 onScroll 事件 &nbsp;-&nbsp; by @hooray [<samp>(46cb9)</samp>](https://github.com/fantastic-admin/pro/commit/46cb9df1)
+- 新增 `FaTimeline` 组件 &nbsp;-&nbsp; by @hooray [<samp>(f34d6)</samp>](https://github.com/fantastic-admin/pro/commit/f34d67dc)
+- 对未设置 `redirect` 的父路由，访问时将自动重定向到允许访问的子路由 &nbsp;-&nbsp; by @hooray [<samp>(8c7ab)</samp>](https://github.com/fantastic-admin/pro/commit/8c7ab890)
+- 新增 `FaHoverCard` 组件 &nbsp;-&nbsp; by @hooray [<samp>(d9ea7)</samp>](https://github.com/fantastic-admin/pro/commit/d9ea7865)
+- 新增 `FaProgress` 组件 &nbsp;-&nbsp; by @hooray [<samp>(ebbed)</samp>](https://github.com/fantastic-admin/pro/commit/ebbedb5f)
+- 增加请求重试机制 &nbsp;-&nbsp; by @hooray [<samp>(76e84)</samp>](https://github.com/fantastic-admin/pro/commit/76e8470b)
+- 将 `FaDropdown` 组件插槽名从 `label` 修改为 `header`，并新增 `footer` 插槽 &nbsp;-&nbsp; by @hooray [<samp>(6cd57)</samp>](https://github.com/fantastic-admin/pro/commit/6cd57d44)
+
+🐞 Bug Fixes
+
+- 修复工具栏 i18n 按钮动画只能执行一次 &nbsp;-&nbsp; by @hooray [<samp>(914e9)</samp>](https://github.com/fantastic-admin/pro/commit/914e9966)
+- 优化 `zoomable` 指令可能会多次创建实例 &nbsp;-&nbsp; by @hooray [<samp>(1203d)</samp>](https://github.com/fantastic-admin/pro/commit/1203dd22)
+- 优化菜单点击处理逻辑，增加对链接和新窗口的判断 &nbsp;-&nbsp; by @hooray [<samp>(fd88e)</samp>](https://github.com/fantastic-admin/pro/commit/fd88e0a7)
+- 修复 `FaPagination` 组件修改当前页码后视图不更新的问题 &nbsp;-&nbsp; by @hooray [<samp>(fd47e)</samp>](https://github.com/fantastic-admin/pro/commit/fd47e267)
+- 修复次导航收起时页面展示错误 &nbsp;-&nbsp; by @hooray [<samp>(37fcb)</samp>](https://github.com/fantastic-admin/pro/commit/37fcbda3)
+- 修复激活标签页定位可能不居中的问题 &nbsp;-&nbsp; by @hooray [<samp>(8ab76)</samp>](https://github.com/fantastic-admin/pro/commit/8ab76aa1)
+:::
+
 ## v5.3.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.3.0)
