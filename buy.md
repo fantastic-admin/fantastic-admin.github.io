@@ -114,8 +114,8 @@ import { withBase } from 'vitepress'
   </tr>
   <tr>
     <td align="center">路由(导航)功能配置项</td>
-    <td align="center">10 个</td>
-    <td align="center" style="color: #e34d22;">24 个</td>
+    <td align="center">10+</td>
+    <td align="center" style="color: #e34d22;">20+</td>
   </tr>
   <tr>
     <td align="center">外链导航</td>
@@ -144,8 +144,8 @@ import { withBase } from 'vitepress'
   </tr>
   <tr>
     <td align="center">内建组件</td>
-    <td align="center">28 个</td>
-    <td align="center" style="color: #e34d22;">38 个</td>
+    <td align="center">20+</td>
+    <td align="center" style="color: #e34d22;">40+</td>
   </tr>
   <tr>
     <td align="center">用户偏好设置</td>
