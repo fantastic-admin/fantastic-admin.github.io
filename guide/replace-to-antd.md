@@ -51,7 +51,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { theme } from 'ant-design-vue'
 import antDesignVueLocaleZhCN from 'ant-design-vue/es/locale/zh_CN'
 
@@ -76,7 +75,6 @@ const themeConfig = computed(() => ({
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ ImagePreview
      ├─ ImagesUpload
      └─ ImageUpload
 ```
@@ -130,7 +128,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { theme } from 'ant-design-vue'
 import { locales } from './index'
 
@@ -157,7 +154,6 @@ const themeConfig = computed(() => ({
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ ImagePreview
      ├─ ImagesUpload
      ├─ ImageUpload
      └─ PcasCascader
