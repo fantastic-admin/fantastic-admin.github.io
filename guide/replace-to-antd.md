@@ -51,7 +51,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { theme } from 'ant-design-vue'
 import antDesignVueLocaleZhCN from 'ant-design-vue/es/locale/zh_CN'
 
@@ -130,7 +129,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { theme } from 'ant-design-vue'
 import { locales } from './index'
 

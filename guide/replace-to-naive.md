@@ -51,7 +51,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { darkTheme, dateZhCN, zhCN } from 'naive-ui'
 
 const settingsStore = useSettingsStore()
@@ -133,7 +132,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { darkTheme } from 'naive-ui'
 import { locales } from './index'
 

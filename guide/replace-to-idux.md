@@ -56,8 +56,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
-
 const settingsStore = useSettingsStore()
 </script>
 
@@ -130,7 +128,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { useGlobalConfig } from '@idux/components/config'
 import { locales } from './index'
 

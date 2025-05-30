@@ -60,7 +60,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { merge } from 'es-toolkit'
 import zhCN from 'tdesign-vue-next/es/locale/zh_CN'
 
@@ -169,7 +168,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { merge } from 'es-toolkit'
 import { locales } from './index'
 

@@ -52,7 +52,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import zhCN from '@arco-design/web-vue/es/locale/lang/zh-cn'
 
 const settingsStore = useSettingsStore()
@@ -151,7 +150,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { locales } from './index'
 
 const settingsStore = useSettingsStore()
