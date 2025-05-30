@@ -28,8 +28,6 @@ const globalSettings: Settings.all = {
 
 ```vue
 <script setup lang="ts">
-import useWatermarkStore from '@/store/modules/watermark'
-
 const watermarkStore = useWatermarkStore()
 
 watermarkStore.update({

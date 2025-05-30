@@ -4,19 +4,11 @@
 
 框架预设了 Digital 7 的两套字体，除此之外，你也可以通过以下方法引入你需要的自定义字体。
 
-## 找字体
-
-访问 [DaFont](https://www.dafont.com/) 或其它字体下载网站，下载 `.ttf` 格式的字体文件。
-
-![](/font1.png){data-zoomable}
-
 ## 生成字体
 
-因为 `.ttf` 格式的字体文件不是浏览器支持的字体格式，所以需要通过 `.ttf` 生成其它格式的字体文件。
+字体文件通常为 `.ttf` / `.otf` 格式，不是浏览器支持的字体格式，所以需要转换生成浏览器支持的格式，也就是 `.woff` / `.woff2` 格式。
 
-访问 [Font Squirrel](https://www.fontsquirrel.com/tools/webfont-generator)，上传 `.ttf` 文件，并按照下面设置后，点击下载。
-
-![](/font2.png){data-zoomable}
+访问 [transfonter](https://transfonter.org/)，上传 `.ttf` / `.otf` 文件，然后点击 Convert 按钮即可。
 
 ## 使用
 

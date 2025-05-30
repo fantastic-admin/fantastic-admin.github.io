@@ -2,17 +2,15 @@
 
 ## 页宽模式 <Badge type="pro" text="专业版" />
 
-提供 4 种基于页宽(页面宽度)模式，在应用配置中设置：
+提供 2 种基于页宽(页面宽度)模式，在应用配置中设置：
 
-```ts {2-11}
+```ts {2-9}
 const globalSettings: Settings.all = {
   layout: {
     /**
-     * 页宽模式，当设置为非 `'adaption'` 时，可以去 /src/assets/styles/globals.css 里设置 `--g-app-width` 宽度变量
+     * 页宽模式，当设置为 `'center'` 时，可以去 /src/assets/styles/globals.css 里设置 `--g-app-width` 宽度变量
      * @默认值 `'adaption'` 自适应
-     * @可选值 `'adaption-min-width'` 自适应（有最小宽度）
      * @可选值 `'center'` 定宽居中
-     * @可选值 `'center-max-width'` 定宽居中（有最大宽度）
      */
     widthMode: 'adaption',
   },
@@ -21,16 +19,10 @@ const globalSettings: Settings.all = {
 
 :::: tabs
 ::: tab adaption
-![](/layout_1.gif){data-zoomable}
-:::
-::: tab adaption-min-width
-![](/layout_2.gif){data-zoomable}
+![](/layout_width_mode_adaption.gif){data-zoomable}
 :::
 ::: tab center
-![](/layout_3.gif){data-zoomable}
-:::
-::: tab center-max-width
-![](/layout_4.gif){data-zoomable}
+![](/layout_width_mode_center.gif){data-zoomable}
 :::
 ::::
 
