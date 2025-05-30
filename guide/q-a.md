@@ -107,7 +107,7 @@ window.globalConfig = {
 ```html
 <body>
   ...
-  <script src="/config.js"></script> // [!code ++]
+  <script src="/config.js"></script> <!-- [!code ++] -->
   <script type="module" src="/src/main.ts"></script>
 </body>
 ```

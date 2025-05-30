@@ -13,7 +13,7 @@
 例如新建一个 `example.ts` 的文件：
 
 ```ts
-const useExampleStore = defineStore(
+export const useExampleStore = defineStore(
   // 唯一ID
   'example',
   () => {
@@ -24,14 +24,11 @@ const useExampleStore = defineStore(
     }
   },
 )
-
-export default useExampleStore
 ```
 
 使用方法：
 
 ```ts
-import useExampleStore from '@/store/modules/example'
 const exampleStore = useExampleStore()
 
 exampleStore.someThing

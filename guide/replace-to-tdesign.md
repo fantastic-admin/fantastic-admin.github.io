@@ -60,7 +60,6 @@ export default { install }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { merge } from 'es-toolkit'
 import zhCN from 'tdesign-vue-next/es/locale/zh_CN'
 
@@ -106,7 +105,6 @@ function updateTheme() {
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ ImagePreview
      ├─ ImagesUpload
      └─ ImageUpload
 ```
@@ -169,7 +167,6 @@ export { locales }
 
 ```vue
 <script setup lang="ts">
-import useSettingsStore from '@/store/modules/settings'
 import { merge } from 'es-toolkit'
 import { locales } from './index'
 
@@ -217,7 +214,6 @@ function updateTheme() {
 └─ src
    └─ components // 下列扩展组件基于 Element Plus 二次封装，需要删除
      ├─ FileUpload
-     ├─ ImagePreview
      ├─ ImagesUpload
      ├─ ImageUpload
      └─ PcasCascader
