@@ -2,6 +2,50 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## v5.4.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.4.0)
+🚀 Features
+
+- `FaScrollArea` 组件新增 onScroll 事件 &nbsp;-&nbsp; by @hooray [<samp>(9b500)</samp>](https://github.com/fantastic-admin/basic/commit/9b5003f)
+- 对未设置 `redirect` 的父路由，访问时将自动重定向到允许访问的子路由 &nbsp;-&nbsp; by @hooray [<samp>(8d4e2)</samp>](https://github.com/fantastic-admin/basic/commit/8d4e226)
+- 新增 `FaHoverCard` 组件 &nbsp;-&nbsp; by @hooray [<samp>(eb306)</samp>](https://github.com/fantastic-admin/basic/commit/eb306b1)
+- 新增 `FaProgress` 组件 &nbsp;-&nbsp; by @hooray [<samp>(b7c62)</samp>](https://github.com/fantastic-admin/basic/commit/b7c627c)
+- 增加请求重试机制 &nbsp;-&nbsp; by @hooray [<samp>(3b889)</samp>](https://github.com/fantastic-admin/basic/commit/3b889f6)
+- 将 `FaDropdown` 组件插槽名从 `label` 修改为 `header`，并新增 `footer` 插槽 &nbsp;-&nbsp; by @hooray [<samp>(b9741)</samp>](https://github.com/fantastic-admin/basic/commit/b974139)
+
+🐞 Bug Fixes
+
+- 优化菜单点击处理逻辑，增加对链接的判断 &nbsp;-&nbsp; by @hooray [<samp>(9f374)</samp>](https://github.com/fantastic-admin/basic/commit/9f37438)
+- 修复次导航收起时页面展示错误 &nbsp;-&nbsp; by @hooray [<samp>(05261)</samp>](https://github.com/fantastic-admin/basic/commit/05261b3)
+- 修复激活标签页定位可能不居中的问题 &nbsp;-&nbsp; by @hooray [<samp>(8bfa0)</samp>](https://github.com/fantastic-admin/basic/commit/8bfa0f0)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.4.0)
+🚨 Breaking Changes
+
+- 调整 `FaLayoutContainer` 组件 props &nbsp;-&nbsp; by @hooray [<samp>(f97c1)</samp>](https://github.com/fantastic-admin/pro/commit/f97c17fa)
+
+🚀 Features
+
+- `FaScrollArea` 组件新增 onScroll 事件 &nbsp;-&nbsp; by @hooray [<samp>(46cb9)</samp>](https://github.com/fantastic-admin/pro/commit/46cb9df1)
+- 新增 `FaTimeline` 组件 &nbsp;-&nbsp; by @hooray [<samp>(f34d6)</samp>](https://github.com/fantastic-admin/pro/commit/f34d67dc)
+- 对未设置 `redirect` 的父路由，访问时将自动重定向到允许访问的子路由 &nbsp;-&nbsp; by @hooray [<samp>(8c7ab)</samp>](https://github.com/fantastic-admin/pro/commit/8c7ab890)
+- 新增 `FaHoverCard` 组件 &nbsp;-&nbsp; by @hooray [<samp>(d9ea7)</samp>](https://github.com/fantastic-admin/pro/commit/d9ea7865)
+- 新增 `FaProgress` 组件 &nbsp;-&nbsp; by @hooray [<samp>(ebbed)</samp>](https://github.com/fantastic-admin/pro/commit/ebbedb5f)
+- 增加请求重试机制 &nbsp;-&nbsp; by @hooray [<samp>(76e84)</samp>](https://github.com/fantastic-admin/pro/commit/76e8470b)
+- 将 `FaDropdown` 组件插槽名从 `label` 修改为 `header`，并新增 `footer` 插槽 &nbsp;-&nbsp; by @hooray [<samp>(6cd57)</samp>](https://github.com/fantastic-admin/pro/commit/6cd57d44)
+
+🐞 Bug Fixes
+
+- 修复工具栏 i18n 按钮动画只能执行一次 &nbsp;-&nbsp; by @hooray [<samp>(914e9)</samp>](https://github.com/fantastic-admin/pro/commit/914e9966)
+- 优化 `zoomable` 指令可能会多次创建实例 &nbsp;-&nbsp; by @hooray [<samp>(1203d)</samp>](https://github.com/fantastic-admin/pro/commit/1203dd22)
+- 优化菜单点击处理逻辑，增加对链接和新窗口的判断 &nbsp;-&nbsp; by @hooray [<samp>(fd88e)</samp>](https://github.com/fantastic-admin/pro/commit/fd88e0a7)
+- 修复 `FaPagination` 组件修改当前页码后视图不更新的问题 &nbsp;-&nbsp; by @hooray [<samp>(fd47e)</samp>](https://github.com/fantastic-admin/pro/commit/fd47e267)
+- 修复次导航收起时页面展示错误 &nbsp;-&nbsp; by @hooray [<samp>(37fcb)</samp>](https://github.com/fantastic-admin/pro/commit/37fcbda3)
+- 修复激活标签页定位可能不居中的问题 &nbsp;-&nbsp; by @hooray [<samp>(8ab76)</samp>](https://github.com/fantastic-admin/pro/commit/8ab76aa1)
+:::
+
 ## v5.3.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.3.0)
