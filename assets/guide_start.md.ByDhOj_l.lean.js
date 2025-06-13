@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as n,ak as t}from"./chunks/framework.DB-MVHTd.js";const k=JSON.parse('{"title":"开始","description":"","frontmatter":{},"headers":[],"relativePath":"guide/start.md","filePath":"guide/start.md"}'),i={name:"guide/start.md"};function p(o,s,l,r,c,d){return n(),e("div",null,s[0]||(s[0]=[t("",5)]))}const m=a(i,[["render",p]]);export{k as __pageData,m as default};
