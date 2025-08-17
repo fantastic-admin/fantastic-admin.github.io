@@ -332,6 +332,7 @@ _hmt.push(['_requirePlugin', 'UrlChangeTracker', {
             { text: 'FaSearchBar 搜索面板', link: '/components/fa-search-bar' },
             { text: 'FaSelect 选择器', link: '/components/fa-select' },
             { text: 'FaSlider 滑块', link: '/components/fa-slider' },
+            { text: 'FaSmoothSwipe 平滑滑动', link: '/components/fa-smooth-swipe' },
             { text: 'FaSparklesText 闪烁文字', link: '/components/fa-sparkles-text' },
             { text: 'FaSparkline 迷你图', link: '/components/fa-sparkline' },
             { text: 'FaSpotlightCard 聚光卡片', link: '/components/fa-spotlight-card' },
