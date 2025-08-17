@@ -2,10 +2,10 @@
 
 ## Props
 
-| 属性名              | 说明     | 类型      | 默认值  |
-| ------------------- | -------- | --------- | ------- |
-| modelValue(v-model) | 绑定值   | `boolean` | -       |
-| disabled            | 是否禁用 | `boolean` | `false` |
+| 属性名              | 说明     | 类型                         | 默认值  |
+| ------------------- | -------- | ---------------------------- | ------- |
+| modelValue(v-model) | 绑定值   | `boolean \| 'indeterminate'` | -       |
+| disabled            | 是否禁用 | `boolean`                    | `false` |
 
 ## Slots
 
