@@ -84,7 +84,7 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + Shadcn-vue + TypeScript
 
 ## 为什么不是它们？
 
-欢迎访问 [hooray/pick-the-right-admin](https://github.com/hooray/pick-the-right-admin) 了解同类产品详细对比。
+欢迎访问 [选择合适的后台管理框架](https://hurui.me/pick-the-right-admin/) 了解同类产品详细对比。
 
 :::tip 作者寄语
 整理的几款同类产品，它们不管在技术栈上、功能的丰富度上、更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。
