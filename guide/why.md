@@ -18,7 +18,7 @@ Fantastic-admin 自 {{ from }} 正式对外发布，截止到今天为止，已�
 
 开箱即用，是我们一直在努力的方向。
 
-事实也证明 Fantastic-admin 足够易于上手，在使用 Fantastic-admin 的开发者中，**非前端开发者占据了约有一半以上的人数**，它们大部分为后端 PHP/Java/.NET/GO 开发者，以及少部分学生人群。
+事实也证明 Fantastic-admin 足够易于上手，在使用 Fantastic-admin 的开发者中，**非前端开发者占据了约有一半以上的人数**，他们大部分为后端 PHP/Java/.NET/GO 开发者，以及少部分学生人群。
 
 ## 技术栈先进
 
@@ -84,7 +84,7 @@ Vite + Vue3 + Vue-router + Pinia + UnoCSS + Shadcn-vue + TypeScript
 
 ## 为什么不是它们？
 
-欢迎访问 [hooray/pick-the-right-admin](https://github.com/hooray/pick-the-right-admin) 了解同类产品详细对比。
+欢迎访问 [选择合适的后台管理框架](https://hurui.me/pick-the-right-admin/) 了解同类产品详细对比。
 
 :::tip 作者寄语
 整理的几款同类产品，它们不管在技术栈上、功能的丰富度上、更新维护的频率上，亦或是 star 数上，都是相对可靠的产品。

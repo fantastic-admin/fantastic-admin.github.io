@@ -45,11 +45,11 @@ VITE_BUILD_ARCHIVE = tar
 
 ## 禁用浏览器开发者工具
 
-在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOLS` 即可在构建后禁用浏览器开发者工具。
+在环境配置文件里设置 `VITE_APP_DISABLE_DEVTOOL` 即可在构建后禁用浏览器开发者工具。
 
 ```yaml
 # 禁用开发者工具
-VITE_APP_DISABLE_DEVTOOLS = true
+VITE_APP_DISABLE_DEVTOOL = true
 ```
 
 ## 其它设置

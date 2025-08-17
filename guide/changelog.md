@@ -2,6 +2,72 @@
 
 只记录 feat/fix 以及破坏性变更。
 
+## v5.9.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.9.0)
+🐞 Bug Fixes
+
+- 修复自定义内容不生效 &nbsp;-&nbsp; by @hooray [<samp>(439d6)</samp>](https://github.com/fantastic-admin/basic/commit/439d6e9)
+- 修复FaImagePreview组件更改src值后不重置加载状态问题 &nbsp;-&nbsp; by @7thlayer [<samp>(69665)</samp>](https://github.com/fantastic-admin/basic/commit/6966585)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.9.0)
+🐞 Bug Fixes
+
+- 修复自定义内容不生效 &nbsp;-&nbsp; by @hooray [<samp>(0f5c4)</samp>](https://github.com/fantastic-admin/pro/commit/0f5c4e83)
+- 修复FaImagePreview组件更改src值后不重置加载状态问题 &nbsp;-&nbsp; by @hooray [<samp>(83f84)</samp>](https://github.com/fantastic-admin/pro/commit/83f849ba)
+:::
+
+## v5.8.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.8.0)
+🐞 Bug Fixes
+
+- 修复 `FaImagePreview` 预览时警告 &nbsp;-&nbsp; by @hooray [<samp>(8e2de)</samp>](https://github.com/fantastic-admin/basic/commit/8e2de47)
+- 修复 `FaSwitch` 图标不居中 &nbsp;-&nbsp; by @hooray [<samp>(c63ac)</samp>](https://github.com/fantastic-admin/basic/commit/c63ac44)
+- 修复明暗主题切换动画闪烁 &nbsp;-&nbsp; by @hooray [<samp>(50db1)</samp>](https://github.com/fantastic-admin/basic/commit/50db1c3)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.8.0)
+🐞 Bug Fixes
+
+- 修复 `FaImagePreview` 预览时警告 &nbsp;-&nbsp; by @hooray [<samp>(146c1)</samp>](https://github.com/fantastic-admin/pro/commit/146c10c1)
+- 修复 `FaSwitch` 图标不居中 &nbsp;-&nbsp; by @hooray [<samp>(65de1)</samp>](https://github.com/fantastic-admin/pro/commit/65de1e6b)
+- 修复明暗主题切换动画闪烁 &nbsp;-&nbsp; by @hooray [<samp>(8ed22)</samp>](https://github.com/fantastic-admin/pro/commit/8ed227dd)
+:::
+
+## v5.7.0
+
+:::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.7.0)
+🚀 Features
+
+- `FaSelect` 组件支持更多类型 &nbsp;-&nbsp; by @hooray [<samp>(7b9df)</samp>](https://github.com/fantastic-admin/basic/commit/7b9dfe3)
+- `FaCheckbox` 支持半选状态 &nbsp;-&nbsp; by @hooray [<samp>(632a2)</samp>](https://github.com/fantastic-admin/basic/commit/632a2d3)
+- 新增 `FaCollapsible` 组件 &nbsp;-&nbsp; by @hooray [<samp>(aa5de)</samp>](https://github.com/fantastic-admin/basic/commit/aa5de0e)
+
+🐞 Bug Fixes
+
+- 修复 `FaPinInput` 组件输入bug &nbsp;-&nbsp; by @hooray [<samp>(16a57)</samp>](https://github.com/fantastic-admin/basic/commit/16a5779)
+- 修复 `FaFileUpload` 和 `FaImageUpload` 在表单中点击可能会触发表单提交 &nbsp;-&nbsp; by @hooray [<samp>(a16f9)</samp>](https://github.com/fantastic-admin/basic/commit/a16f923)
+:::
+
+:::tip [专业版](https://github.com/fantastic-admin/pro/releases/tag/v5.7.0)
+🚀 Features
+
+- `FaSelect` 组件支持更多类型 &nbsp;-&nbsp; by @hooray [<samp>(9a311)</samp>](https://github.com/fantastic-admin/pro/commit/9a311f7d)
+- 新增 `FaSmoothSwipe` 组件 &nbsp;-&nbsp; by @hooray [<samp>(db607)</samp>](https://github.com/fantastic-admin/pro/commit/db60708c)
+- 登录界面增加切换动画 &nbsp;-&nbsp; by @hooray [<samp>(477ad)</samp>](https://github.com/fantastic-admin/pro/commit/477ad7cb)
+- `FaCheckbox` 支持半选状态 &nbsp;-&nbsp; by @hooray [<samp>(5bd31)</samp>](https://github.com/fantastic-admin/pro/commit/5bd31a0e)
+- 新增 `FaCollapsible` 组件 &nbsp;-&nbsp; by @hooray [<samp>(e9e88)</samp>](https://github.com/fantastic-admin/pro/commit/e9e88817)
+- 新增 `FaTree` 组件 &nbsp;-&nbsp; by @hooray [<samp>(5a84a)</samp>](https://github.com/fantastic-admin/pro/commit/5a84aa78)
+
+🐞 Bug Fixes
+
+- 修复导航面板模式下带参路由参数丢失 &nbsp;-&nbsp; by @hooray [<samp>(b58c9)</samp>](https://github.com/fantastic-admin/pro/commit/b58c9815)
+- 修复 `FaPinInput` 组件输入bug &nbsp;-&nbsp; by @hooray [<samp>(8cc0b)</samp>](https://github.com/fantastic-admin/pro/commit/8cc0b041)
+- 修复 `FaFileUpload` 和 `FaImageUpload` 在表单中点击可能会触发表单提交 &nbsp;-&nbsp; by @hooray [<samp>(d9f3c)</samp>](https://github.com/fantastic-admin/pro/commit/d9f3c5ee)
+:::
+
 ## v5.6.0
 
 :::info [基础版](https://github.com/fantastic-admin/basic/releases/tag/v5.6.0)
