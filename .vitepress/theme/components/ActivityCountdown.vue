@@ -2,14 +2,20 @@
 import { onMounted, ref } from 'vue'
 
 const isVisible = ref(false)
+const isCountdownToStart = ref(false) // 是否为活动开始倒计时
+const isClickable = ref(true) // 是否可以点击跳转
 
-const start = new Date('2024/10/17').getTime()
-const deadline = new Date('2024/11/18').getTime()
+const start = new Date('2025/09/17').getTime()
+const deadline = new Date('2025/10/18').getTime()
+const preStartTime = start - (5 * 24 * 60 * 60 * 1000) // 活动开始前5天的时间
+
 const text = ref('')
 const countdownInterval = ref()
 
 function clickBanner() {
-  location.href = '/buy-4yr'
+  if (isClickable.value) {
+    location.href = '/buy-anniversary'
+  }
 }
 
 function closeBanner() {
@@ -18,23 +24,50 @@ function closeBanner() {
   document.documentElement.classList.remove('mirror-site-menu-fixed')
 }
 
+function formatTime(distance: number) {
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+  return `${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒`
+}
+
 onMounted(() => {
-  isVisible.value = new Date().getTime() > start && new Date().getTime() < deadline
-  if (isVisible.value) {
+  const now = new Date().getTime()
+
+  // 判断是否在显示时间范围内（活动开始前7天到活动结束）
+  const shouldShow = now >= preStartTime && now < deadline
+
+  if (shouldShow) {
+    isVisible.value = true
+    isCountdownToStart.value = now < start
+    isClickable.value = now >= start // 只有在活动开始后才能点击
+
     countdownInterval.value = setInterval(() => {
-      const distance = deadline - new Date().getTime()
-      isVisible.value = distance > 0
-      if (distance < 0) {
+      const currentTime = new Date().getTime()
+
+      if (currentTime >= deadline) {
+        // 活动结束
         closeBanner()
+        return
+      }
+
+      if (currentTime < start) {
+        // 活动开始前倒计时
+        isCountdownToStart.value = true
+        isClickable.value = false
+        const distance = start - currentTime
+        text.value = `Fantastic-admin 五周年庆即将开始<i style="margin-left: 20px; font-size: 0.75em;">距离活动开始还有 ${formatTime(distance)}</i>`
       }
       else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-        text.value = `Fantastic-admin 四周年庆，全年最低价，点击查看<i style="margin-left: 20px; font-size: 0.75em;">距离活动结束还有 ${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒</i>`
+        // 活动进行中倒计时
+        isCountdownToStart.value = false
+        isClickable.value = true
+        const distance = deadline - currentTime
+        text.value = `Fantastic-admin 五周年庆，全年最低价，点击查看<i style="margin-left: 20px; font-size: 0.75em;">距离活动结束还有 ${formatTime(distance)}</i>`
       }
     }, 1000)
+
     document.documentElement.classList.add('mirror-site-menu-fixed')
   }
 })
@@ -42,7 +75,7 @@ onMounted(() => {
 
 <template>
   <div v-if="isVisible" class="banner-wrapper" role="banner">
-    <div id="banner" @click="clickBanner">
+    <div id="banner" :class="{ 'clickable': isClickable, 'non-clickable': !isClickable }" @click="clickBanner">
       <div class="content" v-html="text" />
       <button id="banner-close" @click.stop="closeBanner">
         <span class="close">&times;</span>
@@ -78,7 +111,20 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#banner.clickable {
   cursor: pointer;
+}
+
+#banner.clickable:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#banner.non-clickable {
+  cursor: default;
+  opacity: 0.8;
 }
 
 #banner .content {
