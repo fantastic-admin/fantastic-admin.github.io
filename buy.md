@@ -32,16 +32,16 @@ import { withBase } from 'vitepress'
       <td>
         <ul>
           <li>允许加入 Github 组织账号数：<b>1</b> 个</li>
-          <li>二开后交付源码（向你的客户交付源码）：❎</li>
           <li>技术支持：开发者微信群，除本人外可关联 1 位开发者进群(不提供更换)，关联更多开发者进群为 200 元/人</li>
-          <li>是否可以开发票：✅</li>
+          <li>是否允许发行二开源码（销售或提供源码）：❎</li>
+          <li>是否可以开发票：❎</li>
         </ul>
       </td>
       <td>
         <ul>
           <li>允许加入 Github 组织账号数：<b>5</b> 个</li>
-          <li>二开后交付源码（向你的客户交付源码）：✅</li>
           <li>技术支持：专属独立微信群，不限人数，可自行邀请团队成员</li>
+          <li>是否允许发行二开源码（销售或提供源码）：✅</li>
           <li>是否可以开发票：✅</li>
         </ul>
       </td>
@@ -92,137 +92,58 @@ import { withBase } from 'vitepress'
 
 <CustomerEvaluate />
 
-## 基础版与专业版区别
+## 功能一览
 
 <table style="width: 100%; display: table; margin: 1rem auto;">
   <thead>
     <tr>
-      <th width="40%" style="text-align: center;">⭐功能⭐</th>
-      <th width="30%" style="text-align: center;">基础版</th>
-      <th width="30%" style="text-align: center;">专业版</th>
+      <th width="50%" style="text-align: center;">基础版</th>
+      <th width="50%" style="text-align: center;">专业版</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center">长期更新维护</td>
-      <td colspan="2" align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">开发与构建工具</td>
-      <td colspan="2" align="center">Vue 3 / Vite</td>
-    </tr>
-    <tr>
-      <td align="center">UI 组件库</td>
-      <td colspan="2" align="center">默认使用 Element Plus ，可替换成任意 UI 组件库</td>
-    </tr>
-    <tr>
-      <td align="center">页面布局</td>
-      <td align="center">3 套</td>
-      <td align="center" style="color: #e34d22;">20 套</td>
-    </tr>
-    <tr>
-      <td align="center">主题风格</td>
-      <td align="center">明亮 1 款 / 暗黑 1 款</td>
-      <td align="center" style="color: #e34d22;">明亮 8 款 / 暗黑 8 款</td>
-    </tr>
-    <tr>
-      <td align="center">路由(导航)功能配置项</td>
-      <td align="center">10+</td>
-      <td align="center" style="color: #e34d22;">20+</td>
-    </tr>
-    <tr>
-      <td align="center">外链导航</td>
-      <td align="center">✅</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">内嵌导航</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">标签栏</td>
-      <td align="center">支持部分</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">收藏夹</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">全方位权限验证</td>
-      <td align="center">✅</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">内建组件</td>
-      <td align="center">20+</td>
-      <td align="center" style="color: #e34d22;">40+</td>
-    </tr>
-    <tr>
-      <td align="center">用户偏好设置</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">国际化</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">Mock 数据</td>
-      <td align="center">✅</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">快捷键</td>
-      <td align="center">支持部分</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">错误日志上报</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">网站更新提示</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">文件自动生成</td>
-      <td align="center">支持部分</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">业务应用静态页面</td>
-      <td align="center"></td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">团队代码规范</td>
-      <td align="center">✅</td>
-      <td align="center">✅</td>
-    </tr>
-    <tr>
-      <td align="center">框架版权信息</td>
-      <td align="center">需保留</td>
-      <td align="center">可删除</td>
-    </tr>
-    <tr>
-      <td align="center">技术支持</td>
-      <td colspan="2" align="center">
-        <a href="support">查看</a>
+      <td style="vertical-align: top;">
+        <ul>
+          <li>3 套导航栏模式</li>
+          <li>导航栏特性（基础功能）</li>
+          <li>明暗主题切换（明暗主题各 1 款）</li>
+          <li>全方位权限验证</li>
+          <li>支持 Mock 数据</li>
+          <li>标签栏（基础功能）</li>
+          <li>工具栏（基础功能）</li>
+          <li>内建组件（40+）</li>
+          <li>Link 外链导航</li>
+          <li>代码文件自动生成（基础功能）</li>
+          <li>页面缓存</li>
+          <li>基于MIT协议，需保留框架版权信息</li>
+        </ul>
       </td>
-    </tr>
-    <tr>
-      <td align="center">演示地址</td>
-      <td align="center">
-        <a href="https://fantastic-admin.hurui.me/basic-example" target="_blank">访问</a>
-      </td>
-      <td align="center">
-        <a href="https://fantastic-admin.hurui.me/pro-example" target="_blank">访问</a>
+      <td style="vertical-align: top;">
+        <ul>
+          <li style="font-weight: bold; color: #e34d22;">包含基础版所有功能</li>
+          <li>7 套导航栏模式</li>
+          <li>导航栏特性（始终展开、徽章、排序等）</li>
+          <li>明暗主题切换（明暗主题各 8 款）</li>
+          <li>标签栏（常驻、最大化、固定、排序、标签页合并等）</li>
+          <li>工具栏（收藏夹、通知、排序等）</li>
+          <li>内建组件（70+）</li>
+          <li>登录过期弹窗</li>
+          <li>用户偏好设置</li>
+          <li>网站锁屏</li>
+          <li>居中布局</li>
+          <li>Iframe 内嵌导航</li>
+          <li>国际化（支持 RTL 模式）</li>
+          <li>网站水印</li>
+          <li>用户反馈上报</li>
+          <li>错误日志上报</li>
+          <li>网站更新提示</li>
+          <li>自定义字体</li>
+          <li>代码文件自动生成</li>
+          <li>私有 Storage 数据</li>
+          <li>业务应用示例页面</li>
+          <li>可移除源码内框架版权信息</li>
+        </ul>
       </td>
     </tr>
   </tbody>
