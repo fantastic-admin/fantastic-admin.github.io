@@ -1,0 +1,10 @@
+---
+url: /components/fa-kbd.md
+---
+# FaKbd 键盘
+
+## Slots
+
+| 插槽名  | 说明           |
+| ------- | -------------- |
+| default | 自定义默认内容 |
