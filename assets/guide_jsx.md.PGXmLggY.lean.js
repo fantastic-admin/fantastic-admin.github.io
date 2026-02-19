@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as e,aj as t}from"./chunks/framework.Dgeddbvw.js";const E=JSON.parse('{"title":"JSX","description":"","frontmatter":{},"headers":[],"relativePath":"guide/jsx.md","filePath":"guide/jsx.md"}'),n={name:"guide/jsx.md"};function l(h,s,p,r,k,d){return e(),a("div",null,[...s[0]||(s[0]=[t("",14)])])}const c=i(n,[["render",l]]);export{E as __pageData,c as default};

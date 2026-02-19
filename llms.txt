@@ -1,0 +1,184 @@
+# Fantastic-admin
+
+> 杰出的管理系统框架
+
+开箱即用，提供舒适开发体验
+
+## Table of Contents
+
+### 指引
+
+- [文档说明](/guide/intro.md)
+- [为什么选择我们 ?](/guide/why.md)
+- [更新日志](/guide/changelog.md)
+
+### 入门
+
+- [准备工作](/guide/ready.md)
+- [开始](/guide/start.md)
+- [代码规范](/guide/coding-standard.md)
+- [术语](/guide/term.md)
+- [配置](/guide/configure.md)
+- [开发者工具](/guide/devtools.md)
+- [路由（导航）](/guide/router.md)
+- [与服务端交互](/guide/axios.md)
+- [全局状态管理](/guide/store.md)
+- [资源](/guide/resources.md)
+- [图标](/guide/icon.md)
+- [构建与预览](/guide/build.md)
+
+### 进阶
+
+- [登录相关](/guide/login.md)
+- [权限](/guide/permission.md)
+- [主页](/guide/home.md)
+- [布局](/guide/layout.md)
+- [主题](/guide/theme.md)
+- [动态标题](/guide/title.md)
+- [导航菜单](/guide/menu.md)
+- [顶栏](/guide/topbar.md)
+- [快捷键](/guide/hotkeys.md)
+- [版权信息](/guide/copyright.md)
+
+#### 顶栏
+
+- [标签栏](/guide/tabbar.md)
+- [工具栏](/guide/toolbar.md)
+
+### 高级
+
+- [页面缓存](/guide/keep-alive.md)
+- [国际化&#x20;](/guide/i18n.md)
+- [预留插槽](/guide/slots.md)
+- [RTL 模式&#x20;](/guide/rtl.md)
+- [代码文件自动生成](/guide/plop.md)
+- [常用 API](/guide/api.md)
+- [私有 Storage 数据 &#x20;](/guide/storage.md)
+- [首屏 Loading](/guide/loading.md)
+- [页面水印&#x20;](/guide/watermark.md)
+- [反馈 &#x20;](/guide/feedback.md)
+- [检查更新&#x20;](/guide/check-updates.md)
+- [错误日志&#x20;](/guide/error-log.md)
+- [自定义字体&#x20;](/guide/font.md)
+- [用户偏好设置&#x20;](/guide/preferences.md)
+- [JSX](/guide/jsx.md)
+- [基于文件系统的路由](/guide/file-system-route.md)
+- [使用 Composition API 开发](/guide/vue3-composition-api.md)
+
+#### 代码文件自动生成
+
+- [标准模块&#x20;](/guide/plop-module.md)
+
+#### 替换 UI 组件库
+
+- [替换为 Ant Design Vue](/guide/replace-to-antd.md)
+- [替换为 Arco Design Vue](/guide/replace-to-arco.md)
+- [替换为 Naive UI](/guide/replace-to-naive.md)
+- [替换为 TDesign](/guide/replace-to-tdesign.md)
+- [替换为 Vexip UI](/guide/replace-to-vexip.md)
+- [替换为 iDux](/guide/replace-to-idux.md)
+
+### 其它
+
+- [框架更新](/guide/upgrade.md)
+- [从 vue-element-admin 迁移](/guide/vea-to-fa.md)
+- [常见问题](/guide/q-a.md)
+
+### 组件
+
+- [介绍](/components.md)
+
+### 内建组件
+
+- [FaAnimatedBeam 动画光束 &#x20;](/components/fa-animated-beam.md)
+- [FaAnimatedCountTo 动画计数 &#x20;](/components/fa-animated-count-to.md)
+- [FaAuth 鉴权](/components/fa-auth.md)
+- [FaAvatar 头像](/components/fa-avatar.md)
+- [FaBadge 徽章](/components/fa-badge.md)
+- [FaBlurReveal 模糊显示 &#x20;](/components/fa-blur-reveal.md)
+- [FaButton 按钮](/components/fa-button.md)
+- [FaCard 卡片](/components/fa-card.md)
+- [FaCarousel 轮播图 &#x20;](/components/fa-carousel.md)
+- [FaCheckbox 复选框](/components/fa-checkbox.md)
+- [FaCodePreview 代码预览 &#x20;](/components/fa-code-preview.md)
+- [FaCode 代码块 &#x20;](/components/fa-code.md)
+- [FaCollapsible 折叠面板&#x20;](/components/fa-collapsible.md)
+- [FaCountTo 计数到&#x20;](/components/fa-count-to.md)
+- [FaDigitalCard 数字卡片&#x20;](/components/fa-digital-card.md)
+- [FaDivider 分割线](/components/fa-divider.md)
+- [FaDrawer 抽屉](/components/fa-drawer.md)
+- [FaDropdown 下拉菜单](/components/fa-dropdown.md)
+- [FaFileUpload 文件上传&#x20;](/components/fa-file-upload.md)
+- [FaFixedActionBar 固定底部操作栏](/components/fa-fixed-action-bar.md)
+- [FaFlipCard 翻转卡片 &#x20;](/components/fa-flip-card.md)
+- [FaFlipWords 翻转文字 &#x20;](/components/fa-flip-words.md)
+- [FaGlowyCard 发光卡片 &#x20;](/components/fa-glowy-card.md)
+- [FaGradientButton 渐变按钮 &#x20;](/components/fa-gradient-button.md)
+- [FaHoverCard 悬浮卡片&#x20;](/components/fa-hover-card.md)
+- [FaIcon 图标](/components/fa-icon.md)
+- [FaImagePreview 图片预览&#x20;](/components/fa-image-preview.md)
+- [FaImageUpload 图片上传&#x20;](/components/fa-image-upload.md)
+- [FaIconPicker 图标选择器&#x20;](/components/fa-icon-picker.md)
+- [FaInput 输入框](/components/fa-input.md)
+- [FaInteractiveButton 交互式按钮 &#x20;](/components/fa-interactive-button.md)
+- [FaKbd 键盘](/components/fa-kbd.md)
+- [FaLayoutContainer 布局容器&#x20;](/components/fa-layout-container.md)
+- [FaLinkPreview 链接预览 &#x20;](/components/fa-link-preview.md)
+- [FaLoading 加载遮罩](/components/fa-loading.md)
+- [FaMarquee 跑马灯 &#x20;](/components/fa-marquee.md)
+- [FaModal 弹窗](/components/fa-modal.md)
+- [FaPageHeader 页头](/components/fa-page-header.md)
+- [FaPageMain 内容块](/components/fa-page-main.md)
+- [FaPagination 分页&#x20;](/components/fa-pagination.md)
+- [FaParticlesBg 粒子背景 &#x20;](/components/fa-particles-bg.md)
+- [FaPasswordStrength 密码强度](/components/fa-password-strength.md)
+- [FaPatternBg 图案背景 &#x20;](/components/fa-pattern-bg.md)
+- [FaPinInput 数字输入框](/components/fa-pin-input.md)
+- [FaPopover 浮动面板](/components/fa-popover.md)
+- [FaProgress 进度条&#x20;](/components/fa-progress.md)
+- [FaScratchOff 刮刮乐 &#x20;](/components/fa-scratch-off.md)
+- [FaScrollArea 滚动区域](/components/fa-scroll-area.md)
+- [SearchBar 搜索面板](/components/fa-search-bar.md)
+- [FaSelect 选择器](/components/fa-select.md)
+- [FaSlider 滑块&#x20;](/components/fa-slider.md)
+- [FaSmoothSwipe 平滑滑动 &#x20;](/components/fa-smooth-swipe.md)
+- [FaSparklesText 闪烁文字 &#x20;](/components/fa-sparkles-text.md)
+- [FaSparkline 迷你图&#x20;](/components/fa-sparkline.md)
+- [FaSpotlightCard 聚光卡片 &#x20;](/components/fa-spotlight-card.md)
+- [FaStorageBox 储物箱&#x20;](/components/fa-storage-box.md)
+- [FaSwitch 开关](/components/fa-switch.md)
+- [FaTabs 标签页](/components/fa-tabs.md)
+- [FaTextHighlight 文字高亮 &#x20;](/components/fa-text-highlight.md)
+- [FaTimeAgo 可阅读时间&#x20;](/components/fa-time-ago.md)
+- [FaTimeline 时间线 &#x20;](/components/fa-timeline.md)
+- [FaTooltip 文字提示](/components/fa-tooltip.md)
+- [FaTree 树形控件 &#x20;](/components/fa-tree.md)
+- [FaToast 轻提示](/components/fa-toast.md)
+- [FaTrend 趋势标记](/components/fa-trend.md)
+
+### 扩展组件
+
+- [ImageUpload 单图上传&#x20;](/components/image-upload.md)
+- [ImagesUpload 多图上传&#x20;](/components/images-upload.md)
+- [FileUpload 文件上传&#x20;](/components/file-upload.md)
+- [ImagePreview 图片预览&#x20;](/components/image-preview.md)
+- [PcasCascader 省市区街道联动](/components/pcas-cascader.md)
+
+### 
+
+- [定制开发](/customize.md)
+- [技术支持](/support.md)
+- [交换友链](/links.md)
+
+#### 专业版
+
+- [购买永久专业版](/buy.md)
+- [购买历史专业版](/buy-history-version.md)
+- [免费领取 v1 专业版](/get-v1-pro.md)
+
+### Other
+
+- [FaBorderBeam 边框光束 &#x20;](/components/fa-border-beam.md)
+- [FaMultiStepLoader 多步骤加载器 &#x20;](/components/fa-multi-step-loader.md)
+- [FaTextarea 文本域&#x20;](/components/fa-textarea.md)
+- [五周年庆](/buy-anniversary.md)
