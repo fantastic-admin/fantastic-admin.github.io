@@ -1,0 +1,1 @@
+import{_ as a,o,i,aB as t}from"./chunks/framework.CoTX8EIa.js";const u=JSON.parse('{"title":"登录相关","description":"","frontmatter":{},"headers":[],"relativePath":"guide/login.md","filePath":"guide/login.md"}'),l={name:"guide/login.md"};function d(p,e,n,r,c,s){return o(),i("div",null,[...e[0]||(e[0]=[t("",11)])])}const _=a(l,[["render",d]]);export{u as __pageData,_ as default};

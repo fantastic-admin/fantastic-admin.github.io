@@ -1,0 +1,1 @@
+import{o as a,i as t,aB as r,aT as i}from"./chunks/framework.CoTX8EIa.js";const s=JSON.parse('{"title":"免费领取 v1 专业版","description":"","frontmatter":{},"headers":[],"relativePath":"get-v1-pro.md","filePath":"get-v1-pro.md"}'),o={name:"get-v1-pro.md"},d=Object.assign(o,{setup(l){return(n,e)=>(a(),t("div",null,[...e[0]||(e[0]=[r("",11)])]))}});export{s as __pageData,d as default};

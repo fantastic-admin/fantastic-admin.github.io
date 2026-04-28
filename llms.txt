@@ -1,0 +1,178 @@
+# Fantastic-admin
+
+> 杰出的管理系统框架
+
+开箱即用，提供舒适开发体验
+
+## Table of Contents
+
+### 指引
+
+- [文档说明](/guide/intro.md)
+- [为什么选择 Fantastic-admin ？](/guide/why.md)
+- [更新日志](/guide/changelog.md)
+
+### AI 技能 (Skills)
+
+- [AI 技能 (Skills)](/guide/skills.md)
+- [fa-crud-page-generator](/guide/skills/fa-crud-page-generator.md)
+- [fa-form-builder](/guide/skills/fa-form-builder.md)
+- [fa-framework-settings](/guide/skills/fa-framework-settings.md)
+- [fa-i18n-manager&#x20;](/guide/skills/fa-i18n-manager.md)
+- [fa-page-optimizer](/guide/skills/fa-page-optimizer.md)
+- [fa-route-generator](/guide/skills/fa-route-generator.md)
+- [fa-slot-creator](/guide/skills/fa-slot-creator.md)
+- [fa-store-generator](/guide/skills/fa-store-generator.md)
+- [fa-theme-customizer](/guide/skills/fa-theme-customizer.md)
+
+### 入门
+
+- [准备工作](/guide/ready.md)
+- [开始](/guide/start.md)
+- [代码规范](/guide/coding-standard.md)
+- [术语](/guide/term.md)
+- [环境变量](/guide/env.md)
+- [与服务端交互](/guide/axios.md)
+- [登录相关](/guide/login.md)
+- [路由 (导航菜单)](/guide/router.md)
+- [全局状态管理](/guide/store.md)
+- [资源](/guide/resources.md)
+- [图标](/guide/icon.md)
+- [构建与预览](/guide/build.md)
+
+### 应用配置
+
+- [应用配置](/guide/settings.md)
+- [应用](/guide/settings/app.md)
+- [主题](/guide/settings/theme.md)
+- [导航菜单](/guide/settings/menu.md)
+- [顶栏](/guide/settings/topbar.md)
+- [标签栏](/guide/settings/tabbar.md)
+- [工具栏](/guide/settings/toolbar.md)
+- [页面](/guide/settings/page.md)
+
+### 高级
+
+- [权限验证](/guide/auth.md)
+- [页面保活](/guide/keep-alive.md)
+- [国际化&#x20;](/guide/i18n.md)
+- [内置 API](/guide/api.md)
+- [预留插槽](/guide/slots.md)
+- [快捷键](/guide/hotkeys.md)
+- [私有 Storage 数据&#x20;](/guide/storage.md)
+- [开发工具](/guide/devtools.md)
+- [自定义字体&#x20;](/guide/font.md)
+- [首屏 Loading](/guide/loading.md)
+- [其他 UI 组件库](/guide/other-ui.md)
+- [Composition API](/guide/composition-api.md)
+- [JSX](/guide/jsx.md)
+
+### 其他
+
+- [框架更新](/guide/upgrade.md)
+- [常见问题](/guide/q-a.md)
+- [从 v5 迁移](/guide/migration-from-v5.md)
+
+### 组件
+
+- [介绍](/components.md)
+
+### 内建组件
+
+- [FaAnimatedBeam 动画光束组件](/components/FaAnimatedBeam.md)
+- [FaAnimatedCountTo 数字动画](/components/FaAnimatedCountTo.md)
+- [FaAnimatedCountToGroup 数字动画组](/components/FaAnimatedCountToGroup.md)
+- [FaAvatar 头像组件](/components/FaAvatar.md)
+- [FaBadge 徽章组件](/components/FaBadge.md)
+- [FaBlurReveal 模糊显现](/components/FaBlurReveal.md)
+- [FaBorderBeam 边框光束](/components/FaBorderBeam.md)
+- [FaButton 按钮组件](/components/FaButton.md)
+- [FaButtonGroup 按钮组](/components/FaButtonGroup.md)
+- [FaCard 卡片组件](/components/FaCard.md)
+- [FaCarousel 轮播图组件](/components/FaCarousel.md)
+- [FaCascader 级联选择器](/components/FaCascader.md)
+- [FaCheckbox 复选框组件](/components/FaCheckbox.md)
+- [FaCode 代码块](/components/FaCode.md)
+- [FaCodePreview 代码预览](/components/FaCodePreview.md)
+- [FaCollapsible 折叠面板组件](/components/FaCollapsible.md)
+- [FaContextMenu 右键菜单组件](/components/FaContextMenu.md)
+- [FaCountTo 数字滚动组件](/components/FaCountTo.md)
+- [FaDigitalCard 数字卡片](/components/FaDigitalCard.md)
+- [FaDivider 分割线组件](/components/FaDivider.md)
+- [FaDrawer 抽屉组件](/components/FaDrawer.md)
+- [FaDropdown 下拉菜单组件](/components/FaDropdown.md)
+- [FaEmpty 空状态组件](/components/FaEmpty.md)
+- [FaFileUpload 文件上传组件](/components/FaFileUpload.md)
+- [FaFixedBar 固定栏](/components/FaFixedBar.md)
+- [FaFlipCard 翻转卡片](/components/FaFlipCard.md)
+- [FaFlipWords 翻转文字](/components/FaFlipWords.md)
+- [FaGlowyCard 发光卡片](/components/FaGlowyCard.md)
+- [FaGlowyCardWrapper 发光卡片容器](/components/FaGlowyCardWrapper.md)
+- [FaGradientButton 渐变按钮](/components/FaGradientButton.md)
+- [FaHoverCard 悬浮卡片组件](/components/FaHoverCard.md)
+- [FaIcon 图标组件](/components/FaIcon.md)
+- [FaIconPicker 图标选择器组件](/components/FaIconPicker.md)
+- [FaImagePreview 图片预览组件](/components/FaImagePreview.md)
+- [FaImageUpload 图片上传组件](/components/FaImageUpload.md)
+- [FaInput 输入框组件](/components/FaInput.md)
+- [FaInputOTP 验证码输入组件](/components/FaInputOtp.md)
+- [FaInteractiveButton 交互按钮](/components/FaInteractiveButton.md)
+- [FaKbd 键盘按键组件](/components/FaKbd.md)
+- [FaKbdGroup 键盘组合组件](/components/FaKbdGroup.md)
+- [FaLabel 标签组件](/components/FaLabel.md)
+- [FaLayoutContainer 布局容器组件](/components/FaLayoutContainer.md)
+- [FaLinkPreview 链接预览](/components/FaLinkPreview.md)
+- [FaLoading 加载动画](/components/FaLoading.md)
+- [FaMarquee 滚动横幅](/components/FaMarquee.md)
+- [FaMention 提及组件](/components/FaMention.md)
+- [FaModal 对话框组件](/components/FaModal.md)
+- [FaMultiStepLoader 多步骤加载器](/components/FaMultiStepLoader.md)
+- [FaNumberField 数字输入框](/components/FaNumberField.md)
+- [FaPageHeader 页面头部组件](/components/FaPageHeader.md)
+- [FaPageMain 页面主内容区组件](/components/FaPageMain.md)
+- [FaPagination 分页组件](/components/FaPagination.md)
+- [FaParticlesBg 粒子背景](/components/FaParticlesBg.md)
+- [FaPasswordStrength 密码强度组件](/components/FaPasswordStrength.md)
+- [FaPatternBg 图案背景](/components/FaPatternBg.md)
+- [FaPopover 弹出框组件](/components/FaPopover.md)
+- [FaProgress 进度条组件](/components/FaProgress.md)
+- [FaQrcode 二维码组件](/components/FaQrcode.md)
+- [FaRadioGroup 单选组组件](/components/FaRadioGroup.md)
+- [FaScratchOff 刮刮乐](/components/FaScratchOff.md)
+- [FaScrollArea 滚动区域组件](/components/FaScrollArea.md)
+- [FaScrollingText 滚动文字组件](/components/FaScrollingText.md)
+- [FaSearchBar 搜索栏组件](/components/FaSearchBar.md)
+- [FaSelect 选择器组件](/components/FaSelect.md)
+- [FaSlider 滑块](/components/FaSlider.md)
+- [FaSmoothSwipe 平滑滑动](/components/FaSmoothSwipe.md)
+- [FaSparklesText 闪耀文字](/components/FaSparklesText.md)
+- [FaSparkline 迷你图组件](/components/FaSparkline.md)
+- [FaSpotlightCard 聚光灯卡片](/components/FaSpotlightCard.md)
+- [FaStorageBox 储物箱](/components/FaStorageBox.md)
+- [FaSwitch 开关组件](/components/FaSwitch.md)
+- [FaTabs 标签页组件](/components/FaTabs.md)
+- [FaTextHighlight 文字高亮](/components/FaTextHighlight.md)
+- [FaTextShiny 流光文字](/components/FaTextShiny.md)
+- [FaTextarea 文本域组件](/components/FaTextarea.md)
+- [FaTimeAgo 相对时间](/components/FaTimeAgo.md)
+- [FaTimeline 时间轴组件](/components/FaTimeline.md)
+- [FaToast 轻提示组件](/components/FaToast.md)
+- [FaTooltip 文字提示组件](/components/FaTooltip.md)
+- [FaTree 树形控件组件](/components/FaTree.md)
+- [FaTrend 趋势标识组件](/components/FaTrend.md)
+
+### 
+
+- [定制开发](/customize.md)
+- [技术支持](/support.md)
+- [交换友链](/links.md)
+
+#### 专业版
+
+- [购买永久专业版](/buy.md)
+- [购买历史专业版](/buy-history-version.md)
+- [免费领取 v1 专业版](/get-v1-pro.md)
+
+### Other
+
+- [五周年庆](/buy-anniversary.md)
