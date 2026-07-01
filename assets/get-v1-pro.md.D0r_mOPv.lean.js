@@ -1,0 +1,1 @@
+import{o as t,i as e,aB as i,aG as r}from"./chunks/framework._ZAOES46.js";const c=JSON.parse('{"title":"免费领取 v1 专业版","description":"","frontmatter":{},"headers":[],"relativePath":"get-v1-pro.md","filePath":"get-v1-pro.md"}'),o={name:"get-v1-pro.md"},d=Object.assign(o,{setup(s){return(n,a)=>(t(),e("div",null,[...a[0]||(a[0]=[i("",13)])]))}});export{c as __pageData,d as default};
