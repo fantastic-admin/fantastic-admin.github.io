@@ -1,0 +1,1 @@
+import{_t as e,nt as t,rt as n}from"./chunks/framework.CsUFmuvX.js";var r=JSON.parse(`{"title":"技术支持","description":"","frontmatter":{},"headers":[],"relativePath":"support.md","filePath":"support.md"}`),i=Object.assign({name:`support.md`},{setup(r){return(r,i)=>(e(),t(`div`,null,[...i[0]||=[n("",19)]]))}});export{r as __pageData,i as default};

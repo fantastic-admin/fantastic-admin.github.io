@@ -1,0 +1,1 @@
+import{_t as e,n as t,nt as n,rt as r}from"./chunks/framework.CsUFmuvX.js";var i=JSON.parse(`{"title":"开始","description":"","frontmatter":{},"headers":[],"relativePath":"guide/start.md","filePath":"guide/start.md"}`),a={name:`guide/start.md`};function o(t,i,a,o,s,c){return e(),n(`div`,null,[...i[0]||=[r("",35)]])}var s=t(a,[[`render`,o]]);export{i as __pageData,s as default};

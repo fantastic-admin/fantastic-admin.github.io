@@ -1,0 +1,1 @@
+import{_t as e,n as t,nt as n,rt as r}from"./chunks/framework.CsUFmuvX.js";var i=JSON.parse(`{"title":"与服务端交互","description":"","frontmatter":{},"headers":[],"relativePath":"guide/axios.md","filePath":"guide/axios.md"}`),a={name:`guide/axios.md`};function o(t,i,a,o,s,c){return e(),n(`div`,null,[...i[0]||=[r("",56)]])}var s=t(a,[[`render`,o]]);export{i as __pageData,s as default};

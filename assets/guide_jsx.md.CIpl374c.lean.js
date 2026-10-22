@@ -1,0 +1,1 @@
+import{_t as e,n as t,nt as n,rt as r}from"./chunks/framework.CsUFmuvX.js";var i=JSON.parse(`{"title":"JSX","description":"","frontmatter":{},"headers":[],"relativePath":"guide/jsx.md","filePath":"guide/jsx.md"}`),a={name:`guide/jsx.md`};function o(t,i,a,o,s,c){return e(),n(`div`,null,[...i[0]||=[r("",13)]])}var s=t(a,[[`render`,o]]);export{i as __pageData,s as default};
